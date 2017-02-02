@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Libreria;
+
 namespace JUDYSOFT
 {
     public partial class FormGenerarFactura : Form
@@ -34,6 +36,7 @@ namespace JUDYSOFT
 
         private void FormGenerarFactura_Load(object sender, EventArgs e)
         {
+            String cmd = "SELECT * FROM Usuarios WHERE id_usuario= " + frmLogin.Codigo;
 
         }
 
@@ -54,6 +57,21 @@ namespace JUDYSOFT
         private void BotonEliminar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("¿Está seguro de eliminar el objeto?", "Mensaje advertencia", MessageBoxButtons.YesNo);
+        }
+
+        private void BotonSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*SqlConnection con = new SqlConnection("Data Source=LENOVO-PC\\SQLEXPRESS;Initial Catalog=Administracion;Integrated Security=True");
+            con.Open();
+            MessageBox.Show("conexion exitosa");
+            con.Close();*/
+
+
         }
     }
 }

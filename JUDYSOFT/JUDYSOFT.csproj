@@ -244,6 +244,12 @@
   <ItemGroup>
     <None Include="Images\1484546297_Cancel.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Libreria\Libreria.csproj">
+      <Project>{3116a00e-e5a2-4f54-ab2f-d698a646ba7e}</Project>
+      <Name>Libreria</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

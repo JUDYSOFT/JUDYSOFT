@@ -8,10 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
+
 namespace JUDYSOFT
 {
+
+    
     public partial class frmLogin : Form
     {
+        public static String Codigo = "";
         public frmLogin()
         {
             InitializeComponent();
@@ -38,6 +43,12 @@ namespace JUDYSOFT
             this.Visible=false;
             frmHab.Show();
             this.FormClosing += Form1_FormClosing;
+
+            SqlConnection con = new SqlConnection("Data Source=LENOVO-PC\\SQLEXPRESS;Initial Catalog=Administracion;Integrated Security=True");
+            con.Open();
+            MessageBox.Show("conexion exitosa");
+            con.Close();
+
 
         }
 

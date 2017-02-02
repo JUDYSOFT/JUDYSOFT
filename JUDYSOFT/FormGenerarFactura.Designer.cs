@@ -61,6 +61,7 @@
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -213,6 +214,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.BotonAniadir);
             this.panel1.Controls.Add(this.BotonEliminar);
             this.panel1.Controls.Add(this.BotonFacturar);
@@ -259,6 +261,7 @@
             this.BotonSalir.TabIndex = 44;
             this.BotonSalir.Text = "Salir";
             this.BotonSalir.UseVisualStyleBackColor = true;
+            this.BotonSalir.Click += new System.EventHandler(this.BotonSalir_Click);
             // 
             // panel3
             // 
@@ -365,6 +368,16 @@
             this.ValorTotal.HeaderText = "Valor Total";
             this.ValorTotal.Name = "ValorTotal";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(56, 199);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "conectar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormGenerarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -422,5 +435,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button1;
     }
 }
