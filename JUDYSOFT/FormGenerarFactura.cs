@@ -42,12 +42,18 @@ namespace JUDYSOFT
             FormAgregarProductoAFactura agregarProducto = new FormAgregarProductoAFactura();
             agregarProducto.StartPosition = FormStartPosition.CenterScreen;
             agregarProducto.Show();
+            this.Hide();
 
         }
 
         private void FormGenerarFactura_FormClosing(object sender, FormClosingEventArgs e)
         {
             MenuSettings.EnableMenuItem("facturacionToolStripMenuItem", "generarFacturaToolStripMenuItem");
+        }
+
+        private void BotonEliminar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("¿Está seguro de eliminar el objeto?");
         }
     }
 }
