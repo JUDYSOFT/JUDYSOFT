@@ -10,6 +10,7 @@ namespace JUDYSOFT
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
+        /// Se sube a git?
         /// </summary>
         [STAThread]
         static void Main()
