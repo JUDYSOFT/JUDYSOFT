@@ -53,7 +53,7 @@ namespace JUDYSOFT
 
         private void BotonEliminar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("¿Está seguro de eliminar el objeto?","Mensaje advertencia",MessageBoxButtons.YesNo);
+            MessageBox.Show("¿Está seguro de eliminar el objeto?", "Mensaje advertencia", MessageBoxButtons.YesNo);
         }
     }
 }
