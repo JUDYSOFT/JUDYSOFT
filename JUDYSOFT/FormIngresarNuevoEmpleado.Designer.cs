@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIngresarNuevoEmpleado));
             this.panelNuevoEmpleado = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.radioButtonNo = new System.Windows.Forms.RadioButton();
@@ -80,7 +81,6 @@
             // 
             this.panelNuevoEmpleado.AutoSize = true;
             this.panelNuevoEmpleado.BackColor = System.Drawing.SystemColors.Control;
-            this.panelNuevoEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelNuevoEmpleado.Controls.Add(this.panel3);
             this.panelNuevoEmpleado.Controls.Add(this.panel2);
             this.panelNuevoEmpleado.Controls.Add(this.panel1);
@@ -95,7 +95,6 @@
             // 
             // panel3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.radioButtonNo);
             this.panel3.Controls.Add(this.radioButtonSi);
             this.panel3.Controls.Add(this.label15);
@@ -196,7 +195,6 @@
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.radioButton3);
             this.panel2.Controls.Add(this.radioButton2);
             this.panel2.Controls.Add(this.label17);
@@ -273,31 +271,6 @@
             // comboBoxProvincia
             // 
             this.comboBoxProvincia.FormattingEnabled = true;
-            this.comboBoxProvincia.Items.AddRange(new object[] {
-            "Azuay",
-            "Bolivar",
-            "Cañar",
-            "Carchi",
-            "Chimborazo",
-            "Cotopaxi",
-            "El Oro",
-            "Esmeraldas",
-            "Galápagos",
-            "Guayas",
-            "Imbabura",
-            "Loja",
-            "Los Rios",
-            "Manabí",
-            "Morona Santiago – Macas",
-            "Napo – Tena",
-            "Orellana – Francisco de Orellana",
-            "Pastaza – Puyo",
-            "Pichincha – Quito",
-            "Santa Elena – Santa Elena",
-            "Santo Domingo de los Tsáchilas – Santo Domingo",
-            "Sucumbíos – Nueva Loja",
-            "Tungurahua – Ambato",
-            "Zamora Chinchipe – Zamora"});
             this.comboBoxProvincia.Location = new System.Drawing.Point(19, 84);
             this.comboBoxProvincia.Name = "comboBoxProvincia";
             this.comboBoxProvincia.Size = new System.Drawing.Size(200, 21);
@@ -426,7 +399,6 @@
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.textBoxIdentificacion);
             this.panel1.Controls.Add(this.label2);
@@ -520,6 +492,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 487);
             this.Controls.Add(this.panelNuevoEmpleado);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormIngresarNuevoEmpleado";

@@ -48,5 +48,10 @@ namespace JUDYSOFT
             MenuSettings.EnableMenuItem("toolStripMenuItem1", "modificarToolStripMenuItem");
 
         }
+
+        private void FormModificarDatosDeEmpleado_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
