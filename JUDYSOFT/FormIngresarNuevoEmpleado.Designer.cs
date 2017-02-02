@@ -30,9 +30,6 @@
         {
             this.panelNuevoEmpleado = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.radioButtonNo = new System.Windows.Forms.RadioButton();
-            this.radioButtonSi = new System.Windows.Forms.RadioButton();
-            this.label15 = new System.Windows.Forms.Label();
             this.comboBoxCargo = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimePickerFechaDeEntrada = new System.Windows.Forms.DateTimePicker();
@@ -46,7 +43,6 @@
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBoxProvincia = new System.Windows.Forms.ComboBox();
-            this.textBoxCiudad = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePickerFechaDeNacimiento = new System.Windows.Forms.DateTimePicker();
@@ -62,7 +58,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBoxIdentificacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxTipoDeIdentificacion = new System.Windows.Forms.ComboBox();
@@ -70,6 +65,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxCiudad = new System.Windows.Forms.ComboBox();
             this.panelNuevoEmpleado.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -89,57 +85,23 @@
             this.panelNuevoEmpleado.Controls.Add(this.button1);
             this.panelNuevoEmpleado.Location = new System.Drawing.Point(3, 2);
             this.panelNuevoEmpleado.Name = "panelNuevoEmpleado";
-            this.panelNuevoEmpleado.Size = new System.Drawing.Size(768, 481);
+            this.panelNuevoEmpleado.Size = new System.Drawing.Size(768, 440);
             this.panelNuevoEmpleado.TabIndex = 2;
             this.panelNuevoEmpleado.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNuevoEmpleado_Paint);
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.radioButtonNo);
-            this.panel3.Controls.Add(this.radioButtonSi);
-            this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.comboBoxCargo);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.dateTimePickerFechaDeEntrada);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.textBoxSalario);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Location = new System.Drawing.Point(10, 316);
+            this.panel3.Location = new System.Drawing.Point(10, 295);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(731, 94);
+            this.panel3.Size = new System.Drawing.Size(731, 64);
             this.panel3.TabIndex = 37;
-            // 
-            // radioButtonNo
-            // 
-            this.radioButtonNo.AutoSize = true;
-            this.radioButtonNo.Location = new System.Drawing.Point(179, 73);
-            this.radioButtonNo.Name = "radioButtonNo";
-            this.radioButtonNo.Size = new System.Drawing.Size(39, 17);
-            this.radioButtonNo.TabIndex = 42;
-            this.radioButtonNo.TabStop = true;
-            this.radioButtonNo.Text = "No";
-            this.radioButtonNo.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonSi
-            // 
-            this.radioButtonSi.AutoSize = true;
-            this.radioButtonSi.Location = new System.Drawing.Point(18, 73);
-            this.radioButtonSi.Name = "radioButtonSi";
-            this.radioButtonSi.Size = new System.Drawing.Size(34, 17);
-            this.radioButtonSi.TabIndex = 41;
-            this.radioButtonSi.TabStop = true;
-            this.radioButtonSi.Text = "Si";
-            this.radioButtonSi.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(15, 57);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 13);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "Afiliación al IESS (*)";
             // 
             // comboBoxCargo
             // 
@@ -164,7 +126,7 @@
             // 
             // dateTimePickerFechaDeEntrada
             // 
-            this.dateTimePickerFechaDeEntrada.Location = new System.Drawing.Point(18, 20);
+            this.dateTimePickerFechaDeEntrada.Location = new System.Drawing.Point(13, 19);
             this.dateTimePickerFechaDeEntrada.Name = "dateTimePickerFechaDeEntrada";
             this.dateTimePickerFechaDeEntrada.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerFechaDeEntrada.TabIndex = 37;
@@ -172,15 +134,15 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 4);
+            this.label13.Location = new System.Drawing.Point(10, 3);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 13);
+            this.label13.Size = new System.Drawing.Size(102, 13);
             this.label13.TabIndex = 36;
-            this.label13.Text = "Fecha de entrada (*)";
+            this.label13.Text = "Fecha de registro (*)";
             // 
             // textBoxSalario
             // 
-            this.textBoxSalario.Location = new System.Drawing.Point(249, 20);
+            this.textBoxSalario.Location = new System.Drawing.Point(247, 19);
             this.textBoxSalario.Name = "textBoxSalario";
             this.textBoxSalario.Size = new System.Drawing.Size(177, 20);
             this.textBoxSalario.TabIndex = 35;
@@ -197,13 +159,13 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.comboBoxCiudad);
             this.panel2.Controls.Add(this.radioButton3);
             this.panel2.Controls.Add(this.radioButton2);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.textBoxDireccion);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.comboBoxProvincia);
-            this.panel2.Controls.Add(this.textBoxCiudad);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.dateTimePickerFechaDeNacimiento);
@@ -220,13 +182,13 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(9, 78);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(732, 231);
+            this.panel2.Size = new System.Drawing.Size(732, 211);
             this.panel2.TabIndex = 36;
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(610, 24);
+            this.radioButton3.Location = new System.Drawing.Point(591, 24);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(71, 17);
             this.radioButton3.TabIndex = 43;
@@ -237,7 +199,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(465, 24);
+            this.radioButton2.Location = new System.Drawing.Point(461, 24);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(73, 17);
             this.radioButton2.TabIndex = 42;
@@ -248,7 +210,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(462, 6);
+            this.label17.Location = new System.Drawing.Point(458, 8);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(31, 13);
             this.label17.TabIndex = 41;
@@ -256,7 +218,7 @@
             // 
             // textBoxDireccion
             // 
-            this.textBoxDireccion.Location = new System.Drawing.Point(462, 84);
+            this.textBoxDireccion.Location = new System.Drawing.Point(461, 75);
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(255, 20);
             this.textBoxDireccion.TabIndex = 40;
@@ -264,7 +226,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(458, 68);
+            this.label11.Location = new System.Drawing.Point(458, 59);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 13);
             this.label11.TabIndex = 39;
@@ -288,32 +250,26 @@
             "Loja",
             "Los Rios",
             "Manabí",
-            "Morona Santiago – Macas",
-            "Napo – Tena",
-            "Orellana – Francisco de Orellana",
-            "Pastaza – Puyo",
-            "Pichincha – Quito",
-            "Santa Elena – Santa Elena",
-            "Santo Domingo de los Tsáchilas – Santo Domingo",
-            "Sucumbíos – Nueva Loja",
-            "Tungurahua – Ambato",
-            "Zamora Chinchipe – Zamora"});
-            this.comboBoxProvincia.Location = new System.Drawing.Point(19, 84);
+            "Morona Santiago",
+            "Napo",
+            "Orellana",
+            "Pastaza",
+            "Pichincha",
+            "Santa Elena",
+            "Santo Domingo de los Tsáchilas",
+            "Sucumbíos",
+            "Tungurahua",
+            "Zamora Chinchipe"});
+            this.comboBoxProvincia.Location = new System.Drawing.Point(14, 75);
             this.comboBoxProvincia.Name = "comboBoxProvincia";
             this.comboBoxProvincia.Size = new System.Drawing.Size(200, 21);
             this.comboBoxProvincia.TabIndex = 38;
-            // 
-            // textBoxCiudad
-            // 
-            this.textBoxCiudad.Location = new System.Drawing.Point(253, 84);
-            this.textBoxCiudad.Name = "textBoxCiudad";
-            this.textBoxCiudad.Size = new System.Drawing.Size(177, 20);
-            this.textBoxCiudad.TabIndex = 37;
+            this.comboBoxProvincia.SelectedIndexChanged += new System.EventHandler(this.comboBoxProvincia_SelectedIndexChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(252, 68);
+            this.label10.Location = new System.Drawing.Point(245, 59);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 13);
             this.label10.TabIndex = 36;
@@ -322,7 +278,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 68);
+            this.label9.Location = new System.Drawing.Point(9, 59);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 13);
             this.label9.TabIndex = 35;
@@ -330,7 +286,7 @@
             // 
             // dateTimePickerFechaDeNacimiento
             // 
-            this.dateTimePickerFechaDeNacimiento.Location = new System.Drawing.Point(19, 145);
+            this.dateTimePickerFechaDeNacimiento.Location = new System.Drawing.Point(14, 128);
             this.dateTimePickerFechaDeNacimiento.Name = "dateTimePickerFechaDeNacimiento";
             this.dateTimePickerFechaDeNacimiento.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerFechaDeNacimiento.TabIndex = 34;
@@ -338,7 +294,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 129);
+            this.label8.Location = new System.Drawing.Point(11, 112);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 13);
             this.label8.TabIndex = 33;
@@ -346,14 +302,14 @@
             // 
             // textBoxCelular
             // 
-            this.textBoxCelular.Location = new System.Drawing.Point(253, 205);
+            this.textBoxCelular.Location = new System.Drawing.Point(248, 176);
             this.textBoxCelular.Name = "textBoxCelular";
             this.textBoxCelular.Size = new System.Drawing.Size(177, 20);
             this.textBoxCelular.TabIndex = 32;
             // 
             // textBoxTelefonoConvencional
             // 
-            this.textBoxTelefonoConvencional.Location = new System.Drawing.Point(19, 205);
+            this.textBoxTelefonoConvencional.Location = new System.Drawing.Point(14, 176);
             this.textBoxTelefonoConvencional.Name = "textBoxTelefonoConvencional";
             this.textBoxTelefonoConvencional.Size = new System.Drawing.Size(200, 20);
             this.textBoxTelefonoConvencional.TabIndex = 31;
@@ -361,7 +317,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(247, 189);
+            this.label7.Location = new System.Drawing.Point(244, 160);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 30;
@@ -370,7 +326,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 189);
+            this.label6.Location = new System.Drawing.Point(11, 160);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 29;
@@ -378,7 +334,7 @@
             // 
             // textBoxCorreoElectronico
             // 
-            this.textBoxCorreoElectronico.Location = new System.Drawing.Point(253, 148);
+            this.textBoxCorreoElectronico.Location = new System.Drawing.Point(248, 128);
             this.textBoxCorreoElectronico.Name = "textBoxCorreoElectronico";
             this.textBoxCorreoElectronico.Size = new System.Drawing.Size(177, 20);
             this.textBoxCorreoElectronico.TabIndex = 28;
@@ -386,7 +342,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(250, 129);
+            this.label5.Location = new System.Drawing.Point(245, 112);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 13);
             this.label5.TabIndex = 27;
@@ -394,14 +350,14 @@
             // 
             // textBoxApellidos
             // 
-            this.textBoxApellidos.Location = new System.Drawing.Point(253, 22);
+            this.textBoxApellidos.Location = new System.Drawing.Point(248, 21);
             this.textBoxApellidos.Name = "textBoxApellidos";
             this.textBoxApellidos.Size = new System.Drawing.Size(177, 20);
             this.textBoxApellidos.TabIndex = 26;
             // 
             // textBoxNombres
             // 
-            this.textBoxNombres.Location = new System.Drawing.Point(19, 22);
+            this.textBoxNombres.Location = new System.Drawing.Point(14, 21);
             this.textBoxNombres.Name = "textBoxNombres";
             this.textBoxNombres.Size = new System.Drawing.Size(200, 20);
             this.textBoxNombres.TabIndex = 25;
@@ -409,7 +365,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(250, 6);
+            this.label4.Location = new System.Drawing.Point(245, 6);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 13);
             this.label4.TabIndex = 24;
@@ -418,7 +374,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 6);
+            this.label3.Location = new System.Drawing.Point(11, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 23;
@@ -427,7 +383,6 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.textBoxIdentificacion);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.comboBoxTipoDeIdentificacion);
@@ -436,17 +391,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(732, 60);
             this.panel1.TabIndex = 35;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(9, 31);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // textBoxIdentificacion
             // 
@@ -488,7 +432,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(22, 413);
+            this.label16.Location = new System.Drawing.Point(22, 362);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(251, 13);
             this.label16.TabIndex = 34;
@@ -496,7 +440,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(382, 447);
+            this.button2.Location = new System.Drawing.Point(368, 391);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(177, 23);
             this.button2.TabIndex = 28;
@@ -506,7 +450,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(88, 447);
+            this.button1.Location = new System.Drawing.Point(95, 391);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 23);
             this.button1.TabIndex = 27;
@@ -514,11 +458,19 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // comboBoxCiudad
+            // 
+            this.comboBoxCiudad.FormattingEnabled = true;
+            this.comboBoxCiudad.Location = new System.Drawing.Point(248, 75);
+            this.comboBoxCiudad.Name = "comboBoxCiudad";
+            this.comboBoxCiudad.Size = new System.Drawing.Size(177, 21);
+            this.comboBoxCiudad.TabIndex = 44;
+            // 
             // FormIngresarNuevoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 487);
+            this.ClientSize = new System.Drawing.Size(779, 448);
             this.Controls.Add(this.panelNuevoEmpleado);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -552,9 +504,6 @@
         private System.Windows.Forms.ComboBox comboBoxTipoDeIdentificacion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RadioButton radioButtonNo;
-        private System.Windows.Forms.RadioButton radioButtonSi;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBoxCargo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaDeEntrada;
@@ -565,7 +514,6 @@
         private System.Windows.Forms.TextBox textBoxDireccion;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBoxProvincia;
-        private System.Windows.Forms.TextBox textBoxCiudad;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaDeNacimiento;
@@ -583,6 +531,6 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.ComboBox comboBoxCiudad;
     }
 }
