@@ -50,5 +50,10 @@ namespace JUDYSOFT
         {
             MenuSettings.EnableMenuItem("facturacionToolStripMenuItem", "generarFacturaToolStripMenuItem");
         }
+
+        private void BotonEliminar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("¿Está seguro de eliminar el objeto?");
+        }
     }
 }
