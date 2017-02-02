@@ -35,9 +35,20 @@ namespace JUDYSOFT
         {
             
             frmMenuPrincipal frmHab = new frmMenuPrincipal();
-            //this.Close();
-
+            this.Visible=false;
             frmHab.Show();
+            this.FormClosing += Form1_FormClosing;
+
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
 
         }
     }

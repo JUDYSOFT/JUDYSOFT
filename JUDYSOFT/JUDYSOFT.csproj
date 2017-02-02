@@ -46,7 +46,85 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Advertencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advertencia.designer.cs">
+      <DependentUpon>Advertencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="clsHabitacion.cs" />
+    <Compile Include="FormAgregarProductoAFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarProductoAFactura.Designer.cs">
+      <DependentUpon>FormAgregarProductoAFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultarFactura.Designer.cs">
+      <DependentUpon>FormConsultarFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultarReservacionPasada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultarReservacionPasada.Designer.cs">
+      <DependentUpon>FormConsultarReservacionPasada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEliminarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEliminarEmpleado.Designer.cs">
+      <DependentUpon>FormEliminarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGenerarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGenerarFactura.Designer.cs">
+      <DependentUpon>FormGenerarFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIngresarNuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngresarNuevoCliente.Designer.cs">
+      <DependentUpon>FormIngresarNuevoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIngresarNuevoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngresarNuevoEmpleado.Designer.cs">
+      <DependentUpon>FormIngresarNuevoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmpleado.designer.cs">
+      <DependentUpon>FormEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModificarDatosDeCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificarDatosDeCliente.Designer.cs">
+      <DependentUpon>FormModificarDatosDeCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModificarDatosDeEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificarDatosDeEmpleado.Designer.cs">
+      <DependentUpon>FormModificarDatosDeEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevaReservacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevaReservacion.Designer.cs">
+      <DependentUpon>FormNuevaReservacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReservas.Designer.cs">
+      <DependentUpon>FormReservas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdministracionHabitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,8 +149,54 @@
     <Compile Include="frmOpcionHab.Designer.cs">
       <DependentUpon>frmOpcionHab.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSoporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSoporte.Designer.cs">
+      <DependentUpon>frmSoporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Advertencia.resx">
+      <DependentUpon>Advertencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarProductoAFactura.resx">
+      <DependentUpon>FormAgregarProductoAFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarFactura.resx">
+      <DependentUpon>FormConsultarFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarReservacionPasada.resx">
+      <DependentUpon>FormConsultarReservacionPasada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEliminarEmpleado.resx">
+      <DependentUpon>FormEliminarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGenerarFactura.resx">
+      <DependentUpon>FormGenerarFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIngresarNuevoCliente.resx">
+      <DependentUpon>FormIngresarNuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIngresarNuevoEmpleado.resx">
+      <DependentUpon>FormIngresarNuevoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmpleado.resx">
+      <DependentUpon>FormEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificarDatosDeCliente.resx">
+      <DependentUpon>FormModificarDatosDeCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificarDatosDeEmpleado.resx">
+      <DependentUpon>FormModificarDatosDeEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevaReservacion.resx">
+      <DependentUpon>FormNuevaReservacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReservas.resx">
+      <DependentUpon>FormReservas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdministracionHabitaciones.resx">
       <DependentUpon>frmAdministracionHabitaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +209,9 @@
     <EmbeddedResource Include="frmOpcionHab.resx">
       <DependentUpon>frmOpcionHab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSoporte.resx">
+      <DependentUpon>frmSoporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -93,6 +220,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -106,6 +234,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\1484548508_Pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\1484548483_Edit_page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\1484546297_Cancel.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

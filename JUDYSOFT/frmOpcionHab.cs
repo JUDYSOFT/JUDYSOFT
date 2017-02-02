@@ -19,12 +19,32 @@ namespace JUDYSOFT
 
         private void button2_Click(object sender, EventArgs e)
         {
+            groupBox1.Enabled = true;
+            clsHabitacion objHab = new clsHabitacion();
+            objHab.Estado = "ocupado";
 
         }
 
         private void frmOpcionHab_Load(object sender, EventArgs e)
         {
+            groupBox1.Enabled = false;
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = false;
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = false;
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = false;
         }
     }
 }
+
