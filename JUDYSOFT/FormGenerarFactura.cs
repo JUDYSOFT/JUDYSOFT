@@ -42,6 +42,7 @@ namespace JUDYSOFT
             FormAgregarProductoAFactura agregarProducto = new FormAgregarProductoAFactura();
             agregarProducto.StartPosition = FormStartPosition.CenterScreen;
             agregarProducto.Show();
+            this.Hide();
 
         }
 
