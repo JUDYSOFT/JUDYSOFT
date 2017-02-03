@@ -31,16 +31,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtDireccion = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtidCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -62,6 +60,9 @@
             this.ValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblAtendidoPor = new System.Windows.Forms.Label();
+            this.BotonBuscar = new System.Windows.Forms.Button();
+            this.lblCliente = new System.Windows.Forms.Label();
+            this.txtBoxCliente = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,19 +73,20 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.txtBoxCliente);
+            this.panel2.Controls.Add(this.lblCliente);
+            this.panel2.Controls.Add(this.BotonBuscar);
             this.panel2.Controls.Add(this.lblAtendidoPor);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.txtTelefono);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.maskedTextBox1);
+            this.panel2.Controls.Add(this.txtDireccion);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtidCliente);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(9, -2);
             this.panel2.Name = "panel2";
@@ -110,12 +112,12 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "FACTURA #";
             // 
-            // textBox5
+            // txtTelefono
             // 
-            this.textBox5.Location = new System.Drawing.Point(392, 94);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(199, 20);
-            this.textBox5.TabIndex = 25;
+            this.txtTelefono.Location = new System.Drawing.Point(392, 94);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(199, 20);
+            this.txtTelefono.TabIndex = 25;
             // 
             // label6
             // 
@@ -142,35 +144,28 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Fecha";
             // 
-            // maskedTextBox1
+            // txtDireccion
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(79, 94);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(197, 20);
-            this.maskedTextBox1.TabIndex = 21;
+            this.txtDireccion.Location = new System.Drawing.Point(392, 68);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(197, 20);
+            this.txtDireccion.TabIndex = 21;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 101);
+            this.label4.Location = new System.Drawing.Point(330, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 20;
             this.label4.Text = "Dirección";
             // 
-            // textBox4
+            // txtidCliente
             // 
-            this.textBox4.Location = new System.Drawing.Point(392, 67);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(199, 20);
-            this.textBox4.TabIndex = 19;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(79, 67);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(197, 20);
-            this.textBox3.TabIndex = 18;
+            this.txtidCliente.Location = new System.Drawing.Point(85, 72);
+            this.txtidCliente.Name = "txtidCliente";
+            this.txtidCliente.Size = new System.Drawing.Size(61, 20);
+            this.txtidCliente.TabIndex = 19;
             // 
             // label1
             // 
@@ -182,25 +177,15 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Atendido por:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Identificación:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(330, 74);
+            this.label3.Location = new System.Drawing.Point(6, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Cliente:";
+            this.label3.Text = "idCliente:";
             // 
             // panel1
             // 
@@ -373,10 +358,36 @@
             // lblAtendidoPor
             // 
             this.lblAtendidoPor.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblAtendidoPor.Location = new System.Drawing.Point(76, 39);
+            this.lblAtendidoPor.Location = new System.Drawing.Point(82, 39);
             this.lblAtendidoPor.Name = "lblAtendidoPor";
             this.lblAtendidoPor.Size = new System.Drawing.Size(200, 16);
             this.lblAtendidoPor.TabIndex = 28;
+            // 
+            // BotonBuscar
+            // 
+            this.BotonBuscar.Location = new System.Drawing.Point(207, 70);
+            this.BotonBuscar.Name = "BotonBuscar";
+            this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.BotonBuscar.TabIndex = 29;
+            this.BotonBuscar.Text = "Buscar";
+            this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
+            // 
+            // lblCliente
+            // 
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Location = new System.Drawing.Point(6, 97);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(79, 13);
+            this.lblCliente.TabIndex = 30;
+            this.lblCliente.Text = "Nombre Cliente";
+            // 
+            // txtBoxCliente
+            // 
+            this.txtBoxCliente.Location = new System.Drawing.Point(85, 101);
+            this.txtBoxCliente.Name = "txtBoxCliente";
+            this.txtBoxCliente.Size = new System.Drawing.Size(197, 20);
+            this.txtBoxCliente.TabIndex = 31;
             // 
             // FormGenerarFactura
             // 
@@ -404,21 +415,19 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BotonAniadir;
         private System.Windows.Forms.Button BotonEliminar;
         private System.Windows.Forms.Button BotonFacturar;
         private System.Windows.Forms.Button BotonSalir;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtidCliente;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtDireccion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
@@ -436,5 +445,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblAtendidoPor;
+        private System.Windows.Forms.TextBox txtBoxCliente;
+        private System.Windows.Forms.Label lblCliente;
+        private System.Windows.Forms.Button BotonBuscar;
     }
 }

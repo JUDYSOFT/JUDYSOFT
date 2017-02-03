@@ -76,5 +76,23 @@ namespace JUDYSOFT
 
 
         }
+
+        private void BotonBuscar_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(txtidCliente.Text.Trim()) == false) {
+                try
+                {
+                    string cmd = string.Format("SELECT * FROM Cliente WHERE idCliente='{0}'", txtidCliente.Text.Trim());
+                    DataSet DS = Utilidades.Ejecutar(cmd);
+
+                    txtBoxCliente.Text = DS.Tables[0].Rows[0]["nombreCliente"].ToString().Trim() + " " +DS.Tables[0].Rows[0]["apellidoCliente"].ToString().Trim();
+                    txtDireccion.Text = DS.Tables[0].Rows[0]["direccion"].ToString().Trim();
+                    txtTelefono.Text = DS.Tables[0].Rows[0]["telefono"].ToString().Trim();
+                } catch(Exception er)
+                {
+                    MessageBox.Show("Ha ocurrido un problema. \n" + er.Message);
+                }
+           }
+        }
     }
 }
