@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtBoxCliente = new System.Windows.Forms.TextBox();
+            this.lblCliente = new System.Windows.Forms.Label();
+            this.BotonBuscar = new System.Windows.Forms.Button();
+            this.lblAtendidoPor = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
@@ -41,7 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.BotonAniadir = new System.Windows.Forms.Button();
             this.BotonEliminar = new System.Windows.Forms.Button();
             this.BotonFacturar = new System.Windows.Forms.Button();
@@ -59,10 +62,6 @@
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblAtendidoPor = new System.Windows.Forms.Label();
-            this.BotonBuscar = new System.Windows.Forms.Button();
-            this.lblCliente = new System.Windows.Forms.Label();
-            this.txtBoxCliente = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -93,6 +92,40 @@
             this.panel2.Size = new System.Drawing.Size(656, 134);
             this.panel2.TabIndex = 48;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // txtBoxCliente
+            // 
+            this.txtBoxCliente.Location = new System.Drawing.Point(85, 101);
+            this.txtBoxCliente.Name = "txtBoxCliente";
+            this.txtBoxCliente.Size = new System.Drawing.Size(197, 20);
+            this.txtBoxCliente.TabIndex = 31;
+            // 
+            // lblCliente
+            // 
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Location = new System.Drawing.Point(6, 97);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(79, 13);
+            this.lblCliente.TabIndex = 30;
+            this.lblCliente.Text = "Nombre Cliente";
+            // 
+            // BotonBuscar
+            // 
+            this.BotonBuscar.Location = new System.Drawing.Point(207, 70);
+            this.BotonBuscar.Name = "BotonBuscar";
+            this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.BotonBuscar.TabIndex = 29;
+            this.BotonBuscar.Text = "Buscar";
+            this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
+            // 
+            // lblAtendidoPor
+            // 
+            this.lblAtendidoPor.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblAtendidoPor.Location = new System.Drawing.Point(82, 39);
+            this.lblAtendidoPor.Name = "lblAtendidoPor";
+            this.lblAtendidoPor.Size = new System.Drawing.Size(200, 16);
+            this.lblAtendidoPor.TabIndex = 28;
             // 
             // label8
             // 
@@ -191,7 +224,6 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.BotonAniadir);
             this.panel1.Controls.Add(this.BotonEliminar);
             this.panel1.Controls.Add(this.BotonFacturar);
@@ -200,16 +232,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(184, 253);
             this.panel1.TabIndex = 47;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(56, 199);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "conectar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BotonAniadir
             // 
@@ -355,40 +377,6 @@
             this.ValorTotal.HeaderText = "Valor Total";
             this.ValorTotal.Name = "ValorTotal";
             // 
-            // lblAtendidoPor
-            // 
-            this.lblAtendidoPor.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblAtendidoPor.Location = new System.Drawing.Point(82, 39);
-            this.lblAtendidoPor.Name = "lblAtendidoPor";
-            this.lblAtendidoPor.Size = new System.Drawing.Size(200, 16);
-            this.lblAtendidoPor.TabIndex = 28;
-            // 
-            // BotonBuscar
-            // 
-            this.BotonBuscar.Location = new System.Drawing.Point(207, 70);
-            this.BotonBuscar.Name = "BotonBuscar";
-            this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
-            this.BotonBuscar.TabIndex = 29;
-            this.BotonBuscar.Text = "Buscar";
-            this.BotonBuscar.UseVisualStyleBackColor = true;
-            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
-            // 
-            // lblCliente
-            // 
-            this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(6, 97);
-            this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(79, 13);
-            this.lblCliente.TabIndex = 30;
-            this.lblCliente.Text = "Nombre Cliente";
-            // 
-            // txtBoxCliente
-            // 
-            this.txtBoxCliente.Location = new System.Drawing.Point(85, 101);
-            this.txtBoxCliente.Name = "txtBoxCliente";
-            this.txtBoxCliente.Size = new System.Drawing.Size(197, 20);
-            this.txtBoxCliente.TabIndex = 31;
-            // 
             // FormGenerarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,7 +431,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblAtendidoPor;
         private System.Windows.Forms.TextBox txtBoxCliente;
         private System.Windows.Forms.Label lblCliente;
