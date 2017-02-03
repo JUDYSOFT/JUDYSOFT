@@ -36,7 +36,10 @@ namespace JUDYSOFT
 
         private void FormGenerarFactura_Load(object sender, EventArgs e)
         {
-            String cmd = "SELECT * FROM Usuarios WHERE id_usuario= " + frmLogin.Codigo;
+            String cmd = "SELECT * FROM usuario WHERE idUsuario= " + frmLogin.Codigo;
+            DataSet DS = Utilidades.Ejecutar(cmd);
+            lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NombreUsuario"].ToString().Trim();
+
 
         }
 

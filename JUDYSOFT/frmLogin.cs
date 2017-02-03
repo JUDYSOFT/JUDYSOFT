@@ -45,6 +45,7 @@ namespace JUDYSOFT
                 DataSet ds = Utilidades.Ejecutar(CMD);
                 string cuenta = ds.Tables[0].Rows[0]["Cuenta"].ToString().Trim();
                 string psd = ds.Tables[0].Rows[0]["password"].ToString().Trim();
+                Codigo = ds.Tables[0].Rows[0]["idUsuario"].ToString().Trim();
 
                 if (cuenta == txtuser.Text.Trim() && psd == txtpass.Text.Trim())
                 {
