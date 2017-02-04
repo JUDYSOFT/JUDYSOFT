@@ -50,11 +50,17 @@ namespace JUDYSOFT
         {
 
         }
-
-        private void FormReservas_FormClosing(object sender, FormClosingEventArgs e)
+            
+        private void FormReservas_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem", "consultarToolStripMenuItem");
+            DialogResult confirmacion = MessageBox.Show("Esta seguro que desea salir", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
 
+            if (confirmacion == System.Windows.Forms.DialogResult.OK)
+            {
+                this.Dispose();
+                MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem", "reservacionesToolStripMenuItem");
+            }
         }
+
     }
 }

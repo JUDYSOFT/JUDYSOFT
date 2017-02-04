@@ -266,20 +266,6 @@ namespace JUDYSOFT
 
         }
 
-
-        private void fmrAdministracionHabitaciones_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem", "consultarToolStripMenuItem");
-            
-            DialogResult confirmacion = MessageBox.Show("Está seguro que desea Salir?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-
-            if (confirmacion == System.Windows.Forms.DialogResult.OK)
-            {
-                this.Dispose();
-            }
-            
-        }
-
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -361,11 +347,24 @@ namespace JUDYSOFT
             frmOpcion.Show();
         }
 
-  /*      private void btnh20_Click_1(object sender, EventArgs e)
+        private void frmAdministracionHabitaciones_FormClosed(object sender, FormClosedEventArgs e)
         {
+            DialogResult confirmacion = MessageBox.Show("Esta seguro que desea salir", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
 
+            if (confirmacion == System.Windows.Forms.DialogResult.OK)
+            {
+                this.Dispose();
+                MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem", "consultarToolStripMenuItem");
+            }
         }
-        */
+            
+        }
+
+        /*      private void btnh20_Click_1(object sender, EventArgs e)
+              {
+
+              }
+              */
 
 
         /*private void button2_MouseHover(object sender, System.EventArgs e)
@@ -395,7 +394,5 @@ namespace JUDYSOFT
             btnh16.TextImageRelation = TextImageRelation.TextAboveImage;
 
         }*/
-
-    }
 }
 
