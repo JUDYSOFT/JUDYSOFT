@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtBoxCliente = new System.Windows.Forms.TextBox();
             this.lblCliente = new System.Windows.Forms.Label();
@@ -62,10 +64,15 @@
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtCantidad = new Libreria.ErrorTxtBox();
+            this.txtValUni = new Libreria.ErrorTxtBox();
+            this.txtDescripcion = new Libreria.ErrorTxtBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -228,7 +235,7 @@
             this.panel1.Controls.Add(this.BotonEliminar);
             this.panel1.Controls.Add(this.BotonFacturar);
             this.panel1.Controls.Add(this.BotonSalir);
-            this.panel1.Location = new System.Drawing.Point(481, 138);
+            this.panel1.Location = new System.Drawing.Point(481, 167);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(184, 253);
             this.panel1.TabIndex = 47;
@@ -283,7 +290,7 @@
             this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Location = new System.Drawing.Point(9, 138);
+            this.panel3.Location = new System.Drawing.Point(9, 167);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(466, 312);
             this.panel3.TabIndex = 49;
@@ -346,6 +353,10 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cantidad,
@@ -354,6 +365,8 @@
             this.ValorTotal});
             this.dataGridView1.Location = new System.Drawing.Point(9, 12);
             this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(443, 174);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -377,11 +390,42 @@
             this.ValorTotal.HeaderText = "Valor Total";
             this.ValorTotal.Name = "ValorTotal";
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(57, 138);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
+            this.txtCantidad.TabIndex = 45;
+            this.txtCantidad.Validar = true;
+            // 
+            // txtValUni
+            // 
+            this.txtValUni.Location = new System.Drawing.Point(269, 138);
+            this.txtValUni.Name = "txtValUni";
+            this.txtValUni.Size = new System.Drawing.Size(91, 20);
+            this.txtValUni.TabIndex = 51;
+            this.txtValUni.Validar = true;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(163, 138);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtDescripcion.TabIndex = 52;
+            this.txtDescripcion.Validar = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormGenerarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 470);
+            this.ClientSize = new System.Drawing.Size(709, 501);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtValUni);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -395,7 +439,9 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -435,5 +481,9 @@
         private System.Windows.Forms.TextBox txtBoxCliente;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Button BotonBuscar;
+        private Libreria.ErrorTxtBox txtCantidad;
+        private Libreria.ErrorTxtBox txtValUni;
+        private Libreria.ErrorTxtBox txtDescripcion;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

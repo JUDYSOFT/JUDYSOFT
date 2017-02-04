@@ -43,12 +43,57 @@ namespace JUDYSOFT
 
         }
 
+        public static int contFila = 0;
         private void BotonAniadir_Click(object sender, EventArgs e)
         {
-            FormAgregarProductoAFactura agregarProducto = new FormAgregarProductoAFactura();
-            agregarProducto.StartPosition = FormStartPosition.CenterScreen;
-            agregarProducto.Show();
-            this.Hide();
+            //FormAgregarProductoAFactura agregarProducto = new FormAgregarProductoAFactura();
+            //agregarProducto.StartPosition = FormStartPosition.CenterScreen;
+            //agregarProducto.Show();
+            //this.Hide();
+
+            if(Utilidades.ValidarFormulario(this,errorProvider1) == false)
+            {
+                bool existencia = false;
+                int numFila = 0;
+
+                if(contFila == 0)
+                {
+                    dataGridView1.Rows.Add(txtCantidad.Text, txtDescripcion.Text, txtValUni.Text);
+                    double total = Convert.ToDouble(dataGridView1.Rows[contFila].Cells[0].Value) * Convert.ToDouble(dataGridView1.Rows[contFila].Cells[2].Value);
+                    dataGridView1.Rows[contFila].Cells[3].Value = total;
+
+                    contFila++;
+                }
+                else
+                {
+                    foreach(DataGridViewRow fila in dataGridView1.Rows)
+                    {
+                        if(fila.Cells[1].ToString().CompareTo(txtDescripcion.Text) == 0)
+                        {
+                            existencia = true;
+                            numFila = fila.Index;
+
+                        }
+                    }
+
+                    if(existencia == true)
+                    {
+                        dataGridView1.Rows[numFila].Cells[0].Value = (Convert.ToDouble(txtCantidad.Text) + Convert.ToDouble(dataGridView1.Rows[numFila].Cells[0].Value)).ToString();
+                        double total = Convert.ToDouble(dataGridView1.Rows[numFila].Cells[0].Value) * Convert.ToDouble(dataGridView1.Rows[numFila].Cells[2].Value);
+
+                        dataGridView1.Rows[numFila].Cells[3].Value = total;
+
+                    }else
+                    {
+                        dataGridView1.Rows.Add(txtCantidad.Text, txtDescripcion.Text, txtValUni.Text);
+                        double total = Convert.ToDouble(dataGridView1.Rows[contFila].Cells[0].Value) * Convert.ToDouble(dataGridView1.Rows[contFila].Cells[2].Value);
+                        dataGridView1.Rows[contFila].Cells[3].Value = total;
+
+                        contFila++;
+                    }
+
+                }
+            }
 
         }
 
@@ -75,8 +120,8 @@ namespace JUDYSOFT
             con.Close();*/
 
 
-        }
 
+        }
         private void BotonBuscar_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrEmpty(txtidCliente.Text.Trim()) == false) {

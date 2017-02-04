@@ -91,9 +91,9 @@
             // 
             // panel3
           
-            this.panel3.Controls.Add(this.radioButtonNo);
-            this.panel3.Controls.Add(this.radioButtonSi);
-            this.panel3.Controls.Add(this.label15);
+          //  this.panel3.Controls.Add(this.radioButtonNo);
+            //this.panel3.Controls.Add(this.radioButtonSi);
+            //this.panel3.Controls.Add(this.label15);
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 
             this.panel3.Controls.Add(this.comboBoxCargo);
@@ -393,7 +393,7 @@
             // panel1
             // 
 
-            this.panel1.Controls.Add(this.radioButton1);
+            //this.panel1.Controls.Add(this.radioButton1);
 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 
