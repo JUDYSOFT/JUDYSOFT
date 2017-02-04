@@ -91,6 +91,7 @@ namespace JUDYSOFT
                 } catch(Exception er)
                 {
                     MessageBox.Show("Ha ocurrido un problema. \n" + er.Message);
+
                 }
            }
         }
