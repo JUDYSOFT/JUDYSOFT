@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
 namespace Libreria
@@ -23,5 +24,32 @@ namespace Libreria
 
             return DS;
         }
+
+        public static Boolean ValidarFormulario(Control Objeto, ErrorProvider ErrorProvider)
+        {
+            Boolean band = false;
+
+            foreach(Control Item in Objeto.Controls)
+            {
+                if (Item is ErrorTxtBox)
+                {
+                    ErrorTxtBox obj = (ErrorTxtBox)Item;
+                    if(obj.Validar == true)
+                    {
+                        if (string.IsNullOrEmpty(obj.Text.Trim()))
+                        {
+                            ErrorProvider.SetError(obj, "No puede estar vacío");
+                            band = true;
+                        }else
+                        {
+                            ErrorProvider.SetError(obj,"");
+
+                        }
+                    }
+                }
+            }
+
+            return band;
+        } 
     }
 }

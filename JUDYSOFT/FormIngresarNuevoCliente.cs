@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Libreria;
+
 namespace JUDYSOFT
 {
     public partial class FormIngresarNuevoCliente : Form
@@ -20,6 +22,7 @@ namespace JUDYSOFT
         private void button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
