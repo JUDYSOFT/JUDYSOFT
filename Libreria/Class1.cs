@@ -48,7 +48,7 @@ namespace Libreria
                     }
                 }
             }
-
+        
             return band;
         } 
     }
