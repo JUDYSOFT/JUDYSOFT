@@ -40,29 +40,12 @@ namespace JUDYSOFT
        
         private void btningresar_Click(object sender, EventArgs e)
         {
-            try {
-                string CMD = string.Format("SELECT * FROM usuario WHERE Cuenta = '{0}' AND password = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
-                DataSet ds = Utilidades.Ejecutar(CMD);
-                string cuenta = ds.Tables[0].Rows[0]["Cuenta"].ToString().Trim();
-                string psd = ds.Tables[0].Rows[0]["password"].ToString().Trim();
-                Codigo = ds.Tables[0].Rows[0]["idUsuario"].ToString().Trim();
-
-                if (cuenta == txtuser.Text.Trim() && psd == txtpass.Text.Trim())
-                {
-                    frmMenuPrincipal frmHab = new frmMenuPrincipal();
-                    this.Visible = false;
-                    frmHab.Show();
-                    this.FormClosing += Form1_FormClosing;
-                }
-                
-
-
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-          
+            frmMenuPrincipal frm = new frmMenuPrincipal();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+            
+            
 
 
         }

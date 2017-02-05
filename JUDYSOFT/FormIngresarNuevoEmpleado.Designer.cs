@@ -38,6 +38,7 @@
             this.textBoxSalario = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBoxCiudad = new System.Windows.Forms.ComboBox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBoxCiudad = new System.Windows.Forms.ComboBox();
             this.panelNuevoEmpleado.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -90,12 +90,8 @@
             this.panelNuevoEmpleado.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNuevoEmpleado_Paint);
             // 
             // panel3
-          
-          //  this.panel3.Controls.Add(this.radioButtonNo);
-            //this.panel3.Controls.Add(this.radioButtonSi);
-            //this.panel3.Controls.Add(this.label15);
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.comboBoxCargo);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.dateTimePickerFechaDeEntrada);
@@ -162,10 +158,8 @@
             // 
             // panel2
             // 
-
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.comboBoxCiudad);
-
             this.panel2.Controls.Add(this.radioButton3);
             this.panel2.Controls.Add(this.radioButton2);
             this.panel2.Controls.Add(this.label17);
@@ -191,6 +185,14 @@
             this.panel2.Size = new System.Drawing.Size(732, 211);
             this.panel2.TabIndex = 36;
             // 
+            // comboBoxCiudad
+            // 
+            this.comboBoxCiudad.FormattingEnabled = true;
+            this.comboBoxCiudad.Location = new System.Drawing.Point(248, 75);
+            this.comboBoxCiudad.Name = "comboBoxCiudad";
+            this.comboBoxCiudad.Size = new System.Drawing.Size(177, 21);
+            this.comboBoxCiudad.TabIndex = 44;
+            // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
@@ -201,6 +203,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Femenino";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -212,6 +215,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Masculino";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // label17
             // 
@@ -241,9 +245,6 @@
             // comboBoxProvincia
             // 
             this.comboBoxProvincia.FormattingEnabled = true;
-
-            this.comboBoxProvincia.Location = new System.Drawing.Point(19, 84);
-
             this.comboBoxProvincia.Items.AddRange(new object[] {
             "Azuay",
             "Bolivar",
@@ -270,7 +271,6 @@
             "Tungurahua",
             "Zamora Chinchipe"});
             this.comboBoxProvincia.Location = new System.Drawing.Point(14, 75);
-
             this.comboBoxProvincia.Name = "comboBoxProvincia";
             this.comboBoxProvincia.Size = new System.Drawing.Size(200, 21);
             this.comboBoxProvincia.TabIndex = 38;
@@ -393,10 +393,7 @@
             // panel1
             // 
 
-            //this.panel1.Controls.Add(this.radioButton1);
-
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-
             this.panel1.Controls.Add(this.textBoxIdentificacion);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.comboBoxTipoDeIdentificacion);
@@ -471,14 +468,6 @@
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // comboBoxCiudad
-            // 
-            this.comboBoxCiudad.FormattingEnabled = true;
-            this.comboBoxCiudad.Location = new System.Drawing.Point(248, 75);
-            this.comboBoxCiudad.Name = "comboBoxCiudad";
-            this.comboBoxCiudad.Size = new System.Drawing.Size(177, 21);
-            this.comboBoxCiudad.TabIndex = 44;
             // 
             // FormIngresarNuevoEmpleado
             // 
