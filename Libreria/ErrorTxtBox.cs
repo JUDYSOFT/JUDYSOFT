@@ -1,26 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace JUDYSOFT
+namespace Libreria
 {
-    public partial class Reporte : Form
+    public partial class ErrorTxtBox : TextBox
     {
-        public Reporte()
+        public ErrorTxtBox()
         {
             InitializeComponent();
         }
 
-        private void Reporte_Load(object sender, EventArgs e)
+        public Boolean Validar
         {
-
-            this.reportViewer1.RefreshReport();
+            set;
+            get;
         }
     }
 }

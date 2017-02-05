@@ -90,7 +90,7 @@
             this.panelNuevoEmpleado.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNuevoEmpleado_Paint);
             // 
             // panel3
-            // 
+
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.comboBoxCargo);
             this.panel3.Controls.Add(this.label14);
@@ -392,6 +392,7 @@
             // 
             // panel1
             // 
+
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.textBoxIdentificacion);
             this.panel1.Controls.Add(this.label2);

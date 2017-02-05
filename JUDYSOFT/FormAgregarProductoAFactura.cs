@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Libreria;
+
 namespace JUDYSOFT
 {
     public partial class FormAgregarProductoAFactura : Form
@@ -24,7 +26,15 @@ namespace JUDYSOFT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            if(dataGridView1.Rows.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -35,6 +45,20 @@ namespace JUDYSOFT
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+     
+
+        private void FormAgregarProductoAFactura_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = LLenarDGv("Producto").Tables[0];
+        }
+
+        public DataSet LLenarDGv(string tabla)
+        {
+            DataSet DS;
+            string cmd = string.Format("SELECT * FROM " + tabla);
+            DS = Utilidades.Ejecutar(cmd);
+            return DS;
         }
     }
 }
