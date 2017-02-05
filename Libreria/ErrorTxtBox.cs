@@ -1,25 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace moduloFacturación
+namespace Libreria
 {
-    public partial class Advertencia : Form
+    public partial class ErrorTxtBox : TextBox
     {
-        public Advertencia()
+        public ErrorTxtBox()
         {
             InitializeComponent();
         }
 
-        private void BotonCancelar_Click(object sender, EventArgs e)
+        public Boolean Validar
         {
-            this.Close();
+            set;
+            get;
         }
     }
 }
