@@ -62,8 +62,7 @@ namespace JUDYSOFT
             this.btnh16 = new System.Windows.Forms.Button();
             this.lblfecha = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnbuscar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -374,8 +373,7 @@ namespace JUDYSOFT
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnbuscar);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Location = new System.Drawing.Point(41, 9);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(290, 42);
@@ -383,21 +381,17 @@ namespace JUDYSOFT
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar";
             // 
-            // btnbuscar
+            // comboBox1
             // 
-            this.btnbuscar.Location = new System.Drawing.Point(205, 13);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(56, 21);
-            this.btnbuscar.TabIndex = 1;
-            this.btnbuscar.Text = "button16";
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(32, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(87, 20);
-            this.textBox1.TabIndex = 0;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Disponible",
+            "Limpieza",
+            "Ocupado"});
+            this.comboBox1.Location = new System.Drawing.Point(103, 17);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(90, 21);
+            this.comboBox1.TabIndex = 0;
             // 
             // frmAdministracionHabitaciones
             // 
@@ -418,7 +412,6 @@ namespace JUDYSOFT
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,10 +435,8 @@ namespace JUDYSOFT
         private System.Windows.Forms.Button btnh18;
         private System.Windows.Forms.Button btnh17;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Label lblh20;
         private System.Windows.Forms.Label lblh19;
         private System.Windows.Forms.Label lblh18;
@@ -459,6 +450,7 @@ namespace JUDYSOFT
         private System.Windows.Forms.Label lblh23;
         private System.Windows.Forms.Label lblh22;
         private System.Windows.Forms.Label lblh21;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
