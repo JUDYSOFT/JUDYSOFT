@@ -115,7 +115,32 @@ namespace JUDYSOFT
 
         private void BotonEliminar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("¿Está seguro de eliminar el objeto?", "Mensaje advertencia", MessageBoxButtons.YesNo);
+            if (contFila > 0)
+            {
+                //MessageBox.Show("¿Está seguro de eliminar el objeto?", "Mensaje advertencia", MessageBoxButtons.YesNo);
+                string message = "¿Está seguro de eliminar el objeto?";
+                string caption = "Advertencia";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    total = total - (Convert.ToDouble(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[4].Value));
+                    txtSubtotal.Text = total.ToString();
+
+                    dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+                    contFila--;
+
+                }
+
+            }
+
+            else
+            {
+                MessageBox.Show("No hay elementos a eliminar.", "Advertencia");
+            }
         }
 
         private void BotonSalir_Click(object sender, EventArgs e)
