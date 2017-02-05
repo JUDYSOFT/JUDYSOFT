@@ -44,6 +44,9 @@ namespace JUDYSOFT
         }
 
         public static int contFila = 0;
+        public static double total;
+
+
         private void BotonAniadir_Click(object sender, EventArgs e)
         {
             //FormAgregarProductoAFactura agregarProducto = new FormAgregarProductoAFactura();
@@ -85,7 +88,7 @@ namespace JUDYSOFT
 
                     }else
                     {
-                        dataGridView1.Rows.Add(txtCantidad.Text, txtDescripcion.Text, txtValUni.Text);
+                        dataGridView1.Rows.Add(txtCodigo.Text,txtCantidad.Text, txtDescripcion.Text, txtValUni.Text);
                         double total = Convert.ToDouble(dataGridView1.Rows[contFila].Cells[1].Value) * Convert.ToDouble(dataGridView1.Rows[contFila].Cells[3].Value);
                         dataGridView1.Rows[contFila].Cells[4].Value = total;
 
@@ -93,6 +96,14 @@ namespace JUDYSOFT
                     }
 
                 }
+
+                total = 0;
+
+                foreach (DataGridViewRow fila in dataGridView1.Rows)
+                {
+                    total += Convert.ToDouble(fila.Cells[4].Value);
+                }
+                txtSubtotal.Text = total.ToString();
             }
 
         }

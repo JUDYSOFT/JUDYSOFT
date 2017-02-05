@@ -57,19 +57,19 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtCantidad = new Libreria.ErrorTxtBox();
             this.txtValUni = new Libreria.ErrorTxtBox();
             this.txtDescripcion = new Libreria.ErrorTxtBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtCodigo = new Libreria.ErrorTxtBox();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCodigo = new Libreria.ErrorTxtBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -289,10 +289,10 @@
             this.panel3.Controls.Add(this.textBox6);
             this.panel3.Controls.Add(this.comboBox2);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.txtSubtotal);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Location = new System.Drawing.Point(9, 167);
+            this.panel3.Location = new System.Drawing.Point(9, 168);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(466, 312);
             this.panel3.TabIndex = 49;
@@ -337,12 +337,12 @@
             this.label11.TabIndex = 3;
             this.label11.Text = "Impuestos";
             // 
-            // textBox2
+            // txtSubtotal
             // 
-            this.textBox2.Location = new System.Drawing.Point(352, 192);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtSubtotal.Location = new System.Drawing.Point(352, 192);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Size = new System.Drawing.Size(100, 20);
+            this.txtSubtotal.TabIndex = 2;
             // 
             // label10
             // 
@@ -383,9 +383,9 @@
             // 
             // txtValUni
             // 
-            this.txtValUni.Location = new System.Drawing.Point(307, 138);
+            this.txtValUni.Location = new System.Drawing.Point(299, 138);
             this.txtValUni.Name = "txtValUni";
-            this.txtValUni.Size = new System.Drawing.Size(71, 20);
+            this.txtValUni.Size = new System.Drawing.Size(79, 20);
             this.txtValUni.TabIndex = 51;
             this.txtValUni.Validar = true;
             // 
@@ -400,6 +400,14 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(63, 138);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(43, 20);
+            this.txtCodigo.TabIndex = 53;
+            this.txtCodigo.Validar = false;
             // 
             // Codigo
             // 
@@ -417,24 +425,19 @@
             // 
             this.Descripción.HeaderText = "Descripción";
             this.Descripción.Name = "Descripción";
+            this.Descripción.Width = 120;
             // 
             // ValorUnitario
             // 
             this.ValorUnitario.HeaderText = "Valor Unitario";
             this.ValorUnitario.Name = "ValorUnitario";
+            this.ValorUnitario.Width = 93;
             // 
             // ValorTotal
             // 
             this.ValorTotal.HeaderText = "Valor Total";
             this.ValorTotal.Name = "ValorTotal";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(63, 138);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(33, 20);
-            this.txtCodigo.TabIndex = 53;
-            this.txtCodigo.Validar = false;
+            this.ValorTotal.Width = 81;
             // 
             // FormGenerarFactura
             // 
@@ -490,7 +493,7 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSubtotal;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblAtendidoPor;
         private System.Windows.Forms.TextBox txtBoxCliente;
@@ -500,11 +503,11 @@
         private Libreria.ErrorTxtBox txtValUni;
         private Libreria.ErrorTxtBox txtDescripcion;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Libreria.ErrorTxtBox txtCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
-        private Libreria.ErrorTxtBox txtCodigo;
     }
 }
