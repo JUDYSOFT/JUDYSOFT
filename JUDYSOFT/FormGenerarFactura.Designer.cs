@@ -60,16 +60,18 @@
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtCantidad = new Libreria.ErrorTxtBox();
-            this.txtValUni = new Libreria.ErrorTxtBox();
-            this.txtDescripcion = new Libreria.ErrorTxtBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtCodigo = new Libreria.ErrorTxtBox();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtCantidad = new Libreria.ErrorTxtBox();
+            this.txtValUni = new Libreria.ErrorTxtBox();
+            this.txtDescripcion = new Libreria.ErrorTxtBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtCodigo = new Libreria.ErrorTxtBox();
+            this.botonListaClientes = new System.Windows.Forms.Button();
+            this.botonListaProductos = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,6 +83,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.botonListaClientes);
             this.panel2.Controls.Add(this.txtBoxCliente);
             this.panel2.Controls.Add(this.lblCliente);
             this.panel2.Controls.Add(this.BotonBuscar);
@@ -120,7 +123,7 @@
             // 
             // BotonBuscar
             // 
-            this.BotonBuscar.Location = new System.Drawing.Point(207, 70);
+            this.BotonBuscar.Location = new System.Drawing.Point(152, 70);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
             this.BotonBuscar.TabIndex = 29;
@@ -156,7 +159,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(392, 94);
+            this.txtTelefono.Location = new System.Drawing.Point(437, 94);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(199, 20);
             this.txtTelefono.TabIndex = 25;
@@ -164,7 +167,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(330, 101);
+            this.label6.Location = new System.Drawing.Point(369, 101);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 24;
@@ -172,7 +175,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(392, 42);
+            this.dateTimePicker1.Location = new System.Drawing.Point(437, 42);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 23;
@@ -180,7 +183,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(330, 49);
+            this.label5.Location = new System.Drawing.Point(384, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 22;
@@ -188,7 +191,7 @@
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(392, 68);
+            this.txtDireccion.Location = new System.Drawing.Point(437, 67);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(197, 20);
             this.txtDireccion.TabIndex = 21;
@@ -196,7 +199,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(330, 75);
+            this.label4.Location = new System.Drawing.Point(369, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 20;
@@ -233,6 +236,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.botonListaProductos);
             this.panel1.Controls.Add(this.BotonAniadir);
             this.panel1.Controls.Add(this.BotonEliminar);
             this.panel1.Controls.Add(this.BotonFacturar);
@@ -264,7 +268,7 @@
             // 
             // BotonFacturar
             // 
-            this.BotonFacturar.Location = new System.Drawing.Point(22, 119);
+            this.BotonFacturar.Location = new System.Drawing.Point(19, 164);
             this.BotonFacturar.Name = "BotonFacturar";
             this.BotonFacturar.Size = new System.Drawing.Size(143, 23);
             this.BotonFacturar.TabIndex = 2;
@@ -273,7 +277,7 @@
             // 
             // BotonSalir
             // 
-            this.BotonSalir.Location = new System.Drawing.Point(25, 148);
+            this.BotonSalir.Location = new System.Drawing.Point(22, 193);
             this.BotonSalir.Name = "BotonSalir";
             this.BotonSalir.Size = new System.Drawing.Size(140, 25);
             this.BotonSalir.TabIndex = 44;
@@ -374,6 +378,36 @@
             this.dataGridView1.Size = new System.Drawing.Size(443, 174);
             this.dataGridView1.TabIndex = 0;
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 50;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 60;
+            // 
+            // Descripción
+            // 
+            this.Descripción.HeaderText = "Descripción";
+            this.Descripción.Name = "Descripción";
+            this.Descripción.Width = 120;
+            // 
+            // ValorUnitario
+            // 
+            this.ValorUnitario.HeaderText = "Valor Unitario";
+            this.ValorUnitario.Name = "ValorUnitario";
+            this.ValorUnitario.Width = 93;
+            // 
+            // ValorTotal
+            // 
+            this.ValorTotal.HeaderText = "Valor Total";
+            this.ValorTotal.Name = "ValorTotal";
+            this.ValorTotal.Width = 81;
+            // 
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(112, 138);
@@ -410,35 +444,24 @@
             this.txtCodigo.TabIndex = 53;
             this.txtCodigo.Validar = false;
             // 
-            // Codigo
+            // botonListaClientes
             // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 50;
+            this.botonListaClientes.Location = new System.Drawing.Point(242, 70);
+            this.botonListaClientes.Name = "botonListaClientes";
+            this.botonListaClientes.Size = new System.Drawing.Size(98, 22);
+            this.botonListaClientes.TabIndex = 32;
+            this.botonListaClientes.Text = "Lista de Clientes";
+            this.botonListaClientes.UseVisualStyleBackColor = true;
             // 
-            // Cantidad
+            // botonListaProductos
             // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 60;
-            // 
-            // Descripción
-            // 
-            this.Descripción.HeaderText = "Descripción";
-            this.Descripción.Name = "Descripción";
-            this.Descripción.Width = 120;
-            // 
-            // ValorUnitario
-            // 
-            this.ValorUnitario.HeaderText = "Valor Unitario";
-            this.ValorUnitario.Name = "ValorUnitario";
-            this.ValorUnitario.Width = 93;
-            // 
-            // ValorTotal
-            // 
-            this.ValorTotal.HeaderText = "Valor Total";
-            this.ValorTotal.Name = "ValorTotal";
-            this.ValorTotal.Width = 81;
+            this.botonListaProductos.Location = new System.Drawing.Point(22, 119);
+            this.botonListaProductos.Name = "botonListaProductos";
+            this.botonListaProductos.Size = new System.Drawing.Size(142, 39);
+            this.botonListaProductos.TabIndex = 45;
+            this.botonListaProductos.Text = "Lista de Servicios/Productos";
+            this.botonListaProductos.UseVisualStyleBackColor = true;
+            this.botonListaProductos.Click += new System.EventHandler(this.botonListaProductos_Click);
             // 
             // FormGenerarFactura
             // 
@@ -510,5 +533,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
+        private System.Windows.Forms.Button botonListaClientes;
+        private System.Windows.Forms.Button botonListaProductos;
     }
 }

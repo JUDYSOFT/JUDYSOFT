@@ -49,11 +49,7 @@ namespace JUDYSOFT
 
         private void BotonAniadir_Click(object sender, EventArgs e)
         {
-            //FormAgregarProductoAFactura agregarProducto = new FormAgregarProductoAFactura();
-            //agregarProducto.StartPosition = FormStartPosition.CenterScreen;
-            //agregarProducto.Show();
-            //this.Hide();
-
+            
             if(Utilidades.ValidarFormulario(this,errorProvider1) == false)
             {
                 bool existencia = false;
@@ -175,6 +171,31 @@ namespace JUDYSOFT
 
                 }
            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botonListaProductos_Click(object sender, EventArgs e)
+        {
+            FormAgregarProductoAFactura agregarProducto = new FormAgregarProductoAFactura();
+            agregarProducto.StartPosition = FormStartPosition.CenterScreen;
+            agregarProducto.ShowDialog();
+
+            if(agregarProducto.DialogResult == DialogResult.OK)
+            {
+                txtCodigo.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                txtDescripcion.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
+                txtValUni.Text = agregarProducto.dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+
+                txtCantidad.Focus();
+
+            }
+
+
+            //this.Hide();
         }
     }
 }
