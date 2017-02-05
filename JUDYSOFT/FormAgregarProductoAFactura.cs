@@ -46,14 +46,7 @@ namespace JUDYSOFT
         {
 
         }
-
-       public static int controw;
-        private void bttmSelect_Click(object sender, EventArgs e)
-        {
-
-            dataGridView1.Rows.Add(txtCodProduct.Text, txtProductName.Text, txtPrice.Text);
-
-        }
+     
 
         private void FormAgregarProductoAFactura_Load(object sender, EventArgs e)
         {
