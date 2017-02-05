@@ -107,6 +107,12 @@
     <Compile Include="FormIngresarNuevoEmpleado.Designer.cs">
       <DependentUpon>FormIngresarNuevoEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaClientes.Designer.cs">
+      <DependentUpon>FormListaClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormModificarDatosDeCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormIngresarNuevoEmpleado.resx">
       <DependentUpon>FormIngresarNuevoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListaClientes.resx">
+      <DependentUpon>FormListaClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormModificarDatosDeCliente.resx">
       <DependentUpon>FormModificarDatosDeCliente.cs</DependentUpon>

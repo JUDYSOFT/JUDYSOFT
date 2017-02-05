@@ -205,5 +205,24 @@ namespace JUDYSOFT
 
 
         }
+
+        private void botonListaClientes_Click(object sender, EventArgs e)
+        {
+            FormListaClientes nuevaLista = new FormListaClientes();
+            nuevaLista.StartPosition = FormStartPosition.CenterScreen;
+            nuevaLista.ShowDialog();
+
+
+            if (nuevaLista.DialogResult == DialogResult.OK)
+            {
+                txtidCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                txtBoxCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString() + nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                txtDireccion.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
+                txtTelefono.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
+
+                txtCodigo.Focus();
+
+            }
+        }
     }
 }

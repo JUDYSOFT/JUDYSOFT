@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.botonListaClientes = new System.Windows.Forms.Button();
             this.txtBoxCliente = new System.Windows.Forms.TextBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.BotonBuscar = new System.Windows.Forms.Button();
@@ -47,6 +48,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.botonNuevaFactura = new System.Windows.Forms.Button();
+            this.botonListaProductos = new System.Windows.Forms.Button();
             this.BotonAniadir = new System.Windows.Forms.Button();
             this.BotonEliminar = new System.Windows.Forms.Button();
             this.BotonFacturar = new System.Windows.Forms.Button();
@@ -70,9 +73,6 @@
             this.txtDescripcion = new Libreria.ErrorTxtBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtCodigo = new Libreria.ErrorTxtBox();
-            this.botonListaClientes = new System.Windows.Forms.Button();
-            this.botonListaProductos = new System.Windows.Forms.Button();
-            this.botonNuevaFactura = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -105,6 +105,16 @@
             this.panel2.Size = new System.Drawing.Size(656, 134);
             this.panel2.TabIndex = 48;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // botonListaClientes
+            // 
+            this.botonListaClientes.Location = new System.Drawing.Point(242, 70);
+            this.botonListaClientes.Name = "botonListaClientes";
+            this.botonListaClientes.Size = new System.Drawing.Size(98, 22);
+            this.botonListaClientes.TabIndex = 32;
+            this.botonListaClientes.Text = "Lista de Clientes";
+            this.botonListaClientes.UseVisualStyleBackColor = true;
+            this.botonListaClientes.Click += new System.EventHandler(this.botonListaClientes_Click);
             // 
             // txtBoxCliente
             // 
@@ -248,6 +258,26 @@
             this.panel1.Size = new System.Drawing.Size(184, 279);
             this.panel1.TabIndex = 47;
             // 
+            // botonNuevaFactura
+            // 
+            this.botonNuevaFactura.Location = new System.Drawing.Point(40, 13);
+            this.botonNuevaFactura.Name = "botonNuevaFactura";
+            this.botonNuevaFactura.Size = new System.Drawing.Size(99, 52);
+            this.botonNuevaFactura.TabIndex = 46;
+            this.botonNuevaFactura.Text = "Nueva Factura";
+            this.botonNuevaFactura.UseVisualStyleBackColor = true;
+            this.botonNuevaFactura.Click += new System.EventHandler(this.botonNuevaFactura_Click);
+            // 
+            // botonListaProductos
+            // 
+            this.botonListaProductos.Location = new System.Drawing.Point(22, 153);
+            this.botonListaProductos.Name = "botonListaProductos";
+            this.botonListaProductos.Size = new System.Drawing.Size(142, 39);
+            this.botonListaProductos.TabIndex = 45;
+            this.botonListaProductos.Text = "Lista de Servicios/Productos";
+            this.botonListaProductos.UseVisualStyleBackColor = true;
+            this.botonListaProductos.Click += new System.EventHandler(this.botonListaProductos_Click);
+            // 
             // BotonAniadir
             // 
             this.BotonAniadir.Location = new System.Drawing.Point(22, 85);
@@ -375,8 +405,8 @@
             this.ValorTotal});
             this.dataGridView1.Location = new System.Drawing.Point(9, 12);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Size = new System.Drawing.Size(443, 174);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -444,36 +474,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(43, 20);
             this.txtCodigo.TabIndex = 53;
-            this.txtCodigo.Validar = false;
-            // 
-            // botonListaClientes
-            // 
-            this.botonListaClientes.Location = new System.Drawing.Point(242, 70);
-            this.botonListaClientes.Name = "botonListaClientes";
-            this.botonListaClientes.Size = new System.Drawing.Size(98, 22);
-            this.botonListaClientes.TabIndex = 32;
-            this.botonListaClientes.Text = "Lista de Clientes";
-            this.botonListaClientes.UseVisualStyleBackColor = true;
-            // 
-            // botonListaProductos
-            // 
-            this.botonListaProductos.Location = new System.Drawing.Point(22, 153);
-            this.botonListaProductos.Name = "botonListaProductos";
-            this.botonListaProductos.Size = new System.Drawing.Size(142, 39);
-            this.botonListaProductos.TabIndex = 45;
-            this.botonListaProductos.Text = "Lista de Servicios/Productos";
-            this.botonListaProductos.UseVisualStyleBackColor = true;
-            this.botonListaProductos.Click += new System.EventHandler(this.botonListaProductos_Click);
-            // 
-            // botonNuevaFactura
-            // 
-            this.botonNuevaFactura.Location = new System.Drawing.Point(40, 13);
-            this.botonNuevaFactura.Name = "botonNuevaFactura";
-            this.botonNuevaFactura.Size = new System.Drawing.Size(99, 52);
-            this.botonNuevaFactura.TabIndex = 46;
-            this.botonNuevaFactura.Text = "Nueva Factura";
-            this.botonNuevaFactura.UseVisualStyleBackColor = true;
-            this.botonNuevaFactura.Click += new System.EventHandler(this.botonNuevaFactura_Click);
+            this.txtCodigo.Validar = true;
             // 
             // FormGenerarFactura
             // 
