@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace moduloFacturación
+namespace JUDYSOFT
 {
     public partial class Reporte : Form
     {
@@ -21,11 +21,6 @@ namespace moduloFacturación
         {
 
             this.reportViewer1.RefreshReport();
-        }
-
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

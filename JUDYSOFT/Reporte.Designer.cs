@@ -1,4 +1,4 @@
-﻿namespace moduloFacturación
+﻿namespace JUDYSOFT
 {
     partial class Reporte
     {
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
@@ -37,15 +36,14 @@
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(884, 733);
+            this.reportViewer1.Size = new System.Drawing.Size(884, 741);
             this.reportViewer1.TabIndex = 0;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // Reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 733);
+            this.ClientSize = new System.Drawing.Size(884, 741);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Reporte";
             this.Text = "Reporte";
@@ -56,7 +54,6 @@
 
         #endregion
 
-        private System.DirectoryServices.DirectoryEntry directoryEntry1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
