@@ -230,7 +230,7 @@ namespace JUDYSOFT
         }
         double montoTotal;
         private void comboBoxTaxes_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        { 
             if(comboBoxTaxes.SelectedIndex == 0)
             {
                 txtImpuesto.Text = "0,12";
