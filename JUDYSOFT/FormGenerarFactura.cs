@@ -196,8 +196,11 @@ namespace JUDYSOFT
             txtSubtotal.Text = "";
             txtTelefono.Text = "";
             txtValUni.Text = "";
+            txtImpuesto.Text = "";
+            txtTotal.Text = ""; 
             lblCliente.Text = "";
 
+            comboBoxTaxes.SelectedIndex = -1;
             dataGridView1.Rows.Clear();
             contFila = 0;
             total = 0;
@@ -228,16 +231,20 @@ namespace JUDYSOFT
         double montoTotal;
         private void comboBoxTaxes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBoxTaxes.SelectedItem.ToString() == "12%")
+            if(comboBoxTaxes.SelectedIndex == 0)
             {
                 txtImpuesto.Text = "0,12";
                 
                 CalculoMontoTotal(txtImpuesto.Text, txtSubtotal.Text);
             }
-            else
+            else if(comboBoxTaxes.SelectedIndex == 1)
             {
                 txtImpuesto.Text = "0,14";
                 CalculoMontoTotal(txtImpuesto.Text, txtSubtotal.Text);
+            }
+            else
+            {
+                return;
             }
         }
 
