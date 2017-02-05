@@ -144,16 +144,6 @@ namespace JUDYSOFT
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            /*SqlConnection con = new SqlConnection("Data Source=LENOVO-PC\\SQLEXPRESS;Initial Catalog=Administracion;Integrated Security=True");
-            con.Open();
-            MessageBox.Show("conexion exitosa");
-            con.Close();*/
-
-
-
-        }
         private void BotonBuscar_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrEmpty(txtidCliente.Text.Trim()) == false) {
@@ -173,10 +163,6 @@ namespace JUDYSOFT
            }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void botonListaProductos_Click(object sender, EventArgs e)
         {
@@ -188,7 +174,7 @@ namespace JUDYSOFT
             {
                 txtCodigo.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
                 txtDescripcion.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
-                txtValUni.Text = agregarProducto.dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                txtValUni.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
 
                 txtCantidad.Focus();
 
@@ -196,6 +182,28 @@ namespace JUDYSOFT
 
 
             //this.Hide();
+        }
+
+        private void botonNuevaFactura_Click(object sender, EventArgs e)
+        {
+            txtCantidad.Text = "";
+            txtCodigo.Text = "";
+            txtDescripcion.Text = "";
+            txtDireccion.Text = "";
+            txtidCliente.Text = "";
+            txtBoxCliente.Text = "";
+            txtSubtotal.Text = "";
+            txtTelefono.Text = "";
+            txtValUni.Text = "";
+            lblCliente.Text = "";
+
+            dataGridView1.Rows.Clear();
+            contFila = 0;
+            total = 0;
+
+            txtidCliente.Focus();
+
+
         }
     }
 }

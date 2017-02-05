@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtBoxCliente = new System.Windows.Forms.TextBox();
             this.lblCliente = new System.Windows.Forms.Label();
@@ -72,6 +72,7 @@
             this.txtCodigo = new Libreria.ErrorTxtBox();
             this.botonListaClientes = new System.Windows.Forms.Button();
             this.botonListaProductos = new System.Windows.Forms.Button();
+            this.botonNuevaFactura = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -236,6 +237,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.botonNuevaFactura);
             this.panel1.Controls.Add(this.botonListaProductos);
             this.panel1.Controls.Add(this.BotonAniadir);
             this.panel1.Controls.Add(this.BotonEliminar);
@@ -243,12 +245,12 @@
             this.panel1.Controls.Add(this.BotonSalir);
             this.panel1.Location = new System.Drawing.Point(481, 167);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(184, 253);
+            this.panel1.Size = new System.Drawing.Size(184, 279);
             this.panel1.TabIndex = 47;
             // 
             // BotonAniadir
             // 
-            this.BotonAniadir.Location = new System.Drawing.Point(22, 51);
+            this.BotonAniadir.Location = new System.Drawing.Point(22, 85);
             this.BotonAniadir.Name = "BotonAniadir";
             this.BotonAniadir.Size = new System.Drawing.Size(143, 29);
             this.BotonAniadir.TabIndex = 3;
@@ -258,7 +260,7 @@
             // 
             // BotonEliminar
             // 
-            this.BotonEliminar.Location = new System.Drawing.Point(22, 86);
+            this.BotonEliminar.Location = new System.Drawing.Point(22, 120);
             this.BotonEliminar.Name = "BotonEliminar";
             this.BotonEliminar.Size = new System.Drawing.Size(143, 27);
             this.BotonEliminar.TabIndex = 4;
@@ -268,7 +270,7 @@
             // 
             // BotonFacturar
             // 
-            this.BotonFacturar.Location = new System.Drawing.Point(19, 164);
+            this.BotonFacturar.Location = new System.Drawing.Point(22, 198);
             this.BotonFacturar.Name = "BotonFacturar";
             this.BotonFacturar.Size = new System.Drawing.Size(143, 23);
             this.BotonFacturar.TabIndex = 2;
@@ -277,7 +279,7 @@
             // 
             // BotonSalir
             // 
-            this.BotonSalir.Location = new System.Drawing.Point(22, 193);
+            this.BotonSalir.Location = new System.Drawing.Point(22, 227);
             this.BotonSalir.Name = "BotonSalir";
             this.BotonSalir.Size = new System.Drawing.Size(140, 25);
             this.BotonSalir.TabIndex = 44;
@@ -373,8 +375,8 @@
             this.ValorTotal});
             this.dataGridView1.Location = new System.Drawing.Point(9, 12);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(443, 174);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -455,13 +457,23 @@
             // 
             // botonListaProductos
             // 
-            this.botonListaProductos.Location = new System.Drawing.Point(22, 119);
+            this.botonListaProductos.Location = new System.Drawing.Point(22, 153);
             this.botonListaProductos.Name = "botonListaProductos";
             this.botonListaProductos.Size = new System.Drawing.Size(142, 39);
             this.botonListaProductos.TabIndex = 45;
             this.botonListaProductos.Text = "Lista de Servicios/Productos";
             this.botonListaProductos.UseVisualStyleBackColor = true;
             this.botonListaProductos.Click += new System.EventHandler(this.botonListaProductos_Click);
+            // 
+            // botonNuevaFactura
+            // 
+            this.botonNuevaFactura.Location = new System.Drawing.Point(40, 13);
+            this.botonNuevaFactura.Name = "botonNuevaFactura";
+            this.botonNuevaFactura.Size = new System.Drawing.Size(99, 52);
+            this.botonNuevaFactura.TabIndex = 46;
+            this.botonNuevaFactura.Text = "Nueva Factura";
+            this.botonNuevaFactura.UseVisualStyleBackColor = true;
+            this.botonNuevaFactura.Click += new System.EventHandler(this.botonNuevaFactura_Click);
             // 
             // FormGenerarFactura
             // 
@@ -535,5 +547,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
         private System.Windows.Forms.Button botonListaClientes;
         private System.Windows.Forms.Button botonListaProductos;
+        private System.Windows.Forms.Button botonNuevaFactura;
     }
 }
