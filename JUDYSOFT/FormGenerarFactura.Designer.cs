@@ -56,9 +56,9 @@
             this.BotonSalir = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtImpuesto = new System.Windows.Forms.TextBox();
+            this.comboBoxTaxes = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -321,9 +321,9 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Controls.Add(this.comboBox2);
+            this.panel3.Controls.Add(this.txtTotal);
+            this.panel3.Controls.Add(this.txtImpuesto);
+            this.panel3.Controls.Add(this.comboBoxTaxes);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.txtSubtotal);
             this.panel3.Controls.Add(this.label10);
@@ -342,27 +342,31 @@
             this.label12.TabIndex = 7;
             this.label12.Text = "Total";
             // 
-            // textBox7
+            // txtTotal
             // 
-            this.textBox7.Location = new System.Drawing.Point(352, 272);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 6;
+            this.txtTotal.Location = new System.Drawing.Point(352, 272);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 6;
             // 
-            // textBox6
+            // txtImpuesto
             // 
-            this.textBox6.Location = new System.Drawing.Point(352, 231);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 5;
+            this.txtImpuesto.Location = new System.Drawing.Point(352, 231);
+            this.txtImpuesto.Name = "txtImpuesto";
+            this.txtImpuesto.Size = new System.Drawing.Size(100, 20);
+            this.txtImpuesto.TabIndex = 5;
             // 
-            // comboBox2
+            // comboBoxTaxes
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(237, 230);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(88, 21);
-            this.comboBox2.TabIndex = 4;
+            this.comboBoxTaxes.FormattingEnabled = true;
+            this.comboBoxTaxes.Items.AddRange(new object[] {
+            "12%",
+            "14%"});
+            this.comboBoxTaxes.Location = new System.Drawing.Point(237, 230);
+            this.comboBoxTaxes.Name = "comboBoxTaxes";
+            this.comboBoxTaxes.Size = new System.Drawing.Size(88, 21);
+            this.comboBoxTaxes.TabIndex = 4;
+            this.comboBoxTaxes.SelectedIndexChanged += new System.EventHandler(this.comboBoxTaxes_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -526,9 +530,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.TextBox txtImpuesto;
+        private System.Windows.Forms.ComboBox comboBoxTaxes;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtSubtotal;
         private System.Windows.Forms.Label label10;

@@ -129,6 +129,7 @@ namespace JUDYSOFT
                     dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
                     contFila--;
 
+
                 }
 
             }
@@ -223,6 +224,27 @@ namespace JUDYSOFT
                 txtCodigo.Focus();
 
             }
+        }
+        double montoTotal;
+        private void comboBoxTaxes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBoxTaxes.SelectedItem.ToString() == "12%")
+            {
+                txtImpuesto.Text = "0,12";
+                
+                CalculoMontoTotal(txtImpuesto.Text, txtSubtotal.Text);
+            }
+            else
+            {
+                txtImpuesto.Text = "0,14";
+                CalculoMontoTotal(txtImpuesto.Text, txtSubtotal.Text);
+            }
+        }
+
+        public void CalculoMontoTotal (string tax, string Subt)
+        {
+            montoTotal = (Convert.ToDouble(Subt) * Convert.ToDouble(tax)) + Convert.ToDouble(Subt);
+            txtTotal.Text = montoTotal.ToString();
         }
     }
 }
