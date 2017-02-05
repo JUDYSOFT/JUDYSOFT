@@ -60,14 +60,16 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCantidad = new Libreria.ErrorTxtBox();
             this.txtValUni = new Libreria.ErrorTxtBox();
             this.txtDescripcion = new Libreria.ErrorTxtBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtCodigo = new Libreria.ErrorTxtBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -359,6 +361,7 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
             this.Cantidad,
             this.Descripción,
             this.ValorUnitario,
@@ -370,10 +373,45 @@
             this.dataGridView1.Size = new System.Drawing.Size(443, 174);
             this.dataGridView1.TabIndex = 0;
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(112, 138);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(59, 20);
+            this.txtCantidad.TabIndex = 45;
+            this.txtCantidad.Validar = true;
+            // 
+            // txtValUni
+            // 
+            this.txtValUni.Location = new System.Drawing.Point(307, 138);
+            this.txtValUni.Name = "txtValUni";
+            this.txtValUni.Size = new System.Drawing.Size(71, 20);
+            this.txtValUni.TabIndex = 51;
+            this.txtValUni.Validar = true;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(177, 138);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(116, 20);
+            this.txtDescripcion.TabIndex = 52;
+            this.txtDescripcion.Validar = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 50;
+            // 
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 60;
             // 
             // Descripción
             // 
@@ -390,39 +428,20 @@
             this.ValorTotal.HeaderText = "Valor Total";
             this.ValorTotal.Name = "ValorTotal";
             // 
-            // txtCantidad
+            // txtCodigo
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(57, 138);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
-            this.txtCantidad.TabIndex = 45;
-            this.txtCantidad.Validar = true;
-            // 
-            // txtValUni
-            // 
-            this.txtValUni.Location = new System.Drawing.Point(269, 138);
-            this.txtValUni.Name = "txtValUni";
-            this.txtValUni.Size = new System.Drawing.Size(91, 20);
-            this.txtValUni.TabIndex = 51;
-            this.txtValUni.Validar = true;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(163, 138);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.txtDescripcion.TabIndex = 52;
-            this.txtDescripcion.Validar = true;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
+            this.txtCodigo.Location = new System.Drawing.Point(63, 138);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(33, 20);
+            this.txtCodigo.TabIndex = 53;
+            this.txtCodigo.Validar = false;
             // 
             // FormGenerarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 501);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtValUni);
             this.Controls.Add(this.txtCantidad);
@@ -464,10 +483,6 @@
         private System.Windows.Forms.MaskedTextBox txtDireccion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ValorUnitario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label12;
@@ -485,5 +500,11 @@
         private Libreria.ErrorTxtBox txtValUni;
         private Libreria.ErrorTxtBox txtDescripcion;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValorUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
+        private Libreria.ErrorTxtBox txtCodigo;
     }
 }

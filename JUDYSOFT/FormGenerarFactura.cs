@@ -58,9 +58,9 @@ namespace JUDYSOFT
 
                 if(contFila == 0)
                 {
-                    dataGridView1.Rows.Add(txtCantidad.Text, txtDescripcion.Text, txtValUni.Text);
-                    double total = Convert.ToDouble(dataGridView1.Rows[contFila].Cells[0].Value) * Convert.ToDouble(dataGridView1.Rows[contFila].Cells[2].Value);
-                    dataGridView1.Rows[contFila].Cells[3].Value = total;
+                    dataGridView1.Rows.Add(txtCodigo.Text,txtCantidad.Text, txtDescripcion.Text, txtValUni.Text);
+                    double total = Convert.ToDouble(dataGridView1.Rows[contFila].Cells[1].Value) * Convert.ToDouble(dataGridView1.Rows[contFila].Cells[3].Value);
+                    dataGridView1.Rows[contFila].Cells[4].Value = total;
 
                     contFila++;
                 }
@@ -68,7 +68,7 @@ namespace JUDYSOFT
                 {
                     foreach(DataGridViewRow fila in dataGridView1.Rows)
                     {
-                        if(fila.Cells[1].ToString().CompareTo(txtDescripcion.Text) == 0)
+                        if(fila.Cells[0].Value.ToString() == txtCodigo.Text)
                         {
                             existencia = true;
                             numFila = fila.Index;
@@ -78,16 +78,16 @@ namespace JUDYSOFT
 
                     if(existencia == true)
                     {
-                        dataGridView1.Rows[numFila].Cells[0].Value = (Convert.ToDouble(txtCantidad.Text) + Convert.ToDouble(dataGridView1.Rows[numFila].Cells[0].Value)).ToString();
-                        double total = Convert.ToDouble(dataGridView1.Rows[numFila].Cells[0].Value) * Convert.ToDouble(dataGridView1.Rows[numFila].Cells[2].Value);
+                        dataGridView1.Rows[numFila].Cells[1].Value = (Convert.ToDouble(txtCantidad.Text) + Convert.ToDouble(dataGridView1.Rows[numFila].Cells[1].Value)).ToString();
+                        double total = Convert.ToDouble(dataGridView1.Rows[numFila].Cells[1].Value) * Convert.ToDouble(dataGridView1.Rows[numFila].Cells[3].Value);
 
-                        dataGridView1.Rows[numFila].Cells[3].Value = total;
+                        dataGridView1.Rows[numFila].Cells[4].Value = total;
 
                     }else
                     {
                         dataGridView1.Rows.Add(txtCantidad.Text, txtDescripcion.Text, txtValUni.Text);
-                        double total = Convert.ToDouble(dataGridView1.Rows[contFila].Cells[0].Value) * Convert.ToDouble(dataGridView1.Rows[contFila].Cells[2].Value);
-                        dataGridView1.Rows[contFila].Cells[3].Value = total;
+                        double total = Convert.ToDouble(dataGridView1.Rows[contFila].Cells[1].Value) * Convert.ToDouble(dataGridView1.Rows[contFila].Cells[3].Value);
+                        dataGridView1.Rows[contFila].Cells[4].Value = total;
 
                         contFila++;
                     }
