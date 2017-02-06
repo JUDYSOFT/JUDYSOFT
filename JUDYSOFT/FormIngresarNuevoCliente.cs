@@ -64,5 +64,121 @@ namespace JUDYSOFT
         {
 
         }
+
+        private void textBoxNombre1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxNombre1.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxNombre1.BackColor = Color.White;
+            }
+        }
+
+        private void textBoxNombre2_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxNombre2.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxNombre2.BackColor = Color.White;
+            }
+        }
+
+        private void textBoxApellido1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxApellido1.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxApellido1.BackColor = Color.White;
+            }
+        }
+
+        private void textBoxApellido2_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxApellido2.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxApellido2.BackColor = Color.White;
+            }
+        }
+
+        private void textBoxTelefono1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if ((char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxTelefono1.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxTelefono1.BackColor = Color.White;
+            }
+        }
+        private void textBoxTelefono2_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if ((char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxTelefono2.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxTelefono2.BackColor = Color.White;
+            }
+        }
+
+        private void textBoxNacionalidad_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxNacionalidad.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxNacionalidad.BackColor = Color.White;
+            }
+        }
+
+        private void textBoxEstadoCivil_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxNacionalidad.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxNacionalidad.BackColor = Color.White;
+            }
+        }
+
+        private void textBoxNombre1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

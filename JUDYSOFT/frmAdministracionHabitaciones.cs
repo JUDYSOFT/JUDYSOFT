@@ -14,7 +14,8 @@ namespace JUDYSOFT
 
     public partial class frmAdministracionHabitaciones : Form
     {
-        public event FormClosingEventHandler FormClosing;
+        public event FormClosingEventHandler FormAdministracionHabitaciones;
+
         public frmAdministracionHabitaciones()
         {
 
