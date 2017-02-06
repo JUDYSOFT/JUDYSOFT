@@ -113,5 +113,38 @@ namespace JUDYSOFT
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if ((char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBox1.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBox1.BackColor = Color.White;
+            }
+        }
+
+        private void textBox7_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBox7.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBox7.BackColor = Color.White;
+            }
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
