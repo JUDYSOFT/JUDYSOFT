@@ -90,7 +90,7 @@
             this.panelNuevoEmpleado.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNuevoEmpleado_Paint);
             // 
             // panel3
-
+            // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.comboBoxCargo);
             this.panel3.Controls.Add(this.label14);
@@ -146,6 +146,7 @@
             this.textBoxSalario.Name = "textBoxSalario";
             this.textBoxSalario.Size = new System.Drawing.Size(177, 20);
             this.textBoxSalario.TabIndex = 35;
+            this.textBoxSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSalario_TextChanged);
             // 
             // label12
             // 
@@ -232,6 +233,7 @@
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(255, 20);
             this.textBoxDireccion.TabIndex = 40;
+            this.textBoxDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDireccion_TextChanged);
             // 
             // label11
             // 
@@ -316,6 +318,7 @@
             this.textBoxCelular.Name = "textBoxCelular";
             this.textBoxCelular.Size = new System.Drawing.Size(177, 20);
             this.textBoxCelular.TabIndex = 32;
+            this.textBoxCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCelular_TextChanged);
             // 
             // textBoxTelefonoConvencional
             // 
@@ -323,6 +326,7 @@
             this.textBoxTelefonoConvencional.Name = "textBoxTelefonoConvencional";
             this.textBoxTelefonoConvencional.Size = new System.Drawing.Size(200, 20);
             this.textBoxTelefonoConvencional.TabIndex = 31;
+            this.textBoxTelefonoConvencional.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefonoConvencional_TextChanged);
             // 
             // label7
             // 
@@ -348,6 +352,7 @@
             this.textBoxCorreoElectronico.Name = "textBoxCorreoElectronico";
             this.textBoxCorreoElectronico.Size = new System.Drawing.Size(177, 20);
             this.textBoxCorreoElectronico.TabIndex = 28;
+            this.textBoxCorreoElectronico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCorreoElectronico_TextChanged);
             // 
             // label5
             // 
@@ -364,6 +369,7 @@
             this.textBoxApellidos.Name = "textBoxApellidos";
             this.textBoxApellidos.Size = new System.Drawing.Size(177, 20);
             this.textBoxApellidos.TabIndex = 26;
+            this.textBoxApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApellidos_TextChanged);
             // 
             // textBoxNombres
             // 
@@ -371,6 +377,7 @@
             this.textBoxNombres.Name = "textBoxNombres";
             this.textBoxNombres.Size = new System.Drawing.Size(200, 20);
             this.textBoxNombres.TabIndex = 25;
+            this.textBoxNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombres_TextChanged);
             // 
             // label4
             // 
@@ -392,7 +399,6 @@
             // 
             // panel1
             // 
-
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.textBoxIdentificacion);
             this.panel1.Controls.Add(this.label2);
@@ -409,6 +415,7 @@
             this.textBoxIdentificacion.Name = "textBoxIdentificacion";
             this.textBoxIdentificacion.Size = new System.Drawing.Size(177, 20);
             this.textBoxIdentificacion.TabIndex = 7;
+            this.textBoxIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxIdentificacion_TextChanged);
             // 
             // label2
             // 
