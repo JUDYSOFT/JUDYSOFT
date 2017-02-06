@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.botonListaClientes = new System.Windows.Forms.Button();
             this.txtBoxCliente = new System.Windows.Forms.TextBox();
@@ -306,6 +306,7 @@
             this.BotonFacturar.TabIndex = 2;
             this.BotonFacturar.Text = "Facturar";
             this.BotonFacturar.UseVisualStyleBackColor = true;
+            this.BotonFacturar.Click += new System.EventHandler(this.BotonFacturar_Click);
             // 
             // BotonSalir
             // 
@@ -409,8 +410,8 @@
             this.ValorTotal});
             this.dataGridView1.Location = new System.Drawing.Point(9, 12);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(443, 174);
             this.dataGridView1.TabIndex = 0;
             // 

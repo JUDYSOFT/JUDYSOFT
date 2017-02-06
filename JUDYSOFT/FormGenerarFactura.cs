@@ -185,9 +185,32 @@ namespace JUDYSOFT
             //this.Hide();
         }
 
-        private void botonNuevaFactura_Click(object sender, EventArgs e)
+        private void Limpiar()
         {
             txtCantidad.Text = "";
+            txtCodigo.Text = "";
+            txtDescripcion.Text = "";
+            txtDireccion.Text = "";
+            txtidCliente.Text = "";
+            txtBoxCliente.Text = "";
+            txtSubtotal.Text = "";
+            txtTelefono.Text = "";
+            txtValUni.Text = "";
+            txtImpuesto.Text = "";
+            txtTotal.Text = "";
+            lblCliente.Text = "";
+
+            comboBoxTaxes.SelectedIndex = -1;
+            dataGridView1.Rows.Clear();
+            contFila = 0;
+            total = 0;
+
+            txtidCliente.Focus();
+        }
+
+        private void botonNuevaFactura_Click(object sender, EventArgs e)
+        {
+            /*txtCantidad.Text = "";
             txtCodigo.Text = "";
             txtDescripcion.Text = "";
             txtDireccion.Text = "";
@@ -205,7 +228,9 @@ namespace JUDYSOFT
             contFila = 0;
             total = 0;
 
-            txtidCliente.Focus();
+            txtidCliente.Focus();*/
+
+            Limpiar();
 
 
         }
@@ -252,6 +277,41 @@ namespace JUDYSOFT
         {
             montoTotal = (Convert.ToDouble(Subt) * Convert.ToDouble(tax)) + Convert.ToDouble(Subt);
             txtTotal.Text = montoTotal.ToString();
+        }
+
+        private void BotonFacturar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string cmd = string.Format("Exec ActualizarFactura '{0}'", txtidCliente.Text.Trim());
+                DataSet DS = Utilidades.Ejecutar(cmd);
+
+                string NumFac = DS.Tables[0].Rows[0]["NumFactura"].ToString().Trim();
+
+                foreach(DataGridViewRow Fila in dataGridView1.Rows)
+                {
+                    cmd = string.Format("Exec ActualizarDetalle '{0}','{1}','{2}','{3}'", NumFac, Fila.Cells[0].Value.ToString(), Fila.Cells[3].Value.ToString(), Fila.Cells[1].Value.ToString());
+                    DS = Utilidades.Ejecutar(cmd);
+                     
+                }
+
+                cmd = "Exec DatosFactura " + NumFac;
+                DS = Utilidades.Ejecutar(cmd);
+
+                Reporte report = new Reporte();
+
+                report.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
+                report.ShowDialog();
+                Limpiar();
+
+
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
     }
 }
