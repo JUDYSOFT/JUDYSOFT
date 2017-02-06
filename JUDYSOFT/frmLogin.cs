@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Libreria;
 
 
 namespace JUDYSOFT
@@ -37,7 +38,7 @@ namespace JUDYSOFT
        
         private void btningresar_Click(object sender, EventArgs e)
         {
-            /*
+            
             try
             {
                 string CMD = string.Format("SELECT * FROM usuario WHERE Cuenta = '{0}' AND password = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
@@ -62,11 +63,11 @@ namespace JUDYSOFT
                 MessageBox.Show("Error: " + ex.Message);
                             }
 
-     */
-            frmMenuPrincipal frm = new frmMenuPrincipal();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.WindowState = FormWindowState.Maximized;
-            frm.Show();
+     
+           //frmMenuPrincipal frm = new frmMenuPrincipal();
+            //frm.StartPosition = FormStartPosition.CenterScreen;
+            //frm.WindowState = FormWindowState.Maximized;
+            //frm.Show();
 
 
 
