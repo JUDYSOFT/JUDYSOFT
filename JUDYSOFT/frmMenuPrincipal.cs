@@ -127,5 +127,10 @@ namespace JUDYSOFT
         {
 
         }
+
+        private void frmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

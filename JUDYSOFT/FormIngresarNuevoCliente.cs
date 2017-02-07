@@ -55,7 +55,7 @@ namespace JUDYSOFT
         private void FormIngresarNuevoCliente_FormClosing(object sender, FormClosingEventArgs e)
         {
 
- DialogResult confirmacion = MessageBox.Show("Está seguro que desea cancelar?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+        DialogResult confirmacion = MessageBox.Show("Está seguro que desea cancelar?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
 
             if (confirmacion == System.Windows.Forms.DialogResult.OK)
             {
