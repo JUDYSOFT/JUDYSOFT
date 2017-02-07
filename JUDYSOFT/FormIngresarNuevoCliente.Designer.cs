@@ -38,11 +38,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxLugarDeProcedencia = new System.Windows.Forms.TextBox();
             this.textBoxTelefono1 = new System.Windows.Forms.TextBox();
             this.textBoxApellido1 = new System.Windows.Forms.TextBox();
             this.textBoxNombre1 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBoxProfesion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxEstadoCivil = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -177,11 +177,11 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.textBoxLugarDeProcedencia);
             this.panel2.Controls.Add(this.textBoxTelefono1);
             this.panel2.Controls.Add(this.textBoxApellido1);
             this.panel2.Controls.Add(this.textBoxNombre1);
-            this.panel2.Controls.Add(this.textBox11);
+            this.panel2.Controls.Add(this.textBoxProfesion);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.textBoxEstadoCivil);
             this.panel2.Controls.Add(this.label9);
@@ -203,12 +203,13 @@
             this.panel2.Size = new System.Drawing.Size(354, 394);
             this.panel2.TabIndex = 30;
             // 
-            // textBox6
+            // textBoxLugarDeProcedencia
             // 
-            this.textBox6.Location = new System.Drawing.Point(193, 239);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(129, 20);
-            this.textBox6.TabIndex = 33;
+            this.textBoxLugarDeProcedencia.Location = new System.Drawing.Point(193, 239);
+            this.textBoxLugarDeProcedencia.Name = "textBoxLugarDeProcedencia";
+            this.textBoxLugarDeProcedencia.Size = new System.Drawing.Size(129, 20);
+            this.textBoxLugarDeProcedencia.TabIndex = 33;
+            this.textBoxLugarDeProcedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLugarDeProcedencia_TextChanged);
             // 
             // textBoxTelefono1
             // 
@@ -232,16 +233,16 @@
             this.textBoxNombre1.Name = "textBoxNombre1";
             this.textBoxNombre1.Size = new System.Drawing.Size(131, 20);
             this.textBoxNombre1.TabIndex = 30;
-            this.textBoxNombre1.TextChanged += new System.EventHandler(this.textBoxNombre1_TextChanged);
             this.textBoxNombre1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombre1_TextChanged);
             // 
-            // textBox11
+            // textBoxProfesion
             // 
-            this.textBox11.Location = new System.Drawing.Point(190, 359);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(132, 20);
-            this.textBox11.TabIndex = 29;
+            this.textBoxProfesion.Location = new System.Drawing.Point(190, 359);
+            this.textBoxProfesion.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxProfesion.Name = "textBoxProfesion";
+            this.textBoxProfesion.Size = new System.Drawing.Size(132, 20);
+            this.textBoxProfesion.TabIndex = 29;
+            this.textBoxProfesion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxProfesion_TextChanged);
             // 
             // label10
             // 
@@ -484,7 +485,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 522);
+            this.ClientSize = new System.Drawing.Size(657, 574);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -521,7 +522,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBoxProfesion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxEstadoCivil;
         private System.Windows.Forms.Label label9;
@@ -543,7 +544,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxLugarDeProcedencia;
         private System.Windows.Forms.TextBox textBoxTelefono1;
         private System.Windows.Forms.TextBox textBoxApellido1;
         private System.Windows.Forms.TextBox textBoxNombre1;

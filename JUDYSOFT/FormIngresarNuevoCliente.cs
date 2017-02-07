@@ -14,6 +14,7 @@ namespace JUDYSOFT
 {
     public partial class FormIngresarNuevoCliente : Form
     {
+        Validaciones validar = new Validaciones();
         public FormIngresarNuevoCliente()
         {
             InitializeComponent();
@@ -21,11 +22,7 @@ namespace JUDYSOFT
 
         private void button1_Click(object sender, EventArgs e)
         {
-        
-            this.Dispose();
-           
-
-
+             this.Dispose();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -49,8 +46,6 @@ namespace JUDYSOFT
             
             //((Form)this.MdiParent).Controls["ingresarNuevoClienteToolStripMenuItem"].Enabled = true;
 
-
-
             DialogResult confirmacion = MessageBox.Show("Está seguro que desea cancelar?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
 
             if (confirmacion == System.Windows.Forms.DialogResult.OK)
@@ -67,118 +62,63 @@ namespace JUDYSOFT
 
         private void textBoxNombre1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxNombre1.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxNombre1.BackColor = Color.White;
-            }
+            if(textBoxNombre1.Focused)
+                validar.validarCadenasDeTexto( e, textBoxNombre1,textBoxNombre2);
         }
 
         private void textBoxNombre2_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxNombre2.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxNombre2.BackColor = Color.White;
-            }
+            if(textBoxNombre2.Focused)
+                validar.validarCadenasDeTexto(e, textBoxNombre2,textBoxApellido1);
         }
 
         private void textBoxApellido1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxApellido1.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxApellido1.BackColor = Color.White;
-            }
+            if (textBoxApellido1.Focused)
+                validar.validarCadenasDeTexto(e, textBoxApellido1,textBoxApellido2);
         }
 
         private void textBoxApellido2_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxApellido2.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxApellido2.BackColor = Color.White;
-            }
+            if (textBoxApellido2.Focused)
+                validar.validarCadenasDeTexto( e, textBoxApellido2,textBoxTelefono1);
         }
 
         private void textBoxTelefono1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if ((char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxTelefono1.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxTelefono1.BackColor = Color.White;
-            }
+            if (textBoxTelefono1.Focused)
+                validar.validarCamposNumericos(e,textBoxTelefono1, textBoxTelefono2);
         }
         private void textBoxTelefono2_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if ((char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxTelefono2.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxTelefono2.BackColor = Color.White;
-            }
+            if (textBoxTelefono2.Focused)
+                validar.validarCamposNumericos(e, textBoxTelefono2, textBoxLugarDeProcedencia);
         }
-
+        private void textBoxLugarDeProcedencia_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (textBoxLugarDeProcedencia.Focused)
+                validar.validarCadenasDeTexto(e, textBoxLugarDeProcedencia, textBoxNacionalidad);
+        }
         private void textBoxNacionalidad_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxNacionalidad.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxNacionalidad.BackColor = Color.White;
-            }
+            if (textBoxNacionalidad.Focused)
+                validar.validarCadenasDeTexto(e, textBoxNacionalidad, textBoxEstadoCivil);
         }
 
         private void textBoxEstadoCivil_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxNacionalidad.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxNacionalidad.BackColor = Color.White;
-            }
+            if (textBoxEstadoCivil.Focused)
+                validar.validarCadenasDeTexto(e, textBoxEstadoCivil,textBoxProfesion);
         }
 
-        private void textBoxNombre1_TextChanged(object sender, EventArgs e)
+        private void textBoxProfesion_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-
+            if (textBoxProfesion.Focused)
+                validar.validarCadenasDeTexto( e, textBoxProfesion, textBoxProfesion);
         }
+
+       
+
+
     }
 }

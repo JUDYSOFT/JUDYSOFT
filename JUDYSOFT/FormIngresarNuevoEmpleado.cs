@@ -450,7 +450,8 @@ namespace JUDYSOFT
 
         private void textBoxCorreoElectronico_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!email_bien_escrito(textBoxCorreoElectronico.Text))
+            if (!emailBienEscrito(textBoxCorreoElectronico.Text))
+
             {
                 textBoxCorreoElectronico.BackColor = Color.LightCoral;
             }
@@ -460,7 +461,7 @@ namespace JUDYSOFT
             }
         }
 
-        private Boolean email_bien_escrito(String email)
+        private Boolean emailBienEscrito(String email)
         {
             String sFormato;
             sFormato = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
