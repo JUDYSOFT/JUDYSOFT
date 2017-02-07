@@ -17,8 +17,8 @@ namespace Libreria
             //colocar aqui la conexión a la base con su nombre y su respectivo nombre del servidor---------------------------------------
             //Andy----------------------------------------------------------------------------------------------------------------------
 
-                SqlConnection con = new SqlConnection("Data Source=LENOVO-PC\\SQLEXPRESS;Initial Catalog=JUDYSOFT;Integrated Security=True");
-                //SqlConnection con = new SqlConnection("Data Source=LENOVO-PC\SQLEXPRESS;Initial Catalog=Administracion;Integrated Security=True");
+                //SqlConnection con = new SqlConnection("Data Source=LENOVO-PC\\SQLEXPRESS;Initial Catalog=JUDYSOFT;Integrated Security=True");
+                SqlConnection con = new SqlConnection("Data Source=LENOVO-PC\\SQLEXPRESS;Initial Catalog=Administracion;Integrated Security=True");
 
             //pequeñin-------------------------------------------------------------------------------------------------------------------
 
