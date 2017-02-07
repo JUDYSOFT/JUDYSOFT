@@ -300,12 +300,12 @@ namespace JUDYSOFT
 
                 foreach(DataGridViewRow Fila in dataGridView1.Rows)
                 {
-                    cmd = string.Format("Exec ActualizarDetalle '{0}','{1}','{2}','{3}','{4}','{5}','{6}'", NumFac, Fila.Cells[0].Value.ToString(), Fila.Cells[3].Value.ToString(), Fila.Cells[1].Value.ToString(), txtSubtotal.Text.ToString(), txtImpuesto.Text.ToString(), txtTotal.Text.ToString());
+                    cmd = string.Format("Exec ActualizarDetalle '{0}','{1}','{2}','{3}','{4}','{6}'", NumFac, Fila.Cells[0].Value.ToString(), Fila.Cells[3].Value.ToString(), Fila.Cells[1].Value.ToString(), txtSubtotal.Text.ToString(), txtTotal.Text.ToString());
                     DS = Utilidades.Ejecutar(cmd);
                      
                 }
 
-                cmd = "Exec DatosFactura " + NumFac;
+                cmd = "Exec DatosFacturaAct " + NumFac;
                 DS = Utilidades.Ejecutar(cmd);
                 //JUDYSOFT------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

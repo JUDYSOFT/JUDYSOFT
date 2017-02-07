@@ -67,6 +67,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Validaciones.cs" />
     <Compile Include="clsHabitacion.cs" />
     <Compile Include="DataSet1.Designer.cs">
