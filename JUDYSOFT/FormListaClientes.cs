@@ -35,7 +35,7 @@ namespace JUDYSOFT
         private void FormListaClientes_Load(object sender, EventArgs e)
         {
 
-            dataGridView1.DataSource = LLenarDGv("Cliente").Tables[0];  
+            dataGridView1.DataSource = LLenarDGv("CLIENTE").Tables[0];  
         }
 
         public DataSet LLenarDGv(string tabla)

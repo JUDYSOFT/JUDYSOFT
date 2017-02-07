@@ -38,7 +38,7 @@ namespace JUDYSOFT
         {
             String cmd = "SELECT * FROM EMPLEADO WHERE CODEMPLEADO= " + frmLogin.Codigo;
             DataSet DS = Utilidades.Ejecutar(cmd);
-            lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NOMBRE1EMPLEADO"].ToString().Trim() + DS.Tables[0].Rows[0]["APELLIDO1EMPLEADO"].ToString().Trim();
+            lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NOMBRE1EMPLEADO"].ToString().Trim() + " "+DS.Tables[0].Rows[0]["APELLIDO1EMPLEADO"].ToString().Trim();
 
 
         }
@@ -175,9 +175,11 @@ namespace JUDYSOFT
             {
                 txtCodigo.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
                 txtDescripcion.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
-                txtValUni.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                txtValUni.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
 
                 txtCantidad.Focus();
+
+
 
             }
 
