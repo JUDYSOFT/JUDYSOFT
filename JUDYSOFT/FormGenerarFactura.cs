@@ -36,10 +36,18 @@ namespace JUDYSOFT
 
         private void FormGenerarFactura_Load(object sender, EventArgs e)
         {
-            String cmd = "SELECT * FROM EMPLEADO WHERE CODEMPLEADO= " + frmLogin.Codigo;
-            DataSet DS = Utilidades.Ejecutar(cmd);
-            lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NOMBRE1EMPLEADO"].ToString().Trim() + " "+DS.Tables[0].Rows[0]["APELLIDO1EMPLEADO"].ToString().Trim();
 
+            //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------
+
+                //String cmd = "SELECT * FROM EMPLEADO WHERE CODEMPLEADO= " + frmLogin.Codigo;
+                //DataSet DS = Utilidades.Ejecutar(cmd);
+                //lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NOMBRE1EMPLEADO"].ToString().Trim() + " "+DS.Tables[0].Rows[0]["APELLIDO1EMPLEADO"].ToString().Trim();
+
+            //Administración--------------------------------------------------------------------------------------------------------------------------------------
+
+                String cmd = "SELECT * FROM usuario WHERE idUsuario= " + frmLogin.Codigo;
+                DataSet DS = Utilidades.Ejecutar(cmd);
+                lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NombreUsuario"].ToString().Trim();
 
         }
 
@@ -113,7 +121,6 @@ namespace JUDYSOFT
         {
             if (contFila > 0)
             {
-                //MessageBox.Show("¿Está seguro de eliminar el objeto?", "Mensaje advertencia", MessageBoxButtons.YesNo);
                 string message = "¿Está seguro de eliminar el objeto?";
                 string caption = "Advertencia";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -150,12 +157,18 @@ namespace JUDYSOFT
             if(string.IsNullOrEmpty(txtidCliente.Text.Trim()) == false) {
                 try
                 {
-                    string cmd = string.Format("SELECT * FROM Cliente WHERE idCliente='{0}'", txtidCliente.Text.Trim());
-                    DataSet DS = Utilidades.Ejecutar(cmd);
+                    //Administración-------------------------------------------------------------------------------------------------------------------------------
 
-                    txtBoxCliente.Text = DS.Tables[0].Rows[0]["nombreCliente"].ToString().Trim() + " " +DS.Tables[0].Rows[0]["apellidoCliente"].ToString().Trim();
-                    txtDireccion.Text = DS.Tables[0].Rows[0]["direccion"].ToString().Trim();
-                    txtTelefono.Text = DS.Tables[0].Rows[0]["telefono"].ToString().Trim();
+                        string cmd = string.Format("SELECT * FROM Cliente WHERE idCliente='{0}'", txtidCliente.Text.Trim());
+                        DataSet DS = Utilidades.Ejecutar(cmd);
+
+                        txtBoxCliente.Text = DS.Tables[0].Rows[0]["nombreCliente"].ToString().Trim() + " " +DS.Tables[0].Rows[0]["apellidoCliente"].ToString().Trim();
+                        txtDireccion.Text = DS.Tables[0].Rows[0]["direccion"].ToString().Trim();
+                        txtTelefono.Text = DS.Tables[0].Rows[0]["telefono"].ToString().Trim();
+
+                    //JUDYSOFT-----------------------------------------------------------------------------------------------------------------------------------------
+
+                        
                 } catch(Exception er)
                 {
                     MessageBox.Show("Ha ocurrido un problema. \n" + er.Message);
@@ -224,10 +237,19 @@ namespace JUDYSOFT
 
             if (nuevaLista.DialogResult == DialogResult.OK)
             {
-                txtidCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
-                txtBoxCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString() + nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
-                txtDireccion.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
-                txtTelefono.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
+                //Administración-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                    txtidCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                    txtBoxCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString() + nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                    txtDireccion.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
+                    txtTelefono.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
+
+                //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                    //txtidCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[6].Value.ToString();
+                    //txtBoxCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString() +" "+ nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString()+" "+ nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString()+" "+ nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
+                    //txtDireccion.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[7].Value.ToString();
+                    //txtTelefono.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
 
                 txtCodigo.Focus();
 
@@ -238,8 +260,7 @@ namespace JUDYSOFT
         { 
             if(comboBoxTaxes.SelectedIndex == 0)
             {
-                txtImpuesto.Text = "0,12";
-                
+                txtImpuesto.Text = "0,12";                
                 CalculoMontoTotal(txtImpuesto.Text, txtSubtotal.Text);
             }
             else if(comboBoxTaxes.SelectedIndex == 1)
@@ -263,7 +284,7 @@ namespace JUDYSOFT
         {
             try
             {
-
+                //Administración------------------------------------------------------------------------------------------------------------------------------------------------------------------
                 string cmd = string.Format("Exec ActualizarFactura '{0}'", txtidCliente.Text.Trim());
                 DataSet DS = Utilidades.Ejecutar(cmd);
 
@@ -278,9 +299,10 @@ namespace JUDYSOFT
 
                 cmd = "Exec DatosFactura " + NumFac;
                 DS = Utilidades.Ejecutar(cmd);
+                //JUDYSOFT------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
                 Reporte report = new Reporte();
-
                 report.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
                 report.ShowDialog();
                 Limpiar();
