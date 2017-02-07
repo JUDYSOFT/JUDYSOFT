@@ -188,8 +188,16 @@ namespace JUDYSOFT
             {
                 txtCodigo.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
                 txtDescripcion.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
-                txtValUni.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
 
+                //Administrador--------------------------------------------------------------------------------------------------------------------
+
+                    txtValUni.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+
+                //JUDYSOFT-------------------------------------------------------------------------------------------------------------------------
+
+                //txtValUni.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
+
+                txtCantidad.Text = "";
                 txtCantidad.Focus();
 
 

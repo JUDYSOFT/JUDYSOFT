@@ -42,13 +42,14 @@ namespace JUDYSOFT
             
             try
             {
-                string CMD = string.Format("SELECT * FROM EMPLEADO WHERE NOMBREUSUARIOEMPLEADO = '{0}' AND CONTRASENIAEMPLEADO = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
+                //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------------------------
+                /*string CMD = string.Format("SELECT * FROM EMPLEADO WHERE NOMBREUSUARIOEMPLEADO = '{0}' AND CONTRASENIAEMPLEADO = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
                 DataSet ds = Utilidades.Ejecutar(CMD);
                 string cuenta = ds.Tables[0].Rows[0]["NOMBREUSUARIOEMPLEADO"].ToString().Trim();
                 string psd = ds.Tables[0].Rows[0]["CONTRASENIAEMPLEADO"].ToString().Trim();
                 Codigo = ds.Tables[0].Rows[0]["CODEMPLEADO"].ToString().Trim();
                 nivelAcceso = Int32.Parse(ds.Tables[0].Rows[0]["NIVELACCESOEMPLEADO"].ToString().Trim());
-                
+
                 if(cuenta != txtuser.Text.Trim() || psd != txtpass.Text.Trim())
                 {
                     MessageBox.Show("Crendenciales Incorrectas");
@@ -57,7 +58,7 @@ namespace JUDYSOFT
                 else if(nivelAcceso==0)
                    {
                     MessageBox.Show("El usuario no tiene permiso de acceso");
-                    
+
                    }
                 else
                 {
@@ -65,10 +66,25 @@ namespace JUDYSOFT
                     this.Visible = false;
                     frmHab.Show();
                     this.FormClosing += Form1_FormClosing;
+                }*/
+
+                //Administración---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                string CMD = string.Format("SELECT * FROM usuario WHERE Cuenta = '{0}' AND password = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                string cuenta = ds.Tables[0].Rows[0]["Cuenta"].ToString().Trim();
+                string psd = ds.Tables[0].Rows[0]["password"].ToString().Trim();
+                Codigo = ds.Tables[0].Rows[0]["idUsuario"].ToString().Trim();
+
+                if (cuenta == txtuser.Text.Trim() && psd == txtpass.Text.Trim())
+                {
+                    frmMenuPrincipal frmHab = new frmMenuPrincipal();
+                    this.Visible = false;
+                    frmHab.Show();
+                    this.FormClosing += Form1_FormClosing;
                 }
-                
-                
-                            }
+
+            }
             catch (Exception ex)
              {
                 MessageBox.Show("Error: " + ex.Message);
