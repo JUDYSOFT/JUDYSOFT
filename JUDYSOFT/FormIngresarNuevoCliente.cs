@@ -14,26 +14,39 @@ namespace JUDYSOFT
 {
     public partial class FormIngresarNuevoCliente : Form
     {
-        Validaciones validar = new Validaciones();
         public FormIngresarNuevoCliente()
         {
             InitializeComponent();
+            textBoxCédula.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//boton aceptar 
         {
-             this.Dispose();
+            if (radioCedula.Checked)
+            {
+                verificarCedula(textBoxCédula.Text.Trim());
+            }
+            else
+            {
+                MessageBox.Show("Pasaporte seleccionado");
+                
+            }
+                
+           
+
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//boton cancelar 
         {
             DialogResult confirmacion = MessageBox.Show("Está seguro que desea cancelar?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
 
             if (confirmacion == System.Windows.Forms.DialogResult.OK)
             {
                 this.Dispose();
+                MenuSettings.EnableMenuItem("clientesToolStripMenuItem", "ingresarNuevoClienteToolStripMenuItem");
             }
-            else if (confirmacion == System.Windows.Forms.DialogResult.Cancel)
+            else
             {
 
             }
@@ -42,15 +55,17 @@ namespace JUDYSOFT
         private void FormIngresarNuevoCliente_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-            MenuSettings.EnableMenuItem("clientesToolStripMenuItem", "ingresarNuevoClienteToolStripMenuItem");
-            
-            //((Form)this.MdiParent).Controls["ingresarNuevoClienteToolStripMenuItem"].Enabled = true;
-
-            DialogResult confirmacion = MessageBox.Show("Está seguro que desea cancelar?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+ DialogResult confirmacion = MessageBox.Show("Está seguro que desea cancelar?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
 
             if (confirmacion == System.Windows.Forms.DialogResult.OK)
             {
                 this.Dispose();
+                MenuSettings.EnableMenuItem("clientesToolStripMenuItem", "ingresarNuevoClienteToolStripMenuItem");
+            }
+            else
+            {
+                
+                e.Cancel=true;
             }
 
         }
@@ -62,63 +77,194 @@ namespace JUDYSOFT
 
         private void textBoxNombre1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if(textBoxNombre1.Focused)
-                validar.validarCadenasDeTexto( e, textBoxNombre1,textBoxNombre2);
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxNombre1.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxNombre1.BackColor = Color.White;
+            }
         }
 
         private void textBoxNombre2_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if(textBoxNombre2.Focused)
-                validar.validarCadenasDeTexto(e, textBoxNombre2,textBoxApellido1);
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxNombre2.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxNombre2.BackColor = Color.White;
+            }
         }
 
         private void textBoxApellido1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (textBoxApellido1.Focused)
-                validar.validarCadenasDeTexto(e, textBoxApellido1,textBoxApellido2);
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxApellido1.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxApellido1.BackColor = Color.White;
+            }
         }
 
         private void textBoxApellido2_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (textBoxApellido2.Focused)
-                validar.validarCadenasDeTexto( e, textBoxApellido2,textBoxTelefono1);
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxApellido2.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxApellido2.BackColor = Color.White;
+            }
         }
 
         private void textBoxTelefono1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (textBoxTelefono1.Focused)
-                validar.validarCamposNumericos(e,textBoxTelefono1, textBoxTelefono2);
+            if ((char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxTelefono1.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxTelefono1.BackColor = Color.White;
+            }
         }
         private void textBoxTelefono2_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (textBoxTelefono2.Focused)
-                validar.validarCamposNumericos(e, textBoxTelefono2, textBoxLugarDeProcedencia);
+            if ((char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxTelefono2.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxTelefono2.BackColor = Color.White;
+            }
         }
-        private void textBoxLugarDeProcedencia_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            if (textBoxLugarDeProcedencia.Focused)
-                validar.validarCadenasDeTexto(e, textBoxLugarDeProcedencia, textBoxNacionalidad);
-        }
+
         private void textBoxNacionalidad_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (textBoxNacionalidad.Focused)
-                validar.validarCadenasDeTexto(e, textBoxNacionalidad, textBoxEstadoCivil);
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxNacionalidad.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxNacionalidad.BackColor = Color.White;
+            }
         }
 
         private void textBoxEstadoCivil_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (textBoxEstadoCivil.Focused)
-                validar.validarCadenasDeTexto(e, textBoxEstadoCivil,textBoxProfesion);
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                textBoxEstadoCivil.BackColor = Color.LightCoral;
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                textBoxEstadoCivil.BackColor = Color.White;
+            }
         }
 
-        private void textBoxProfesion_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        private void textBoxNombre1_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxProfesion.Focused)
-                validar.validarCadenasDeTexto( e, textBoxProfesion, textBoxProfesion);
+
         }
 
-       
+        
 
+        
 
+        private void textBoxCédula_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (radioCedula.Checked)
+            {
+                if ((char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+                {
+                    textBoxCédula.BackColor = Color.LightCoral;
+                    e.Handled = true;
+                    return;
+                }
+                else
+                {
+                    textBoxCédula.BackColor = Color.White;
+                }
+            }
+            else
+            {
+                
+            }
+            
+        
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioCedula.Checked)
+            {
+                textBoxCédula.Visible = true;
+            }
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void verificarCedula(string cedula)
+        {
+            char[] vector = cedula.ToCharArray();
+            int sumatotal = 0;
+            if (vector.Length==10)
+            {
+                for(int i = 0; i < vector.Length - 1; i++)
+                {
+                    int numero =Convert.ToInt32( vector[i].ToString());
+                    if ((i+1) % 2 ==1)
+                    {
+                        numero = Convert.ToInt32(vector[i].ToString()) * 2;
+                        if (numero>9)
+                        {
+                            numero = numero- 9;
+                        }
+                    }
+                    sumatotal += numero;
+                }
+                sumatotal = 10 - (sumatotal % 10);
+                if (sumatotal == Convert.ToInt32(vector[9].ToString()))
+                {
+                    MessageBox.Show("la cédula es correcta");
+                }
+                else
+                {
+                    MessageBox.Show("la cédula es incorrecta","JUDYSOFT",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("el número de cédula ingresado no contiene 10 dígitos");
+            
+            }
+        }
     }
 }
