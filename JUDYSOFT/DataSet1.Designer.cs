@@ -24,7 +24,7 @@ namespace JUDYSOFT {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSet1 : global::System.Data.DataSet {
         
-        private DatosFacturaDataTable tableDatosFactura;
+        private DatosFacturaActDataTable tableDatosFacturaAct;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace JUDYSOFT {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DatosFactura"] != null)) {
-                    base.Tables.Add(new DatosFacturaDataTable(ds.Tables["DatosFactura"]));
+                if ((ds.Tables["DatosFacturaAct"] != null)) {
+                    base.Tables.Add(new DatosFacturaActDataTable(ds.Tables["DatosFacturaAct"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace JUDYSOFT {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DatosFacturaDataTable DatosFactura {
+        public DatosFacturaActDataTable DatosFacturaAct {
             get {
-                return this.tableDatosFactura;
+                return this.tableDatosFacturaAct;
             }
         }
         
@@ -152,8 +152,8 @@ namespace JUDYSOFT {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DatosFactura"] != null)) {
-                    base.Tables.Add(new DatosFacturaDataTable(ds.Tables["DatosFactura"]));
+                if ((ds.Tables["DatosFacturaAct"] != null)) {
+                    base.Tables.Add(new DatosFacturaActDataTable(ds.Tables["DatosFacturaAct"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace JUDYSOFT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDatosFactura = ((DatosFacturaDataTable)(base.Tables["DatosFactura"]));
+            this.tableDatosFacturaAct = ((DatosFacturaActDataTable)(base.Tables["DatosFacturaAct"]));
             if ((initTable == true)) {
-                if ((this.tableDatosFactura != null)) {
-                    this.tableDatosFactura.InitVars();
+                if ((this.tableDatosFacturaAct != null)) {
+                    this.tableDatosFacturaAct.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace JUDYSOFT {
             this.Namespace = "http://tempuri.org/DataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDatosFactura = new DatosFacturaDataTable();
-            base.Tables.Add(this.tableDatosFactura);
+            this.tableDatosFacturaAct = new DatosFacturaActDataTable();
+            base.Tables.Add(this.tableDatosFacturaAct);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeDatosFactura() {
+        private bool ShouldSerializeDatosFacturaAct() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace JUDYSOFT {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void DatosFacturaRowChangeEventHandler(object sender, DatosFacturaRowChangeEvent e);
+        public delegate void DatosFacturaActRowChangeEventHandler(object sender, DatosFacturaActRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DatosFacturaDataTable : global::System.Data.TypedTableBase<DatosFacturaRow> {
+        public partial class DatosFacturaActDataTable : global::System.Data.TypedTableBase<DatosFacturaActRow> {
             
             private global::System.Data.DataColumn columnNumFactura;
             
@@ -297,10 +297,16 @@ namespace JUDYSOFT {
             
             private global::System.Data.DataColumn columnImporte;
             
+            private global::System.Data.DataColumn columnSubTotal;
+            
+            private global::System.Data.DataColumn columnImpuesto;
+            
+            private global::System.Data.DataColumn columnTotal;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DatosFacturaDataTable() {
-                this.TableName = "DatosFactura";
+            public DatosFacturaActDataTable() {
+                this.TableName = "DatosFacturaAct";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -308,7 +314,7 @@ namespace JUDYSOFT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DatosFacturaDataTable(global::System.Data.DataTable table) {
+            internal DatosFacturaActDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -325,7 +331,7 @@ namespace JUDYSOFT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected DatosFacturaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DatosFacturaActDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -404,6 +410,30 @@ namespace JUDYSOFT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SubTotalColumn {
+                get {
+                    return this.columnSubTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ImpuestoColumn {
+                get {
+                    return this.columnImpuesto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TotalColumn {
+                get {
+                    return this.columnTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -413,34 +443,34 @@ namespace JUDYSOFT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DatosFacturaRow this[int index] {
+            public DatosFacturaActRow this[int index] {
                 get {
-                    return ((DatosFacturaRow)(this.Rows[index]));
+                    return ((DatosFacturaActRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DatosFacturaRowChangeEventHandler DatosFacturaRowChanging;
+            public event DatosFacturaActRowChangeEventHandler DatosFacturaActRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DatosFacturaRowChangeEventHandler DatosFacturaRowChanged;
+            public event DatosFacturaActRowChangeEventHandler DatosFacturaActRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DatosFacturaRowChangeEventHandler DatosFacturaRowDeleting;
+            public event DatosFacturaActRowChangeEventHandler DatosFacturaActRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DatosFacturaRowChangeEventHandler DatosFacturaRowDeleted;
+            public event DatosFacturaActRowChangeEventHandler DatosFacturaActRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddDatosFacturaRow(DatosFacturaRow row) {
+            public void AddDatosFacturaActRow(DatosFacturaActRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DatosFacturaRow AddDatosFacturaRow(int NumFactura, System.DateTime FechaEmision, int idCliente, double PrecioVenta, int CantidadVendida, string nombreCliente, string apellidoCliente, string NombreProducto, double Importe) {
-                DatosFacturaRow rowDatosFacturaRow = ((DatosFacturaRow)(this.NewRow()));
+            public DatosFacturaActRow AddDatosFacturaActRow(int NumFactura, System.DateTime FechaEmision, int idCliente, double PrecioVenta, int CantidadVendida, string nombreCliente, string apellidoCliente, string NombreProducto, double Importe, double SubTotal, double Impuesto, double Total) {
+                DatosFacturaActRow rowDatosFacturaActRow = ((DatosFacturaActRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NumFactura,
                         FechaEmision,
@@ -450,16 +480,19 @@ namespace JUDYSOFT {
                         nombreCliente,
                         apellidoCliente,
                         NombreProducto,
-                        Importe};
-                rowDatosFacturaRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDatosFacturaRow);
-                return rowDatosFacturaRow;
+                        Importe,
+                        SubTotal,
+                        Impuesto,
+                        Total};
+                rowDatosFacturaActRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDatosFacturaActRow);
+                return rowDatosFacturaActRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DatosFacturaDataTable cln = ((DatosFacturaDataTable)(base.Clone()));
+                DatosFacturaActDataTable cln = ((DatosFacturaActDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -467,7 +500,7 @@ namespace JUDYSOFT {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DatosFacturaDataTable();
+                return new DatosFacturaActDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -482,6 +515,9 @@ namespace JUDYSOFT {
                 this.columnapellidoCliente = base.Columns["apellidoCliente"];
                 this.columnNombreProducto = base.Columns["NombreProducto"];
                 this.columnImporte = base.Columns["Importe"];
+                this.columnSubTotal = base.Columns["SubTotal"];
+                this.columnImpuesto = base.Columns["Impuesto"];
+                this.columnTotal = base.Columns["Total"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -505,6 +541,12 @@ namespace JUDYSOFT {
                 base.Columns.Add(this.columnNombreProducto);
                 this.columnImporte = new global::System.Data.DataColumn("Importe", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnImporte);
+                this.columnSubTotal = new global::System.Data.DataColumn("SubTotal", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubTotal);
+                this.columnImpuesto = new global::System.Data.DataColumn("Impuesto", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImpuesto);
+                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal);
                 this.columnnombreCliente.MaxLength = 50;
                 this.columnapellidoCliente.MaxLength = 50;
                 this.columnNombreProducto.MaxLength = 50;
@@ -513,28 +555,28 @@ namespace JUDYSOFT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DatosFacturaRow NewDatosFacturaRow() {
-                return ((DatosFacturaRow)(this.NewRow()));
+            public DatosFacturaActRow NewDatosFacturaActRow() {
+                return ((DatosFacturaActRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DatosFacturaRow(builder);
+                return new DatosFacturaActRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DatosFacturaRow);
+                return typeof(DatosFacturaActRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DatosFacturaRowChanged != null)) {
-                    this.DatosFacturaRowChanged(this, new DatosFacturaRowChangeEvent(((DatosFacturaRow)(e.Row)), e.Action));
+                if ((this.DatosFacturaActRowChanged != null)) {
+                    this.DatosFacturaActRowChanged(this, new DatosFacturaActRowChangeEvent(((DatosFacturaActRow)(e.Row)), e.Action));
                 }
             }
             
@@ -542,8 +584,8 @@ namespace JUDYSOFT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DatosFacturaRowChanging != null)) {
-                    this.DatosFacturaRowChanging(this, new DatosFacturaRowChangeEvent(((DatosFacturaRow)(e.Row)), e.Action));
+                if ((this.DatosFacturaActRowChanging != null)) {
+                    this.DatosFacturaActRowChanging(this, new DatosFacturaActRowChangeEvent(((DatosFacturaActRow)(e.Row)), e.Action));
                 }
             }
             
@@ -551,8 +593,8 @@ namespace JUDYSOFT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DatosFacturaRowDeleted != null)) {
-                    this.DatosFacturaRowDeleted(this, new DatosFacturaRowChangeEvent(((DatosFacturaRow)(e.Row)), e.Action));
+                if ((this.DatosFacturaActRowDeleted != null)) {
+                    this.DatosFacturaActRowDeleted(this, new DatosFacturaActRowChangeEvent(((DatosFacturaActRow)(e.Row)), e.Action));
                 }
             }
             
@@ -560,14 +602,14 @@ namespace JUDYSOFT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DatosFacturaRowDeleting != null)) {
-                    this.DatosFacturaRowDeleting(this, new DatosFacturaRowChangeEvent(((DatosFacturaRow)(e.Row)), e.Action));
+                if ((this.DatosFacturaActRowDeleting != null)) {
+                    this.DatosFacturaActRowDeleting(this, new DatosFacturaActRowChangeEvent(((DatosFacturaActRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveDatosFacturaRow(DatosFacturaRow row) {
+            public void RemoveDatosFacturaActRow(DatosFacturaActRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -594,7 +636,7 @@ namespace JUDYSOFT {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DatosFacturaDataTable";
+                attribute2.FixedValue = "DatosFacturaActDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -638,15 +680,15 @@ namespace JUDYSOFT {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DatosFacturaRow : global::System.Data.DataRow {
+        public partial class DatosFacturaActRow : global::System.Data.DataRow {
             
-            private DatosFacturaDataTable tableDatosFactura;
+            private DatosFacturaActDataTable tableDatosFacturaAct;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DatosFacturaRow(global::System.Data.DataRowBuilder rb) : 
+            internal DatosFacturaActRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDatosFactura = ((DatosFacturaDataTable)(this.Table));
+                this.tableDatosFacturaAct = ((DatosFacturaActDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -654,14 +696,14 @@ namespace JUDYSOFT {
             public int NumFactura {
                 get {
                     try {
-                        return ((int)(this[this.tableDatosFactura.NumFacturaColumn]));
+                        return ((int)(this[this.tableDatosFacturaAct.NumFacturaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NumFactura\' in table \'DatosFactura\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'NumFactura\' in table \'DatosFacturaAct\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDatosFactura.NumFacturaColumn] = value;
+                    this[this.tableDatosFacturaAct.NumFacturaColumn] = value;
                 }
             }
             
@@ -670,14 +712,14 @@ namespace JUDYSOFT {
             public System.DateTime FechaEmision {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDatosFactura.FechaEmisionColumn]));
+                        return ((global::System.DateTime)(this[this.tableDatosFacturaAct.FechaEmisionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FechaEmision\' in table \'DatosFactura\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'FechaEmision\' in table \'DatosFacturaAct\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDatosFactura.FechaEmisionColumn] = value;
+                    this[this.tableDatosFacturaAct.FechaEmisionColumn] = value;
                 }
             }
             
@@ -686,14 +728,14 @@ namespace JUDYSOFT {
             public int idCliente {
                 get {
                     try {
-                        return ((int)(this[this.tableDatosFactura.idClienteColumn]));
+                        return ((int)(this[this.tableDatosFacturaAct.idClienteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'idCliente\' in table \'DatosFactura\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'idCliente\' in table \'DatosFacturaAct\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDatosFactura.idClienteColumn] = value;
+                    this[this.tableDatosFacturaAct.idClienteColumn] = value;
                 }
             }
             
@@ -702,14 +744,14 @@ namespace JUDYSOFT {
             public double PrecioVenta {
                 get {
                     try {
-                        return ((double)(this[this.tableDatosFactura.PrecioVentaColumn]));
+                        return ((double)(this[this.tableDatosFacturaAct.PrecioVentaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PrecioVenta\' in table \'DatosFactura\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PrecioVenta\' in table \'DatosFacturaAct\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDatosFactura.PrecioVentaColumn] = value;
+                    this[this.tableDatosFacturaAct.PrecioVentaColumn] = value;
                 }
             }
             
@@ -718,14 +760,14 @@ namespace JUDYSOFT {
             public int CantidadVendida {
                 get {
                     try {
-                        return ((int)(this[this.tableDatosFactura.CantidadVendidaColumn]));
+                        return ((int)(this[this.tableDatosFacturaAct.CantidadVendidaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CantidadVendida\' in table \'DatosFactura\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CantidadVendida\' in table \'DatosFacturaAct\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDatosFactura.CantidadVendidaColumn] = value;
+                    this[this.tableDatosFacturaAct.CantidadVendidaColumn] = value;
                 }
             }
             
@@ -734,14 +776,14 @@ namespace JUDYSOFT {
             public string nombreCliente {
                 get {
                     try {
-                        return ((string)(this[this.tableDatosFactura.nombreClienteColumn]));
+                        return ((string)(this[this.tableDatosFacturaAct.nombreClienteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'nombreCliente\' in table \'DatosFactura\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'nombreCliente\' in table \'DatosFacturaAct\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDatosFactura.nombreClienteColumn] = value;
+                    this[this.tableDatosFacturaAct.nombreClienteColumn] = value;
                 }
             }
             
@@ -750,14 +792,14 @@ namespace JUDYSOFT {
             public string apellidoCliente {
                 get {
                     try {
-                        return ((string)(this[this.tableDatosFactura.apellidoClienteColumn]));
+                        return ((string)(this[this.tableDatosFacturaAct.apellidoClienteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'apellidoCliente\' in table \'DatosFactura\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'apellidoCliente\' in table \'DatosFacturaAct\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDatosFactura.apellidoClienteColumn] = value;
+                    this[this.tableDatosFacturaAct.apellidoClienteColumn] = value;
                 }
             }
             
@@ -766,14 +808,14 @@ namespace JUDYSOFT {
             public string NombreProducto {
                 get {
                     try {
-                        return ((string)(this[this.tableDatosFactura.NombreProductoColumn]));
+                        return ((string)(this[this.tableDatosFacturaAct.NombreProductoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NombreProducto\' in table \'DatosFactura\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'NombreProducto\' in table \'DatosFacturaAct\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDatosFactura.NombreProductoColumn] = value;
+                    this[this.tableDatosFacturaAct.NombreProductoColumn] = value;
                 }
             }
             
@@ -782,123 +824,207 @@ namespace JUDYSOFT {
             public double Importe {
                 get {
                     try {
-                        return ((double)(this[this.tableDatosFactura.ImporteColumn]));
+                        return ((double)(this[this.tableDatosFacturaAct.ImporteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Importe\' in table \'DatosFactura\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Importe\' in table \'DatosFacturaAct\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDatosFactura.ImporteColumn] = value;
+                    this[this.tableDatosFacturaAct.ImporteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double SubTotal {
+                get {
+                    try {
+                        return ((double)(this[this.tableDatosFacturaAct.SubTotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SubTotal\' in table \'DatosFacturaAct\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDatosFacturaAct.SubTotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Impuesto {
+                get {
+                    try {
+                        return ((double)(this[this.tableDatosFacturaAct.ImpuestoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Impuesto\' in table \'DatosFacturaAct\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDatosFacturaAct.ImpuestoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Total {
+                get {
+                    try {
+                        return ((double)(this[this.tableDatosFacturaAct.TotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Total\' in table \'DatosFacturaAct\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDatosFacturaAct.TotalColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNumFacturaNull() {
-                return this.IsNull(this.tableDatosFactura.NumFacturaColumn);
+                return this.IsNull(this.tableDatosFacturaAct.NumFacturaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNumFacturaNull() {
-                this[this.tableDatosFactura.NumFacturaColumn] = global::System.Convert.DBNull;
+                this[this.tableDatosFacturaAct.NumFacturaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFechaEmisionNull() {
-                return this.IsNull(this.tableDatosFactura.FechaEmisionColumn);
+                return this.IsNull(this.tableDatosFacturaAct.FechaEmisionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetFechaEmisionNull() {
-                this[this.tableDatosFactura.FechaEmisionColumn] = global::System.Convert.DBNull;
+                this[this.tableDatosFacturaAct.FechaEmisionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsidClienteNull() {
-                return this.IsNull(this.tableDatosFactura.idClienteColumn);
+                return this.IsNull(this.tableDatosFacturaAct.idClienteColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetidClienteNull() {
-                this[this.tableDatosFactura.idClienteColumn] = global::System.Convert.DBNull;
+                this[this.tableDatosFacturaAct.idClienteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPrecioVentaNull() {
-                return this.IsNull(this.tableDatosFactura.PrecioVentaColumn);
+                return this.IsNull(this.tableDatosFacturaAct.PrecioVentaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPrecioVentaNull() {
-                this[this.tableDatosFactura.PrecioVentaColumn] = global::System.Convert.DBNull;
+                this[this.tableDatosFacturaAct.PrecioVentaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCantidadVendidaNull() {
-                return this.IsNull(this.tableDatosFactura.CantidadVendidaColumn);
+                return this.IsNull(this.tableDatosFacturaAct.CantidadVendidaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCantidadVendidaNull() {
-                this[this.tableDatosFactura.CantidadVendidaColumn] = global::System.Convert.DBNull;
+                this[this.tableDatosFacturaAct.CantidadVendidaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsnombreClienteNull() {
-                return this.IsNull(this.tableDatosFactura.nombreClienteColumn);
+                return this.IsNull(this.tableDatosFacturaAct.nombreClienteColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetnombreClienteNull() {
-                this[this.tableDatosFactura.nombreClienteColumn] = global::System.Convert.DBNull;
+                this[this.tableDatosFacturaAct.nombreClienteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsapellidoClienteNull() {
-                return this.IsNull(this.tableDatosFactura.apellidoClienteColumn);
+                return this.IsNull(this.tableDatosFacturaAct.apellidoClienteColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetapellidoClienteNull() {
-                this[this.tableDatosFactura.apellidoClienteColumn] = global::System.Convert.DBNull;
+                this[this.tableDatosFacturaAct.apellidoClienteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNombreProductoNull() {
-                return this.IsNull(this.tableDatosFactura.NombreProductoColumn);
+                return this.IsNull(this.tableDatosFacturaAct.NombreProductoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNombreProductoNull() {
-                this[this.tableDatosFactura.NombreProductoColumn] = global::System.Convert.DBNull;
+                this[this.tableDatosFacturaAct.NombreProductoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsImporteNull() {
-                return this.IsNull(this.tableDatosFactura.ImporteColumn);
+                return this.IsNull(this.tableDatosFacturaAct.ImporteColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetImporteNull() {
-                this[this.tableDatosFactura.ImporteColumn] = global::System.Convert.DBNull;
+                this[this.tableDatosFacturaAct.ImporteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSubTotalNull() {
+                return this.IsNull(this.tableDatosFacturaAct.SubTotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSubTotalNull() {
+                this[this.tableDatosFacturaAct.SubTotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsImpuestoNull() {
+                return this.IsNull(this.tableDatosFacturaAct.ImpuestoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetImpuestoNull() {
+                this[this.tableDatosFacturaAct.ImpuestoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTotalNull() {
+                return this.IsNull(this.tableDatosFacturaAct.TotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTotalNull() {
+                this[this.tableDatosFacturaAct.TotalColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -906,22 +1032,22 @@ namespace JUDYSOFT {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class DatosFacturaRowChangeEvent : global::System.EventArgs {
+        public class DatosFacturaActRowChangeEvent : global::System.EventArgs {
             
-            private DatosFacturaRow eventRow;
+            private DatosFacturaActRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DatosFacturaRowChangeEvent(DatosFacturaRow row, global::System.Data.DataRowAction action) {
+            public DatosFacturaActRowChangeEvent(DatosFacturaActRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DatosFacturaRow Row {
+            public DatosFacturaActRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -949,7 +1075,7 @@ namespace JUDYSOFT.DataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DatosFacturaTableAdapter : global::System.ComponentModel.Component {
+    public partial class DatosFacturaActTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -963,7 +1089,7 @@ namespace JUDYSOFT.DataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DatosFacturaTableAdapter() {
+        public DatosFacturaActTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1060,7 +1186,7 @@ namespace JUDYSOFT.DataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DatosFactura";
+            tableMapping.DataSetTable = "DatosFacturaAct";
             tableMapping.ColumnMappings.Add("NumFactura", "NumFactura");
             tableMapping.ColumnMappings.Add("FechaEmision", "FechaEmision");
             tableMapping.ColumnMappings.Add("idCliente", "idCliente");
@@ -1070,6 +1196,9 @@ namespace JUDYSOFT.DataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("apellidoCliente", "apellidoCliente");
             tableMapping.ColumnMappings.Add("NombreProducto", "NombreProducto");
             tableMapping.ColumnMappings.Add("Importe", "Importe");
+            tableMapping.ColumnMappings.Add("SubTotal", "SubTotal");
+            tableMapping.ColumnMappings.Add("Impuesto", "Impuesto");
+            tableMapping.ColumnMappings.Add("Total", "Total");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1086,7 +1215,7 @@ namespace JUDYSOFT.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.DatosFactura";
+            this._commandCollection[0].CommandText = "dbo.DatosFacturaAct";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumeroFactura", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1096,7 +1225,7 @@ namespace JUDYSOFT.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.DatosFacturaDataTable dataTable, global::System.Nullable<int> NumeroFactura) {
+        public virtual int Fill(DataSet1.DatosFacturaActDataTable dataTable, global::System.Nullable<int> NumeroFactura) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((NumeroFactura.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(NumeroFactura.Value));
@@ -1115,7 +1244,7 @@ namespace JUDYSOFT.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.DatosFacturaDataTable GetData(global::System.Nullable<int> NumeroFactura) {
+        public virtual DataSet1.DatosFacturaActDataTable GetData(global::System.Nullable<int> NumeroFactura) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((NumeroFactura.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(NumeroFactura.Value));
@@ -1123,7 +1252,7 @@ namespace JUDYSOFT.DataSet1TableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            DataSet1.DatosFacturaDataTable dataTable = new DataSet1.DatosFacturaDataTable();
+            DataSet1.DatosFacturaActDataTable dataTable = new DataSet1.DatosFacturaActDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
