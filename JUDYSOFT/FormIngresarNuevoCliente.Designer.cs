@@ -437,7 +437,7 @@
             this.textBoxDocumento.Size = new System.Drawing.Size(195, 22);
             this.textBoxDocumento.TabIndex = 18;
             this.textBoxDocumento.TextChanged += new System.EventHandler(this.textBoxDocumento_TextChanged);
-            this.textBoxDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCédula_TextChanged);
+            this.textBoxDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDocumento_TextChanged);
             // 
             // lblIdentificacion
             // 
