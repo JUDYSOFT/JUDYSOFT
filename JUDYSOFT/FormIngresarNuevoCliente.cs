@@ -17,14 +17,14 @@ namespace JUDYSOFT
         public FormIngresarNuevoCliente()
         {
             InitializeComponent();
-            textBoxCédula.Visible = false;
+            textBoxDocumento.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)//boton aceptar 
         {
             if (radioCedula.Checked)
             {
-                verificarCedula(textBoxCédula.Text.Trim());
+                verificarCedula(textBoxDocumento.Text.Trim());
             }
             else
             {
@@ -201,13 +201,13 @@ namespace JUDYSOFT
             {
                 if ((char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
                 {
-                    textBoxCédula.BackColor = Color.LightCoral;
+                    textBoxDocumento.BackColor = Color.LightCoral;
                     e.Handled = true;
                     return;
                 }
                 else
                 {
-                    textBoxCédula.BackColor = Color.White;
+                    textBoxDocumento.BackColor = Color.White;
                 }
             }
             else
@@ -223,12 +223,16 @@ namespace JUDYSOFT
         {
             if (radioCedula.Checked)
             {
-                textBoxCédula.Visible = true;
+                textBoxDocumento.Visible = true;
             }
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
+            if (radioPasaporte.Checked)
+            {
+                textBoxDocumento.Visible = true;
+            }
 
         }
         private void verificarCedula(string cedula)
@@ -265,6 +269,11 @@ namespace JUDYSOFT
                 MessageBox.Show("el número de cédula ingresado no contiene 10 dígitos");
             
             }
+        }
+
+        private void textBoxDocumento_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

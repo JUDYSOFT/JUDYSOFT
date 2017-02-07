@@ -59,9 +59,9 @@
             this.textBoxNombre2 = new System.Windows.Forms.TextBox();
             this.textBoxApellido2 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioPasaporte = new System.Windows.Forms.RadioButton();
             this.radioCedula = new System.Windows.Forms.RadioButton();
-            this.textBoxCédula = new System.Windows.Forms.TextBox();
+            this.textBoxDocumento = new System.Windows.Forms.TextBox();
             this.lblIdentificacion = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -396,9 +396,9 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.radioButton4);
+            this.panel1.Controls.Add(this.radioPasaporte);
             this.panel1.Controls.Add(this.radioCedula);
-            this.panel1.Controls.Add(this.textBoxCédula);
+            this.panel1.Controls.Add(this.textBoxDocumento);
             this.panel1.Controls.Add(this.lblIdentificacion);
             this.panel1.Location = new System.Drawing.Point(43, 23);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -406,17 +406,17 @@
             this.panel1.Size = new System.Drawing.Size(449, 102);
             this.panel1.TabIndex = 29;
             // 
-            // radioButton4
+            // radioPasaporte
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(310, 34);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(94, 21);
-            this.radioButton4.TabIndex = 20;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Pasaporte";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.radioPasaporte.AutoSize = true;
+            this.radioPasaporte.Location = new System.Drawing.Point(300, 34);
+            this.radioPasaporte.Name = "radioPasaporte";
+            this.radioPasaporte.Size = new System.Drawing.Size(94, 21);
+            this.radioPasaporte.TabIndex = 20;
+            this.radioPasaporte.TabStop = true;
+            this.radioPasaporte.Text = "Pasaporte";
+            this.radioPasaporte.UseVisualStyleBackColor = true;
+            this.radioPasaporte.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioCedula
             // 
@@ -430,13 +430,14 @@
             this.radioCedula.UseVisualStyleBackColor = true;
             this.radioCedula.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
-            // textBoxCédula
+            // textBoxDocumento
             // 
-            this.textBoxCédula.Location = new System.Drawing.Point(199, 61);
-            this.textBoxCédula.Name = "textBoxCédula";
-            this.textBoxCédula.Size = new System.Drawing.Size(195, 22);
-            this.textBoxCédula.TabIndex = 18;
-            this.textBoxCédula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCédula_TextChanged);
+            this.textBoxDocumento.Location = new System.Drawing.Point(199, 61);
+            this.textBoxDocumento.Name = "textBoxDocumento";
+            this.textBoxDocumento.Size = new System.Drawing.Size(195, 22);
+            this.textBoxDocumento.TabIndex = 18;
+            this.textBoxDocumento.TextChanged += new System.EventHandler(this.textBoxDocumento_TextChanged);
+            this.textBoxDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCédula_TextChanged);
             // 
             // lblIdentificacion
             // 
@@ -560,8 +561,8 @@
         private System.Windows.Forms.TextBox textBoxTelefono1;
         private System.Windows.Forms.TextBox textBoxApellido1;
         private System.Windows.Forms.TextBox textBoxNombre1;
-        private System.Windows.Forms.TextBox textBoxCédula;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.TextBox textBoxDocumento;
+        private System.Windows.Forms.RadioButton radioPasaporte;
         private System.Windows.Forms.RadioButton radioCedula;
     }
 }
