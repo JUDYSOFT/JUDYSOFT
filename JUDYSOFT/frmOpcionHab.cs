@@ -43,7 +43,13 @@ namespace JUDYSOFT
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-        
+            groupBox1.Enabled = true;
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = false;
         }
     }
 }

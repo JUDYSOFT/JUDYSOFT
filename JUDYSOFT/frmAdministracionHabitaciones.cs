@@ -358,8 +358,12 @@ namespace JUDYSOFT
                 MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem", "consultarToolStripMenuItem");
             }
         }
-            
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
+    }
 
         /*      private void btnh20_Click_1(object sender, EventArgs e)
               {

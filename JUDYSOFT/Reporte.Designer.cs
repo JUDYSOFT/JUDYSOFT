@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+    
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DatosFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet1 = new JUDYSOFT.DataSet1();
