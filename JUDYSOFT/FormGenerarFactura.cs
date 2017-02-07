@@ -212,29 +212,7 @@ namespace JUDYSOFT
 
         private void botonNuevaFactura_Click(object sender, EventArgs e)
         {
-            /*txtCantidad.Text = "";
-            txtCodigo.Text = "";
-            txtDescripcion.Text = "";
-            txtDireccion.Text = "";
-            txtidCliente.Text = "";
-            txtBoxCliente.Text = "";
-            txtSubtotal.Text = "";
-            txtTelefono.Text = "";
-            txtValUni.Text = "";
-            txtImpuesto.Text = "";
-            txtTotal.Text = ""; 
-            lblCliente.Text = "";
-
-            comboBoxTaxes.SelectedIndex = -1;
-            dataGridView1.Rows.Clear();
-            contFila = 0;
-            total = 0;
-
-            txtidCliente.Focus();*/
-
             Limpiar();
-
-
         }
 
         private void botonListaClientes_Click(object sender, EventArgs e)
