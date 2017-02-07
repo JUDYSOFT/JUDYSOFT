@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Libreria;
 
 using Libreria;
 
@@ -75,11 +74,7 @@ namespace JUDYSOFT
                 MessageBox.Show("Error: " + ex.Message);
                             }
 
-     */
-            frmMenuPrincipal frm = new frmMenuPrincipal();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.WindowState = FormWindowState.Maximized;
-            frm.Show();
+
 
 
 

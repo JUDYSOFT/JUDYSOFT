@@ -50,7 +50,7 @@ namespace JUDYSOFT
 
         private void FormAgregarProductoAFactura_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = LLenarDGv("Producto").Tables[0];
+            dataGridView1.DataSource = LLenarDGv("PRODUCTO").Tables[0];
         }
 
         public DataSet LLenarDGv(string tabla)

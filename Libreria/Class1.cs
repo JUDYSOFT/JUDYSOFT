@@ -13,7 +13,7 @@ namespace Libreria
     {
         public static DataSet Ejecutar(string cmd) {
 
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-P6D1EH2\\SQLEXPRESS;Initial Catalog=JUDYSOFT;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=LENOVO-PC\\SQLEXPRESS;Initial Catalog=JUDYSOFT;Integrated Security=True");
             con.Open();
 
             DataSet DS = new DataSet();
