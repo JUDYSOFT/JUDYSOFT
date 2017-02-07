@@ -13,6 +13,7 @@ namespace JUDYSOFT
 {
     public partial class FormIngresarNuevoEmpleado : Form
     {
+        Validaciones validar = new Validaciones();
         public FormIngresarNuevoEmpleado()
         {
             InitializeComponent();
@@ -386,160 +387,59 @@ namespace JUDYSOFT
 
         private void textBoxIdentificacion_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!validarNumeros(textBoxIdentificacion.Text,e) && (e.KeyChar != (char)Keys.Back))
-            {
-                
-                
-                e.Handled = true;
-                textBoxIdentificacion.BackColor = Color.LightCoral;
-                return;
-            }
-            else
-            {
-
-                textBoxIdentificacion.BackColor = Color.White;
-            }
-            if(validarNumeros(textBoxIdentificacion.Text, e) && textBoxIdentificacion.Focus() == false)
-            {
-                MessageBox.Show("hola"); 
-            }
+            if (textBoxIdentificacion.Focused)
+                if(validar.validarCamposNumericos(e,textBoxIdentificacion))
+                    Console.Write("validar ident");
+                     //validar 10 digitos        
         }
 
         private void textBoxNombres_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxNombres.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxNombres.BackColor = Color.White;
-            }
+            if (textBoxNombres.Focused)
+                if(validar.validarCadenasDeTexto(e, textBoxNombres))
+                    Console.Write("validar nombres");
+                    //validar nombres.
         }
 
         private void textBoxApellidos_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxApellidos.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxApellidos.BackColor = Color.White;
-            }
+            if (textBoxApellidos.Focused)
+                if (validar.validarCadenasDeTexto(e, textBoxApellidos))
+                    Console.Write("validar apellidos");
+                    //validar apellidos
+            
         }
 
         private void textBoxDireccion_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!(char.IsLetterOrDigit(e.KeyChar)) && (e.KeyChar != (char)Keys.Back)&& !(char.IsWhiteSpace(e.KeyChar)))
-            {
-                textBoxDireccion.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxDireccion.BackColor = Color.White;
-            }
+            if (textBoxDireccion.Focused)
+                validar.validarCadenasDeTexto(e, textBoxDireccion);
+                // Validar que se puedan ingresar numeros
         }
 
         private void textBoxCorreoElectronico_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!emailBienEscrito(textBoxCorreoElectronico.Text))
-
-            {
-                textBoxCorreoElectronico.BackColor = Color.LightCoral;
-            }
-            else
-            {
-                textBoxCorreoElectronico.BackColor = Color.White;
-            }
+            if (textBoxCorreoElectronico.Focused)
+                validar.emailBienEscrito(textBoxCorreoElectronico.Text);
         }
-
-        private Boolean emailBienEscrito(String email)
-        {
-            String sFormato;
-            sFormato = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-            if (Regex.IsMatch(email, sFormato))
-            {
-                if (Regex.Replace(email, sFormato, String.Empty).Length == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        private Boolean validarNumeros(String cadena, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            if (!(char.IsDigit(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-            
-        }
-
+        
         private void textBoxTelefonoConvencional_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!(char.IsDigit(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxTelefonoConvencional.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxTelefonoConvencional.BackColor = Color.White;
-            }
+            if (textBoxTelefonoConvencional.Focused)
+                validar.validarCamposNumericos(e, textBoxTelefonoConvencional);
         }
 
         private void textBoxCelular_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!(char.IsDigit(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxCelular.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxCelular.BackColor = Color.White;
-            }
+            if (textBoxCelular.Focused)
+                validar.validarCamposNumericos(e, textBoxCelular);
         }
 
         private void textBoxSalario_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxSalario.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxSalario.BackColor = Color.White;
-            }
+           
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
     }
 }
