@@ -195,7 +195,7 @@ namespace JUDYSOFT
 
         
 
-        private void textBoxCédula_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        private void textBoxDocumento_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
             if (radioCedula.Checked)
             {
