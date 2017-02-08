@@ -41,7 +41,7 @@ namespace JUDYSOFT
         {
             
            try
-            {
+           {
                 //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------------------------
                 /*string CMD = string.Format("SELECT * FROM EMPLEADO WHERE NOMBREUSUARIOEMPLEADO = '{0}' AND CONTRASENIAEMPLEADO = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
                 DataSet ds = Utilidades.Ejecutar(CMD);
@@ -89,14 +89,14 @@ namespace JUDYSOFT
              {
                 MessageBox.Show("Error: " + ex.Message);
                             }
-                            
-                //frmMenuPrincipal frmHab = new frmMenuPrincipal();
+                        
+               // frmMenuPrincipal frmHab = new frmMenuPrincipal();
                 //this.Visible = false;
                 //frmHab.Show();
                 //this.FormClosing += Form1_FormClosing;
 
-
-
+    
+            
 
             }
 

@@ -14,18 +14,20 @@ namespace JUDYSOFT
 {
     public partial class FormIngresarNuevoCliente : Form
     {
+        Validaciones val = new Validaciones();
         public FormIngresarNuevoCliente()
         {
             InitializeComponent();
             txtDocumento.Visible = false;
         }
+        private string error=" ";
 
         private void btnAceptar_Click(object sender, EventArgs e)//boton aceptar 
         {
             if (Utilidades.ValidarFormulario(groupBoxDocumento,errorProvider2)==false )
             {
 
-               // verificarCedula(txtDocumento.Text.Trim());
+                //verificarCedula(txtDocumento.Text.Trim());
 
             }
             if (Utilidades.ValidarFormulario(panelInformación,errorProvider2)==false)
@@ -220,55 +222,25 @@ namespace JUDYSOFT
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
+            txtDocumento.Text = "";
             if (radioCedula.Checked)
             {
                 txtDocumento.Visible = true;
             }
+            txtDocumento.CharacterCasing = CharacterCasing.Upper;
+
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
+            txtDocumento.Text ="";
             if (radioPasaporte.Checked)
             {
-                //textBoxDocumento.Visible = true;
+                txtDocumento.Visible = true;
             }
 
         }
-        private void verificarCedula(string cedula)
-        {
-            char[] vector = cedula.ToCharArray();
-            int sumatotal = 0;
-            if (vector.Length==10)
-            {
-                for(int i = 0; i < vector.Length - 1; i++)
-                {
-                    int numero =Convert.ToInt32( vector[i].ToString());
-                    if ((i+1) % 2 ==1)
-                    {
-                        numero = Convert.ToInt32(vector[i].ToString()) * 2;
-                        if (numero>9)
-                        {
-                            numero = numero- 9;
-                        }
-                    }
-                    sumatotal += numero;
-                }
-                sumatotal = 10 - (sumatotal % 10);
-                if (sumatotal == Convert.ToInt32(vector[9].ToString()))
-                {
-                    MessageBox.Show("la cédula es correcta");
-                }
-                else
-                {
-                    MessageBox.Show("la cédula es incorrecta","JUDYSOFT",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                }
-            }
-            else
-            {
-                MessageBox.Show("el número de cédula ingresado no contiene 10 dígitos");
-            
-            }
-        }
+        
 
         private void textBoxNacionalidad_TextChanged(object sender, EventArgs e)
         {
@@ -294,27 +266,79 @@ namespace JUDYSOFT
 
         private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtDocumento.Focused)
-            {
+            
                 if (radioCedula.Checked)
                 {
-                    if (Convert.ToInt32(txtDocumento.Text.Length)==10&& e.KeyChar!=(char)Keys.Back)
+                   
+                    /*if (Convert.ToInt32(txtDocumento.Text.Length) == 10 && e.KeyChar != (char)Keys.Back)
                     {
                         e.Handled = true;
-                        
-
-                    }
+                    }*/
+                if (val.validarCamposNumericos(e, txtDocumento))
+                    return;
                     
-                }
                 
                     
-            }
-            
-           
-            
-              
+
+                }
+                else if (radioPasaporte.Checked)
+                {
+                    
+                    if (Convert.ToInt32(txtDocumento.Text.Length) == 8 && e.KeyChar != (char)Keys.Back)
+                    {
+                        e.Handled = true;
+                    }
+
+                }
+
             
 
+               
+                
+                    
+            
+            
+      }
+
+        private void txtNombre1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtNombre1.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e, txtNombre1))
+                return;
+        }
+
+        private void txtApellido1_KeyPress(object sender, KeyPressEventArgs e)
+           
+        {
+            txtApellido1.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e, txtApellido1))
+                return;
+        }
+
+        private void txtTelefono1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txtTelefono1_Leave(object sender, EventArgs e)
+        {
+            if (val.validartelefono(txtTelefono1.Text))
+                return;
+            else
+                MessageBox.Show("telefono incorrecto");
+        }
+
+        private void txtDocumento_Leave(object sender, EventArgs e)
+        {
+            if (radioCedula.Checked)
+            {
+                val.verificarCedula(txtDocumento.Text, txtDocumento);
+                    
+            }
+            else if (radioPasaporte.Checked)
+            {
+
+            }
         }
     }
 }

@@ -39,12 +39,12 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxDocumento = new System.Windows.Forms.GroupBox();
-            this.radioCedula = new System.Windows.Forms.RadioButton();
-            this.radioPasaporte = new System.Windows.Forms.RadioButton();
             this.txtDocumento = new Libreria.ErrorTxtBox();
+            this.radioPasaporte = new System.Windows.Forms.RadioButton();
+            this.radioCedula = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.panelInformación = new System.Windows.Forms.Panel();
             this.txtProfesión = new Libreria.ErrorTxtBox();
             this.txtProcedencia = new Libreria.ErrorTxtBox();
@@ -168,7 +168,7 @@
             this.btnAceptar.Size = new System.Drawing.Size(159, 49);
             this.btnAceptar.TabIndex = 27;
             this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // errorProvider2
@@ -188,18 +188,16 @@
             this.groupBoxDocumento.TabStop = false;
             this.groupBoxDocumento.Text = "Documento de Identificación (*)";
             // 
-            // radioCedula
+            // txtDocumento
             // 
-            this.radioCedula.AutoSize = true;
-            this.radioCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioCedula.Location = new System.Drawing.Point(50, 33);
-            this.radioCedula.Name = "radioCedula";
-            this.radioCedula.Size = new System.Drawing.Size(82, 24);
-            this.radioCedula.TabIndex = 19;
-            this.radioCedula.TabStop = true;
-            this.radioCedula.Text = "Cédula";
-            this.radioCedula.UseVisualStyleBackColor = true;
-            this.radioCedula.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.txtDocumento.Location = new System.Drawing.Point(199, 48);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(172, 22);
+            this.txtDocumento.TabIndex = 21;
+            this.txtDocumento.Validar = true;
+            this.txtDocumento.TextChanged += new System.EventHandler(this.txtDocumento_TextChanged);
+            this.txtDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento_KeyPress);
+            this.txtDocumento.Leave += new System.EventHandler(this.txtDocumento_Leave);
             // 
             // radioPasaporte
             // 
@@ -214,15 +212,18 @@
             this.radioPasaporte.UseVisualStyleBackColor = true;
             this.radioPasaporte.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
-            // txtDocumento
+            // radioCedula
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(199, 48);
-            this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(172, 22);
-            this.txtDocumento.TabIndex = 21;
-            this.txtDocumento.Validar = true;
-            this.txtDocumento.TextChanged += new System.EventHandler(this.txtDocumento_TextChanged);
-            this.txtDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento_KeyPress);
+            this.radioCedula.AutoSize = true;
+            this.radioCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioCedula.Location = new System.Drawing.Point(50, 33);
+            this.radioCedula.Name = "radioCedula";
+            this.radioCedula.Size = new System.Drawing.Size(82, 24);
+            this.radioCedula.TabIndex = 19;
+            this.radioCedula.TabStop = true;
+            this.radioCedula.Text = "Cédula";
+            this.radioCedula.UseVisualStyleBackColor = true;
+            this.radioCedula.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -234,19 +235,6 @@
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sexo";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(6, 46);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(106, 24);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Masculino";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -260,6 +248,19 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Femenino";
             this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(17, 46);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(106, 24);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Masculino";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // panelInformación
             // 
@@ -344,6 +345,7 @@
             this.txtNombre1.Size = new System.Drawing.Size(172, 22);
             this.txtNombre1.TabIndex = 112;
             this.txtNombre1.Validar = true;
+            this.txtNombre1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre1_KeyPress);
             // 
             // txtApellido1
             // 
@@ -352,6 +354,7 @@
             this.txtApellido1.Size = new System.Drawing.Size(172, 22);
             this.txtApellido1.TabIndex = 111;
             this.txtApellido1.Validar = true;
+            this.txtApellido1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido1_KeyPress);
             // 
             // txtTelefono1
             // 
@@ -360,6 +363,8 @@
             this.txtTelefono1.Size = new System.Drawing.Size(172, 22);
             this.txtTelefono1.TabIndex = 110;
             this.txtTelefono1.Validar = true;
+            this.txtTelefono1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono1_KeyPress);
+            this.txtTelefono1.Leave += new System.EventHandler(this.txtTelefono1_Leave);
             // 
             // txtNacionalidad
             // 
