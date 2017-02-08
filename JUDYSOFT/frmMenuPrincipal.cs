@@ -42,14 +42,12 @@ namespace JUDYSOFT
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
             FormIngresarNuevoEmpleado frm = new FormIngresarNuevoEmpleado();
             nuevoToolStripMenuItem.Enabled = false;
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.WindowState = FormWindowState.Maximized;
             frm.MdiParent = this;
             frm.Show();
-
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
