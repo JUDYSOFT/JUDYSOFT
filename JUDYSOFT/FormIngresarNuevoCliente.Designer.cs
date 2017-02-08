@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -46,7 +41,9 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.panelInformación = new System.Windows.Forms.Panel();
-            this.txtProfesión = new Libreria.ErrorTxtBox();
+            this.txtDireccion = new Libreria.ErrorTxtBox();
+            this.lbldireccion = new System.Windows.Forms.Label();
+            this.txtCorreo = new Libreria.ErrorTxtBox();
             this.txtProcedencia = new Libreria.ErrorTxtBox();
             this.txtTelefono2 = new Libreria.ErrorTxtBox();
             this.txtApellido2 = new Libreria.ErrorTxtBox();
@@ -56,75 +53,21 @@
             this.txtApellido1 = new Libreria.ErrorTxtBox();
             this.txtTelefono1 = new Libreria.ErrorTxtBox();
             this.txtNacionalidad = new Libreria.ErrorTxtBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelCorreo = new System.Windows.Forms.Label();
+            this.lblEstadoCivil = new System.Windows.Forms.Label();
+            this.lblNacionalidad = new System.Windows.Forms.Label();
+            this.labelProcedencia = new System.Windows.Forms.Label();
             this.lblNombre1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelNombre2 = new System.Windows.Forms.Label();
+            this.lblApellido1 = new System.Windows.Forms.Label();
             this.lblApellido2 = new System.Windows.Forms.Label();
             this.lbltelefono2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3.SuspendLayout();
+            this.lblTelefono = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.groupBoxDocumento.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelInformación.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.dateTimePicker2);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.dateTimePicker1);
-            this.panel3.Location = new System.Drawing.Point(43, 487);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(785, 82);
-            this.panel3.TabIndex = 31;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(561, 22);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(171, 22);
-            this.dateTimePicker2.TabIndex = 14;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(396, 24);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(140, 20);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "Fecha de Salida *";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(16, 22);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(149, 20);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Fecha de Ingreso *";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(197, 20);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(172, 22);
-            this.dateTimePicker1.TabIndex = 12;
             // 
             // label4
             // 
@@ -145,7 +88,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(445, 582);
+            this.btnCancelar.Location = new System.Drawing.Point(466, 561);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(159, 49);
@@ -161,7 +104,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.Black;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(229, 582);
+            this.btnAceptar.Location = new System.Drawing.Point(242, 561);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -220,7 +163,6 @@
             this.radioCedula.Name = "radioCedula";
             this.radioCedula.Size = new System.Drawing.Size(82, 24);
             this.radioCedula.TabIndex = 19;
-            this.radioCedula.TabStop = true;
             this.radioCedula.Text = "Cédula";
             this.radioCedula.UseVisualStyleBackColor = true;
             this.radioCedula.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
@@ -234,7 +176,7 @@
             this.groupBox1.Size = new System.Drawing.Size(283, 100);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sexo";
+            this.groupBox1.Text = "Sexo (*)";
             // 
             // radioButton2
             // 
@@ -252,6 +194,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(17, 46);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -265,7 +208,9 @@
             // panelInformación
             // 
             this.panelInformación.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelInformación.Controls.Add(this.txtProfesión);
+            this.panelInformación.Controls.Add(this.txtDireccion);
+            this.panelInformación.Controls.Add(this.lbldireccion);
+            this.panelInformación.Controls.Add(this.txtCorreo);
             this.panelInformación.Controls.Add(this.txtProcedencia);
             this.panelInformación.Controls.Add(this.txtTelefono2);
             this.panelInformación.Controls.Add(this.txtApellido2);
@@ -275,28 +220,49 @@
             this.panelInformación.Controls.Add(this.txtApellido1);
             this.panelInformación.Controls.Add(this.txtTelefono1);
             this.panelInformación.Controls.Add(this.txtNacionalidad);
-            this.panelInformación.Controls.Add(this.label10);
-            this.panelInformación.Controls.Add(this.label9);
-            this.panelInformación.Controls.Add(this.label8);
-            this.panelInformación.Controls.Add(this.label2);
+            this.panelInformación.Controls.Add(this.labelCorreo);
+            this.panelInformación.Controls.Add(this.lblEstadoCivil);
+            this.panelInformación.Controls.Add(this.lblNacionalidad);
+            this.panelInformación.Controls.Add(this.labelProcedencia);
             this.panelInformación.Controls.Add(this.lblNombre1);
-            this.panelInformación.Controls.Add(this.label6);
-            this.panelInformación.Controls.Add(this.label3);
+            this.panelInformación.Controls.Add(this.labelNombre2);
+            this.panelInformación.Controls.Add(this.lblApellido1);
             this.panelInformación.Controls.Add(this.lblApellido2);
             this.panelInformación.Controls.Add(this.lbltelefono2);
-            this.panelInformación.Controls.Add(this.label1);
+            this.panelInformación.Controls.Add(this.lblTelefono);
             this.panelInformación.Location = new System.Drawing.Point(43, 147);
             this.panelInformación.Name = "panelInformación";
-            this.panelInformación.Size = new System.Drawing.Size(785, 319);
+            this.panelInformación.Size = new System.Drawing.Size(785, 372);
             this.panelInformación.TabIndex = 60;
             // 
-            // txtProfesión
+            // txtDireccion
             // 
-            this.txtProfesión.Location = new System.Drawing.Point(562, 266);
-            this.txtProfesión.Name = "txtProfesión";
-            this.txtProfesión.Size = new System.Drawing.Size(172, 22);
-            this.txtProfesión.TabIndex = 118;
-            this.txtProfesión.Validar = false;
+            this.txtDireccion.Location = new System.Drawing.Point(197, 320);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(172, 22);
+            this.txtDireccion.TabIndex = 120;
+            this.txtDireccion.Validar = false;
+            this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
+            // 
+            // lbldireccion
+            // 
+            this.lbldireccion.AutoSize = true;
+            this.lbldireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldireccion.Location = new System.Drawing.Point(58, 320);
+            this.lbldireccion.Name = "lbldireccion";
+            this.lbldireccion.Size = new System.Drawing.Size(86, 40);
+            this.lbldireccion.TabIndex = 119;
+            this.lbldireccion.Text = "Dirección \r\nDomicilio";
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCorreo.Location = new System.Drawing.Point(562, 268);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(172, 22);
+            this.txtCorreo.TabIndex = 118;
+            this.txtCorreo.Validar = false;
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // txtProcedencia
             // 
@@ -305,6 +271,7 @@
             this.txtProcedencia.Size = new System.Drawing.Size(173, 22);
             this.txtProcedencia.TabIndex = 117;
             this.txtProcedencia.Validar = false;
+            this.txtProcedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProcedencia_KeyPress);
             // 
             // txtTelefono2
             // 
@@ -313,6 +280,7 @@
             this.txtTelefono2.Size = new System.Drawing.Size(171, 22);
             this.txtTelefono2.TabIndex = 116;
             this.txtTelefono2.Validar = false;
+            this.txtTelefono2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono2_KeyPress);
             // 
             // txtApellido2
             // 
@@ -321,6 +289,7 @@
             this.txtApellido2.Size = new System.Drawing.Size(172, 22);
             this.txtApellido2.TabIndex = 115;
             this.txtApellido2.Validar = false;
+            this.txtApellido2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido2_KeyPress);
             // 
             // txtNombre2
             // 
@@ -329,18 +298,20 @@
             this.txtNombre2.Size = new System.Drawing.Size(172, 22);
             this.txtNombre2.TabIndex = 114;
             this.txtNombre2.Validar = false;
+            this.txtNombre2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre2_KeyPress);
             // 
             // txtEstadoCivil
             // 
-            this.txtEstadoCivil.Location = new System.Drawing.Point(199, 268);
+            this.txtEstadoCivil.Location = new System.Drawing.Point(197, 268);
             this.txtEstadoCivil.Name = "txtEstadoCivil";
             this.txtEstadoCivil.Size = new System.Drawing.Size(172, 22);
             this.txtEstadoCivil.TabIndex = 113;
             this.txtEstadoCivil.Validar = false;
+            this.txtEstadoCivil.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstadoCivil_KeyPress);
             // 
             // txtNombre1
             // 
-            this.txtNombre1.Location = new System.Drawing.Point(201, 24);
+            this.txtNombre1.Location = new System.Drawing.Point(197, 26);
             this.txtNombre1.Name = "txtNombre1";
             this.txtNombre1.Size = new System.Drawing.Size(172, 22);
             this.txtNombre1.TabIndex = 112;
@@ -349,7 +320,7 @@
             // 
             // txtApellido1
             // 
-            this.txtApellido1.Location = new System.Drawing.Point(199, 83);
+            this.txtApellido1.Location = new System.Drawing.Point(197, 81);
             this.txtApellido1.Name = "txtApellido1";
             this.txtApellido1.Size = new System.Drawing.Size(172, 22);
             this.txtApellido1.TabIndex = 111;
@@ -358,7 +329,7 @@
             // 
             // txtTelefono1
             // 
-            this.txtTelefono1.Location = new System.Drawing.Point(199, 139);
+            this.txtTelefono1.Location = new System.Drawing.Point(197, 140);
             this.txtTelefono1.Name = "txtTelefono1";
             this.txtTelefono1.Size = new System.Drawing.Size(172, 22);
             this.txtTelefono1.TabIndex = 110;
@@ -368,51 +339,52 @@
             // 
             // txtNacionalidad
             // 
-            this.txtNacionalidad.Location = new System.Drawing.Point(199, 210);
+            this.txtNacionalidad.Location = new System.Drawing.Point(197, 210);
             this.txtNacionalidad.Name = "txtNacionalidad";
             this.txtNacionalidad.Size = new System.Drawing.Size(172, 22);
             this.txtNacionalidad.TabIndex = 109;
             this.txtNacionalidad.Validar = true;
+            this.txtNacionalidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNacionalidad_KeyPress);
             // 
-            // label10
+            // labelCorreo
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(417, 268);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 20);
-            this.label10.TabIndex = 108;
-            this.label10.Text = "Profesión";
+            this.labelCorreo.AutoSize = true;
+            this.labelCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCorreo.Location = new System.Drawing.Point(416, 268);
+            this.labelCorreo.Name = "labelCorreo";
+            this.labelCorreo.Size = new System.Drawing.Size(93, 40);
+            this.labelCorreo.TabIndex = 108;
+            this.labelCorreo.Text = "Correo \r\nElectrónico";
             // 
-            // label9
+            // lblEstadoCivil
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(46, 266);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 20);
-            this.label9.TabIndex = 107;
-            this.label9.Text = "Estado Civil";
+            this.lblEstadoCivil.AutoSize = true;
+            this.lblEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoCivil.Location = new System.Drawing.Point(46, 266);
+            this.lblEstadoCivil.Name = "lblEstadoCivil";
+            this.lblEstadoCivil.Size = new System.Drawing.Size(98, 20);
+            this.lblEstadoCivil.TabIndex = 107;
+            this.lblEstadoCivil.Text = "Estado Civil";
             // 
-            // label8
+            // lblNacionalidad
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(46, 212);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(128, 20);
-            this.label8.TabIndex = 106;
-            this.label8.Text = "Nacionalidad (*)";
+            this.lblNacionalidad.AutoSize = true;
+            this.lblNacionalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNacionalidad.Location = new System.Drawing.Point(46, 212);
+            this.lblNacionalidad.Name = "lblNacionalidad";
+            this.lblNacionalidad.Size = new System.Drawing.Size(128, 20);
+            this.lblNacionalidad.TabIndex = 106;
+            this.lblNacionalidad.Text = "Nacionalidad (*)";
             // 
-            // label2
+            // labelProcedencia
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(417, 202);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 40);
-            this.label2.TabIndex = 105;
-            this.label2.Text = "Lugar de \r\nProcedencia ";
+            this.labelProcedencia.AutoSize = true;
+            this.labelProcedencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProcedencia.Location = new System.Drawing.Point(417, 202);
+            this.labelProcedencia.Name = "labelProcedencia";
+            this.labelProcedencia.Size = new System.Drawing.Size(107, 40);
+            this.labelProcedencia.TabIndex = 105;
+            this.labelProcedencia.Text = "Lugar de \r\nProcedencia ";
             // 
             // lblNombre1
             // 
@@ -425,26 +397,26 @@
             this.lblNombre1.Text = " Nombre 1 (*)";
             this.lblNombre1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // label6
+            // labelNombre2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(417, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 20);
-            this.label6.TabIndex = 102;
-            this.label6.Text = "Nombre 2";
+            this.labelNombre2.AutoSize = true;
+            this.labelNombre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre2.Location = new System.Drawing.Point(417, 26);
+            this.labelNombre2.Name = "labelNombre2";
+            this.labelNombre2.Size = new System.Drawing.Size(82, 20);
+            this.labelNombre2.TabIndex = 102;
+            this.labelNombre2.Text = "Nombre 2";
             // 
-            // label3
+            // lblApellido1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(46, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 20);
-            this.label3.TabIndex = 100;
-            this.label3.Text = "Apellido 1 (*)";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblApellido1.AutoSize = true;
+            this.lblApellido1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido1.Location = new System.Drawing.Point(46, 83);
+            this.lblApellido1.Name = "lblApellido1";
+            this.lblApellido1.Size = new System.Drawing.Size(105, 20);
+            this.lblApellido1.TabIndex = 100;
+            this.lblApellido1.Text = "Apellido 1 (*)";
+            this.lblApellido1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblApellido2
             // 
@@ -466,15 +438,15 @@
             this.lbltelefono2.TabIndex = 104;
             this.lbltelefono2.Text = "Teléfono 2 ";
             // 
-            // label1
+            // lblTelefono
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 142);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 20);
-            this.label1.TabIndex = 103;
-            this.label1.Text = "Teléfono 1 (*)";
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Location = new System.Drawing.Point(46, 142);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(110, 20);
+            this.lblTelefono.TabIndex = 103;
+            this.lblTelefono.Text = "Teléfono 1 (*)";
             // 
             // FormIngresarNuevoCliente
             // 
@@ -485,7 +457,6 @@
             this.Controls.Add(this.panelInformación);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxDocumento);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label4);
@@ -494,8 +465,6 @@
             this.Text = "FormIngresarNuevoCliente";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormIngresarNuevoCliente_FormClosing);
             this.Load += new System.EventHandler(this.FormIngresarNuevoCliente_Load);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.groupBoxDocumento.ResumeLayout(false);
             this.groupBoxDocumento.PerformLayout();
@@ -509,11 +478,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label4;
@@ -526,7 +490,7 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Panel panelInformación;
-        private Libreria.ErrorTxtBox txtProfesión;
+        private Libreria.ErrorTxtBox txtCorreo;
         private Libreria.ErrorTxtBox txtProcedencia;
         private Libreria.ErrorTxtBox txtTelefono2;
         private Libreria.ErrorTxtBox txtApellido2;
@@ -536,15 +500,17 @@
         private Libreria.ErrorTxtBox txtApellido1;
         private Libreria.ErrorTxtBox txtTelefono1;
         private Libreria.ErrorTxtBox txtNacionalidad;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelCorreo;
+        private System.Windows.Forms.Label lblEstadoCivil;
+        private System.Windows.Forms.Label lblNacionalidad;
+        private System.Windows.Forms.Label labelProcedencia;
         private System.Windows.Forms.Label lblNombre1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelNombre2;
+        private System.Windows.Forms.Label lblApellido1;
         private System.Windows.Forms.Label lblApellido2;
         private System.Windows.Forms.Label lbltelefono2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lbldireccion;
+        private Libreria.ErrorTxtBox txtDireccion;
     }
 }
