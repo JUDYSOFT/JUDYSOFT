@@ -40,10 +40,10 @@ namespace JUDYSOFT
         private void btningresar_Click(object sender, EventArgs e)
         {
             
-           // try
-            //{
+           try
+            {
                 //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------------------------
-                string CMD = string.Format("SELECT * FROM EMPLEADO WHERE NOMBREUSUARIOEMPLEADO = '{0}' AND CONTRASENIAEMPLEADO = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
+                /*string CMD = string.Format("SELECT * FROM EMPLEADO WHERE NOMBREUSUARIOEMPLEADO = '{0}' AND CONTRASENIAEMPLEADO = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
                 DataSet ds = Utilidades.Ejecutar(CMD);
                 string cuenta = ds.Tables[0].Rows[0]["NOMBREUSUARIOEMPLEADO"].ToString().Trim();
                 string psd = ds.Tables[0].Rows[0]["CONTRASENIAEMPLEADO"].ToString().Trim();
@@ -66,11 +66,11 @@ namespace JUDYSOFT
                     this.Visible = false;
                     frmHab.Show();
                     this.FormClosing += Form1_FormClosing;
-                }
+                }*/
 
                 //Administración---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-                /*string CMD = string.Format("SELECT * FROM usuario WHERE Cuenta = '{0}' AND password = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
+                string CMD = string.Format("SELECT * FROM usuario WHERE Cuenta = '{0}' AND password = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
                 DataSet ds = Utilidades.Ejecutar(CMD);
                 string cuenta = ds.Tables[0].Rows[0]["Cuenta"].ToString().Trim();
                 string psd = ds.Tables[0].Rows[0]["password"].ToString().Trim();
@@ -90,11 +90,11 @@ namespace JUDYSOFT
                 MessageBox.Show("Error: " + ex.Message);
                             }
                             
-                frmMenuPrincipal frmHab = new frmMenuPrincipal();
-                this.Visible = false;
-                frmHab.Show();
-                this.FormClosing += Form1_FormClosing;
-                */
+                //frmMenuPrincipal frmHab = new frmMenuPrincipal();
+                //this.Visible = false;
+                //frmHab.Show();
+                //this.FormClosing += Form1_FormClosing;
+
 
 
 

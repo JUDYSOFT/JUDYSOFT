@@ -132,5 +132,10 @@ namespace JUDYSOFT
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void adnibistracionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

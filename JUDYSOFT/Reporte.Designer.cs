@@ -29,24 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+    
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DatosFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet1 = new JUDYSOFT.DataSet1();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DatosFacturaTableAdapter = new JUDYSOFT.DataSet1TableAdapters.DatosFacturaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DatosFacturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DatosFacturaBindingSource
-            // 
-            this.DatosFacturaBindingSource.DataMember = "DatosFactura";
-            this.DatosFacturaBindingSource.DataSource = this.DataSet1;
-            // 
-            // DataSet1
-            // 
-            this.DataSet1.DataSetName = "DataSet1";
-            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -60,9 +50,15 @@
             this.reportViewer1.Size = new System.Drawing.Size(884, 733);
             this.reportViewer1.TabIndex = 0;
             // 
-            // DatosFacturaTableAdapter
+            // DatosFacturaBindingSource
             // 
-            this.DatosFacturaTableAdapter.ClearBeforeFill = true;
+            this.DatosFacturaBindingSource.DataMember = "DatosFactura";
+            this.DatosFacturaBindingSource.DataSource = this.DataSet1;
+            // 
+            // DataSet1
+            // 
+            this.DataSet1.DataSetName = "DataSet1";
+            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Reporte
             // 
@@ -82,7 +78,6 @@
         #endregion
         private System.Windows.Forms.BindingSource DatosFacturaBindingSource;
         private DataSet1 DataSet1;
-        private DataSet1TableAdapters.DatosFacturaTableAdapter DatosFacturaTableAdapter;
         public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
