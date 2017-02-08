@@ -39,15 +39,15 @@ namespace JUDYSOFT
 
             //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------
 
-                //String cmd = "SELECT * FROM EMPLEADO WHERE CODEMPLEADO= " + frmLogin.Codigo;
-                //DataSet DS = Utilidades.Ejecutar(cmd);
-                //lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NOMBRE1EMPLEADO"].ToString().Trim() + " "+DS.Tables[0].Rows[0]["APELLIDO1EMPLEADO"].ToString().Trim();
+                String cmd = "SELECT * FROM EMPLEADO WHERE CODEMPLEADO= " + frmLogin.Codigo;
+                DataSet DS = Utilidades.Ejecutar(cmd);
+                lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NOMBRE1EMPLEADO"].ToString().Trim() + " "+DS.Tables[0].Rows[0]["APELLIDO1EMPLEADO"].ToString().Trim();
 
             //Administración--------------------------------------------------------------------------------------------------------------------------------------
 
-                String cmd = "SELECT * FROM usuario WHERE idUsuario= " + frmLogin.Codigo;
-                DataSet DS = Utilidades.Ejecutar(cmd);
-                lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NombreUsuario"].ToString().Trim();
+                //String cmd = "SELECT * FROM usuario WHERE idUsuario= " + frmLogin.Codigo;
+                //DataSet DS = Utilidades.Ejecutar(cmd);
+                //lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NombreUsuario"].ToString().Trim();
 
         }
 
@@ -322,6 +322,16 @@ namespace JUDYSOFT
             {
                 MessageBox.Show(error.Message);
             }
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

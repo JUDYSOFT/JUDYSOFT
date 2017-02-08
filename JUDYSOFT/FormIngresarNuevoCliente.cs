@@ -17,25 +17,24 @@ namespace JUDYSOFT
         public FormIngresarNuevoCliente()
         {
             InitializeComponent();
-            textBoxDocumento.Visible = false;
+            txtDocumento.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)//boton aceptar 
+        private void btnAceptar_Click(object sender, EventArgs e)//boton aceptar 
         {
-            if (radioCedula.Checked)
+            if (Utilidades.ValidarFormulario(groupBoxDocumento,errorProvider2)==false )
             {
-                verificarCedula(textBoxDocumento.Text.Trim());
+
+               // verificarCedula(txtDocumento.Text.Trim());
+
             }
-            else
+            if (Utilidades.ValidarFormulario(panelInformación,errorProvider2)==false)
             {
-                MessageBox.Show("Pasaporte seleccionado");
-                
+                MessageBox.Show("Datos Correctos");
             }
-                
+                 
            
-
-
-        }
+         }
 
         private void button2_Click(object sender, EventArgs e)//boton cancelar 
         {
@@ -75,7 +74,7 @@ namespace JUDYSOFT
 
         }
 
-        private void textBoxNombre1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+      /*  private void textBoxNombre1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
             if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
             {
@@ -162,13 +161,13 @@ namespace JUDYSOFT
         {
             if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
             {
-                textBoxNacionalidad.BackColor = Color.LightCoral;
+                textBoxProcedencia.BackColor = Color.LightCoral;
                 e.Handled = true;
                 return;
             }
             else
             {
-                textBoxNacionalidad.BackColor = Color.White;
+                textBoxProcedencia.BackColor = Color.White;
             }
         }
 
@@ -217,13 +216,13 @@ namespace JUDYSOFT
             
         
 
-        }
+        }*/
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             if (radioCedula.Checked)
             {
-                textBoxDocumento.Visible = true;
+                txtDocumento.Visible = true;
             }
         }
 
@@ -231,7 +230,7 @@ namespace JUDYSOFT
         {
             if (radioPasaporte.Checked)
             {
-                textBoxDocumento.Visible = true;
+                //textBoxDocumento.Visible = true;
             }
 
         }
@@ -271,8 +270,50 @@ namespace JUDYSOFT
             }
         }
 
+        private void textBoxNacionalidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void textBoxDocumento_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtDocumento_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        
+
+        private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtDocumento.Focused)
+            {
+                if (radioCedula.Checked)
+                {
+                    if (Convert.ToInt32(txtDocumento.Text.Length)==10&& e.KeyChar!=(char)Keys.Back)
+                    {
+                        e.Handled = true;
+                        
+
+                    }
+                    
+                }
+                
+                    
+            }
+            
+           
+            
+              
+            
 
         }
     }
