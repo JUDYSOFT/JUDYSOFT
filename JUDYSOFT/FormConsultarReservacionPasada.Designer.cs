@@ -28,63 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnAtrasReservacionesPasadas = new System.Windows.Forms.Button();
+            this.btnConsultarReservacionesPasadas = new System.Windows.Forms.Button();
+            this.tablaReservacionesPasadas = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaReservacionesPasadas)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnAtrasReservacionesPasadas
             // 
-            this.button2.Location = new System.Drawing.Point(304, 310);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 24);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Atrás";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAtrasReservacionesPasadas.Location = new System.Drawing.Point(405, 382);
+            this.btnAtrasReservacionesPasadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAtrasReservacionesPasadas.Name = "btnAtrasReservacionesPasadas";
+            this.btnAtrasReservacionesPasadas.Size = new System.Drawing.Size(129, 30);
+            this.btnAtrasReservacionesPasadas.TabIndex = 5;
+            this.btnAtrasReservacionesPasadas.Text = "Atrás";
+            this.btnAtrasReservacionesPasadas.UseVisualStyleBackColor = true;
+            this.btnAtrasReservacionesPasadas.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnConsultarReservacionesPasadas
             // 
-            this.button1.Location = new System.Drawing.Point(177, 310);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 24);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConsultarReservacionesPasadas.Location = new System.Drawing.Point(236, 382);
+            this.btnConsultarReservacionesPasadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConsultarReservacionesPasadas.Name = "btnConsultarReservacionesPasadas";
+            this.btnConsultarReservacionesPasadas.Size = new System.Drawing.Size(128, 30);
+            this.btnConsultarReservacionesPasadas.TabIndex = 4;
+            this.btnConsultarReservacionesPasadas.Text = "Consultar";
+            this.btnConsultarReservacionesPasadas.UseVisualStyleBackColor = true;
+            this.btnConsultarReservacionesPasadas.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
+            // tablaReservacionesPasadas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 13);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(383, 286);
-            this.dataGridView1.TabIndex = 3;
+            this.tablaReservacionesPasadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaReservacionesPasadas.Location = new System.Drawing.Point(23, 16);
+            this.tablaReservacionesPasadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tablaReservacionesPasadas.Name = "tablaReservacionesPasadas";
+            this.tablaReservacionesPasadas.RowTemplate.Height = 24;
+            this.tablaReservacionesPasadas.Size = new System.Drawing.Size(511, 352);
+            this.tablaReservacionesPasadas.TabIndex = 3;
             // 
-            // FormConsultarReservacionPasada
+            // reservacionesPasadas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 357);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "FormConsultarReservacionPasada";
-            this.Text = "FormConsultarReservacionPasada";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ClientSize = new System.Drawing.Size(573, 439);
+            this.Controls.Add(this.btnAtrasReservacionesPasadas);
+            this.Controls.Add(this.btnConsultarReservacionesPasadas);
+            this.Controls.Add(this.tablaReservacionesPasadas);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "reservacionesPasadas";
+            this.Text = "Reservaciones Pasadas";
+            ((System.ComponentModel.ISupportInitialize)(this.tablaReservacionesPasadas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnAtrasReservacionesPasadas;
+        private System.Windows.Forms.Button btnConsultarReservacionesPasadas;
+        private System.Windows.Forms.DataGridView tablaReservacionesPasadas;
     }
 }

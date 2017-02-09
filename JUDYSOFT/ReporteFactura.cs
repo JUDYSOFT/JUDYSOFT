@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace JUDYSOFT
 {
-    public partial class Reporte : Form
+    public partial class ReporteFactura : Form
     {
-        public Reporte()
+        public ReporteFactura()
         {
             InitializeComponent();
         }
 
-        private void Reporte_Load(object sender, EventArgs e)
+        private void ReporteFactura_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DataSet1.DatosFactura' table. You can move, or remove it, as needed.
-           // this.DatosFacturaTableAdapter.Fill(this.DataSet1.DatosFactura);
 
             this.reportViewer1.RefreshReport();
+            this.reportViewer2.RefreshReport();
         }
     }
 }

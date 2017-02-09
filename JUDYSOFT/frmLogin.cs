@@ -36,37 +36,37 @@ namespace JUDYSOFT
 
         }
 
-       
+
         private void btningresar_Click(object sender, EventArgs e)
         {
-            
-           //try
-            //{
+
+
+            {
                 //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------------------------
-                /*string CMD = string.Format("SELECT * FROM EMPLEADO WHERE NOMBREUSUARIOEMPLEADO = '{0}' AND CONTRASENIAEMPLEADO = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
+                string CMD = string.Format("SELECT * FROM EMPLEADO WHERE NOMBREUSUARIOEMPLEADO = '{0}' AND CONTRASENIAEMPLEADO = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
                 DataSet ds = Utilidades.Ejecutar(CMD);
                 string cuenta = ds.Tables[0].Rows[0]["NOMBREUSUARIOEMPLEADO"].ToString().Trim();
                 string psd = ds.Tables[0].Rows[0]["CONTRASENIAEMPLEADO"].ToString().Trim();
                 Codigo = ds.Tables[0].Rows[0]["CODEMPLEADO"].ToString().Trim();
                 nivelAcceso = Int32.Parse(ds.Tables[0].Rows[0]["NIVELACCESOEMPLEADO"].ToString().Trim());
 
-                if(cuenta != txtuser.Text.Trim() || psd != txtpass.Text.Trim())
+                if (cuenta != txtuser.Text.Trim() || psd != txtpass.Text.Trim())
                 {
                     MessageBox.Show("Crendenciales Incorrectas");
 
                 }
-                else if(nivelAcceso==0)
-                   {
+                else if (nivelAcceso == 0)
+                {
                     MessageBox.Show("El usuario no tiene permiso de acceso");
 
-                   }
+                }
                 else
                 {
-                    frmMenuPrincipal frmHab = new frmMenuPrincipal();
+                    frmMenuPrincipal NUEVO = new frmMenuPrincipal();
                     this.Visible = false;
-                    frmHab.Show();
+                    NUEVO.Show();
                     this.FormClosing += Form1_FormClosing;
-                }*/
+                }
 
                 //Administración---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -88,13 +88,14 @@ namespace JUDYSOFT
             catch (Exception ex)
              {
                 MessageBox.Show("Error: " + ex.Message);
-             }*/
+             }
                             
                 frmMenuPrincipal frmHab = new frmMenuPrincipal();
                 this.Visible = false;
                 frmHab.Show();
-                this.FormClosing += Form1_FormClosing;
+                this.FormClosing += Form1_FormClosing;*/
             }
+        }
 
         private void btncancelar_Click(object sender, EventArgs e)
         {

@@ -34,7 +34,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DGVGenerarFactura
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
@@ -42,7 +42,7 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(51, 50);
-            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Name = "DGVGenerarFactura";
             this.dataGridView1.Size = new System.Drawing.Size(531, 152);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -74,6 +74,7 @@
             this.Controls.Add(this.bttnSeleccionar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormListaClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormListaClientes";
             this.Load += new System.EventHandler(this.FormListaClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
