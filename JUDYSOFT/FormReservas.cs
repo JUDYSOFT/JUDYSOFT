@@ -19,7 +19,7 @@ namespace JUDYSOFT
 
         private void button3_Click(object sender, EventArgs e)
         {
-            reservacionesPasadas nueva = new reservacionesPasadas();
+            FormConsultarReservacionPasada nueva = new FormConsultarReservacionPasada();
             nueva.Show();
         }
 

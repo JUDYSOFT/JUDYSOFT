@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JUDYSOFT
 {
-    public partial class reservacionesPasadas : Form
+    public partial class FormConsultarReservacionPasada : Form
     {
-        public reservacionesPasadas()
+        public FormConsultarReservacionPasada()
         {
             InitializeComponent();
         }

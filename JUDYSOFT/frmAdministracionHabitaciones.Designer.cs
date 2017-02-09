@@ -75,7 +75,7 @@ namespace JUDYSOFT
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(701, 439);
+            this.groupBox1.Size = new System.Drawing.Size(701, 468);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "HABITACIONES";
@@ -97,7 +97,7 @@ namespace JUDYSOFT
             this.groupBox4.Controls.Add(this.btnh23);
             this.groupBox4.Controls.Add(this.btnh21);
             this.groupBox4.Controls.Add(this.btnh22);
-            this.groupBox4.Location = new System.Drawing.Point(8, 176);
+            this.groupBox4.Location = new System.Drawing.Point(8, 175);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(680, 250);
             this.groupBox4.TabIndex = 18;
@@ -106,7 +106,7 @@ namespace JUDYSOFT
             // 
             // lblh27
             // 
-            this.lblh27.Location = new System.Drawing.Point(31, 222);
+            this.lblh27.Location = new System.Drawing.Point(15, 222);
             this.lblh27.Name = "lblh27";
             this.lblh27.Size = new System.Drawing.Size(90, 20);
             this.lblh27.TabIndex = 23;
@@ -115,7 +115,7 @@ namespace JUDYSOFT
             // 
             // lblh26
             // 
-            this.lblh26.Location = new System.Drawing.Point(561, 104);
+            this.lblh26.Location = new System.Drawing.Point(548, 104);
             this.lblh26.Name = "lblh26";
             this.lblh26.Size = new System.Drawing.Size(86, 20);
             this.lblh26.TabIndex = 22;
@@ -124,7 +124,7 @@ namespace JUDYSOFT
             // 
             // lblh25
             // 
-            this.lblh25.Location = new System.Drawing.Point(452, 104);
+            this.lblh25.Location = new System.Drawing.Point(439, 104);
             this.lblh25.Name = "lblh25";
             this.lblh25.Size = new System.Drawing.Size(90, 20);
             this.lblh25.TabIndex = 21;
@@ -133,7 +133,7 @@ namespace JUDYSOFT
             // 
             // lblh24
             // 
-            this.lblh24.Location = new System.Drawing.Point(349, 104);
+            this.lblh24.Location = new System.Drawing.Point(336, 104);
             this.lblh24.Name = "lblh24";
             this.lblh24.Size = new System.Drawing.Size(90, 20);
             this.lblh24.TabIndex = 20;
@@ -142,7 +142,7 @@ namespace JUDYSOFT
             // 
             // lblh23
             // 
-            this.lblh23.Location = new System.Drawing.Point(244, 104);
+            this.lblh23.Location = new System.Drawing.Point(231, 104);
             this.lblh23.Name = "lblh23";
             this.lblh23.Size = new System.Drawing.Size(90, 20);
             this.lblh23.TabIndex = 19;
@@ -151,7 +151,7 @@ namespace JUDYSOFT
             // 
             // lblh22
             // 
-            this.lblh22.Location = new System.Drawing.Point(137, 104);
+            this.lblh22.Location = new System.Drawing.Point(124, 104);
             this.lblh22.Name = "lblh22";
             this.lblh22.Size = new System.Drawing.Size(90, 20);
             this.lblh22.TabIndex = 18;
@@ -160,7 +160,7 @@ namespace JUDYSOFT
             // 
             // lblh21
             // 
-            this.lblh21.Location = new System.Drawing.Point(28, 104);
+            this.lblh21.Location = new System.Drawing.Point(15, 104);
             this.lblh21.Name = "lblh21";
             this.lblh21.Size = new System.Drawing.Size(90, 20);
             this.lblh21.TabIndex = 17;
@@ -169,7 +169,7 @@ namespace JUDYSOFT
             // 
             // btnh26
             // 
-            this.btnh26.Location = new System.Drawing.Point(564, 18);
+            this.btnh26.Location = new System.Drawing.Point(548, 20);
             this.btnh26.Name = "btnh26";
             this.btnh26.Size = new System.Drawing.Size(86, 81);
             this.btnh26.TabIndex = 16;
@@ -178,7 +178,7 @@ namespace JUDYSOFT
             // 
             // btnh25
             // 
-            this.btnh25.Location = new System.Drawing.Point(458, 18);
+            this.btnh25.Location = new System.Drawing.Point(439, 19);
             this.btnh25.Name = "btnh25";
             this.btnh25.Size = new System.Drawing.Size(90, 82);
             this.btnh25.TabIndex = 15;
@@ -187,7 +187,7 @@ namespace JUDYSOFT
             // 
             // btnh27
             // 
-            this.btnh27.Location = new System.Drawing.Point(31, 137);
+            this.btnh27.Location = new System.Drawing.Point(15, 137);
             this.btnh27.Name = "btnh27";
             this.btnh27.Size = new System.Drawing.Size(90, 82);
             this.btnh27.TabIndex = 14;
@@ -196,7 +196,7 @@ namespace JUDYSOFT
             // 
             // btnh24
             // 
-            this.btnh24.Location = new System.Drawing.Point(349, 19);
+            this.btnh24.Location = new System.Drawing.Point(336, 19);
             this.btnh24.Name = "btnh24";
             this.btnh24.Size = new System.Drawing.Size(90, 82);
             this.btnh24.TabIndex = 10;
@@ -205,7 +205,7 @@ namespace JUDYSOFT
             // 
             // btnh23
             // 
-            this.btnh23.Location = new System.Drawing.Point(244, 19);
+            this.btnh23.Location = new System.Drawing.Point(231, 19);
             this.btnh23.Name = "btnh23";
             this.btnh23.Size = new System.Drawing.Size(90, 82);
             this.btnh23.TabIndex = 9;
@@ -214,17 +214,16 @@ namespace JUDYSOFT
             // 
             // btnh21
             // 
-            this.btnh21.Location = new System.Drawing.Point(31, 19);
+            this.btnh21.Location = new System.Drawing.Point(15, 19);
             this.btnh21.Name = "btnh21";
             this.btnh21.Size = new System.Drawing.Size(90, 82);
             this.btnh21.TabIndex = 7;
             this.btnh21.Text = "button9";
             this.btnh21.UseVisualStyleBackColor = true;
-            this.btnh21.Click += new System.EventHandler(this.btnh21_Click_1);
             // 
             // btnh22
             // 
-            this.btnh22.Location = new System.Drawing.Point(137, 20);
+            this.btnh22.Location = new System.Drawing.Point(124, 20);
             this.btnh22.Name = "btnh22";
             this.btnh22.Size = new System.Drawing.Size(90, 82);
             this.btnh22.TabIndex = 8;
@@ -254,7 +253,7 @@ namespace JUDYSOFT
             // 
             // lblh20
             // 
-            this.lblh20.Location = new System.Drawing.Point(560, 105);
+            this.lblh20.Location = new System.Drawing.Point(547, 105);
             this.lblh20.Name = "lblh20";
             this.lblh20.Size = new System.Drawing.Size(87, 17);
             this.lblh20.TabIndex = 21;
@@ -263,7 +262,7 @@ namespace JUDYSOFT
             // 
             // lblh19
             // 
-            this.lblh19.Location = new System.Drawing.Point(455, 105);
+            this.lblh19.Location = new System.Drawing.Point(442, 105);
             this.lblh19.Name = "lblh19";
             this.lblh19.Size = new System.Drawing.Size(87, 17);
             this.lblh19.TabIndex = 20;
@@ -272,7 +271,7 @@ namespace JUDYSOFT
             // 
             // lblh18
             // 
-            this.lblh18.Location = new System.Drawing.Point(346, 105);
+            this.lblh18.Location = new System.Drawing.Point(333, 105);
             this.lblh18.Name = "lblh18";
             this.lblh18.Size = new System.Drawing.Size(93, 17);
             this.lblh18.TabIndex = 19;
@@ -281,7 +280,7 @@ namespace JUDYSOFT
             // 
             // lblh17
             // 
-            this.lblh17.Location = new System.Drawing.Point(247, 105);
+            this.lblh17.Location = new System.Drawing.Point(234, 105);
             this.lblh17.Name = "lblh17";
             this.lblh17.Size = new System.Drawing.Size(87, 17);
             this.lblh17.TabIndex = 14;
@@ -290,7 +289,7 @@ namespace JUDYSOFT
             // 
             // lblh16
             // 
-            this.lblh16.Location = new System.Drawing.Point(137, 104);
+            this.lblh16.Location = new System.Drawing.Point(124, 104);
             this.lblh16.Name = "lblh16";
             this.lblh16.Size = new System.Drawing.Size(90, 18);
             this.lblh16.TabIndex = 13;
@@ -300,7 +299,7 @@ namespace JUDYSOFT
             // lblh15
             // 
             this.lblh15.BackColor = System.Drawing.Color.Silver;
-            this.lblh15.Location = new System.Drawing.Point(28, 103);
+            this.lblh15.Location = new System.Drawing.Point(15, 103);
             this.lblh15.Name = "lblh15";
             this.lblh15.Size = new System.Drawing.Size(90, 19);
             this.lblh15.TabIndex = 12;
@@ -309,7 +308,7 @@ namespace JUDYSOFT
             // 
             // btnh20
             // 
-            this.btnh20.Location = new System.Drawing.Point(561, 20);
+            this.btnh20.Location = new System.Drawing.Point(548, 20);
             this.btnh20.Name = "btnh20";
             this.btnh20.Size = new System.Drawing.Size(86, 81);
             this.btnh20.TabIndex = 11;
@@ -318,7 +317,7 @@ namespace JUDYSOFT
             // 
             // btnh15
             // 
-            this.btnh15.Location = new System.Drawing.Point(28, 20);
+            this.btnh15.Location = new System.Drawing.Point(15, 20);
             this.btnh15.Name = "btnh15";
             this.btnh15.Size = new System.Drawing.Size(90, 80);
             this.btnh15.TabIndex = 0;
@@ -328,7 +327,7 @@ namespace JUDYSOFT
             // 
             // btnh19
             // 
-            this.btnh19.Location = new System.Drawing.Point(456, 19);
+            this.btnh19.Location = new System.Drawing.Point(443, 19);
             this.btnh19.Name = "btnh19";
             this.btnh19.Size = new System.Drawing.Size(86, 81);
             this.btnh19.TabIndex = 6;
@@ -337,7 +336,7 @@ namespace JUDYSOFT
             // 
             // btnh18
             // 
-            this.btnh18.Location = new System.Drawing.Point(349, 19);
+            this.btnh18.Location = new System.Drawing.Point(336, 19);
             this.btnh18.Name = "btnh18";
             this.btnh18.Size = new System.Drawing.Size(90, 82);
             this.btnh18.TabIndex = 5;
@@ -346,7 +345,7 @@ namespace JUDYSOFT
             // 
             // btnh17
             // 
-            this.btnh17.Location = new System.Drawing.Point(244, 20);
+            this.btnh17.Location = new System.Drawing.Point(231, 20);
             this.btnh17.Name = "btnh17";
             this.btnh17.Size = new System.Drawing.Size(90, 82);
             this.btnh17.TabIndex = 4;
@@ -355,7 +354,7 @@ namespace JUDYSOFT
             // 
             // btnh16
             // 
-            this.btnh16.Location = new System.Drawing.Point(137, 19);
+            this.btnh16.Location = new System.Drawing.Point(124, 19);
             this.btnh16.Name = "btnh16";
             this.btnh16.Size = new System.Drawing.Size(90, 82);
             this.btnh16.TabIndex = 3;
@@ -366,7 +365,7 @@ namespace JUDYSOFT
             // lblfecha
             // 
             this.lblfecha.AutoSize = true;
-            this.lblfecha.Location = new System.Drawing.Point(565, 29);
+            this.lblfecha.Location = new System.Drawing.Point(501, 29);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(35, 13);
             this.lblfecha.TabIndex = 2;
@@ -375,7 +374,7 @@ namespace JUDYSOFT
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 9);
+            this.groupBox2.Location = new System.Drawing.Point(41, 9);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(290, 42);
             this.groupBox2.TabIndex = 3;
@@ -389,7 +388,7 @@ namespace JUDYSOFT
             "Disponible",
             "Limpieza",
             "Ocupado"});
-            this.comboBox1.Location = new System.Drawing.Point(98, 13);
+            this.comboBox1.Location = new System.Drawing.Point(103, 17);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(90, 21);
             this.comboBox1.TabIndex = 0;
@@ -399,7 +398,7 @@ namespace JUDYSOFT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 511);
+            this.ClientSize = new System.Drawing.Size(760, 562);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblfecha);
             this.Controls.Add(this.groupBox1);

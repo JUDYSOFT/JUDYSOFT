@@ -201,7 +201,7 @@
             this.panelTablaCargo.TabIndex = 8;
             this.panelTablaCargo.Visible = false;
             // 
-            // dataGridView1
+            // DGVGenerarFactura
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -211,7 +211,7 @@
             this.Cargo});
             this.dataGridView1.Location = new System.Drawing.Point(108, 23);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
-            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Name = "DGVGenerarFactura";
             this.dataGridView1.Size = new System.Drawing.Size(445, 150);
             this.dataGridView1.TabIndex = 0;
             // 
