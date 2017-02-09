@@ -74,7 +74,6 @@
             this.tBoxNumeroNiniosNuevaReserva.Name = "tBoxNumeroNiniosNuevaReserva";
             this.tBoxNumeroNiniosNuevaReserva.Size = new System.Drawing.Size(43, 22);
             this.tBoxNumeroNiniosNuevaReserva.TabIndex = 29;
-            this.tBoxNumeroNiniosNuevaReserva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxNumeroNiniosNuevaReserva_KeyPress);
             // 
             // lblNumeroNiniosNuevaReservacion
             // 
@@ -101,8 +100,6 @@
             this.tBoxNumeroAdultosNuevaReserva.Name = "tBoxNumeroAdultosNuevaReserva";
             this.tBoxNumeroAdultosNuevaReserva.Size = new System.Drawing.Size(43, 22);
             this.tBoxNumeroAdultosNuevaReserva.TabIndex = 26;
-            this.tBoxNumeroAdultosNuevaReserva.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.tBoxNumeroAdultosNuevaReserva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxNumeroAdultosNuevaReserva_KeyPress);
             // 
             // lblFechaSalidaNuevaReservacion
             // 
@@ -157,7 +154,6 @@
             this.lblNumeroIdentificacionNuevaReservacion.Size = new System.Drawing.Size(160, 17);
             this.lblNumeroIdentificacionNuevaReservacion.TabIndex = 20;
             this.lblNumeroIdentificacionNuevaReservacion.Text = "Identificación del Cliente";
-            this.lblNumeroIdentificacionNuevaReservacion.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnIngresarNuevaReservacion
             // 
@@ -188,7 +184,6 @@
             this.tBoxNumeroIdClienteNuevareservacion.Size = new System.Drawing.Size(128, 22);
             this.tBoxNumeroIdClienteNuevareservacion.TabIndex = 33;
             this.tBoxNumeroIdClienteNuevareservacion.TextChanged += new System.EventHandler(this.tBoxNumeroIdClienteNuevareservacion_TextChanged);
-            this.tBoxNumeroIdClienteNuevareservacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxNumeroIdClienteNuevareservacion_KeyPress_1);
             // 
             // lblNombreClienteNuevaReservacion
             // 
@@ -233,7 +228,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormNuevaReservacion";
             this.Text = "Nueva Reservacion";
-            this.Load += new System.EventHandler(this.FormNuevaReservacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
