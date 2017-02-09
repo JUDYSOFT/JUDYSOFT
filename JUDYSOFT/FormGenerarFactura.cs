@@ -159,12 +159,12 @@ namespace JUDYSOFT
                 {
                     //Administración-------------------------------------------------------------------------------------------------------------------------------
 
-                        string cmd = string.Format("SELECT * FROM Cliente WHERE idCliente='{0}'", txtidCliente.Text.Trim());
+                        string cmd = string.Format("SELECT * FROM Cliente WHERE CODCLIENTE='{0}'", txtidCliente.Text.Trim());
                         DataSet DS = Utilidades.Ejecutar(cmd);
 
-                        txtBoxCliente.Text = DS.Tables[0].Rows[0]["nombreCliente"].ToString().Trim() + " " +DS.Tables[0].Rows[0]["apellidoCliente"].ToString().Trim();
-                        txtDireccion.Text = DS.Tables[0].Rows[0]["direccion"].ToString().Trim();
-                        txtTelefono.Text = DS.Tables[0].Rows[0]["telefono"].ToString().Trim();
+                        txtBoxCliente.Text = DS.Tables[0].Rows[0]["nombre1Cliente"].ToString().Trim() + " " +DS.Tables[0].Rows[0]["apellido1Cliente"].ToString().Trim();
+                        txtDireccion.Text = DS.Tables[0].Rows[0]["direcciondomiciliocliente"].ToString().Trim();
+                        txtTelefono.Text = DS.Tables[0].Rows[0]["telefono1cliente"].ToString().Trim();
 
                     //JUDYSOFT-----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -191,7 +191,7 @@ namespace JUDYSOFT
 
                 //Administrador--------------------------------------------------------------------------------------------------------------------
 
-                    txtValUni.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                    txtValUni.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
 
                 //JUDYSOFT-------------------------------------------------------------------------------------------------------------------------
 
@@ -248,9 +248,9 @@ namespace JUDYSOFT
                 //Administración-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
                     txtidCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
-                    txtBoxCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString() + nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
-                    txtDireccion.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
-                    txtTelefono.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
+                    txtBoxCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString() +" "+ nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
+                    txtDireccion.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[12].Value.ToString();
+                    txtTelefono.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[13].Value.ToString();
 
                 //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -268,12 +268,12 @@ namespace JUDYSOFT
         { 
             if(comboBoxTaxes.SelectedIndex == 0)
             {
-                txtImpuesto.Text = "0,12";                
+                txtImpuesto.Text = "0.12";                
                 CalculoMontoTotal(txtImpuesto.Text, txtSubtotal.Text);
             }
             else if(comboBoxTaxes.SelectedIndex == 1)
             {
-                txtImpuesto.Text = "0,14";
+                txtImpuesto.Text = "0.14";
                 CalculoMontoTotal(txtImpuesto.Text, txtSubtotal.Text);
             }
             else
