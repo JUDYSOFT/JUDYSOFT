@@ -304,7 +304,10 @@ namespace JUDYSOFT
 
 
             }
-
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
     }
 }
