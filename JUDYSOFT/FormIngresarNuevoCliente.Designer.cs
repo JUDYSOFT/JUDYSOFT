@@ -90,7 +90,7 @@
             this.btnCancelarIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarIngresoCliente.ForeColor = System.Drawing.Color.Black;
             this.btnCancelarIngresoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelarIngresoCliente.Location = new System.Drawing.Point(509, 561);
+            this.btnCancelarIngresoCliente.Location = new System.Drawing.Point(422, 561);
             this.btnCancelarIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelarIngresoCliente.Name = "btnCancelarIngresoCliente";
             this.btnCancelarIngresoCliente.Size = new System.Drawing.Size(159, 49);
@@ -106,7 +106,7 @@
             this.btnAceptarIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptarIngresoCliente.ForeColor = System.Drawing.Color.Black;
             this.btnAceptarIngresoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptarIngresoCliente.Location = new System.Drawing.Point(242, 561);
+            this.btnAceptarIngresoCliente.Location = new System.Drawing.Point(212, 561);
             this.btnAceptarIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAceptarIngresoCliente.Name = "btnAceptarIngresoCliente";
             this.btnAceptarIngresoCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
