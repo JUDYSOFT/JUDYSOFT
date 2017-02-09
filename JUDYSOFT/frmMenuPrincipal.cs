@@ -107,7 +107,7 @@ namespace JUDYSOFT
 
         private void ingresarNuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            IngresarCliente frm = new IngresarCliente();
+            FormIngresarNuevoCliente frm = new FormIngresarNuevoCliente();
             frm.MdiParent = this;
             frm.StartPosition = FormStartPosition.CenterScreen;
             ingresarNuevoClienteToolStripMenuItem.Enabled = false;
