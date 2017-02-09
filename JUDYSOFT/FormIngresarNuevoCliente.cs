@@ -12,15 +12,17 @@ using Libreria;
 
 namespace JUDYSOFT
 {
-    public partial class FormIngresarNuevoCliente : Form
+    public partial class IngresarCliente : Form
     {
         Validaciones val = new Validaciones();
-        public FormIngresarNuevoCliente()
+        public IngresarCliente()
         {
             InitializeComponent();
-            txtDocumento.Visible = false;
+            //txtDocumento.Visible = false;
+            desabilitarCampos();
+           
         }
-        private string error=" ";
+        
 
         private void btnAceptar_Click(object sender, EventArgs e)//boton aceptar 
         {
@@ -222,22 +224,22 @@ namespace JUDYSOFT
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            txtDocumento.Text = "";
-            if (radioCedula.Checked)
+            txtNumIdentificacionIngresoCliente.Text = "";
+            /*if (radioCedula.Checked)
             {
                 txtDocumento.Visible = true;
-            }
-            txtDocumento.CharacterCasing = CharacterCasing.Upper;
+            }*/
+            txtNumIdentificacionIngresoCliente.CharacterCasing = CharacterCasing.Upper;
 
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            txtDocumento.Text ="";
-            if (radioPasaporte.Checked)
+            txtNumIdentificacionIngresoCliente.Text ="";
+            /*if (radioPasaporte.Checked)
             {
                 txtDocumento.Visible = true;
-            }
+            }*/
 
         }
         
@@ -267,24 +269,24 @@ namespace JUDYSOFT
         private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
             
-                if (radioCedula.Checked)
+                if (radioCedulaIngresoCliente.Checked)
                 {
                    
-                    /*if (Convert.ToInt32(txtDocumento.Text.Length) == 10 && e.KeyChar != (char)Keys.Back)
+                    if (Convert.ToInt32(txtNumIdentificacionIngresoCliente.Text.Length) == 10 && e.KeyChar != (char)Keys.Back)
                     {
                         e.Handled = true;
-                    }*/
-                if (val.validarCamposNumericos(e, txtDocumento))
+                    }
+                if (val.validarCamposNumericos(e, txtNumIdentificacionIngresoCliente))
                     return;
                     
                 
                     
 
                 }
-                else if (radioPasaporte.Checked)
+                else if (radioPasaporteIngresoCliente.Checked)
                 {
                     
-                    if (Convert.ToInt32(txtDocumento.Text.Length) == 8 && e.KeyChar != (char)Keys.Back)
+                    if (Convert.ToInt32(txtNumIdentificacionIngresoCliente.Text.Length) == 8 && e.KeyChar != (char)Keys.Back)
                     {
                         e.Handled = true;
                     }
@@ -302,43 +304,137 @@ namespace JUDYSOFT
 
         private void txtNombre1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtNombre1.CharacterCasing = CharacterCasing.Upper;
-            if (val.validarCadenasDeTexto(e, txtNombre1))
+            txtNombre1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e, txtNombre1IngresoCliente))
                 return;
         }
 
         private void txtApellido1_KeyPress(object sender, KeyPressEventArgs e)
            
         {
-            txtApellido1.CharacterCasing = CharacterCasing.Upper;
-            if (val.validarCadenasDeTexto(e, txtApellido1))
+            txtApellido1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e, txtApellido1IngresoCliente))
                 return;
         }
 
         private void txtTelefono1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (val.validarCamposNumericos(e, txtTelefono1IngresoCliente))
+                return;
         }
 
         private void txtTelefono1_Leave(object sender, EventArgs e)
         {
-            if (val.validartelefono(txtTelefono1.Text))
+            if (val.validartelefono(txtTelefono1IngresoCliente.Text))
                 return;
             else
                 MessageBox.Show("telefono incorrecto");
         }
 
-        private void txtDocumento_Leave(object sender, EventArgs e)
+       private void txtDocumento_Leave(object sender, EventArgs e)
         {
-            if (radioCedula.Checked)
+            if (radioCedulaIngresoCliente.Checked)
             {
-                val.verificarCedula(txtDocumento.Text, txtDocumento);
+                if (val.verificarCedula(txtNumIdentificacionIngresoCliente.Text))
+                    habilitarCampos();
+                else
+                    desabilitarCampos();
                     
             }
-            else if (radioPasaporte.Checked)
-            {
+            
+        }
 
+        private void txtNacionalidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtNacionalidadIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e,txtNacionalidadIngresoCliente))
+                return;
+
+            
+        }
+        private void desabilitarCampos()
+        {
+            txtNombre1IngresoCliente.Enabled = false;
+            txtApellido1IngresoCliente.Enabled = false;
+            txtNombre2IngresoCliente.Enabled = false;
+            txtApellido2IngresoCliente.Enabled = false;
+            txtTelefono1IngresoCliente.Enabled = false;
+            txtTelefono2IngresoCliente.Enabled = false;
+            txtNacionalidadIngresoCliente.Enabled = false;
+            txtEstadoCivilIngresoCliente.Enabled = false;
+            txtCorreoIngresoCLiente.Enabled = false;
+            txtProcedenciaIngresoCliente.Enabled = false;
+            txtDireccionIngresoCliente.Enabled = false;
+        }
+        private void habilitarCampos()
+        {
+            txtNombre1IngresoCliente.Enabled = true;
+            txtApellido1IngresoCliente.Enabled = true;
+            txtNombre2IngresoCliente.Enabled = true;
+            txtApellido2IngresoCliente.Enabled = true;
+            txtTelefono1IngresoCliente.Enabled = true;
+            txtTelefono2IngresoCliente.Enabled = true;
+            txtNacionalidadIngresoCliente.Enabled = true;
+            txtEstadoCivilIngresoCliente.Enabled = true;
+            txtCorreoIngresoCLiente.Enabled = true;
+            txtProcedenciaIngresoCliente.Enabled = true;
+            txtDireccionIngresoCliente.Enabled = true;
+        }
+
+        private void txtEstadoCivil_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtEstadoCivilIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e, txtEstadoCivilIngresoCliente))
+                return;
+
+            
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtDireccionIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            
+        }
+
+        private void txtNombre2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtNombre2IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e,txtNombre2IngresoCliente))
+                return;
+        }
+
+        private void txtApellido2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtApellido2IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e,txtApellido2IngresoCliente))
+                return;
+            
+        }
+
+        private void txtTelefono2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (val.validarCamposNumericos(e,txtTelefono2IngresoCliente))
+                return;
+        }
+
+        private void txtProcedencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtProcedenciaIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e, txtProcedenciaIngresoCliente))
+                return;
+
+            
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (val.emailBienEscrito(txtCorreoIngresoCLiente.Text))
+            {
+                txtCorreoIngresoCLiente.BackColor = Color.LightGreen;
             }
+            else
+                txtCorreoIngresoCLiente.BackColor = Color.LightCoral;
         }
     }
 }

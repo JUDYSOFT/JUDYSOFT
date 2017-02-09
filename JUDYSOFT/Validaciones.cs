@@ -24,6 +24,7 @@ namespace JUDYSOFT
             else
             {
                 bandera = true;
+                
             }
                       
             return bandera;
@@ -78,7 +79,7 @@ namespace JUDYSOFT
             }
             else return false;
         }
-        public void verificarCedula(string cedula,System.Windows.Forms.TextBox txtDocumento)
+        public Boolean verificarCedula(string cedula)
         {
             char[] vector = cedula.ToCharArray();
             int sumatotal = 0;
@@ -100,17 +101,19 @@ namespace JUDYSOFT
                 sumatotal = 10 - (sumatotal % 10);
                 if (sumatotal == Convert.ToInt32(vector[9].ToString()))
                 {
-                    toolTip1.Show("la cédula es correcta",txtDocumento,1000);
+                    //toolTip1.Show("la cédula es correcta",txtDocumento,1000);
+                    return true;
                 }
                 else
                 {
-                    toolTip1.Show("la cédula es incorrecta", txtDocumento, 1000);
+                    //toolTip1.Show("la cédula es incorrecta", txtDocumento, 1000);
+                    return false;
                 }
             }
             else //if(txtDocumento.Text==""||Convert.ToInt32 (txtDocumento.Text.Length)!=10)
             {
-                toolTip1.Show("el número de cedula ingresado no contiene 10 dígitos", txtDocumento, 1000);
-
+                // toolTip1.Show("el número de cedula ingresado no contiene 10 dígitos", txtDocumento, 1000);
+                return false;
             }
         }
 
