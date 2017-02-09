@@ -14,7 +14,9 @@ namespace JUDYSOFT
 
     public partial class frmAdministracionHabitaciones : Form
     {
+#pragma warning disable CS0067 // The event 'frmAdministracionHabitaciones.FormAdministracionHabitaciones' is never used
         public event FormClosingEventHandler FormAdministracionHabitaciones;
+#pragma warning restore CS0067 // The event 'frmAdministracionHabitaciones.FormAdministracionHabitaciones' is never used
 
         public frmAdministracionHabitaciones()
         {

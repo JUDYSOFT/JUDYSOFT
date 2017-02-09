@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Libreria;
-
+using System.Globalization;
 namespace JUDYSOFT
 {
     public partial class FormGenerarFactura : Form
@@ -41,13 +41,13 @@ namespace JUDYSOFT
 
                 //String cmd = "SELECT * FROM EMPLEADO WHERE CODEMPLEADO= " + frmLogin.Codigo;
                 //DataSet DS = Utilidades.Ejecutar(cmd);
-                //lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NOMBRE1EMPLEADO"].ToString().Trim() + " "+DS.Tables[0].Rows[0]["APELLIDO1EMPLEADO"].ToString().Trim();
+                //lblAtendidoPorGenerarFactura.Text = DS.Tables[0].Rows[0]["NOMBRE1EMPLEADO"].ToString().Trim() + " "+DS.Tables[0].Rows[0]["APELLIDO1EMPLEADO"].ToString().Trim();
 
             //Administración--------------------------------------------------------------------------------------------------------------------------------------
 
                 String cmd = "SELECT * FROM usuario WHERE idUsuario= " + frmLogin.Codigo;
                 DataSet DS = Utilidades.Ejecutar(cmd);
-                lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NombreUsuario"].ToString().Trim();
+                lblAtendidoPorGenerarFactura.Text = DS.Tables[0].Rows[0]["NombreUsuario"].ToString().Trim();
 
         }
 
@@ -55,7 +55,7 @@ namespace JUDYSOFT
         public static double total;
 
 
-        private void BotonAniadir_Click(object sender, EventArgs e)
+        private void BotonAniadirGenerarFactura_Click(object sender, EventArgs e)
         {
             
             if(Utilidades.ValidarFormulario(this,errorProvider1) == false)
@@ -65,17 +65,17 @@ namespace JUDYSOFT
 
                 if(contFila == 0)
                 {
-                    dataGridView1.Rows.Add(txtCodigo.Text,txtCantidad.Text, txtDescripcion.Text, txtValUni.Text);
-                    double total = Convert.ToDouble(dataGridView1.Rows[contFila].Cells[1].Value) * Convert.ToDouble(dataGridView1.Rows[contFila].Cells[3].Value);
-                    dataGridView1.Rows[contFila].Cells[4].Value = total;
+                    DGVGenerarFactura.Rows.Add(txtCodigoGenerarFactura.Text,txtCantidadGenerarFactura.Text, txtDescripcionGenerarFactura.Text, txtValUniGenerarFactura.Text);
+                    double total = Convert.ToDouble(DGVGenerarFactura.Rows[contFila].Cells[1].Value) * Convert.ToDouble(DGVGenerarFactura.Rows[contFila].Cells[3].Value);
+                    DGVGenerarFactura.Rows[contFila].Cells[4].Value = total;
 
                     contFila++;
                 }
                 else
                 {
-                    foreach(DataGridViewRow fila in dataGridView1.Rows)
+                    foreach(DataGridViewRow fila in DGVGenerarFactura.Rows)
                     {
-                        if(fila.Cells[0].Value.ToString() == txtCodigo.Text)
+                        if(fila.Cells[0].Value.ToString() == txtCodigoGenerarFactura.Text)
                         {
                             existencia = true;
                             numFila = fila.Index;
@@ -85,16 +85,16 @@ namespace JUDYSOFT
 
                     if(existencia == true)
                     {
-                        dataGridView1.Rows[numFila].Cells[1].Value = (Convert.ToDouble(txtCantidad.Text) + Convert.ToDouble(dataGridView1.Rows[numFila].Cells[1].Value)).ToString();
-                        double total = Convert.ToDouble(dataGridView1.Rows[numFila].Cells[1].Value) * Convert.ToDouble(dataGridView1.Rows[numFila].Cells[3].Value);
+                        DGVGenerarFactura.Rows[numFila].Cells[1].Value = (Convert.ToDouble(txtCantidadGenerarFactura.Text) + Convert.ToDouble(DGVGenerarFactura.Rows[numFila].Cells[1].Value)).ToString();
+                        double total = Convert.ToDouble(DGVGenerarFactura.Rows[numFila].Cells[1].Value) * Convert.ToDouble(DGVGenerarFactura.Rows[numFila].Cells[3].Value);
 
-                        dataGridView1.Rows[numFila].Cells[4].Value = total;
+                        DGVGenerarFactura.Rows[numFila].Cells[4].Value = total;
 
                     }else
                     {
-                        dataGridView1.Rows.Add(txtCodigo.Text,txtCantidad.Text, txtDescripcion.Text, txtValUni.Text);
-                        double total = Convert.ToDouble(dataGridView1.Rows[contFila].Cells[1].Value) * Convert.ToDouble(dataGridView1.Rows[contFila].Cells[3].Value);
-                        dataGridView1.Rows[contFila].Cells[4].Value = total;
+                        DGVGenerarFactura.Rows.Add(txtCodigoGenerarFactura.Text,txtCantidadGenerarFactura.Text, txtDescripcionGenerarFactura.Text, txtValUniGenerarFactura.Text);
+                        double total = Convert.ToDouble(DGVGenerarFactura.Rows[contFila].Cells[1].Value) * Convert.ToDouble(DGVGenerarFactura.Rows[contFila].Cells[3].Value);
+                        DGVGenerarFactura.Rows[contFila].Cells[4].Value = total;
 
                         contFila++;
                     }
@@ -103,11 +103,11 @@ namespace JUDYSOFT
 
                 total = 0;
 
-                foreach (DataGridViewRow fila in dataGridView1.Rows)
+                foreach (DataGridViewRow fila in DGVGenerarFactura.Rows)
                 {
                     total += Convert.ToDouble(fila.Cells[4].Value);
                 }
-                txtSubtotal.Text = total.ToString();
+                txtSubtotalGenerarFactura.Text = total.ToString();
             }
 
         }
@@ -117,7 +117,7 @@ namespace JUDYSOFT
             MenuSettings.EnableMenuItem("facturacionToolStripMenuItem", "generarFacturaToolStripMenuItem");
         }
 
-        private void BotonEliminar_Click(object sender, EventArgs e)
+        private void BotonEliminarGenerarFactura_Click(object sender, EventArgs e)
         {
             if (contFila > 0)
             {
@@ -130,10 +130,10 @@ namespace JUDYSOFT
 
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
-                    total = total - (Convert.ToDouble(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[4].Value));
-                    txtSubtotal.Text = total.ToString();
+                    total = total - (Convert.ToDouble(DGVGenerarFactura.Rows[DGVGenerarFactura.CurrentRow.Index].Cells[4].Value));
+                    txtSubtotalGenerarFactura.Text = total.ToString();
 
-                    dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+                    DGVGenerarFactura.Rows.RemoveAt(DGVGenerarFactura.CurrentRow.Index);
                     contFila--;
 
 
@@ -147,38 +147,13 @@ namespace JUDYSOFT
             }
         }
 
-        private void BotonSalir_Click(object sender, EventArgs e)
+        private void BotonSalirGenerarFactura_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void BotonBuscar_Click(object sender, EventArgs e)
-        {
-            if(string.IsNullOrEmpty(txtidCliente.Text.Trim()) == false) {
-                try
-                {
-                    //Administración-------------------------------------------------------------------------------------------------------------------------------
 
-                        string cmd = string.Format("SELECT * FROM Cliente WHERE idCliente='{0}'", txtidCliente.Text.Trim());
-                        DataSet DS = Utilidades.Ejecutar(cmd);
-
-                        txtBoxCliente.Text = DS.Tables[0].Rows[0]["nombreCliente"].ToString().Trim() + " " +DS.Tables[0].Rows[0]["apellidoCliente"].ToString().Trim();
-                        txtDireccion.Text = DS.Tables[0].Rows[0]["direccion"].ToString().Trim();
-                        txtTelefono.Text = DS.Tables[0].Rows[0]["telefono"].ToString().Trim();
-
-                    //JUDYSOFT-----------------------------------------------------------------------------------------------------------------------------------------
-
-                        
-                } catch(Exception er)
-                {
-                    MessageBox.Show("Ha ocurrido un problema. \n" + er.Message);
-
-                }
-           }
-        }
-
-
-        private void botonListaProductos_Click(object sender, EventArgs e)
+        private void botonListaProductosGenerarFactura_Click(object sender, EventArgs e)
         {
             FormAgregarProductoAFactura agregarProducto = new FormAgregarProductoAFactura();
             agregarProducto.StartPosition = FormStartPosition.CenterScreen;
@@ -186,19 +161,19 @@ namespace JUDYSOFT
 
             if(agregarProducto.DialogResult == DialogResult.OK)
             {
-                txtCodigo.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
-                txtDescripcion.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
+                txtCodigoGenerarFactura.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                txtDescripcionGenerarFactura.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
 
                 //Administrador--------------------------------------------------------------------------------------------------------------------
 
-                    txtValUni.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                    txtValUniGenerarFactura.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
 
                 //JUDYSOFT-------------------------------------------------------------------------------------------------------------------------
 
-                //txtValUni.Text = agregarProducto.dataGridView1.Rows[agregarProducto.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
+                //txtValUni.Text = agregarProducto.DGVGenerarFactura.Rows[agregarProducto.DGVGenerarFactura.CurrentRow.Index].Cells[3].Value.ToString();
 
-                txtCantidad.Text = "";
-                txtCantidad.Focus();
+                txtCantidadGenerarFactura.Text = "";
+                txtCantidadGenerarFactura.Focus();
 
 
 
@@ -210,33 +185,33 @@ namespace JUDYSOFT
 
         private void Limpiar()
         {
-            txtCantidad.Text = "";
-            txtCodigo.Text = "";
-            txtDescripcion.Text = "";
-            txtDireccion.Text = "";
-            txtidCliente.Text = "";
-            txtBoxCliente.Text = "";
-            txtSubtotal.Text = "";
-            txtTelefono.Text = "";
-            txtValUni.Text = "";
-            txtImpuesto.Text = "";
-            txtTotal.Text = "";
-            lblCliente.Text = "";
+            txtCantidadGenerarFactura.Text = "";
+            txtCodigoGenerarFactura.Text = "";
+            txtDescripcionGenerarFactura.Text = "";
+            txtDireccionGenerarFactura.Text = "";
+            txtidClienteGenerarFactura.Text = "";
+            txtBoxClienteGenerarFactura.Text = "";
+            txtSubtotalGenerarFactura.Text = "";
+            txtTelefonoGenerarFactura.Text = "";
+            txtValUniGenerarFactura.Text = "";
+            txtImpuestoGenerarFactura.Text = "";
+            txtTotalGenerarFactura.Text = "";
+            lblClienteGenerarFactura.Text = "";
 
-            comboBoxTaxes.SelectedIndex = -1;
-            dataGridView1.Rows.Clear();
+            cBoxTaxesGenerarFactura.SelectedIndex = -1;
+            DGVGenerarFactura.Rows.Clear();
             contFila = 0;
             total = 0;
 
-            txtidCliente.Focus();
+            txtidClienteGenerarFactura.Focus();
         }
 
-        private void botonNuevaFactura_Click(object sender, EventArgs e)
+        private void botonNuevaFacturaGenerarFactura_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
 
-        private void botonListaClientes_Click(object sender, EventArgs e)
+        private void botonListaClientesGenerarFactura_Click(object sender, EventArgs e)
         {
             FormListaClientes nuevaLista = new FormListaClientes();
             nuevaLista.StartPosition = FormStartPosition.CenterScreen;
@@ -247,34 +222,34 @@ namespace JUDYSOFT
             {
                 //Administración-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-                    txtidCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
-                    txtBoxCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString() + nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
-                    txtDireccion.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
-                    txtTelefono.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
+                    txtidClienteGenerarFactura.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                    txtBoxClienteGenerarFactura.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString() + nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                    txtDireccionGenerarFactura.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
+                    txtTelefonoGenerarFactura.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
 
                 //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-                    //txtidCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[6].Value.ToString();
-                    //txtBoxCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString() +" "+ nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString()+" "+ nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString()+" "+ nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
-                    //txtDireccion.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[7].Value.ToString();
-                    //txtTelefono.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
+                    //txtidClienteGenerarFactura.Text = nuevaLista.DGVGenerarFactura.Rows[nuevaLista.DGVGenerarFactura.CurrentRow.Index].Cells[6].Value.ToString();
+                    //txtBoxClienteGenerarFactura.Text = nuevaLista.DGVGenerarFactura.Rows[nuevaLista.DGVGenerarFactura.CurrentRow.Index].Cells[1].Value.ToString() +" "+ nuevaLista.DGVGenerarFactura.Rows[nuevaLista.DGVGenerarFactura.CurrentRow.Index].Cells[2].Value.ToString()+" "+ nuevaLista.DGVGenerarFactura.Rows[nuevaLista.DGVGenerarFactura.CurrentRow.Index].Cells[3].Value.ToString()+" "+ nuevaLista.DGVGenerarFactura.Rows[nuevaLista.DGVGenerarFactura.CurrentRow.Index].Cells[4].Value.ToString();
+                    //txtDireccion.Text = nuevaLista.DGVGenerarFactura.Rows[nuevaLista.DGVGenerarFactura.CurrentRow.Index].Cells[7].Value.ToString();
+                    //txtTelefonoGenerarFactura.Text = nuevaLista.DGVGenerarFactura.Rows[nuevaLista.DGVGenerarFactura.CurrentRow.Index].Cells[4].Value.ToString();
 
-                txtCodigo.Focus();
+                txtCodigoGenerarFactura.Focus();
 
             }
         }
         double montoTotal;
-        private void comboBoxTaxes_SelectedIndexChanged(object sender, EventArgs e)
+        private void cBoxTaxesGenerarFactura_SelectedIndexChanged(object sender, EventArgs e)
         { 
-            if(comboBoxTaxes.SelectedIndex == 0)
+            if(cBoxTaxesGenerarFactura.SelectedIndex == 0)
             {
-                txtImpuesto.Text = "0,12";                
-                CalculoMontoTotal(txtImpuesto.Text, txtSubtotal.Text);
+                txtImpuestoGenerarFactura.Text = "0,12";                
+                CalculoMontoTotal(txtImpuestoGenerarFactura.Text, txtSubtotalGenerarFactura.Text);
             }
-            else if(comboBoxTaxes.SelectedIndex == 1)
+            else if(cBoxTaxesGenerarFactura.SelectedIndex == 1)
             {
-                txtImpuesto.Text = "0,14";
-                CalculoMontoTotal(txtImpuesto.Text, txtSubtotal.Text);
+                txtImpuestoGenerarFactura.Text = "0,14";
+                CalculoMontoTotal(txtImpuestoGenerarFactura.Text, txtSubtotalGenerarFactura.Text);
             }
             else
             {
@@ -285,43 +260,51 @@ namespace JUDYSOFT
         public void CalculoMontoTotal (string tax, string Subt)
         {
             montoTotal = (Convert.ToDouble(Subt) * Convert.ToDouble(tax)) + Convert.ToDouble(Subt);
-            txtTotal.Text = montoTotal.ToString();
+            txtTotalGenerarFactura.Text = montoTotal.ToString();
         }
 
-        private void BotonFacturar_Click(object sender, EventArgs e)
+        private void BotonFacturarGenerarFactura_Click(object sender, EventArgs e)
         {
-            try
+            //Administracion--------------------------------------------------------------------------------------------
+            if (contFila != 0)
             {
-                //Administración------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                string cmd = string.Format("Exec ActualizarFactura '{0}'", txtidCliente.Text.Trim());
-                DataSet DS = Utilidades.Ejecutar(cmd);
-
-                string NumFac = DS.Tables[0].Rows[0]["NumFactura"].ToString().Trim();
-
-                foreach(DataGridViewRow Fila in dataGridView1.Rows)
+                try
                 {
-                    cmd = string.Format("Exec ActualizarDetalle '{0}','{1}','{2}','{3}','{4}','{6}'", NumFac, Fila.Cells[0].Value.ToString(), Fila.Cells[3].Value.ToString(), Fila.Cells[1].Value.ToString(), txtSubtotal.Text.ToString(), txtTotal.Text.ToString());
+                    string cmd = string.Format("Exec ActualizaFactura '{0}','{1}'", txtidClienteGenerarFactura.Text.Trim(), lblAtendidoPorGenerarFactura.Text.Trim());
+                    DataSet DS = Utilidades.Ejecutar(cmd);
+                    string NumFactura = DS.Tables[0].Rows[0]["NumFactura"].ToString().Trim(); 
+
+                    foreach(DataGridViewRow Fila in DGVGenerarFactura.Rows)
+                    {
+                        cmd = string.Format("Exec ActualizaDetalle '{0}','{1}','{2}','{3}','{4}','{5}','{6}'", NumFactura,
+                                                                                                               Fila.Cells[0].Value.ToString(),
+                                                                                                               (decimal)(Fila.Cells[3].Value),
+                                                                                                               Fila.Cells[1].Value.ToString(),
+                                                                                                               decimal.Parse(txtSubtotalGenerarFactura.Text),
+                                                                                                               decimal.Parse(txtImpuestoGenerarFactura.Text),
+                                                                                                               decimal.Parse(txtTotalGenerarFactura.Text));                                                                                                              ;
+                        DS = Utilidades.Ejecutar(cmd);
+                    }
+
+                    cmd = "Exec DetalleFactura " + NumFactura;
                     DS = Utilidades.Ejecutar(cmd);
-                     
+
+
+                    ReporteFactura informe = new ReporteFactura();
+                    informe.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
+                    informe.ShowDialog();
+                    Limpiar(); 
+
+                }catch(Exception error)
+                {
+                    MessageBox.Show("Error: " + error.Message);
                 }
 
-                cmd = "Exec DatosFacturaAct " + NumFac;
-                DS = Utilidades.Ejecutar(cmd);
-                //JUDYSOFT------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-                Reporte report = new Reporte();
-                report.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
-                report.ShowDialog();
-                Limpiar();
 
 
 
             }
-            catch (Exception error)
-            {
-                MessageBox.Show(error.Message);
-            }
+
         }
     }
 }

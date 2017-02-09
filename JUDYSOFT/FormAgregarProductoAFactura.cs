@@ -56,7 +56,7 @@ namespace JUDYSOFT
 
             //JUDYSOFT-----------------------------------------------------------------------------------------------------
 
-                //dataGridView1.DataSource = LLenarDGv("PRODUCTO").Tables[0];
+                //DGVGenerarFactura.DataSource = LLenarDGv("PRODUCTO").Tables[0];
         }
 
         public DataSet LLenarDGv(string tabla)
