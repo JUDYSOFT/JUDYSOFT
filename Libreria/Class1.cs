@@ -22,7 +22,7 @@ namespace Libreria
 
             //pequeñin-------------------------------------------------------------------------------------------------------------------
 
-                SqlConnection con = new SqlConnection("Data Source=DESKTOP-TPC97N2;Initial Catalog=JUDYSOFT;Integrated Security=True");
+                SqlConnection con = new SqlConnection("Data Source=DESKTOP-P6D1EH2\\SQLEXPRESS;Initial Catalog=JUDYSOFT;Integrated Security=True");
 
             
 

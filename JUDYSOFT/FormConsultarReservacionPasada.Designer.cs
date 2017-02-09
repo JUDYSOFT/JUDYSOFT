@@ -1,6 +1,6 @@
 ﻿namespace JUDYSOFT
 {
-    partial class reservacionesPasadas
+    partial class FormConsultarReservacionPasada
     {
         /// <summary>
         /// Required designer variable.
