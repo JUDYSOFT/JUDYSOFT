@@ -41,6 +41,8 @@
             this.radioF = new System.Windows.Forms.RadioButton();
             this.radioM = new System.Windows.Forms.RadioButton();
             this.panelInformación = new System.Windows.Forms.Panel();
+            this.fechaNacIngresoCliente = new System.Windows.Forms.DateTimePicker();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.txtDireccionIngresoCliente = new Libreria.ErrorTxtBox();
             this.lbldireccion = new System.Windows.Forms.Label();
             this.txtCorreoIngresoCLiente = new Libreria.ErrorTxtBox();
@@ -63,8 +65,6 @@
             this.lblApellido2 = new System.Windows.Forms.Label();
             this.lbltelefono2 = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.fechaNacIngresoCliente = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.groupBoxDocumento.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -90,7 +90,7 @@
             this.btnCancelarIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarIngresoCliente.ForeColor = System.Drawing.Color.Black;
             this.btnCancelarIngresoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelarIngresoCliente.Location = new System.Drawing.Point(466, 561);
+            this.btnCancelarIngresoCliente.Location = new System.Drawing.Point(509, 561);
             this.btnCancelarIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelarIngresoCliente.Name = "btnCancelarIngresoCliente";
             this.btnCancelarIngresoCliente.Size = new System.Drawing.Size(159, 49);
@@ -238,6 +238,25 @@
             this.panelInformación.Name = "panelInformación";
             this.panelInformación.Size = new System.Drawing.Size(785, 372);
             this.panelInformación.TabIndex = 60;
+            // 
+            // fechaNacIngresoCliente
+            // 
+            this.fechaNacIngresoCliente.CustomFormat = "";
+            this.fechaNacIngresoCliente.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fechaNacIngresoCliente.Location = new System.Drawing.Point(562, 318);
+            this.fechaNacIngresoCliente.Name = "fechaNacIngresoCliente";
+            this.fechaNacIngresoCliente.Size = new System.Drawing.Size(173, 22);
+            this.fechaNacIngresoCliente.TabIndex = 122;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(421, 318);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(93, 40);
+            this.lblFecha.TabIndex = 121;
+            this.lblFecha.Text = "Fecha de \r\nNacimiento";
             // 
             // txtDireccionIngresoCliente
             // 
@@ -451,25 +470,6 @@
             this.lblTelefono.Size = new System.Drawing.Size(110, 20);
             this.lblTelefono.TabIndex = 103;
             this.lblTelefono.Text = "Teléfono 1 (*)";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(421, 318);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(93, 40);
-            this.lblFecha.TabIndex = 121;
-            this.lblFecha.Text = "Fecha de \r\nNacimiento";
-            // 
-            // fechaNacIngresoCliente
-            // 
-            this.fechaNacIngresoCliente.CustomFormat = "";
-            this.fechaNacIngresoCliente.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechaNacIngresoCliente.Location = new System.Drawing.Point(562, 318);
-            this.fechaNacIngresoCliente.Name = "fechaNacIngresoCliente";
-            this.fechaNacIngresoCliente.Size = new System.Drawing.Size(173, 22);
-            this.fechaNacIngresoCliente.TabIndex = 122;
             // 
             // IngresarCliente
             // 
