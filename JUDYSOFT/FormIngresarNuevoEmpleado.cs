@@ -440,6 +440,9 @@ namespace JUDYSOFT
            
         }
 
+        private void textBoxTelefonoConvencional_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
