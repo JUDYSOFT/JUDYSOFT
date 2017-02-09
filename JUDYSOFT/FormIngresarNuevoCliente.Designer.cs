@@ -30,45 +30,46 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnCancelarIngresoCliente = new System.Windows.Forms.Button();
-            this.btnAceptarIngresoCliente = new System.Windows.Forms.Button();
+            this.btnCancelarIngresarCliente = new System.Windows.Forms.Button();
+            this.btnAceptarIngresarCliente = new System.Windows.Forms.Button();
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.groupBoxDocumento = new System.Windows.Forms.GroupBox();
-            this.txtNumIdentificacionIngresoCliente = new Libreria.ErrorTxtBox();
-            this.radioPasaporteIngresoCliente = new System.Windows.Forms.RadioButton();
-            this.radioCedulaIngresoCliente = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioF = new System.Windows.Forms.RadioButton();
-            this.radioM = new System.Windows.Forms.RadioButton();
-            this.panelInformación = new System.Windows.Forms.Panel();
-            this.txtDireccionIngresoCliente = new Libreria.ErrorTxtBox();
-            this.lbldireccion = new System.Windows.Forms.Label();
-            this.txtCorreoIngresoCLiente = new Libreria.ErrorTxtBox();
-            this.txtProcedenciaIngresoCliente = new Libreria.ErrorTxtBox();
-            this.txtTelefono2IngresoCliente = new Libreria.ErrorTxtBox();
-            this.txtApellido2IngresoCliente = new Libreria.ErrorTxtBox();
-            this.txtNombre2IngresoCliente = new Libreria.ErrorTxtBox();
-            this.txtEstadoCivilIngresoCliente = new Libreria.ErrorTxtBox();
-            this.txtNombre1IngresoCliente = new Libreria.ErrorTxtBox();
-            this.txtApellido1IngresoCliente = new Libreria.ErrorTxtBox();
-            this.txtTelefono1IngresoCliente = new Libreria.ErrorTxtBox();
-            this.txtNacionalidadIngresoCliente = new Libreria.ErrorTxtBox();
-            this.labelCorreo = new System.Windows.Forms.Label();
-            this.lblEstadoCivil = new System.Windows.Forms.Label();
-            this.lblNacionalidad = new System.Windows.Forms.Label();
-            this.labelProcedencia = new System.Windows.Forms.Label();
-            this.lblNombre1 = new System.Windows.Forms.Label();
-            this.labelNombre2 = new System.Windows.Forms.Label();
-            this.lblApellido1 = new System.Windows.Forms.Label();
-            this.lblApellido2 = new System.Windows.Forms.Label();
-            this.lbltelefono2 = new System.Windows.Forms.Label();
-            this.lblTelefono = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.fechaNacIngresoCliente = new System.Windows.Forms.DateTimePicker();
+            this.groupBoxDocumentoIdentificaciónIngresarCliente = new System.Windows.Forms.GroupBox();
+            this.txtNumIdentificacionIngresarCliente = new Libreria.ErrorTxtBox();
+            this.radioPasaporteIngresarCliente = new System.Windows.Forms.RadioButton();
+            this.radioCedulaIngresarCliente = new System.Windows.Forms.RadioButton();
+            this.groupBoxSexoIngresarCliente = new System.Windows.Forms.GroupBox();
+            this.radioFIngresarCliente = new System.Windows.Forms.RadioButton();
+            this.radioMIngresarCliente = new System.Windows.Forms.RadioButton();
+            this.panelInformaciónIngresarCliente = new System.Windows.Forms.Panel();
+            this.DTPfechaNacIngresarCliente = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaIngresarCliente = new System.Windows.Forms.Label();
+            this.txtDireccionIngresarCliente = new Libreria.ErrorTxtBox();
+            this.lblDireccionIngresarCliente = new System.Windows.Forms.Label();
+            this.txtCorreoIngresarCLiente = new Libreria.ErrorTxtBox();
+            this.txtProcedenciaIngresarCliente = new Libreria.ErrorTxtBox();
+            this.txtTelefono2IngresarCliente = new Libreria.ErrorTxtBox();
+            this.txtApellido2IngresarCliente = new Libreria.ErrorTxtBox();
+            this.txtNombre2IngresarCliente = new Libreria.ErrorTxtBox();
+            this.txtEstadoCivilIngresarCliente = new Libreria.ErrorTxtBox();
+            this.txtNombre1IngresarCliente = new Libreria.ErrorTxtBox();
+            this.txtApellido1IngresarCliente = new Libreria.ErrorTxtBox();
+            this.txtTelefono1IngresarCliente = new Libreria.ErrorTxtBox();
+            this.txtNacionalidadIngresarCliente = new Libreria.ErrorTxtBox();
+            this.labelCorreoIngresarCliente = new System.Windows.Forms.Label();
+            this.lblEstadoCivilIngresarCliente = new System.Windows.Forms.Label();
+            this.lblNacionalidadRegistrarCliente = new System.Windows.Forms.Label();
+            this.labelProcedenciaIngresarCliente = new System.Windows.Forms.Label();
+            this.lblNombre1IngresarCliente = new System.Windows.Forms.Label();
+            this.labelNombre2IngresarCliente = new System.Windows.Forms.Label();
+            this.lblApellido1IngresarCliente = new System.Windows.Forms.Label();
+            this.lblApellido2IngresarCliente = new System.Windows.Forms.Label();
+            this.lbltelefono2IngresarCliente = new System.Windows.Forms.Label();
+            this.lblTelefono1IngresarCliente = new System.Windows.Forms.Label();
+            this.btnSalirIngresarCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
-            this.groupBoxDocumento.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panelInformación.SuspendLayout();
+            this.groupBoxDocumentoIdentificaciónIngresarCliente.SuspendLayout();
+            this.groupBoxSexoIngresarCliente.SuspendLayout();
+            this.panelInformaciónIngresarCliente.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -82,394 +83,404 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "Judy\'s Palace Hostal";
             // 
-            // btnCancelarIngresoCliente
+            // btnCancelarIngresarCliente
             // 
-            this.btnCancelarIngresoCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCancelarIngresoCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCancelarIngresoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarIngresoCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelarIngresoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelarIngresoCliente.Location = new System.Drawing.Point(466, 561);
-            this.btnCancelarIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCancelarIngresoCliente.Name = "btnCancelarIngresoCliente";
-            this.btnCancelarIngresoCliente.Size = new System.Drawing.Size(159, 49);
-            this.btnCancelarIngresoCliente.TabIndex = 28;
-            this.btnCancelarIngresoCliente.Text = "Cancelar";
-            this.btnCancelarIngresoCliente.UseVisualStyleBackColor = false;
-            this.btnCancelarIngresoCliente.Click += new System.EventHandler(this.button2_Click);
+            this.btnCancelarIngresarCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCancelarIngresarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCancelarIngresarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelarIngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarIngresarCliente.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelarIngresarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelarIngresarCliente.Location = new System.Drawing.Point(340, 560);
+            this.btnCancelarIngresarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelarIngresarCliente.Name = "btnCancelarIngresarCliente";
+            this.btnCancelarIngresarCliente.Size = new System.Drawing.Size(159, 49);
+            this.btnCancelarIngresarCliente.TabIndex = 28;
+            this.btnCancelarIngresarCliente.Text = "Cancelar";
+            this.btnCancelarIngresarCliente.UseVisualStyleBackColor = false;
+            this.btnCancelarIngresarCliente.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnAceptarIngresoCliente
+            // btnAceptarIngresarCliente
             // 
-            this.btnAceptarIngresoCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAceptarIngresoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAceptarIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarIngresoCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnAceptarIngresoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptarIngresoCliente.Location = new System.Drawing.Point(242, 561);
-            this.btnAceptarIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAceptarIngresoCliente.Name = "btnAceptarIngresoCliente";
-            this.btnAceptarIngresoCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAceptarIngresoCliente.Size = new System.Drawing.Size(159, 49);
-            this.btnAceptarIngresoCliente.TabIndex = 27;
-            this.btnAceptarIngresoCliente.Text = "Aceptar";
-            this.btnAceptarIngresoCliente.UseVisualStyleBackColor = false;
-            this.btnAceptarIngresoCliente.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptarIngresarCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAceptarIngresarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAceptarIngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarIngresarCliente.ForeColor = System.Drawing.Color.Black;
+            this.btnAceptarIngresarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAceptarIngresarCliente.Location = new System.Drawing.Point(132, 561);
+            this.btnAceptarIngresarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAceptarIngresarCliente.Name = "btnAceptarIngresarCliente";
+            this.btnAceptarIngresarCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAceptarIngresarCliente.Size = new System.Drawing.Size(159, 49);
+            this.btnAceptarIngresarCliente.TabIndex = 27;
+            this.btnAceptarIngresarCliente.Text = "Aceptar";
+            this.btnAceptarIngresarCliente.UseVisualStyleBackColor = false;
+            this.btnAceptarIngresarCliente.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // errorProvider2
             // 
             this.errorProvider2.ContainerControl = this;
             // 
-            // groupBoxDocumento
+            // groupBoxDocumentoIdentificaciónIngresarCliente
             // 
-            this.groupBoxDocumento.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBoxDocumento.Controls.Add(this.txtNumIdentificacionIngresoCliente);
-            this.groupBoxDocumento.Controls.Add(this.radioPasaporteIngresoCliente);
-            this.groupBoxDocumento.Controls.Add(this.radioCedulaIngresoCliente);
-            this.groupBoxDocumento.Location = new System.Drawing.Point(43, 23);
-            this.groupBoxDocumento.Name = "groupBoxDocumento";
-            this.groupBoxDocumento.Size = new System.Drawing.Size(419, 100);
-            this.groupBoxDocumento.TabIndex = 3;
-            this.groupBoxDocumento.TabStop = false;
-            this.groupBoxDocumento.Text = "Documento de Identificación (*)";
+            this.groupBoxDocumentoIdentificaciónIngresarCliente.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxDocumentoIdentificaciónIngresarCliente.Controls.Add(this.txtNumIdentificacionIngresarCliente);
+            this.groupBoxDocumentoIdentificaciónIngresarCliente.Controls.Add(this.radioPasaporteIngresarCliente);
+            this.groupBoxDocumentoIdentificaciónIngresarCliente.Controls.Add(this.radioCedulaIngresarCliente);
+            this.groupBoxDocumentoIdentificaciónIngresarCliente.Location = new System.Drawing.Point(43, 23);
+            this.groupBoxDocumentoIdentificaciónIngresarCliente.Name = "groupBoxDocumentoIdentificaciónIngresarCliente";
+            this.groupBoxDocumentoIdentificaciónIngresarCliente.Size = new System.Drawing.Size(419, 100);
+            this.groupBoxDocumentoIdentificaciónIngresarCliente.TabIndex = 3;
+            this.groupBoxDocumentoIdentificaciónIngresarCliente.TabStop = false;
+            this.groupBoxDocumentoIdentificaciónIngresarCliente.Text = "Documento de Identificación (*)";
             // 
-            // txtNumIdentificacionIngresoCliente
+            // txtNumIdentificacionIngresarCliente
             // 
-            this.txtNumIdentificacionIngresoCliente.Location = new System.Drawing.Point(199, 48);
-            this.txtNumIdentificacionIngresoCliente.Name = "txtNumIdentificacionIngresoCliente";
-            this.txtNumIdentificacionIngresoCliente.Size = new System.Drawing.Size(172, 22);
-            this.txtNumIdentificacionIngresoCliente.TabIndex = 21;
-            this.txtNumIdentificacionIngresoCliente.Validar = true;
-            this.txtNumIdentificacionIngresoCliente.TextChanged += new System.EventHandler(this.txtDocumento_TextChanged);
-            this.txtNumIdentificacionIngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento_KeyPress);
-            this.txtNumIdentificacionIngresoCliente.Leave += new System.EventHandler(this.txtDocumento_Leave);
+            this.txtNumIdentificacionIngresarCliente.Location = new System.Drawing.Point(199, 48);
+            this.txtNumIdentificacionIngresarCliente.Name = "txtNumIdentificacionIngresarCliente";
+            this.txtNumIdentificacionIngresarCliente.Size = new System.Drawing.Size(172, 22);
+            this.txtNumIdentificacionIngresarCliente.TabIndex = 21;
+            this.txtNumIdentificacionIngresarCliente.Validar = true;
+            this.txtNumIdentificacionIngresarCliente.TextChanged += new System.EventHandler(this.txtDocumento_TextChanged);
+            this.txtNumIdentificacionIngresarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento_KeyPress);
+            this.txtNumIdentificacionIngresarCliente.Leave += new System.EventHandler(this.txtDocumento_Leave);
             // 
-            // radioPasaporteIngresoCliente
+            // radioPasaporteIngresarCliente
             // 
-            this.radioPasaporteIngresoCliente.AutoSize = true;
-            this.radioPasaporteIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioPasaporteIngresoCliente.Location = new System.Drawing.Point(50, 63);
-            this.radioPasaporteIngresoCliente.Name = "radioPasaporteIngresoCliente";
-            this.radioPasaporteIngresoCliente.Size = new System.Drawing.Size(106, 24);
-            this.radioPasaporteIngresoCliente.TabIndex = 20;
-            this.radioPasaporteIngresoCliente.TabStop = true;
-            this.radioPasaporteIngresoCliente.Text = "Pasaporte";
-            this.radioPasaporteIngresoCliente.UseVisualStyleBackColor = true;
-            this.radioPasaporteIngresoCliente.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.radioPasaporteIngresarCliente.AutoSize = true;
+            this.radioPasaporteIngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioPasaporteIngresarCliente.Location = new System.Drawing.Point(50, 63);
+            this.radioPasaporteIngresarCliente.Name = "radioPasaporteIngresarCliente";
+            this.radioPasaporteIngresarCliente.Size = new System.Drawing.Size(106, 24);
+            this.radioPasaporteIngresarCliente.TabIndex = 20;
+            this.radioPasaporteIngresarCliente.TabStop = true;
+            this.radioPasaporteIngresarCliente.Text = "Pasaporte";
+            this.radioPasaporteIngresarCliente.UseVisualStyleBackColor = true;
+            this.radioPasaporteIngresarCliente.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
-            // radioCedulaIngresoCliente
+            // radioCedulaIngresarCliente
             // 
-            this.radioCedulaIngresoCliente.AutoSize = true;
-            this.radioCedulaIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioCedulaIngresoCliente.Location = new System.Drawing.Point(50, 33);
-            this.radioCedulaIngresoCliente.Name = "radioCedulaIngresoCliente";
-            this.radioCedulaIngresoCliente.Size = new System.Drawing.Size(82, 24);
-            this.radioCedulaIngresoCliente.TabIndex = 19;
-            this.radioCedulaIngresoCliente.Text = "Cédula";
-            this.radioCedulaIngresoCliente.UseVisualStyleBackColor = true;
-            this.radioCedulaIngresoCliente.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.radioCedulaIngresarCliente.AutoSize = true;
+            this.radioCedulaIngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioCedulaIngresarCliente.Location = new System.Drawing.Point(50, 33);
+            this.radioCedulaIngresarCliente.Name = "radioCedulaIngresarCliente";
+            this.radioCedulaIngresarCliente.Size = new System.Drawing.Size(82, 24);
+            this.radioCedulaIngresarCliente.TabIndex = 19;
+            this.radioCedulaIngresarCliente.Text = "Cédula";
+            this.radioCedulaIngresarCliente.UseVisualStyleBackColor = true;
+            this.radioCedulaIngresarCliente.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
-            // groupBox1
+            // groupBoxSexoIngresarCliente
             // 
-            this.groupBox1.Controls.Add(this.radioF);
-            this.groupBox1.Controls.Add(this.radioM);
-            this.groupBox1.Location = new System.Drawing.Point(545, 23);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(283, 100);
-            this.groupBox1.TabIndex = 59;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sexo (*)";
+            this.groupBoxSexoIngresarCliente.Controls.Add(this.radioFIngresarCliente);
+            this.groupBoxSexoIngresarCliente.Controls.Add(this.radioMIngresarCliente);
+            this.groupBoxSexoIngresarCliente.Location = new System.Drawing.Point(545, 23);
+            this.groupBoxSexoIngresarCliente.Name = "groupBoxSexoIngresarCliente";
+            this.groupBoxSexoIngresarCliente.Size = new System.Drawing.Size(283, 100);
+            this.groupBoxSexoIngresarCliente.TabIndex = 59;
+            this.groupBoxSexoIngresarCliente.TabStop = false;
+            this.groupBoxSexoIngresarCliente.Text = "Sexo (*)";
             // 
-            // radioF
+            // radioFIngresarCliente
             // 
-            this.radioF.AutoSize = true;
-            this.radioF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioF.Location = new System.Drawing.Point(158, 46);
-            this.radioF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioF.Name = "radioF";
-            this.radioF.Size = new System.Drawing.Size(103, 24);
-            this.radioF.TabIndex = 4;
-            this.radioF.TabStop = true;
-            this.radioF.Text = "Femenino";
-            this.radioF.UseVisualStyleBackColor = true;
+            this.radioFIngresarCliente.AutoSize = true;
+            this.radioFIngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioFIngresarCliente.Location = new System.Drawing.Point(158, 46);
+            this.radioFIngresarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioFIngresarCliente.Name = "radioFIngresarCliente";
+            this.radioFIngresarCliente.Size = new System.Drawing.Size(103, 24);
+            this.radioFIngresarCliente.TabIndex = 4;
+            this.radioFIngresarCliente.TabStop = true;
+            this.radioFIngresarCliente.Text = "Femenino";
+            this.radioFIngresarCliente.UseVisualStyleBackColor = true;
             // 
-            // radioM
+            // radioMIngresarCliente
             // 
-            this.radioM.AutoSize = true;
-            this.radioM.Checked = true;
-            this.radioM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioM.Location = new System.Drawing.Point(17, 46);
-            this.radioM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioM.Name = "radioM";
-            this.radioM.Size = new System.Drawing.Size(106, 24);
-            this.radioM.TabIndex = 3;
-            this.radioM.TabStop = true;
-            this.radioM.Text = "Masculino";
-            this.radioM.UseVisualStyleBackColor = true;
+            this.radioMIngresarCliente.AutoSize = true;
+            this.radioMIngresarCliente.Checked = true;
+            this.radioMIngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioMIngresarCliente.Location = new System.Drawing.Point(17, 46);
+            this.radioMIngresarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioMIngresarCliente.Name = "radioMIngresarCliente";
+            this.radioMIngresarCliente.Size = new System.Drawing.Size(106, 24);
+            this.radioMIngresarCliente.TabIndex = 3;
+            this.radioMIngresarCliente.TabStop = true;
+            this.radioMIngresarCliente.Text = "Masculino";
+            this.radioMIngresarCliente.UseVisualStyleBackColor = true;
             // 
-            // panelInformación
+            // panelInformaciónIngresarCliente
             // 
-            this.panelInformación.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelInformación.Controls.Add(this.fechaNacIngresoCliente);
-            this.panelInformación.Controls.Add(this.lblFecha);
-            this.panelInformación.Controls.Add(this.txtDireccionIngresoCliente);
-            this.panelInformación.Controls.Add(this.lbldireccion);
-            this.panelInformación.Controls.Add(this.txtCorreoIngresoCLiente);
-            this.panelInformación.Controls.Add(this.txtProcedenciaIngresoCliente);
-            this.panelInformación.Controls.Add(this.txtTelefono2IngresoCliente);
-            this.panelInformación.Controls.Add(this.txtApellido2IngresoCliente);
-            this.panelInformación.Controls.Add(this.txtNombre2IngresoCliente);
-            this.panelInformación.Controls.Add(this.txtEstadoCivilIngresoCliente);
-            this.panelInformación.Controls.Add(this.txtNombre1IngresoCliente);
-            this.panelInformación.Controls.Add(this.txtApellido1IngresoCliente);
-            this.panelInformación.Controls.Add(this.txtTelefono1IngresoCliente);
-            this.panelInformación.Controls.Add(this.txtNacionalidadIngresoCliente);
-            this.panelInformación.Controls.Add(this.labelCorreo);
-            this.panelInformación.Controls.Add(this.lblEstadoCivil);
-            this.panelInformación.Controls.Add(this.lblNacionalidad);
-            this.panelInformación.Controls.Add(this.labelProcedencia);
-            this.panelInformación.Controls.Add(this.lblNombre1);
-            this.panelInformación.Controls.Add(this.labelNombre2);
-            this.panelInformación.Controls.Add(this.lblApellido1);
-            this.panelInformación.Controls.Add(this.lblApellido2);
-            this.panelInformación.Controls.Add(this.lbltelefono2);
-            this.panelInformación.Controls.Add(this.lblTelefono);
-            this.panelInformación.Location = new System.Drawing.Point(43, 147);
-            this.panelInformación.Name = "panelInformación";
-            this.panelInformación.Size = new System.Drawing.Size(785, 372);
-            this.panelInformación.TabIndex = 60;
+            this.panelInformaciónIngresarCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelInformaciónIngresarCliente.Controls.Add(this.DTPfechaNacIngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.lblFechaIngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.txtDireccionIngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.lblDireccionIngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.txtCorreoIngresarCLiente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.txtProcedenciaIngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.txtTelefono2IngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.txtApellido2IngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.txtNombre2IngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.txtEstadoCivilIngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.txtNombre1IngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.txtApellido1IngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.txtTelefono1IngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.txtNacionalidadIngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.labelCorreoIngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.lblEstadoCivilIngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.lblNacionalidadRegistrarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.labelProcedenciaIngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.lblNombre1IngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.labelNombre2IngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.lblApellido1IngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.lblApellido2IngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.lbltelefono2IngresarCliente);
+            this.panelInformaciónIngresarCliente.Controls.Add(this.lblTelefono1IngresarCliente);
+            this.panelInformaciónIngresarCliente.Location = new System.Drawing.Point(43, 147);
+            this.panelInformaciónIngresarCliente.Name = "panelInformaciónIngresarCliente";
+            this.panelInformaciónIngresarCliente.Size = new System.Drawing.Size(785, 372);
+            this.panelInformaciónIngresarCliente.TabIndex = 60;
             // 
-            // txtDireccionIngresoCliente
+            // DTPfechaNacIngresarCliente
             // 
-            this.txtDireccionIngresoCliente.Location = new System.Drawing.Point(197, 320);
-            this.txtDireccionIngresoCliente.Name = "txtDireccionIngresoCliente";
-            this.txtDireccionIngresoCliente.Size = new System.Drawing.Size(172, 22);
-            this.txtDireccionIngresoCliente.TabIndex = 120;
-            this.txtDireccionIngresoCliente.Validar = false;
-            this.txtDireccionIngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
+            this.DTPfechaNacIngresarCliente.CustomFormat = "";
+            this.DTPfechaNacIngresarCliente.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTPfechaNacIngresarCliente.Location = new System.Drawing.Point(562, 318);
+            this.DTPfechaNacIngresarCliente.Name = "DTPfechaNacIngresarCliente";
+            this.DTPfechaNacIngresarCliente.Size = new System.Drawing.Size(173, 22);
+            this.DTPfechaNacIngresarCliente.TabIndex = 122;
             // 
-            // lbldireccion
+            // lblFechaIngresarCliente
             // 
-            this.lbldireccion.AutoSize = true;
-            this.lbldireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldireccion.Location = new System.Drawing.Point(44, 318);
-            this.lbldireccion.Name = "lbldireccion";
-            this.lbldireccion.Size = new System.Drawing.Size(86, 40);
-            this.lbldireccion.TabIndex = 119;
-            this.lbldireccion.Text = "Dirección \r\nDomicilio";
+            this.lblFechaIngresarCliente.AutoSize = true;
+            this.lblFechaIngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaIngresarCliente.Location = new System.Drawing.Point(421, 318);
+            this.lblFechaIngresarCliente.Name = "lblFechaIngresarCliente";
+            this.lblFechaIngresarCliente.Size = new System.Drawing.Size(93, 40);
+            this.lblFechaIngresarCliente.TabIndex = 121;
+            this.lblFechaIngresarCliente.Text = "Fecha de \r\nNacimiento";
             // 
-            // txtCorreoIngresoCLiente
+            // txtDireccionIngresarCliente
             // 
-            this.txtCorreoIngresoCLiente.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCorreoIngresoCLiente.Location = new System.Drawing.Point(562, 268);
-            this.txtCorreoIngresoCLiente.Name = "txtCorreoIngresoCLiente";
-            this.txtCorreoIngresoCLiente.Size = new System.Drawing.Size(172, 22);
-            this.txtCorreoIngresoCLiente.TabIndex = 118;
-            this.txtCorreoIngresoCLiente.Validar = false;
-            this.txtCorreoIngresoCLiente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
+            this.txtDireccionIngresarCliente.Location = new System.Drawing.Point(197, 320);
+            this.txtDireccionIngresarCliente.Name = "txtDireccionIngresarCliente";
+            this.txtDireccionIngresarCliente.Size = new System.Drawing.Size(172, 22);
+            this.txtDireccionIngresarCliente.TabIndex = 120;
+            this.txtDireccionIngresarCliente.Validar = false;
+            this.txtDireccionIngresarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
             // 
-            // txtProcedenciaIngresoCliente
+            // lblDireccionIngresarCliente
             // 
-            this.txtProcedenciaIngresoCliente.Location = new System.Drawing.Point(562, 213);
-            this.txtProcedenciaIngresoCliente.Name = "txtProcedenciaIngresoCliente";
-            this.txtProcedenciaIngresoCliente.Size = new System.Drawing.Size(173, 22);
-            this.txtProcedenciaIngresoCliente.TabIndex = 117;
-            this.txtProcedenciaIngresoCliente.Validar = false;
-            this.txtProcedenciaIngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProcedencia_KeyPress);
+            this.lblDireccionIngresarCliente.AutoSize = true;
+            this.lblDireccionIngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccionIngresarCliente.Location = new System.Drawing.Point(44, 318);
+            this.lblDireccionIngresarCliente.Name = "lblDireccionIngresarCliente";
+            this.lblDireccionIngresarCliente.Size = new System.Drawing.Size(86, 40);
+            this.lblDireccionIngresarCliente.TabIndex = 119;
+            this.lblDireccionIngresarCliente.Text = "Dirección \r\nDomicilio";
             // 
-            // txtTelefono2IngresoCliente
+            // txtCorreoIngresarCLiente
             // 
-            this.txtTelefono2IngresoCliente.Location = new System.Drawing.Point(563, 144);
-            this.txtTelefono2IngresoCliente.Name = "txtTelefono2IngresoCliente";
-            this.txtTelefono2IngresoCliente.Size = new System.Drawing.Size(171, 22);
-            this.txtTelefono2IngresoCliente.TabIndex = 116;
-            this.txtTelefono2IngresoCliente.Validar = false;
-            this.txtTelefono2IngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono2_KeyPress);
+            this.txtCorreoIngresarCLiente.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCorreoIngresarCLiente.Location = new System.Drawing.Point(562, 268);
+            this.txtCorreoIngresarCLiente.Name = "txtCorreoIngresarCLiente";
+            this.txtCorreoIngresarCLiente.Size = new System.Drawing.Size(172, 22);
+            this.txtCorreoIngresarCLiente.TabIndex = 118;
+            this.txtCorreoIngresarCLiente.Validar = false;
+            this.txtCorreoIngresarCLiente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
-            // txtApellido2IngresoCliente
+            // txtProcedenciaIngresarCliente
             // 
-            this.txtApellido2IngresoCliente.Location = new System.Drawing.Point(562, 81);
-            this.txtApellido2IngresoCliente.Name = "txtApellido2IngresoCliente";
-            this.txtApellido2IngresoCliente.Size = new System.Drawing.Size(172, 22);
-            this.txtApellido2IngresoCliente.TabIndex = 115;
-            this.txtApellido2IngresoCliente.Validar = false;
-            this.txtApellido2IngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido2_KeyPress);
+            this.txtProcedenciaIngresarCliente.Location = new System.Drawing.Point(562, 213);
+            this.txtProcedenciaIngresarCliente.Name = "txtProcedenciaIngresarCliente";
+            this.txtProcedenciaIngresarCliente.Size = new System.Drawing.Size(173, 22);
+            this.txtProcedenciaIngresarCliente.TabIndex = 117;
+            this.txtProcedenciaIngresarCliente.Validar = false;
+            this.txtProcedenciaIngresarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProcedencia_KeyPress);
             // 
-            // txtNombre2IngresoCliente
+            // txtTelefono2IngresarCliente
             // 
-            this.txtNombre2IngresoCliente.Location = new System.Drawing.Point(562, 31);
-            this.txtNombre2IngresoCliente.Name = "txtNombre2IngresoCliente";
-            this.txtNombre2IngresoCliente.Size = new System.Drawing.Size(172, 22);
-            this.txtNombre2IngresoCliente.TabIndex = 114;
-            this.txtNombre2IngresoCliente.Validar = false;
-            this.txtNombre2IngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre2_KeyPress);
+            this.txtTelefono2IngresarCliente.Location = new System.Drawing.Point(563, 144);
+            this.txtTelefono2IngresarCliente.Name = "txtTelefono2IngresarCliente";
+            this.txtTelefono2IngresarCliente.Size = new System.Drawing.Size(171, 22);
+            this.txtTelefono2IngresarCliente.TabIndex = 116;
+            this.txtTelefono2IngresarCliente.Validar = false;
+            this.txtTelefono2IngresarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono2_KeyPress);
             // 
-            // txtEstadoCivilIngresoCliente
+            // txtApellido2IngresarCliente
             // 
-            this.txtEstadoCivilIngresoCliente.Location = new System.Drawing.Point(197, 268);
-            this.txtEstadoCivilIngresoCliente.Name = "txtEstadoCivilIngresoCliente";
-            this.txtEstadoCivilIngresoCliente.Size = new System.Drawing.Size(172, 22);
-            this.txtEstadoCivilIngresoCliente.TabIndex = 113;
-            this.txtEstadoCivilIngresoCliente.Validar = false;
-            this.txtEstadoCivilIngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstadoCivil_KeyPress);
+            this.txtApellido2IngresarCliente.Location = new System.Drawing.Point(562, 81);
+            this.txtApellido2IngresarCliente.Name = "txtApellido2IngresarCliente";
+            this.txtApellido2IngresarCliente.Size = new System.Drawing.Size(172, 22);
+            this.txtApellido2IngresarCliente.TabIndex = 115;
+            this.txtApellido2IngresarCliente.Validar = false;
+            this.txtApellido2IngresarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido2_KeyPress);
             // 
-            // txtNombre1IngresoCliente
+            // txtNombre2IngresarCliente
             // 
-            this.txtNombre1IngresoCliente.Location = new System.Drawing.Point(197, 26);
-            this.txtNombre1IngresoCliente.Name = "txtNombre1IngresoCliente";
-            this.txtNombre1IngresoCliente.Size = new System.Drawing.Size(172, 22);
-            this.txtNombre1IngresoCliente.TabIndex = 112;
-            this.txtNombre1IngresoCliente.Validar = true;
-            this.txtNombre1IngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre1_KeyPress);
+            this.txtNombre2IngresarCliente.Location = new System.Drawing.Point(562, 31);
+            this.txtNombre2IngresarCliente.Name = "txtNombre2IngresarCliente";
+            this.txtNombre2IngresarCliente.Size = new System.Drawing.Size(172, 22);
+            this.txtNombre2IngresarCliente.TabIndex = 114;
+            this.txtNombre2IngresarCliente.Validar = false;
+            this.txtNombre2IngresarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre2_KeyPress);
             // 
-            // txtApellido1IngresoCliente
+            // txtEstadoCivilIngresarCliente
             // 
-            this.txtApellido1IngresoCliente.Location = new System.Drawing.Point(197, 81);
-            this.txtApellido1IngresoCliente.Name = "txtApellido1IngresoCliente";
-            this.txtApellido1IngresoCliente.Size = new System.Drawing.Size(172, 22);
-            this.txtApellido1IngresoCliente.TabIndex = 111;
-            this.txtApellido1IngresoCliente.Validar = true;
-            this.txtApellido1IngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido1_KeyPress);
+            this.txtEstadoCivilIngresarCliente.Location = new System.Drawing.Point(197, 268);
+            this.txtEstadoCivilIngresarCliente.Name = "txtEstadoCivilIngresarCliente";
+            this.txtEstadoCivilIngresarCliente.Size = new System.Drawing.Size(172, 22);
+            this.txtEstadoCivilIngresarCliente.TabIndex = 113;
+            this.txtEstadoCivilIngresarCliente.Validar = false;
+            this.txtEstadoCivilIngresarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstadoCivil_KeyPress);
             // 
-            // txtTelefono1IngresoCliente
+            // txtNombre1IngresarCliente
             // 
-            this.txtTelefono1IngresoCliente.Location = new System.Drawing.Point(197, 140);
-            this.txtTelefono1IngresoCliente.Name = "txtTelefono1IngresoCliente";
-            this.txtTelefono1IngresoCliente.Size = new System.Drawing.Size(172, 22);
-            this.txtTelefono1IngresoCliente.TabIndex = 110;
-            this.txtTelefono1IngresoCliente.Validar = true;
-            this.txtTelefono1IngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono1_KeyPress);
-            this.txtTelefono1IngresoCliente.Leave += new System.EventHandler(this.txtTelefono1_Leave);
+            this.txtNombre1IngresarCliente.Location = new System.Drawing.Point(197, 26);
+            this.txtNombre1IngresarCliente.Name = "txtNombre1IngresarCliente";
+            this.txtNombre1IngresarCliente.Size = new System.Drawing.Size(172, 22);
+            this.txtNombre1IngresarCliente.TabIndex = 112;
+            this.txtNombre1IngresarCliente.Validar = true;
+            this.txtNombre1IngresarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre1_KeyPress);
             // 
-            // txtNacionalidadIngresoCliente
+            // txtApellido1IngresarCliente
             // 
-            this.txtNacionalidadIngresoCliente.Location = new System.Drawing.Point(197, 210);
-            this.txtNacionalidadIngresoCliente.Name = "txtNacionalidadIngresoCliente";
-            this.txtNacionalidadIngresoCliente.Size = new System.Drawing.Size(172, 22);
-            this.txtNacionalidadIngresoCliente.TabIndex = 109;
-            this.txtNacionalidadIngresoCliente.Validar = true;
-            this.txtNacionalidadIngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNacionalidad_KeyPress);
+            this.txtApellido1IngresarCliente.Location = new System.Drawing.Point(197, 81);
+            this.txtApellido1IngresarCliente.Name = "txtApellido1IngresarCliente";
+            this.txtApellido1IngresarCliente.Size = new System.Drawing.Size(172, 22);
+            this.txtApellido1IngresarCliente.TabIndex = 111;
+            this.txtApellido1IngresarCliente.Validar = true;
+            this.txtApellido1IngresarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido1_KeyPress);
             // 
-            // labelCorreo
+            // txtTelefono1IngresarCliente
             // 
-            this.labelCorreo.AutoSize = true;
-            this.labelCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCorreo.Location = new System.Drawing.Point(417, 266);
-            this.labelCorreo.Name = "labelCorreo";
-            this.labelCorreo.Size = new System.Drawing.Size(93, 40);
-            this.labelCorreo.TabIndex = 108;
-            this.labelCorreo.Text = "Correo \r\nElectrónico";
+            this.txtTelefono1IngresarCliente.Location = new System.Drawing.Point(197, 140);
+            this.txtTelefono1IngresarCliente.Name = "txtTelefono1IngresarCliente";
+            this.txtTelefono1IngresarCliente.Size = new System.Drawing.Size(172, 22);
+            this.txtTelefono1IngresarCliente.TabIndex = 110;
+            this.txtTelefono1IngresarCliente.Validar = true;
+            this.txtTelefono1IngresarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono1_KeyPress);
+            this.txtTelefono1IngresarCliente.Leave += new System.EventHandler(this.txtTelefono1_Leave);
             // 
-            // lblEstadoCivil
+            // txtNacionalidadIngresarCliente
             // 
-            this.lblEstadoCivil.AutoSize = true;
-            this.lblEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoCivil.Location = new System.Drawing.Point(46, 266);
-            this.lblEstadoCivil.Name = "lblEstadoCivil";
-            this.lblEstadoCivil.Size = new System.Drawing.Size(98, 20);
-            this.lblEstadoCivil.TabIndex = 107;
-            this.lblEstadoCivil.Text = "Estado Civil";
+            this.txtNacionalidadIngresarCliente.Location = new System.Drawing.Point(197, 210);
+            this.txtNacionalidadIngresarCliente.Name = "txtNacionalidadIngresarCliente";
+            this.txtNacionalidadIngresarCliente.Size = new System.Drawing.Size(172, 22);
+            this.txtNacionalidadIngresarCliente.TabIndex = 109;
+            this.txtNacionalidadIngresarCliente.Validar = true;
+            this.txtNacionalidadIngresarCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNacionalidad_KeyPress);
             // 
-            // lblNacionalidad
+            // labelCorreoIngresarCliente
             // 
-            this.lblNacionalidad.AutoSize = true;
-            this.lblNacionalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNacionalidad.Location = new System.Drawing.Point(46, 212);
-            this.lblNacionalidad.Name = "lblNacionalidad";
-            this.lblNacionalidad.Size = new System.Drawing.Size(128, 20);
-            this.lblNacionalidad.TabIndex = 106;
-            this.lblNacionalidad.Text = "Nacionalidad (*)";
+            this.labelCorreoIngresarCliente.AutoSize = true;
+            this.labelCorreoIngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCorreoIngresarCliente.Location = new System.Drawing.Point(417, 266);
+            this.labelCorreoIngresarCliente.Name = "labelCorreoIngresarCliente";
+            this.labelCorreoIngresarCliente.Size = new System.Drawing.Size(93, 40);
+            this.labelCorreoIngresarCliente.TabIndex = 108;
+            this.labelCorreoIngresarCliente.Text = "Correo \r\nElectrónico";
             // 
-            // labelProcedencia
+            // lblEstadoCivilIngresarCliente
             // 
-            this.labelProcedencia.AutoSize = true;
-            this.labelProcedencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProcedencia.Location = new System.Drawing.Point(417, 202);
-            this.labelProcedencia.Name = "labelProcedencia";
-            this.labelProcedencia.Size = new System.Drawing.Size(107, 40);
-            this.labelProcedencia.TabIndex = 105;
-            this.labelProcedencia.Text = "Lugar de \r\nProcedencia ";
+            this.lblEstadoCivilIngresarCliente.AutoSize = true;
+            this.lblEstadoCivilIngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoCivilIngresarCliente.Location = new System.Drawing.Point(46, 266);
+            this.lblEstadoCivilIngresarCliente.Name = "lblEstadoCivilIngresarCliente";
+            this.lblEstadoCivilIngresarCliente.Size = new System.Drawing.Size(98, 20);
+            this.lblEstadoCivilIngresarCliente.TabIndex = 107;
+            this.lblEstadoCivilIngresarCliente.Text = "Estado Civil";
             // 
-            // lblNombre1
+            // lblNacionalidadRegistrarCliente
             // 
-            this.lblNombre1.AutoSize = true;
-            this.lblNombre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre1.Location = new System.Drawing.Point(46, 26);
-            this.lblNombre1.Name = "lblNombre1";
-            this.lblNombre1.Size = new System.Drawing.Size(110, 20);
-            this.lblNombre1.TabIndex = 99;
-            this.lblNombre1.Text = " Nombre 1 (*)";
-            this.lblNombre1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblNacionalidadRegistrarCliente.AutoSize = true;
+            this.lblNacionalidadRegistrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNacionalidadRegistrarCliente.Location = new System.Drawing.Point(46, 212);
+            this.lblNacionalidadRegistrarCliente.Name = "lblNacionalidadRegistrarCliente";
+            this.lblNacionalidadRegistrarCliente.Size = new System.Drawing.Size(128, 20);
+            this.lblNacionalidadRegistrarCliente.TabIndex = 106;
+            this.lblNacionalidadRegistrarCliente.Text = "Nacionalidad (*)";
             // 
-            // labelNombre2
+            // labelProcedenciaIngresarCliente
             // 
-            this.labelNombre2.AutoSize = true;
-            this.labelNombre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre2.Location = new System.Drawing.Point(417, 26);
-            this.labelNombre2.Name = "labelNombre2";
-            this.labelNombre2.Size = new System.Drawing.Size(82, 20);
-            this.labelNombre2.TabIndex = 102;
-            this.labelNombre2.Text = "Nombre 2";
+            this.labelProcedenciaIngresarCliente.AutoSize = true;
+            this.labelProcedenciaIngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProcedenciaIngresarCliente.Location = new System.Drawing.Point(417, 202);
+            this.labelProcedenciaIngresarCliente.Name = "labelProcedenciaIngresarCliente";
+            this.labelProcedenciaIngresarCliente.Size = new System.Drawing.Size(107, 40);
+            this.labelProcedenciaIngresarCliente.TabIndex = 105;
+            this.labelProcedenciaIngresarCliente.Text = "Lugar de \r\nProcedencia ";
             // 
-            // lblApellido1
+            // lblNombre1IngresarCliente
             // 
-            this.lblApellido1.AutoSize = true;
-            this.lblApellido1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido1.Location = new System.Drawing.Point(46, 83);
-            this.lblApellido1.Name = "lblApellido1";
-            this.lblApellido1.Size = new System.Drawing.Size(105, 20);
-            this.lblApellido1.TabIndex = 100;
-            this.lblApellido1.Text = "Apellido 1 (*)";
-            this.lblApellido1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblNombre1IngresarCliente.AutoSize = true;
+            this.lblNombre1IngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre1IngresarCliente.Location = new System.Drawing.Point(46, 26);
+            this.lblNombre1IngresarCliente.Name = "lblNombre1IngresarCliente";
+            this.lblNombre1IngresarCliente.Size = new System.Drawing.Size(110, 20);
+            this.lblNombre1IngresarCliente.TabIndex = 99;
+            this.lblNombre1IngresarCliente.Text = " Nombre 1 (*)";
+            this.lblNombre1IngresarCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // lblApellido2
+            // labelNombre2IngresarCliente
             // 
-            this.lblApellido2.AutoSize = true;
-            this.lblApellido2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido2.Location = new System.Drawing.Point(417, 83);
-            this.lblApellido2.Name = "lblApellido2";
-            this.lblApellido2.Size = new System.Drawing.Size(82, 20);
-            this.lblApellido2.TabIndex = 101;
-            this.lblApellido2.Text = "Apellido 2";
+            this.labelNombre2IngresarCliente.AutoSize = true;
+            this.labelNombre2IngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre2IngresarCliente.Location = new System.Drawing.Point(417, 26);
+            this.labelNombre2IngresarCliente.Name = "labelNombre2IngresarCliente";
+            this.labelNombre2IngresarCliente.Size = new System.Drawing.Size(82, 20);
+            this.labelNombre2IngresarCliente.TabIndex = 102;
+            this.labelNombre2IngresarCliente.Text = "Nombre 2";
             // 
-            // lbltelefono2
+            // lblApellido1IngresarCliente
             // 
-            this.lbltelefono2.AutoSize = true;
-            this.lbltelefono2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltelefono2.Location = new System.Drawing.Point(417, 144);
-            this.lbltelefono2.Name = "lbltelefono2";
-            this.lbltelefono2.Size = new System.Drawing.Size(92, 20);
-            this.lbltelefono2.TabIndex = 104;
-            this.lbltelefono2.Text = "Teléfono 2 ";
+            this.lblApellido1IngresarCliente.AutoSize = true;
+            this.lblApellido1IngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido1IngresarCliente.Location = new System.Drawing.Point(46, 83);
+            this.lblApellido1IngresarCliente.Name = "lblApellido1IngresarCliente";
+            this.lblApellido1IngresarCliente.Size = new System.Drawing.Size(105, 20);
+            this.lblApellido1IngresarCliente.TabIndex = 100;
+            this.lblApellido1IngresarCliente.Text = "Apellido 1 (*)";
+            this.lblApellido1IngresarCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblTelefono
+            // lblApellido2IngresarCliente
             // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(46, 142);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(110, 20);
-            this.lblTelefono.TabIndex = 103;
-            this.lblTelefono.Text = "Teléfono 1 (*)";
+            this.lblApellido2IngresarCliente.AutoSize = true;
+            this.lblApellido2IngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido2IngresarCliente.Location = new System.Drawing.Point(417, 83);
+            this.lblApellido2IngresarCliente.Name = "lblApellido2IngresarCliente";
+            this.lblApellido2IngresarCliente.Size = new System.Drawing.Size(82, 20);
+            this.lblApellido2IngresarCliente.TabIndex = 101;
+            this.lblApellido2IngresarCliente.Text = "Apellido 2";
             // 
-            // lblFecha
+            // lbltelefono2IngresarCliente
             // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(421, 318);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(93, 40);
-            this.lblFecha.TabIndex = 121;
-            this.lblFecha.Text = "Fecha de \r\nNacimiento";
+            this.lbltelefono2IngresarCliente.AutoSize = true;
+            this.lbltelefono2IngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltelefono2IngresarCliente.Location = new System.Drawing.Point(417, 144);
+            this.lbltelefono2IngresarCliente.Name = "lbltelefono2IngresarCliente";
+            this.lbltelefono2IngresarCliente.Size = new System.Drawing.Size(92, 20);
+            this.lbltelefono2IngresarCliente.TabIndex = 104;
+            this.lbltelefono2IngresarCliente.Text = "Teléfono 2 ";
             // 
-            // fechaNacIngresoCliente
+            // lblTelefono1IngresarCliente
             // 
-            this.fechaNacIngresoCliente.CustomFormat = "";
-            this.fechaNacIngresoCliente.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechaNacIngresoCliente.Location = new System.Drawing.Point(562, 318);
-            this.fechaNacIngresoCliente.Name = "fechaNacIngresoCliente";
-            this.fechaNacIngresoCliente.Size = new System.Drawing.Size(173, 22);
-            this.fechaNacIngresoCliente.TabIndex = 122;
+            this.lblTelefono1IngresarCliente.AutoSize = true;
+            this.lblTelefono1IngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono1IngresarCliente.Location = new System.Drawing.Point(46, 142);
+            this.lblTelefono1IngresarCliente.Name = "lblTelefono1IngresarCliente";
+            this.lblTelefono1IngresarCliente.Size = new System.Drawing.Size(110, 20);
+            this.lblTelefono1IngresarCliente.TabIndex = 103;
+            this.lblTelefono1IngresarCliente.Text = "Teléfono 1 (*)";
+            // 
+            // btnSalirIngresarCliente
+            // 
+            this.btnSalirIngresarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirIngresarCliente.Location = new System.Drawing.Point(562, 561);
+            this.btnSalirIngresarCliente.Name = "btnSalirIngresarCliente";
+            this.btnSalirIngresarCliente.Size = new System.Drawing.Size(159, 49);
+            this.btnSalirIngresarCliente.TabIndex = 61;
+            this.btnSalirIngresarCliente.Text = "Salir";
+            this.btnSalirIngresarCliente.UseVisualStyleBackColor = true;
             // 
             // IngresarCliente
             // 
@@ -477,11 +488,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(876, 642);
-            this.Controls.Add(this.panelInformación);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBoxDocumento);
-            this.Controls.Add(this.btnAceptarIngresoCliente);
-            this.Controls.Add(this.btnCancelarIngresoCliente);
+            this.Controls.Add(this.btnSalirIngresarCliente);
+            this.Controls.Add(this.panelInformaciónIngresarCliente);
+            this.Controls.Add(this.groupBoxSexoIngresarCliente);
+            this.Controls.Add(this.groupBoxDocumentoIdentificaciónIngresarCliente);
+            this.Controls.Add(this.btnAceptarIngresarCliente);
+            this.Controls.Add(this.btnCancelarIngresarCliente);
             this.Controls.Add(this.label4);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IngresarCliente";
@@ -489,53 +501,54 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormIngresarNuevoCliente_FormClosing);
             this.Load += new System.EventHandler(this.FormIngresarNuevoCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
-            this.groupBoxDocumento.ResumeLayout(false);
-            this.groupBoxDocumento.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panelInformación.ResumeLayout(false);
-            this.panelInformación.PerformLayout();
+            this.groupBoxDocumentoIdentificaciónIngresarCliente.ResumeLayout(false);
+            this.groupBoxDocumentoIdentificaciónIngresarCliente.PerformLayout();
+            this.groupBoxSexoIngresarCliente.ResumeLayout(false);
+            this.groupBoxSexoIngresarCliente.PerformLayout();
+            this.panelInformaciónIngresarCliente.ResumeLayout(false);
+            this.panelInformaciónIngresarCliente.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnCancelarIngresoCliente;
-        private System.Windows.Forms.Button btnAceptarIngresoCliente;
+        private System.Windows.Forms.Button btnCancelarIngresarCliente;
+        private System.Windows.Forms.Button btnAceptarIngresarCliente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ErrorProvider errorProvider2;
-        private System.Windows.Forms.GroupBox groupBoxDocumento;
-        private Libreria.ErrorTxtBox txtNumIdentificacionIngresoCliente;
-        private System.Windows.Forms.RadioButton radioPasaporteIngresoCliente;
-        private System.Windows.Forms.RadioButton radioCedulaIngresoCliente;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioF;
-        private System.Windows.Forms.RadioButton radioM;
-        private System.Windows.Forms.Panel panelInformación;
-        private Libreria.ErrorTxtBox txtCorreoIngresoCLiente;
-        private Libreria.ErrorTxtBox txtProcedenciaIngresoCliente;
-        private Libreria.ErrorTxtBox txtTelefono2IngresoCliente;
-        private Libreria.ErrorTxtBox txtApellido2IngresoCliente;
-        private Libreria.ErrorTxtBox txtNombre2IngresoCliente;
-        private Libreria.ErrorTxtBox txtEstadoCivilIngresoCliente;
-        private Libreria.ErrorTxtBox txtNombre1IngresoCliente;
-        private Libreria.ErrorTxtBox txtApellido1IngresoCliente;
-        private Libreria.ErrorTxtBox txtTelefono1IngresoCliente;
-        private Libreria.ErrorTxtBox txtNacionalidadIngresoCliente;
-        private System.Windows.Forms.Label labelCorreo;
-        private System.Windows.Forms.Label lblEstadoCivil;
-        private System.Windows.Forms.Label lblNacionalidad;
-        private System.Windows.Forms.Label labelProcedencia;
-        private System.Windows.Forms.Label lblNombre1;
-        private System.Windows.Forms.Label labelNombre2;
-        private System.Windows.Forms.Label lblApellido1;
-        private System.Windows.Forms.Label lblApellido2;
-        private System.Windows.Forms.Label lbltelefono2;
-        private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.Label lbldireccion;
-        private Libreria.ErrorTxtBox txtDireccionIngresoCliente;
-        private System.Windows.Forms.DateTimePicker fechaNacIngresoCliente;
-        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.GroupBox groupBoxDocumentoIdentificaciónIngresarCliente;
+        private Libreria.ErrorTxtBox txtNumIdentificacionIngresarCliente;
+        private System.Windows.Forms.RadioButton radioPasaporteIngresarCliente;
+        private System.Windows.Forms.RadioButton radioCedulaIngresarCliente;
+        private System.Windows.Forms.GroupBox groupBoxSexoIngresarCliente;
+        private System.Windows.Forms.RadioButton radioFIngresarCliente;
+        private System.Windows.Forms.RadioButton radioMIngresarCliente;
+        private System.Windows.Forms.Panel panelInformaciónIngresarCliente;
+        private Libreria.ErrorTxtBox txtCorreoIngresarCLiente;
+        private Libreria.ErrorTxtBox txtProcedenciaIngresarCliente;
+        private Libreria.ErrorTxtBox txtTelefono2IngresarCliente;
+        private Libreria.ErrorTxtBox txtApellido2IngresarCliente;
+        private Libreria.ErrorTxtBox txtNombre2IngresarCliente;
+        private Libreria.ErrorTxtBox txtEstadoCivilIngresarCliente;
+        private Libreria.ErrorTxtBox txtNombre1IngresarCliente;
+        private Libreria.ErrorTxtBox txtApellido1IngresarCliente;
+        private Libreria.ErrorTxtBox txtTelefono1IngresarCliente;
+        private Libreria.ErrorTxtBox txtNacionalidadIngresarCliente;
+        private System.Windows.Forms.Label labelCorreoIngresarCliente;
+        private System.Windows.Forms.Label lblEstadoCivilIngresarCliente;
+        private System.Windows.Forms.Label lblNacionalidadRegistrarCliente;
+        private System.Windows.Forms.Label labelProcedenciaIngresarCliente;
+        private System.Windows.Forms.Label lblNombre1IngresarCliente;
+        private System.Windows.Forms.Label labelNombre2IngresarCliente;
+        private System.Windows.Forms.Label lblApellido1IngresarCliente;
+        private System.Windows.Forms.Label lblApellido2IngresarCliente;
+        private System.Windows.Forms.Label lbltelefono2IngresarCliente;
+        private System.Windows.Forms.Label lblTelefono1IngresarCliente;
+        private System.Windows.Forms.Label lblDireccionIngresarCliente;
+        private Libreria.ErrorTxtBox txtDireccionIngresarCliente;
+        private System.Windows.Forms.DateTimePicker DTPfechaNacIngresarCliente;
+        private System.Windows.Forms.Label lblFechaIngresarCliente;
+        private System.Windows.Forms.Button btnSalirIngresarCliente;
     }
 }

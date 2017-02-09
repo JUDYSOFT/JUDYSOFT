@@ -26,13 +26,13 @@ namespace JUDYSOFT
 
         private void btnAceptar_Click(object sender, EventArgs e)//boton aceptar 
         {
-            if (Utilidades.ValidarFormulario(groupBoxDocumento,errorProvider2)==false )
+            if (Utilidades.ValidarFormulario(groupBoxDocumentoIdentificaciónIngresarCliente,errorProvider2)==false )
             {
 
                 //verificarCedula(txtDocumento.Text.Trim());
 
             }
-            if (Utilidades.ValidarFormulario(panelInformación,errorProvider2)==false)
+            if (Utilidades.ValidarFormulario(panelInformaciónIngresarCliente,errorProvider2)==false)
             {
                 MessageBox.Show("Datos Correctos");
             }
@@ -224,18 +224,18 @@ namespace JUDYSOFT
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            txtNumIdentificacionIngresoCliente.Text = "";
+            txtNumIdentificacionIngresarCliente.Text = "";
             /*if (radioCedula.Checked)
             {
                 txtDocumento.Visible = true;
             }*/
-            txtNumIdentificacionIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtNumIdentificacionIngresarCliente.CharacterCasing = CharacterCasing.Upper;
 
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            txtNumIdentificacionIngresoCliente.Text ="";
+            txtNumIdentificacionIngresarCliente.Text ="";
             /*if (radioPasaporte.Checked)
             {
                 txtDocumento.Visible = true;
@@ -269,24 +269,24 @@ namespace JUDYSOFT
         private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
             
-                if (radioCedulaIngresoCliente.Checked)
+                if (radioCedulaIngresarCliente.Checked)
                 {
                    
-                    if (Convert.ToInt32(txtNumIdentificacionIngresoCliente.Text.Length) == 10 && e.KeyChar != (char)Keys.Back)
+                    if (Convert.ToInt32(txtNumIdentificacionIngresarCliente.Text.Length) == 10 && e.KeyChar != (char)Keys.Back)
                     {
                         e.Handled = true;
                     }
-                if (val.validarCamposNumericos(e, txtNumIdentificacionIngresoCliente))
+                if (val.validarCamposNumericos(e, txtNumIdentificacionIngresarCliente))
                     return;
                     
                 
                     
 
                 }
-                else if (radioPasaporteIngresoCliente.Checked)
+                else if (radioPasaporteIngresarCliente.Checked)
                 {
                     
-                    if (Convert.ToInt32(txtNumIdentificacionIngresoCliente.Text.Length) == 8 && e.KeyChar != (char)Keys.Back)
+                    if (Convert.ToInt32(txtNumIdentificacionIngresarCliente.Text.Length) == 8 && e.KeyChar != (char)Keys.Back)
                     {
                         e.Handled = true;
                     }
@@ -304,28 +304,28 @@ namespace JUDYSOFT
 
         private void txtNombre1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtNombre1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
-            if (val.validarCadenasDeTexto(e, txtNombre1IngresoCliente))
+            txtNombre1IngresarCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e, txtNombre1IngresarCliente))
                 return;
         }
 
         private void txtApellido1_KeyPress(object sender, KeyPressEventArgs e)
            
         {
-            txtApellido1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
-            if (val.validarCadenasDeTexto(e, txtApellido1IngresoCliente))
+            txtApellido1IngresarCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e, txtApellido1IngresarCliente))
                 return;
         }
 
         private void txtTelefono1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (val.validarCamposNumericos(e, txtTelefono1IngresoCliente))
+            if (val.validarCamposNumericos(e, txtTelefono1IngresarCliente))
                 return;
         }
 
         private void txtTelefono1_Leave(object sender, EventArgs e)
         {
-            if (val.validartelefono(txtTelefono1IngresoCliente.Text))
+            if (val.validartelefono(txtTelefono1IngresarCliente.Text))
                 return;
             else
                 MessageBox.Show("telefono incorrecto");
@@ -333,9 +333,9 @@ namespace JUDYSOFT
 
        private void txtDocumento_Leave(object sender, EventArgs e)
         {
-            if (radioCedulaIngresoCliente.Checked)
+            if (radioCedulaIngresarCliente.Checked)
             {
-                if (val.verificarCedula(txtNumIdentificacionIngresoCliente.Text))
+                if (val.verificarCedula(txtNumIdentificacionIngresarCliente.Text))
                     habilitarCampos();
                 else
                     desabilitarCampos();
@@ -346,45 +346,45 @@ namespace JUDYSOFT
 
         private void txtNacionalidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtNacionalidadIngresoCliente.CharacterCasing = CharacterCasing.Upper;
-            if (val.validarCadenasDeTexto(e,txtNacionalidadIngresoCliente))
+            txtNacionalidadIngresarCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e,txtNacionalidadIngresarCliente))
                 return;
 
             
         }
         private void desabilitarCampos()
         {
-            txtNombre1IngresoCliente.Enabled = false;
-            txtApellido1IngresoCliente.Enabled = false;
-            txtNombre2IngresoCliente.Enabled = false;
-            txtApellido2IngresoCliente.Enabled = false;
-            txtTelefono1IngresoCliente.Enabled = false;
-            txtTelefono2IngresoCliente.Enabled = false;
-            txtNacionalidadIngresoCliente.Enabled = false;
-            txtEstadoCivilIngresoCliente.Enabled = false;
-            txtCorreoIngresoCLiente.Enabled = false;
-            txtProcedenciaIngresoCliente.Enabled = false;
-            txtDireccionIngresoCliente.Enabled = false;
+            txtNombre1IngresarCliente.Enabled = false;
+            txtApellido1IngresarCliente.Enabled = false;
+            txtNombre2IngresarCliente.Enabled = false;
+            txtApellido2IngresarCliente.Enabled = false;
+            txtTelefono1IngresarCliente.Enabled = false;
+            txtTelefono2IngresarCliente.Enabled = false;
+            txtNacionalidadIngresarCliente.Enabled = false;
+            txtEstadoCivilIngresarCliente.Enabled = false;
+            txtCorreoIngresarCLiente.Enabled = false;
+            txtProcedenciaIngresarCliente.Enabled = false;
+            txtDireccionIngresarCliente.Enabled = false;
         }
         private void habilitarCampos()
         {
-            txtNombre1IngresoCliente.Enabled = true;
-            txtApellido1IngresoCliente.Enabled = true;
-            txtNombre2IngresoCliente.Enabled = true;
-            txtApellido2IngresoCliente.Enabled = true;
-            txtTelefono1IngresoCliente.Enabled = true;
-            txtTelefono2IngresoCliente.Enabled = true;
-            txtNacionalidadIngresoCliente.Enabled = true;
-            txtEstadoCivilIngresoCliente.Enabled = true;
-            txtCorreoIngresoCLiente.Enabled = true;
-            txtProcedenciaIngresoCliente.Enabled = true;
-            txtDireccionIngresoCliente.Enabled = true;
+            txtNombre1IngresarCliente.Enabled = true;
+            txtApellido1IngresarCliente.Enabled = true;
+            txtNombre2IngresarCliente.Enabled = true;
+            txtApellido2IngresarCliente.Enabled = true;
+            txtTelefono1IngresarCliente.Enabled = true;
+            txtTelefono2IngresarCliente.Enabled = true;
+            txtNacionalidadIngresarCliente.Enabled = true;
+            txtEstadoCivilIngresarCliente.Enabled = true;
+            txtCorreoIngresarCLiente.Enabled = true;
+            txtProcedenciaIngresarCliente.Enabled = true;
+            txtDireccionIngresarCliente.Enabled = true;
         }
 
         private void txtEstadoCivil_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtEstadoCivilIngresoCliente.CharacterCasing = CharacterCasing.Upper;
-            if (val.validarCadenasDeTexto(e, txtEstadoCivilIngresoCliente))
+            txtEstadoCivilIngresarCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e, txtEstadoCivilIngresarCliente))
                 return;
 
             
@@ -392,35 +392,35 @@ namespace JUDYSOFT
 
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtDireccionIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtDireccionIngresarCliente.CharacterCasing = CharacterCasing.Upper;
             
         }
 
         private void txtNombre2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtNombre2IngresoCliente.CharacterCasing = CharacterCasing.Upper;
-            if (val.validarCadenasDeTexto(e,txtNombre2IngresoCliente))
+            txtNombre2IngresarCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e,txtNombre2IngresarCliente))
                 return;
         }
 
         private void txtApellido2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtApellido2IngresoCliente.CharacterCasing = CharacterCasing.Upper;
-            if (val.validarCadenasDeTexto(e,txtApellido2IngresoCliente))
+            txtApellido2IngresarCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e,txtApellido2IngresarCliente))
                 return;
             
         }
 
         private void txtTelefono2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (val.validarCamposNumericos(e,txtTelefono2IngresoCliente))
+            if (val.validarCamposNumericos(e,txtTelefono2IngresarCliente))
                 return;
         }
 
         private void txtProcedencia_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtProcedenciaIngresoCliente.CharacterCasing = CharacterCasing.Upper;
-            if (val.validarCadenasDeTexto(e, txtProcedenciaIngresoCliente))
+            txtProcedenciaIngresarCliente.CharacterCasing = CharacterCasing.Upper;
+            if (val.validarCadenasDeTexto(e, txtProcedenciaIngresarCliente))
                 return;
 
             
@@ -429,12 +429,12 @@ namespace JUDYSOFT
         private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if (val.emailBienEscrito(txtCorreoIngresoCLiente.Text))
+            if (val.emailBienEscrito(txtCorreoIngresarCLiente.Text))
             {
-                txtCorreoIngresoCLiente.BackColor = Color.LightGreen;
+                txtCorreoIngresarCLiente.BackColor = Color.LightGreen;
             }
             else
-                txtCorreoIngresoCLiente.BackColor = Color.LightCoral;
+                txtCorreoIngresarCLiente.BackColor = Color.LightCoral;
         }
     }
 }
