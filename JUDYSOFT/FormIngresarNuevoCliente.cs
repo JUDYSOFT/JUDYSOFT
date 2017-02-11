@@ -12,10 +12,13 @@ using Libreria;
 
 namespace JUDYSOFT
 {
-    public partial class IngresarCliente : Form
+    public partial class FormIngresarNuevoCliente : Form
     {
         Validaciones val = new Validaciones();
-        public IngresarCliente()
+        clsCliente objCliente = new clsCliente();
+        //DataSet DS = new DataSet();
+
+        public FormIngresarNuevoCliente()
         {
             InitializeComponent();
             //txtDocumento.Visible = false;
@@ -28,31 +31,86 @@ namespace JUDYSOFT
         {
             if (Utilidades.ValidarFormulario(groupBoxDocumento,errorProvider2)==false )
             {
+                if (radioCedulaIngresoCliente.Checked)
+                {
+                    objCliente.Documento = radioCedulaIngresoCliente.Text;
+                    objCliente.NumDocumento = txtNumIdentificacionIngresoCliente.Text;
 
-                //verificarCedula(txtDocumento.Text.Trim());
+                }
+                else if (radioPasaporteIngresoCliente.Checked)
+                {
+                    objCliente.Documento = radioPasaporteIngresoCliente.Text;
+                    objCliente.NumDocumento = txtNumIdentificacionIngresoCliente.Text;
+                }
 
             }
+
             if (Utilidades.ValidarFormulario(panelInformación,errorProvider2)==false)
             {
-                MessageBox.Show("Datos Correctos");
+               
+
+                objCliente.Nombre1 = txtNombre1IngresoCliente.Text.ToString();
+                objCliente.Nombre2 = txtNombre2IngresoCliente.Text.ToString();
+                objCliente.Apellido1 = txtApellido1IngresoCliente.Text.ToString();
+                objCliente.Apellido2 = txtApellido2IngresoCliente.Text.ToString();
+                objCliente.Telefono1 =  txtTelefono1IngresoCliente.Text.ToString();
+                objCliente.Telefono2 = txtTelefono2IngresoCliente.Text.ToString();
+                objCliente.Nacionalidad = txtNacionalidadIngresoCliente.Text.ToString();
+                objCliente.Procedencia = txtProcedenciaIngresoCliente.Text.ToString();
+                objCliente.EstadoCivil = comboBoxEstadoCivil.SelectedText.ToString();
+                objCliente.Correo = txtCorreoIngresoCLiente.Text.ToString();
+                objCliente.Direccion = txtDireccionIngresoCliente.Text.ToString();
+                objCliente.FechaNac = Convert.ToDateTime( fechaNacIngresoCliente.Text.ToString());
+                if (radioF.Checked)
+                {
+                    objCliente.Sexo = radioF.Text.ToString();
+                }
+                else if (radioM.Checked)
+                {
+                    objCliente.Sexo = radioM.Text.ToString();
+                }
+
+                
+                
+             string val = string.Format("exec verificarCliente '{0}' ", objCliente.NumDocumento);
+             DataSet   DS = Utilidades.Ejecutar(val);
+                string codCliente = DS.Tables[0].Rows[0]["CODCLIENTE"].ToString().Trim();
+
+                if (codCliente==null)
+                {
+                    try
+                    {
+                        string cmd = string.Format("Exec registrarCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}', '{8}', '{9}','{10}','{11}','{12}','{13}'", objCliente.Nombre1, objCliente.Nombre2, objCliente.Telefono1, objCliente.Telefono2, objCliente.Direccion, objCliente.Documento, objCliente.NumDocumento, objCliente.Nacionalidad, objCliente.Procedencia, objCliente.FechaNac, objCliente.Sexo, objCliente.Apellido1, objCliente.Apellido2, objCliente.Correo);
+                      DataSet  DS1 = Utilidades.Ejecutar(cmd);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error " + ex.Message);
+                    }
+                    limpiarCampos();
+                    MessageBox.Show("Cliente Ingreasado Correctamente", "JUDYSOFT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else {
+
+                    MessageBox.Show("El cliente ya se encuentra registrado en la base de datos", "JUDYSOFT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiarCampos();
+                }
+                
+
+               
             }
-                 
+            
+            
+            
            
-         }
+
+
+        }
 
         private void button2_Click(object sender, EventArgs e)//boton cancelar 
         {
-            DialogResult confirmacion = MessageBox.Show("Está seguro que desea cancelar?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-
-            if (confirmacion == System.Windows.Forms.DialogResult.OK)
-            {
-                this.Dispose();
-                MenuSettings.EnableMenuItem("clientesToolStripMenuItem", "ingresarNuevoClienteToolStripMenuItem");
-            }
-            else
-            {
-
-            }
+            limpiarCampos();
         }
 
         private void FormIngresarNuevoCliente_FormClosing(object sender, FormClosingEventArgs e)
@@ -78,157 +136,12 @@ namespace JUDYSOFT
 
         }
 
-      /*  private void textBoxNombre1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxNombre1.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxNombre1.BackColor = Color.White;
-            }
-        }
-
-        private void textBoxNombre2_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxNombre2.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxNombre2.BackColor = Color.White;
-            }
-        }
-
-        private void textBoxApellido1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxApellido1.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxApellido1.BackColor = Color.White;
-            }
-        }
-
-        private void textBoxApellido2_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxApellido2.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxApellido2.BackColor = Color.White;
-            }
-        }
-
-        private void textBoxTelefono1_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            if ((char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxTelefono1.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxTelefono1.BackColor = Color.White;
-            }
-        }
-        private void textBoxTelefono2_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            if ((char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxTelefono2.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxTelefono2.BackColor = Color.White;
-            }
-        }
-
-        private void textBoxNacionalidad_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxProcedencia.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxProcedencia.BackColor = Color.White;
-            }
-        }
-
-        private void textBoxEstadoCivil_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                textBoxEstadoCivil.BackColor = Color.LightCoral;
-                e.Handled = true;
-                return;
-            }
-            else
-            {
-                textBoxEstadoCivil.BackColor = Color.White;
-            }
-        }
-
-        private void textBoxNombre1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        
-
-        private void textBoxDocumento_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            if (radioCedula.Checked)
-            {
-                if ((char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-                {
-                    textBoxDocumento.BackColor = Color.LightCoral;
-                    e.Handled = true;
-                    return;
-                }
-                else
-                {
-                    textBoxDocumento.BackColor = Color.White;
-                }
-            }
-            else
-            {
-                
-            }
-            
-        
-
-        }*/
+      
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             txtNumIdentificacionIngresoCliente.Text = "";
-            /*if (radioCedula.Checked)
-            {
-                txtDocumento.Visible = true;
-            }*/
+            
             txtNumIdentificacionIngresoCliente.CharacterCasing = CharacterCasing.Upper;
 
         }
@@ -236,10 +149,7 @@ namespace JUDYSOFT
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             txtNumIdentificacionIngresoCliente.Text ="";
-            /*if (radioPasaporte.Checked)
-            {
-                txtDocumento.Visible = true;
-            }*/
+            
 
         }
         
@@ -304,15 +214,29 @@ namespace JUDYSOFT
 
         private void txtNombre1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtNombre1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
-            if (val.validarCadenasDeTexto(e, txtNombre1IngresoCliente))
-                return;
+            //txtNombre1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = false;
+            }
         }
 
         private void txtApellido1_KeyPress(object sender, KeyPressEventArgs e)
            
         {
-            txtApellido1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+           // txtApellido1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
             if (val.validarCadenasDeTexto(e, txtApellido1IngresoCliente))
                 return;
         }
@@ -339,14 +263,21 @@ namespace JUDYSOFT
                     habilitarCampos();
                 else
                     desabilitarCampos();
-                    
+
             }
+            else if (radioPasaporteIngresoCliente.Checked)
+            {
+
+                habilitarCampos();
+            }
+            else
+                desabilitarCampos();
             
         }
 
         private void txtNacionalidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtNacionalidadIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+           // txtNacionalidadIngresoCliente.CharacterCasing = CharacterCasing.Upper;
             if (val.validarCadenasDeTexto(e,txtNacionalidadIngresoCliente))
                 return;
 
@@ -361,10 +292,11 @@ namespace JUDYSOFT
             txtTelefono1IngresoCliente.Enabled = false;
             txtTelefono2IngresoCliente.Enabled = false;
             txtNacionalidadIngresoCliente.Enabled = false;
-            txtEstadoCivilIngresoCliente.Enabled = false;
+            comboBoxEstadoCivil.Enabled = false;
             txtCorreoIngresoCLiente.Enabled = false;
             txtProcedenciaIngresoCliente.Enabled = false;
             txtDireccionIngresoCliente.Enabled = false;
+            fechaNacIngresoCliente.Enabled = false;
         }
         private void habilitarCampos()
         {
@@ -375,20 +307,31 @@ namespace JUDYSOFT
             txtTelefono1IngresoCliente.Enabled = true;
             txtTelefono2IngresoCliente.Enabled = true;
             txtNacionalidadIngresoCliente.Enabled = true;
-            txtEstadoCivilIngresoCliente.Enabled = true;
+            comboBoxEstadoCivil.Enabled = true;
             txtCorreoIngresoCLiente.Enabled = true;
             txtProcedenciaIngresoCliente.Enabled = true;
             txtDireccionIngresoCliente.Enabled = true;
+            fechaNacIngresoCliente.Enabled = true;
         }
 
-        private void txtEstadoCivil_KeyPress(object sender, KeyPressEventArgs e)
+        private void limpiarCampos()
         {
-            txtEstadoCivilIngresoCliente.CharacterCasing = CharacterCasing.Upper;
-            if (val.validarCadenasDeTexto(e, txtEstadoCivilIngresoCliente))
-                return;
-
+            txtNombre1IngresoCliente.Text = "";
+            txtApellido1IngresoCliente.Text = "";
+            txtNombre2IngresoCliente.Text = "";
+            txtApellido2IngresoCliente.Text = "";
+            txtTelefono1IngresoCliente.Text = "";
+            txtTelefono2IngresoCliente.Text = "";
+            txtNacionalidadIngresoCliente.Text = "";
+            comboBoxEstadoCivil.SelectedIndex=0;
+            txtCorreoIngresoCLiente.Text = "";
+            txtProcedenciaIngresoCliente.Text = "";
+            txtDireccionIngresoCliente.Text = "";
+            txtNumIdentificacionIngresoCliente.Text = "";
             
         }
+
+       
 
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -435,6 +378,21 @@ namespace JUDYSOFT
             }
             else
                 txtCorreoIngresoCLiente.BackColor = Color.LightCoral;
+        }
+
+        private void btnSalirCliente_Click(object sender, EventArgs e)
+        {
+            DialogResult confirmacion = MessageBox.Show("Está seguro que desea cancelar?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+
+            if (confirmacion == System.Windows.Forms.DialogResult.OK)
+            {
+                this.Dispose();
+                MenuSettings.EnableMenuItem("clientesToolStripMenuItem", "ingresarNuevoClienteToolStripMenuItem");
+            }
+            else
+            {
+
+            }
         }
     }
 }

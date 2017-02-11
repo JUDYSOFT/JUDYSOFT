@@ -367,5 +367,10 @@ namespace JUDYSOFT
                 return;
             }
         }
+
+        private void BotonFacturarGenerarFactura_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

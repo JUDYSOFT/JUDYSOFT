@@ -1,6 +1,6 @@
 ﻿namespace JUDYSOFT
 {
-    partial class FormConsultarReservacionPasada
+    partial class reservacionesPasadas
     {
         /// <summary>
         /// Required designer variable.
@@ -74,9 +74,10 @@
             this.Controls.Add(this.btnAtrasReservacionesPasadas);
             this.Controls.Add(this.btnConsultarReservacionesPasadas);
             this.Controls.Add(this.tablaReservacionesPasadas);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "reservacionesPasadas";
             this.Text = "Reservaciones Pasadas";
+            this.Load += new System.EventHandler(this.reservacionesPasadas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaReservacionesPasadas)).EndInit();
             this.ResumeLayout(false);
 
