@@ -26,5 +26,10 @@ namespace JUDYSOFT
         {
 
         }
+
+        private void reservacionesPasadas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

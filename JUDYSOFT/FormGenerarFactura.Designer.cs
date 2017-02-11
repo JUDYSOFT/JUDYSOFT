@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.botonListaClientesGenerarFactura = new System.Windows.Forms.Button();
             this.txtBoxClienteGenerarFactura = new System.Windows.Forms.TextBox();
@@ -53,6 +53,7 @@
             this.BotonFacturarGenerarFactura = new System.Windows.Forms.Button();
             this.BotonSalirGenerarFactura = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBoxTAX = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtTotalGenerarFactura = new System.Windows.Forms.TextBox();
             this.txtImpuestoGenerarFactura = new System.Windows.Forms.TextBox();
@@ -70,7 +71,6 @@
             this.txtDescripcionGenerarFactura = new Libreria.ErrorTxtBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtCodigoGenerarFactura = new Libreria.ErrorTxtBox();
-            this.comboBoxTAX = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -304,6 +304,7 @@
             this.BotonFacturarGenerarFactura.TabIndex = 2;
             this.BotonFacturarGenerarFactura.Text = "Facturar";
             this.BotonFacturarGenerarFactura.UseVisualStyleBackColor = true;
+            this.BotonFacturarGenerarFactura.Click += new System.EventHandler(this.BotonFacturarGenerarFactura_Click);
             // 
             // BotonSalirGenerarFactura
             // 
@@ -331,6 +332,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(620, 383);
             this.panel3.TabIndex = 49;
+            // 
+            // comboBoxTAX
+            // 
+            this.comboBoxTAX.FormattingEnabled = true;
+            this.comboBoxTAX.Items.AddRange(new object[] {
+            "12%",
+            "14%"});
+            this.comboBoxTAX.Location = new System.Drawing.Point(323, 293);
+            this.comboBoxTAX.Name = "comboBoxTAX";
+            this.comboBoxTAX.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxTAX.TabIndex = 8;
+            this.comboBoxTAX.SelectedIndexChanged += new System.EventHandler(this.comboBoxTAX_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -403,8 +416,8 @@
             this.DGVGenerarFactura.Location = new System.Drawing.Point(12, 15);
             this.DGVGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.DGVGenerarFactura.Name = "DGVGenerarFactura";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DGVGenerarFactura.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DGVGenerarFactura.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVGenerarFactura.Size = new System.Drawing.Size(591, 214);
             this.DGVGenerarFactura.TabIndex = 0;
             // 
@@ -477,18 +490,6 @@
             this.txtCodigoGenerarFactura.Size = new System.Drawing.Size(56, 22);
             this.txtCodigoGenerarFactura.TabIndex = 53;
             this.txtCodigoGenerarFactura.Validar = true;
-            // 
-            // comboBoxTAX
-            // 
-            this.comboBoxTAX.FormattingEnabled = true;
-            this.comboBoxTAX.Items.AddRange(new object[] {
-            "12%",
-            "14%"});
-            this.comboBoxTAX.Location = new System.Drawing.Point(323, 293);
-            this.comboBoxTAX.Name = "comboBoxTAX";
-            this.comboBoxTAX.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxTAX.TabIndex = 8;
-            this.comboBoxTAX.SelectedIndexChanged += new System.EventHandler(this.comboBoxTAX_SelectedIndexChanged);
             // 
             // FormGenerarFactura
             // 

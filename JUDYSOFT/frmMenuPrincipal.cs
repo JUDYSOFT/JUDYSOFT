@@ -97,7 +97,7 @@ namespace JUDYSOFT
 
         private void modificarDatosDeClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormModificarDatosDeCliente frm = new FormModificarDatosDeCliente();
+            FormListaClientes frm = new FormListaClientes();
             modificarDatosDeClienteToolStripMenuItem.Enabled = false;
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.WindowState = FormWindowState.Maximized;
