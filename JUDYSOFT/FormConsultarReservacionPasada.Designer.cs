@@ -11,14 +11,14 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing && (components != null))
+        //    {
+        //        components.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
 
         #region Windows Form Designer generated code
 
@@ -32,7 +32,7 @@
             this.btnConsultarReservacionesPasadas = new System.Windows.Forms.Button();
             this.tablaReservacionesPasadas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.tablaReservacionesPasadas)).BeginInit();
-            this.SuspendLayout();
+            //this.SuspendLayout();
             // 
             // btnAtrasReservacionesPasadas
             // 
@@ -43,7 +43,7 @@
             this.btnAtrasReservacionesPasadas.TabIndex = 5;
             this.btnAtrasReservacionesPasadas.Text = "Atrás";
             this.btnAtrasReservacionesPasadas.UseVisualStyleBackColor = true;
-            this.btnAtrasReservacionesPasadas.Click += new System.EventHandler(this.button2_Click);
+            //this.btnAtrasReservacionesPasadas.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnConsultarReservacionesPasadas
             // 
@@ -54,7 +54,7 @@
             this.btnConsultarReservacionesPasadas.TabIndex = 4;
             this.btnConsultarReservacionesPasadas.Text = "Consultar";
             this.btnConsultarReservacionesPasadas.UseVisualStyleBackColor = true;
-            this.btnConsultarReservacionesPasadas.Click += new System.EventHandler(this.button1_Click);
+           // this.btnConsultarReservacionesPasadas.Click += new System.EventHandler(this.button1_Click);
             // 
             // tablaReservacionesPasadas
             // 
@@ -68,17 +68,17 @@
             // 
             // reservacionesPasadas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 439);
-            this.Controls.Add(this.btnAtrasReservacionesPasadas);
-            this.Controls.Add(this.btnConsultarReservacionesPasadas);
-            this.Controls.Add(this.tablaReservacionesPasadas);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "reservacionesPasadas";
-            this.Text = "Reservaciones Pasadas";
-            ((System.ComponentModel.ISupportInitialize)(this.tablaReservacionesPasadas)).EndInit();
-            this.ResumeLayout(false);
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //this.ClientSize = new System.Drawing.Size(573, 439);
+            //this.Controls.Add(this.btnAtrasReservacionesPasadas);
+            //this.Controls.Add(this.btnConsultarReservacionesPasadas);
+            //this.Controls.Add(this.tablaReservacionesPasadas);
+            //this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            //this.Name = "reservacionesPasadas";
+            //this.Text = "Reservaciones Pasadas";
+            //((System.ComponentModel.ISupportInitialize)(this.tablaReservacionesPasadas)).EndInit();
+            //this.ResumeLayout(false);
 
         }
 

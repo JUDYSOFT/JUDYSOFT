@@ -12,10 +12,10 @@ namespace JUDYSOFT
 {
     public partial class reservacionesPasadas : Form
     {
-        public reservacionesPasadas()
-        {
-            InitializeComponent();
-        }
+        //public reservacionesPasadas()
+        //{
+        //    //InitializeComponent();
+        //}
 
         private void button2_Click(object sender, EventArgs e)
         {
