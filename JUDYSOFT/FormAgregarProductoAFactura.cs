@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Libreria;
+
 namespace JUDYSOFT
 {
     public partial class FormAgregarProductoAFactura : Form
@@ -44,13 +46,25 @@ namespace JUDYSOFT
         {
 
         }
+     
 
-       public static int controw;
-        private void bttmSelect_Click(object sender, EventArgs e)
+        private void FormAgregarProductoAFactura_Load(object sender, EventArgs e)
         {
+            //Administración-----------------------------------------------------------------------------------------------
 
-            dataGridView1.Rows.Add(txtCodProduct.Text, txtProductName.Text, txtPrice.Text);
+                dataGridView1.DataSource = LLenarDGv("Producto").Tables[0];
 
+            //JUDYSOFT-----------------------------------------------------------------------------------------------------
+
+                //DGVGenerarFactura.DataSource = LLenarDGv("PRODUCTO").Tables[0];
+        }
+
+        public DataSet LLenarDGv(string tabla)
+        {
+            DataSet DS;
+            string cmd = string.Format("SELECT * FROM " + tabla);
+            DS = Utilidades.Ejecutar(cmd);
+            return DS;
         }
     }
 }

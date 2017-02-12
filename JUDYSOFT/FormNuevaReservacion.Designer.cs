@@ -28,207 +28,206 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.botonReservacion = new System.Windows.Forms.Button();
-            this.botonCancelarReservacion = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnListaClientesNuevaReservacion = new System.Windows.Forms.Button();
+            this.lblAvisoNuevaReservacion = new System.Windows.Forms.Label();
+            this.tBoxNumeroNiniosNuevaReserva = new System.Windows.Forms.TextBox();
+            this.lblNumeroNiniosNuevaReservacion = new System.Windows.Forms.Label();
+            this.lblNumeroAdultosNuevaReservacion = new System.Windows.Forms.Label();
+            this.tBoxNumeroAdultosNuevaReserva = new System.Windows.Forms.TextBox();
+            this.lblFechaSalidaNuevaReservacion = new System.Windows.Forms.Label();
+            this.fechaSalidaNuevaReservacion = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaArrivoNuevaReservacion = new System.Windows.Forms.Label();
+            this.fechaArrivoNuevaReservacion = new System.Windows.Forms.DateTimePicker();
+            this.btnConsultarNuevaReservacion = new System.Windows.Forms.Button();
+            this.lblNumeroIdentificacionNuevaReservacion = new System.Windows.Forms.Label();
+            this.btnIngresarNuevaReservacion = new System.Windows.Forms.Button();
+            this.btnCancelarNuevaReservacion = new System.Windows.Forms.Button();
+            this.tBoxNumeroIdClienteNuevareservacion = new System.Windows.Forms.TextBox();
+            this.lblNombreClienteNuevaReservacion = new System.Windows.Forms.Label();
+            this.tBoxNombreClienteNuevaReservacion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button2
+            // btnListaClientesNuevaReservacion
             // 
-            this.button2.Location = new System.Drawing.Point(389, 19);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 19);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnListaClientesNuevaReservacion.Location = new System.Drawing.Point(467, 22);
+            this.btnListaClientesNuevaReservacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnListaClientesNuevaReservacion.Name = "btnListaClientesNuevaReservacion";
+            this.btnListaClientesNuevaReservacion.Size = new System.Drawing.Size(126, 26);
+            this.btnListaClientesNuevaReservacion.TabIndex = 32;
+            this.btnListaClientesNuevaReservacion.Text = "Lista de Clientes";
+            this.btnListaClientesNuevaReservacion.UseVisualStyleBackColor = true;
+            this.btnListaClientesNuevaReservacion.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label6
+            // lblAvisoNuevaReservacion
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(182, 200);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(185, 13);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "* Niño se considera hasta los 12 años";
+            this.lblAvisoNuevaReservacion.AutoSize = true;
+            this.lblAvisoNuevaReservacion.Location = new System.Drawing.Point(272, 261);
+            this.lblAvisoNuevaReservacion.Name = "lblAvisoNuevaReservacion";
+            this.lblAvisoNuevaReservacion.Size = new System.Drawing.Size(247, 17);
+            this.lblAvisoNuevaReservacion.TabIndex = 31;
+            this.lblAvisoNuevaReservacion.Text = "* Niño se considera hasta los 12 años";
             // 
-            // dataGridView1
+            // tBoxNumeroNiniosNuevaReserva
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 43);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(424, 27);
-            this.dataGridView1.TabIndex = 30;
+            this.tBoxNumeroNiniosNuevaReserva.Location = new System.Drawing.Point(195, 290);
+            this.tBoxNumeroNiniosNuevaReserva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tBoxNumeroNiniosNuevaReserva.Name = "tBoxNumeroNiniosNuevaReserva";
+            this.tBoxNumeroNiniosNuevaReserva.Size = new System.Drawing.Size(43, 22);
+            this.tBoxNumeroNiniosNuevaReserva.TabIndex = 29;
             // 
-            // textBox2
+            // lblNumeroNiniosNuevaReservacion
             // 
-            this.textBox2.Location = new System.Drawing.Point(125, 196);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(33, 20);
-            this.textBox2.TabIndex = 29;
+            this.lblNumeroNiniosNuevaReservacion.AutoSize = true;
+            this.lblNumeroNiniosNuevaReservacion.Location = new System.Drawing.Point(29, 290);
+            this.lblNumeroNiniosNuevaReservacion.Name = "lblNumeroNiniosNuevaReservacion";
+            this.lblNumeroNiniosNuevaReservacion.Size = new System.Drawing.Size(116, 17);
+            this.lblNumeroNiniosNuevaReservacion.TabIndex = 28;
+            this.lblNumeroNiniosNuevaReservacion.Text = "Número de niños";
             // 
-            // label5
+            // lblNumeroAdultosNuevaReservacion
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 198);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 13);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Número de niños";
+            this.lblNumeroAdultosNuevaReservacion.AutoSize = true;
+            this.lblNumeroAdultosNuevaReservacion.Location = new System.Drawing.Point(29, 231);
+            this.lblNumeroAdultosNuevaReservacion.Name = "lblNumeroAdultosNuevaReservacion";
+            this.lblNumeroAdultosNuevaReservacion.Size = new System.Drawing.Size(128, 17);
+            this.lblNumeroAdultosNuevaReservacion.TabIndex = 27;
+            this.lblNumeroAdultosNuevaReservacion.Text = "Número de adultos";
             // 
-            // label4
+            // tBoxNumeroAdultosNuevaReserva
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 155);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 13);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Número de adultos";
+            this.tBoxNumeroAdultosNuevaReserva.Location = new System.Drawing.Point(195, 231);
+            this.tBoxNumeroAdultosNuevaReserva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tBoxNumeroAdultosNuevaReserva.Name = "tBoxNumeroAdultosNuevaReserva";
+            this.tBoxNumeroAdultosNuevaReserva.Size = new System.Drawing.Size(43, 22);
+            this.tBoxNumeroAdultosNuevaReserva.TabIndex = 26;
             // 
-            // textBox1
+            // lblFechaSalidaNuevaReservacion
             // 
-            this.textBox1.Location = new System.Drawing.Point(125, 155);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(33, 20);
-            this.textBox1.TabIndex = 26;
+            this.lblFechaSalidaNuevaReservacion.AutoSize = true;
+            this.lblFechaSalidaNuevaReservacion.Location = new System.Drawing.Point(29, 176);
+            this.lblFechaSalidaNuevaReservacion.Name = "lblFechaSalidaNuevaReservacion";
+            this.lblFechaSalidaNuevaReservacion.Size = new System.Drawing.Size(108, 17);
+            this.lblFechaSalidaNuevaReservacion.TabIndex = 25;
+            this.lblFechaSalidaNuevaReservacion.Text = "Fecha de salida";
             // 
-            // label3
+            // fechaSalidaNuevaReservacion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 115);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Fecha de salida";
+            this.fechaSalidaNuevaReservacion.Location = new System.Drawing.Point(195, 176);
+            this.fechaSalidaNuevaReservacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fechaSalidaNuevaReservacion.Name = "fechaSalidaNuevaReservacion";
+            this.fechaSalidaNuevaReservacion.Size = new System.Drawing.Size(248, 22);
+            this.fechaSalidaNuevaReservacion.TabIndex = 24;
             // 
-            // dateTimePicker2
+            // lblFechaArrivoNuevaReservacion
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(125, 115);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(151, 20);
-            this.dateTimePicker2.TabIndex = 24;
+            this.lblFechaArrivoNuevaReservacion.AutoSize = true;
+            this.lblFechaArrivoNuevaReservacion.Location = new System.Drawing.Point(29, 125);
+            this.lblFechaArrivoNuevaReservacion.Name = "lblFechaArrivoNuevaReservacion";
+            this.lblFechaArrivoNuevaReservacion.Size = new System.Drawing.Size(107, 17);
+            this.lblFechaArrivoNuevaReservacion.TabIndex = 23;
+            this.lblFechaArrivoNuevaReservacion.Text = "Fecha de arrivo";
             // 
-            // label2
+            // fechaArrivoNuevaReservacion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 79);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Fecha de arrivo";
+            this.fechaArrivoNuevaReservacion.Location = new System.Drawing.Point(195, 125);
+            this.fechaArrivoNuevaReservacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fechaArrivoNuevaReservacion.Name = "fechaArrivoNuevaReservacion";
+            this.fechaArrivoNuevaReservacion.Size = new System.Drawing.Size(248, 22);
+            this.fechaArrivoNuevaReservacion.TabIndex = 22;
             // 
-            // dateTimePicker1
+            // btnConsultarNuevaReservacion
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(125, 75);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
-            this.dateTimePicker1.TabIndex = 22;
+            this.btnConsultarNuevaReservacion.Location = new System.Drawing.Point(351, 22);
+            this.btnConsultarNuevaReservacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConsultarNuevaReservacion.Name = "btnConsultarNuevaReservacion";
+            this.btnConsultarNuevaReservacion.Size = new System.Drawing.Size(92, 26);
+            this.btnConsultarNuevaReservacion.TabIndex = 21;
+            this.btnConsultarNuevaReservacion.Text = "Consultar";
+            this.btnConsultarNuevaReservacion.UseVisualStyleBackColor = true;
+            this.btnConsultarNuevaReservacion.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // lblNumeroIdentificacionNuevaReservacion
             // 
-            this.button1.Location = new System.Drawing.Point(243, 19);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 20);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lblNumeroIdentificacionNuevaReservacion.AutoSize = true;
+            this.lblNumeroIdentificacionNuevaReservacion.Location = new System.Drawing.Point(29, 26);
+            this.lblNumeroIdentificacionNuevaReservacion.Name = "lblNumeroIdentificacionNuevaReservacion";
+            this.lblNumeroIdentificacionNuevaReservacion.Size = new System.Drawing.Size(160, 17);
+            this.lblNumeroIdentificacionNuevaReservacion.TabIndex = 20;
+            this.lblNumeroIdentificacionNuevaReservacion.Text = "Identificación del Cliente";
             // 
-            // label1
+            // btnIngresarNuevaReservacion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Tipo de Documento";
+            this.btnIngresarNuevaReservacion.Location = new System.Drawing.Point(342, 341);
+            this.btnIngresarNuevaReservacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIngresarNuevaReservacion.Name = "btnIngresarNuevaReservacion";
+            this.btnIngresarNuevaReservacion.Size = new System.Drawing.Size(101, 30);
+            this.btnIngresarNuevaReservacion.TabIndex = 18;
+            this.btnIngresarNuevaReservacion.Text = "Ingresar Reservación";
+            this.btnIngresarNuevaReservacion.UseVisualStyleBackColor = true;
+            this.btnIngresarNuevaReservacion.Click += new System.EventHandler(this.botonReservacion_Click);
             // 
-            // comboBox1
+            // btnCancelarNuevaReservacion
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Cédula",
-            "Pasaporte"});
-            this.comboBox1.Location = new System.Drawing.Point(125, 19);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 19;
+            this.btnCancelarNuevaReservacion.Location = new System.Drawing.Point(492, 341);
+            this.btnCancelarNuevaReservacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelarNuevaReservacion.Name = "btnCancelarNuevaReservacion";
+            this.btnCancelarNuevaReservacion.Size = new System.Drawing.Size(101, 30);
+            this.btnCancelarNuevaReservacion.TabIndex = 17;
+            this.btnCancelarNuevaReservacion.Text = "Cancelar";
+            this.btnCancelarNuevaReservacion.UseVisualStyleBackColor = true;
+            this.btnCancelarNuevaReservacion.Click += new System.EventHandler(this.botonCancelarReservacion_Click);
             // 
-            // botonReservacion
+            // tBoxNumeroIdClienteNuevareservacion
             // 
-            this.botonReservacion.Location = new System.Drawing.Point(273, 236);
-            this.botonReservacion.Margin = new System.Windows.Forms.Padding(2);
-            this.botonReservacion.Name = "botonReservacion";
-            this.botonReservacion.Size = new System.Drawing.Size(76, 24);
-            this.botonReservacion.TabIndex = 18;
-            this.botonReservacion.Text = "Ingresar Reservación";
-            this.botonReservacion.UseVisualStyleBackColor = true;
-            this.botonReservacion.Click += new System.EventHandler(this.botonReservacion_Click);
+            this.tBoxNumeroIdClienteNuevareservacion.Location = new System.Drawing.Point(195, 24);
+            this.tBoxNumeroIdClienteNuevareservacion.Name = "tBoxNumeroIdClienteNuevareservacion";
+            this.tBoxNumeroIdClienteNuevareservacion.Size = new System.Drawing.Size(128, 22);
+            this.tBoxNumeroIdClienteNuevareservacion.TabIndex = 33;
+            //this.tBoxNumeroIdClienteNuevareservacion.TextChanged += new System.EventHandler(this.tBoxNumeroIdClienteNuevareservacion_TextChanged);
             // 
-            // botonCancelarReservacion
+            // lblNombreClienteNuevaReservacion
             // 
-            this.botonCancelarReservacion.Location = new System.Drawing.Point(369, 236);
-            this.botonCancelarReservacion.Margin = new System.Windows.Forms.Padding(2);
-            this.botonCancelarReservacion.Name = "botonCancelarReservacion";
-            this.botonCancelarReservacion.Size = new System.Drawing.Size(76, 24);
-            this.botonCancelarReservacion.TabIndex = 17;
-            this.botonCancelarReservacion.Text = "Cancelar";
-            this.botonCancelarReservacion.UseVisualStyleBackColor = true;
-            this.botonCancelarReservacion.Click += new System.EventHandler(this.botonCancelarReservacion_Click);
+            this.lblNombreClienteNuevaReservacion.AutoSize = true;
+            this.lblNombreClienteNuevaReservacion.Location = new System.Drawing.Point(29, 78);
+            this.lblNombreClienteNuevaReservacion.Name = "lblNombreClienteNuevaReservacion";
+            this.lblNombreClienteNuevaReservacion.Size = new System.Drawing.Size(125, 17);
+            this.lblNombreClienteNuevaReservacion.TabIndex = 34;
+            this.lblNombreClienteNuevaReservacion.Text = "Nombre de Cliente";
             // 
-            // FormNuevaReservacion1
+            // tBoxNombreClienteNuevaReservacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.tBoxNombreClienteNuevaReservacion.Enabled = false;
+            this.tBoxNombreClienteNuevaReservacion.Location = new System.Drawing.Point(195, 75);
+            this.tBoxNombreClienteNuevaReservacion.Name = "tBoxNombreClienteNuevaReservacion";
+            this.tBoxNombreClienteNuevaReservacion.Size = new System.Drawing.Size(248, 22);
+            this.tBoxNombreClienteNuevaReservacion.TabIndex = 35;
+            // 
+            // FormNuevaReservacion
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 275);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.botonReservacion);
-            this.Controls.Add(this.botonCancelarReservacion);
-            this.Name = "FormNuevaReservacion1";
-            this.Text = "FormNuevaReservacion1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ClientSize = new System.Drawing.Size(631, 382);
+            this.Controls.Add(this.tBoxNombreClienteNuevaReservacion);
+            this.Controls.Add(this.lblNombreClienteNuevaReservacion);
+            this.Controls.Add(this.tBoxNumeroIdClienteNuevareservacion);
+            this.Controls.Add(this.btnListaClientesNuevaReservacion);
+            this.Controls.Add(this.lblAvisoNuevaReservacion);
+            this.Controls.Add(this.tBoxNumeroNiniosNuevaReserva);
+            this.Controls.Add(this.lblNumeroNiniosNuevaReservacion);
+            this.Controls.Add(this.lblNumeroAdultosNuevaReservacion);
+            this.Controls.Add(this.tBoxNumeroAdultosNuevaReserva);
+            this.Controls.Add(this.lblFechaSalidaNuevaReservacion);
+            this.Controls.Add(this.fechaSalidaNuevaReservacion);
+            this.Controls.Add(this.lblFechaArrivoNuevaReservacion);
+            this.Controls.Add(this.fechaArrivoNuevaReservacion);
+            this.Controls.Add(this.btnConsultarNuevaReservacion);
+            this.Controls.Add(this.lblNumeroIdentificacionNuevaReservacion);
+            this.Controls.Add(this.btnIngresarNuevaReservacion);
+            this.Controls.Add(this.btnCancelarNuevaReservacion);
+            this.HelpButton = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "FormNuevaReservacion";
+            this.Text = "Nueva Reservacion";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,21 +235,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button botonReservacion;
-        private System.Windows.Forms.Button botonCancelarReservacion;
+        private System.Windows.Forms.Button btnListaClientesNuevaReservacion;
+        private System.Windows.Forms.Label lblAvisoNuevaReservacion;
+        private System.Windows.Forms.TextBox tBoxNumeroNiniosNuevaReserva;
+        private System.Windows.Forms.Label lblNumeroNiniosNuevaReservacion;
+        private System.Windows.Forms.Label lblNumeroAdultosNuevaReservacion;
+        private System.Windows.Forms.TextBox tBoxNumeroAdultosNuevaReserva;
+        private System.Windows.Forms.Label lblFechaSalidaNuevaReservacion;
+        private System.Windows.Forms.DateTimePicker fechaSalidaNuevaReservacion;
+        private System.Windows.Forms.Label lblFechaArrivoNuevaReservacion;
+        private System.Windows.Forms.DateTimePicker fechaArrivoNuevaReservacion;
+        private System.Windows.Forms.Button btnConsultarNuevaReservacion;
+        private System.Windows.Forms.Label lblNumeroIdentificacionNuevaReservacion;
+        private System.Windows.Forms.Button btnIngresarNuevaReservacion;
+        private System.Windows.Forms.Button btnCancelarNuevaReservacion;
+        private System.Windows.Forms.TextBox tBoxNumeroIdClienteNuevareservacion;
+        private System.Windows.Forms.Label lblNombreClienteNuevaReservacion;
+        private System.Windows.Forms.TextBox tBoxNombreClienteNuevaReservacion;
     }
 }

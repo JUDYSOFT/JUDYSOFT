@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace JUDYSOFT
 {
     public partial class FormIngresarNuevoEmpleado : Form
     {
+        Validaciones validar = new Validaciones();
         public FormIngresarNuevoEmpleado()
         {
             InitializeComponent();
@@ -161,40 +163,286 @@ namespace JUDYSOFT
             else if (comboBoxProvincia.SelectedItem.Equals("Galápagos"))
             {
                 comboBoxCiudad.Items.Clear();
-                comboBoxCiudad.Items.Add("");
-
-
-                /*
-Guayas
-Imbabura
-Loja
-Los Rios
-Manabí
-Morona Santiago
-Napo
-Orellana
-Pastaza
-Pichincha
-Santa Elena
-Santo Domingo de los Tsáchilas
-Sucumbíos
-Tungurahua
-Zamora Chinchipe*/
-
-
+                comboBoxCiudad.Items.Add("Isabela");
+                comboBoxCiudad.Items.Add("San Cristóbal");
+                comboBoxCiudad.Items.Add("Santa Cruz");
             }
-            else if (comboBoxProvincia.SelectedItem.Equals(""))
+            else if (comboBoxProvincia.SelectedItem.Equals("Guayas"))
             {
-
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("Alfredo Baquerizo Moreno(Jujan)");
+                comboBoxCiudad.Items.Add("Balao");
+                comboBoxCiudad.Items.Add("Balzar");
+                comboBoxCiudad.Items.Add("Colimes");
+                comboBoxCiudad.Items.Add("Daule");
+                comboBoxCiudad.Items.Add("Duran");
+                comboBoxCiudad.Items.Add("El Triunfo");
+                comboBoxCiudad.Items.Add("Empalme");
+                comboBoxCiudad.Items.Add("General Antonio Elizalde (Bucay)");
+                comboBoxCiudad.Items.Add("General Villamil(Playas)");
+                comboBoxCiudad.Items.Add("Guayaquil");
+                comboBoxCiudad.Items.Add("Isidro Ayora");
+                comboBoxCiudad.Items.Add("Lomas De Sargentillo");
+                comboBoxCiudad.Items.Add("Marcelino Mariduena");
+                comboBoxCiudad.Items.Add("Milagro");
+                comboBoxCiudad.Items.Add("Naranjal");
+                comboBoxCiudad.Items.Add("Naranjito");
+                comboBoxCiudad.Items.Add("Nobol(Narcisa De Jesus)");
+                comboBoxCiudad.Items.Add("Palestina");
+                comboBoxCiudad.Items.Add("Pedro Carbo");
+                comboBoxCiudad.Items.Add("Samborondon");
+                comboBoxCiudad.Items.Add("Santa Lucia");
+                comboBoxCiudad.Items.Add("Simon Bolivar");
+                comboBoxCiudad.Items.Add("Urbina Jado(Salitre)");
+                comboBoxCiudad.Items.Add("Yaguachi");
             }
-            else if (comboBoxProvincia.SelectedItem.Equals(""))
+            else if (comboBoxProvincia.SelectedItem.Equals("Imbabura"))
             {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("Antonio Ante");
+                comboBoxCiudad.Items.Add("Cotacachi");
+                comboBoxCiudad.Items.Add("Ibarra");
+                comboBoxCiudad.Items.Add("Otavalo");
+                comboBoxCiudad.Items.Add("Pimampiro");
+                comboBoxCiudad.Items.Add("San Miguel De Urcuquí");
 
             }
-            else if (comboBoxProvincia.SelectedItem.Equals(""))
+            else if (comboBoxProvincia.SelectedItem.Equals("Loja"))
             {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("Calvas");
+                comboBoxCiudad.Items.Add("Catamayo");
+                comboBoxCiudad.Items.Add("Celica");
+                comboBoxCiudad.Items.Add("Chaguarpamba");
+                comboBoxCiudad.Items.Add("Espíndola");
+                comboBoxCiudad.Items.Add("Gonzanamá");
+                comboBoxCiudad.Items.Add("Loja");
+                comboBoxCiudad.Items.Add("Macará");
+                comboBoxCiudad.Items.Add("Olmedo");
+                comboBoxCiudad.Items.Add("Paltas");
+                comboBoxCiudad.Items.Add("Pindal");
+                comboBoxCiudad.Items.Add("Puyango");
+                comboBoxCiudad.Items.Add("Quilanga");
+                comboBoxCiudad.Items.Add("Saraguro");
+                comboBoxCiudad.Items.Add("Sozoranga");
+                comboBoxCiudad.Items.Add("Zapotillo");
+            }
+            else if (comboBoxProvincia.SelectedItem.Equals("Los Rios"))
+            {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("Baba");
+                comboBoxCiudad.Items.Add("Babahoyo");
+                comboBoxCiudad.Items.Add("Buena Fe");
+                comboBoxCiudad.Items.Add("Mocache");
+                comboBoxCiudad.Items.Add("Montalvo");
+                comboBoxCiudad.Items.Add("Palenque");
+                comboBoxCiudad.Items.Add("Pueblo Viejo");
+                comboBoxCiudad.Items.Add("Quevedo");
+                comboBoxCiudad.Items.Add("Urdaneta");
+                comboBoxCiudad.Items.Add("Valencia");
+                comboBoxCiudad.Items.Add("Ventanas");
+                comboBoxCiudad.Items.Add("Vinces");
+           
 
             }
+            else if (comboBoxProvincia.SelectedItem.Equals("Manabí"))
+            {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("24 De Mayo");
+                comboBoxCiudad.Items.Add("Bolivar");
+                comboBoxCiudad.Items.Add("Chone");
+                comboBoxCiudad.Items.Add("El Carmen");
+                comboBoxCiudad.Items.Add("Flavio Alfaro");
+                comboBoxCiudad.Items.Add("Jama");
+                comboBoxCiudad.Items.Add("Jaramijo");
+                comboBoxCiudad.Items.Add("Jipijapa");
+                comboBoxCiudad.Items.Add("Junin");
+                comboBoxCiudad.Items.Add("Manta");
+                comboBoxCiudad.Items.Add("Montecristi");
+                comboBoxCiudad.Items.Add("Olmedo");
+                comboBoxCiudad.Items.Add("Pajan");
+                comboBoxCiudad.Items.Add("Pedernales");
+                comboBoxCiudad.Items.Add("Pichincha");
+                comboBoxCiudad.Items.Add("Portoviejo");
+                comboBoxCiudad.Items.Add("Puerto Lopez");
+                comboBoxCiudad.Items.Add("Rocafuerte");
+                comboBoxCiudad.Items.Add("San Vicente");
+                comboBoxCiudad.Items.Add("Santa Ana");
+                comboBoxCiudad.Items.Add("Sucre");
+                comboBoxCiudad.Items.Add("Tosagua");
+            }
+            else if (comboBoxProvincia.SelectedItem.Equals("Morona Santiago"))
+            {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("Gualaquiza");
+                comboBoxCiudad.Items.Add("Huamboya");
+                comboBoxCiudad.Items.Add("Limon - indanza");
+                comboBoxCiudad.Items.Add("Logroño");
+                comboBoxCiudad.Items.Add("Morona");
+                comboBoxCiudad.Items.Add("Pablo VI");
+                comboBoxCiudad.Items.Add("Palora");
+                comboBoxCiudad.Items.Add("San Juan Bosco");
+                comboBoxCiudad.Items.Add("Santiago");
+                comboBoxCiudad.Items.Add("Sucua");
+                comboBoxCiudad.Items.Add("Taisha");
+                comboBoxCiudad.Items.Add("Twintza");
+            }
+            else if (comboBoxProvincia.SelectedItem.Equals("Napo"))
+            {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("Aguarico");
+                comboBoxCiudad.Items.Add("Archidona");
+                comboBoxCiudad.Items.Add("Carlos J.Arosemena");
+                comboBoxCiudad.Items.Add("El Chaco");
+                comboBoxCiudad.Items.Add("Quijos");
+                comboBoxCiudad.Items.Add("Tena");
+            }
+            else if (comboBoxProvincia.SelectedItem.Equals("Orellana"))
+            {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("Aguarico");
+                comboBoxCiudad.Items.Add("La Joya De Los Sachas");
+                comboBoxCiudad.Items.Add("Loreto");
+                comboBoxCiudad.Items.Add("Orellana");
+            }
+            else if (comboBoxProvincia.SelectedItem.Equals("Pastaza"))
+            {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("Arajuno");
+                comboBoxCiudad.Items.Add("Mera");
+                comboBoxCiudad.Items.Add("Pastaza");
+                comboBoxCiudad.Items.Add("Santa Clara");
+            }
+            else if (comboBoxProvincia.SelectedItem.Equals("Pichincha"))
+            {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("Cayambe");
+                comboBoxCiudad.Items.Add("Mejia");
+                comboBoxCiudad.Items.Add("Pedro Moncayo");
+                comboBoxCiudad.Items.Add("Pedro Vicente Maldonado");
+                comboBoxCiudad.Items.Add("Puerto Quito");
+                comboBoxCiudad.Items.Add("Quito");
+                comboBoxCiudad.Items.Add("Rumiñahui");
+                comboBoxCiudad.Items.Add("San Miguel De Los Bancos");
+            }
+            else if (comboBoxProvincia.SelectedItem.Equals("Santa Elena"))
+            {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("La Libertad");
+                comboBoxCiudad.Items.Add("Salinas");
+                comboBoxCiudad.Items.Add("Santa Elena");
+            }
+            else if (comboBoxProvincia.SelectedItem.Equals("Santo Domingo de los Tsáchilas"))
+            {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("Santo Domingo De Los Tsáchilas");
+            }
+            else if (comboBoxProvincia.SelectedItem.Equals("Sucumbíos"))
+            {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("Cascales");
+                comboBoxCiudad.Items.Add("Cuyabeno");
+                comboBoxCiudad.Items.Add("Gonzalo Pizarro");
+                comboBoxCiudad.Items.Add("Lago Agrio");
+                comboBoxCiudad.Items.Add("Putumayo");
+                comboBoxCiudad.Items.Add("Shushufindi");
+                comboBoxCiudad.Items.Add("Sucumbios");
+            }
+            else if (comboBoxProvincia.SelectedItem.Equals("Tungurahua"))
+            {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("Ambato");
+                comboBoxCiudad.Items.Add("Baños De Agua Santa");
+                comboBoxCiudad.Items.Add("Cevallos");
+                comboBoxCiudad.Items.Add("Mocha");
+                comboBoxCiudad.Items.Add("Patate");
+                comboBoxCiudad.Items.Add("Quero");
+                comboBoxCiudad.Items.Add("San Pedro De Pelileo");
+                comboBoxCiudad.Items.Add("Santiago De Pillaro");
+                comboBoxCiudad.Items.Add("Tisaleo");
+            }
+            else if (comboBoxProvincia.SelectedItem.Equals("Zamora Chinchipe"))
+            {
+                comboBoxCiudad.Items.Clear();
+                comboBoxCiudad.Items.Add("Centinela Del Condor");
+                comboBoxCiudad.Items.Add("Chinchipe");
+                comboBoxCiudad.Items.Add("El Pangui");
+                comboBoxCiudad.Items.Add("Nangaritza");
+                comboBoxCiudad.Items.Add("Palanda");
+                comboBoxCiudad.Items.Add("Yacuambi");
+                comboBoxCiudad.Items.Add("Yantzaza");
+                comboBoxCiudad.Items.Add("Zamora");
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxIdentificacion_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (textBoxIdentificacion.Focused)
+                if(validar.validarCamposNumericos(e,textBoxIdentificacion))
+                    Console.Write("validar ident");
+                     //validar 10 digitos        
+        }
+
+        private void textBoxNombres_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (textBoxNombres.Focused)
+                if(validar.validarCadenasDeTexto(e, textBoxNombres))
+                    Console.Write("validar nombres");
+                    //validar nombres.
+        }
+
+        private void textBoxApellidos_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (textBoxApellidos.Focused)
+                if (validar.validarCadenasDeTexto(e, textBoxApellidos))
+                    Console.Write("validar apellidos");
+                    //validar apellidos
+            
+        }
+
+        private void textBoxDireccion_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (textBoxDireccion.Focused)
+                validar.validarCadenasDeTexto(e, textBoxDireccion);
+                // Validar que se puedan ingresar numeros
+        }
+
+        private void textBoxCorreoElectronico_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (textBoxCorreoElectronico.Focused)
+                validar.emailBienEscrito(textBoxCorreoElectronico.Text);
+        }
+        
+        private void textBoxTelefonoConvencional_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (textBoxTelefonoConvencional.Focused)
+                validar.validarCamposNumericos(e, textBoxTelefonoConvencional);
+        }
+
+        private void textBoxCelular_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (textBoxCelular.Focused)
+                validar.validarCamposNumericos(e, textBoxCelular);
+        }
+
+        private void textBoxSalario_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void textBoxTelefonoConvencional_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

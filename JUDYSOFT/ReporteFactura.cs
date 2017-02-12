@@ -8,24 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace moduloFacturación
+namespace JUDYSOFT
 {
-    public partial class Reporte : Form
+    public partial class ReporteFactura : Form
     {
-        public Reporte()
+        public ReporteFactura()
         {
             InitializeComponent();
         }
 
-        private void Reporte_Load(object sender, EventArgs e)
+        private void ReporteFactura_Load(object sender, EventArgs e)
         {
 
             this.reportViewer1.RefreshReport();
-        }
-
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-
+            this.reportViewer2.RefreshReport();
         }
     }
 }

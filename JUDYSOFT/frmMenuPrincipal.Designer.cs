@@ -190,22 +190,23 @@
             // 
             this.soporteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("soporteToolStripMenuItem.Image")));
             this.soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
-            this.soporteToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
+            this.soporteToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.soporteToolStripMenuItem.Text = "Soporte";
             // 
             // acercaEToolStripMenuItem
             // 
             this.acercaEToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("acercaEToolStripMenuItem.Image")));
             this.acercaEToolStripMenuItem.Name = "acercaEToolStripMenuItem";
-            this.acercaEToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
+            this.acercaEToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.acercaEToolStripMenuItem.Text = "Acerca de JUDYSOFT ";
             this.acercaEToolStripMenuItem.Click += new System.EventHandler(this.acercaEToolStripMenuItem_Click);
             // 
             // adnibistracionToolStripMenuItem
             // 
             this.adnibistracionToolStripMenuItem.Name = "adnibistracionToolStripMenuItem";
-            this.adnibistracionToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.adnibistracionToolStripMenuItem.Text = "Adnibistracion";
+            this.adnibistracionToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.adnibistracionToolStripMenuItem.Text = "Administracion";
+            this.adnibistracionToolStripMenuItem.Click += new System.EventHandler(this.adnibistracionToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -219,6 +220,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenuPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

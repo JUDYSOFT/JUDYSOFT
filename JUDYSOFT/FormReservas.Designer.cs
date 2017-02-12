@@ -28,108 +28,108 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnCancelarReservaReservaciones = new System.Windows.Forms.Button();
+            this.btnNuevaReservaReservaciones = new System.Windows.Forms.Button();
+            this.btnConsultarReservasPasadasReservaciones = new System.Windows.Forms.Button();
+            this.btnConsultarReservaciones = new System.Windows.Forms.Button();
+            this.tablaReservaciones = new System.Windows.Forms.DataGridView();
+            this.lblFuturasReservasReservaciones = new System.Windows.Forms.Label();
+            this.btnSalirReservaciones = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaReservaciones)).BeginInit();
             this.SuspendLayout();
             // 
-            // button5
+            // btnCancelarReservaReservaciones
             // 
-            this.button5.Location = new System.Drawing.Point(161, 241);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 24);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "Cancelar Reserva";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnCancelarReservaReservaciones.Location = new System.Drawing.Point(215, 297);
+            this.btnCancelarReservaReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelarReservaReservaciones.Name = "btnCancelarReservaReservaciones";
+            this.btnCancelarReservaReservaciones.Size = new System.Drawing.Size(136, 30);
+            this.btnCancelarReservaReservaciones.TabIndex = 13;
+            this.btnCancelarReservaReservaciones.Text = "Cancelar Reserva";
+            this.btnCancelarReservaReservaciones.UseVisualStyleBackColor = true;
+            this.btnCancelarReservaReservaciones.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // btnNuevaReservaReservaciones
             // 
-            this.button4.Location = new System.Drawing.Point(311, 241);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 24);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Nueva Reserva";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnNuevaReservaReservaciones.Location = new System.Drawing.Point(415, 297);
+            this.btnNuevaReservaReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNuevaReservaReservaciones.Name = "btnNuevaReservaReservaciones";
+            this.btnNuevaReservaReservaciones.Size = new System.Drawing.Size(125, 30);
+            this.btnNuevaReservaReservaciones.TabIndex = 12;
+            this.btnNuevaReservaReservaciones.Text = "Nueva Reserva";
+            this.btnNuevaReservaReservaciones.UseVisualStyleBackColor = true;
+            this.btnNuevaReservaReservaciones.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // btnConsultarReservasPasadasReservaciones
             // 
-            this.button3.Location = new System.Drawing.Point(377, 27);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(167, 27);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Consultar Reservas Pasadas";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnConsultarReservasPasadasReservaciones.Location = new System.Drawing.Point(503, 33);
+            this.btnConsultarReservasPasadasReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConsultarReservasPasadasReservaciones.Name = "btnConsultarReservasPasadasReservaciones";
+            this.btnConsultarReservasPasadasReservaciones.Size = new System.Drawing.Size(223, 33);
+            this.btnConsultarReservasPasadasReservaciones.TabIndex = 11;
+            this.btnConsultarReservasPasadasReservaciones.Text = "Consultar Reservas Pasadas";
+            this.btnConsultarReservasPasadasReservaciones.UseVisualStyleBackColor = true;
+            this.btnConsultarReservasPasadasReservaciones.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnConsultarReservaciones
             // 
-            this.button2.Location = new System.Drawing.Point(24, 241);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 24);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Consultar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnConsultarReservaciones.Location = new System.Drawing.Point(32, 297);
+            this.btnConsultarReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConsultarReservaciones.Name = "btnConsultarReservaciones";
+            this.btnConsultarReservaciones.Size = new System.Drawing.Size(123, 30);
+            this.btnConsultarReservaciones.TabIndex = 10;
+            this.btnConsultarReservaciones.Text = "Consultar";
+            this.btnConsultarReservaciones.UseVisualStyleBackColor = true;
+            this.btnConsultarReservaciones.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dataGridView1
+            // tablaReservaciones
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 60);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(522, 162);
-            this.dataGridView1.TabIndex = 9;
+            this.tablaReservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaReservaciones.Location = new System.Drawing.Point(29, 74);
+            this.tablaReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tablaReservaciones.Name = "tablaReservaciones";
+            this.tablaReservaciones.RowTemplate.Height = 24;
+            this.tablaReservaciones.Size = new System.Drawing.Size(696, 199);
+            this.tablaReservaciones.TabIndex = 9;
             // 
-            // label1
+            // lblFuturasReservasReservaciones
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 40);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Futuras Reservas";
+            this.lblFuturasReservasReservaciones.AutoSize = true;
+            this.lblFuturasReservasReservaciones.Location = new System.Drawing.Point(29, 49);
+            this.lblFuturasReservasReservaciones.Name = "lblFuturasReservasReservaciones";
+            this.lblFuturasReservasReservaciones.Size = new System.Drawing.Size(120, 17);
+            this.lblFuturasReservasReservaciones.TabIndex = 8;
+            this.lblFuturasReservasReservaciones.Text = "Futuras Reservas";
             // 
-            // button1
+            // btnSalirReservaciones
             // 
-            this.button1.Location = new System.Drawing.Point(441, 241);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 24);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Atrás";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSalirReservaciones.Location = new System.Drawing.Point(588, 297);
+            this.btnSalirReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalirReservaciones.Name = "btnSalirReservaciones";
+            this.btnSalirReservaciones.Size = new System.Drawing.Size(137, 30);
+            this.btnSalirReservaciones.TabIndex = 7;
+            this.btnSalirReservaciones.Text = "Salir";
+            this.btnSalirReservaciones.UseVisualStyleBackColor = true;
+            this.btnSalirReservaciones.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormReservas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 293);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(749, 361);
+            this.Controls.Add(this.btnCancelarReservaReservaciones);
+            this.Controls.Add(this.btnNuevaReservaReservaciones);
+            this.Controls.Add(this.btnConsultarReservasPasadasReservaciones);
+            this.Controls.Add(this.btnConsultarReservaciones);
+            this.Controls.Add(this.tablaReservaciones);
+            this.Controls.Add(this.lblFuturasReservasReservaciones);
+            this.Controls.Add(this.btnSalirReservaciones);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormReservas";
-            this.Text = "FormReservas1";
+            this.Text = "Reservaciones";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormReservas_FormClosed);
             this.Load += new System.EventHandler(this.FormReservas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaReservaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,12 +137,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        public System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelarReservaReservaciones;
+        private System.Windows.Forms.Button btnNuevaReservaReservaciones;
+        public System.Windows.Forms.Button btnConsultarReservasPasadasReservaciones;
+        private System.Windows.Forms.Button btnConsultarReservaciones;
+        private System.Windows.Forms.DataGridView tablaReservaciones;
+        private System.Windows.Forms.Label lblFuturasReservasReservaciones;
+        private System.Windows.Forms.Button btnSalirReservaciones;
     }
 }

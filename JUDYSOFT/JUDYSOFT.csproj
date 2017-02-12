@@ -51,8 +51,11 @@
     <StartupObject>JUDYSOFT.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +67,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsCliente.cs" />
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="ReporteFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteFactura.Designer.cs">
+      <DependentUpon>ReporteFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validaciones.cs" />
     <Compile Include="clsHabitacion.cs" />
     <Compile Include="FormAgregarProductoAFactura.cs">
       <SubType>Form</SubType>
@@ -106,6 +123,12 @@
     </Compile>
     <Compile Include="FormIngresarNuevoEmpleado.Designer.cs">
       <DependentUpon>FormIngresarNuevoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaClientes.Designer.cs">
+      <DependentUpon>FormListaClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="FormModificarDatosDeCliente.cs">
       <SubType>Form</SubType>
@@ -185,6 +208,9 @@
     <EmbeddedResource Include="FormIngresarNuevoEmpleado.resx">
       <DependentUpon>FormIngresarNuevoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormListaClientes.resx">
+      <DependentUpon>FormListaClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormModificarDatosDeCliente.resx">
       <DependentUpon>FormModificarDatosDeCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +238,8 @@
     <EmbeddedResource Include="frmSoporte.resx">
       <DependentUpon>frmSoporte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informe.rdlc" />
+    <EmbeddedResource Include="InformeFactura.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -222,6 +250,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReporteFactura.resx">
+      <DependentUpon>ReporteFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
