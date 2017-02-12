@@ -60,7 +60,7 @@ namespace JUDYSOFT
                 objCliente.EstadoCivil = comboBoxEstadoCivil.SelectedText.ToString();
                 objCliente.Correo = txtCorreoIngresoCLiente.Text.ToString();
                 objCliente.Direccion = txtDireccionIngresoCliente.Text.ToString();
-                objCliente.FechaNac = Convert.ToDateTime( fechaNacIngresoCliente.Text.ToString());
+                //objCliente.FechaNac = Convert.ToDateTime( fechaNacIngresoCliente.Text.ToString());
                 if (radioF.Checked)
                 {
                     objCliente.Sexo = radioF.Text.ToString();

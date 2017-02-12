@@ -294,10 +294,10 @@ namespace JUDYSOFT
                 //JUDYSOFT------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-                ReporteFactura report = new ReporteFactura();
+                /*ReporteFactura report = new ReporteFactura();
                 report.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
                 report.ShowDialog();
-                Limpiar();
+                Limpiar();*/
 
 
 

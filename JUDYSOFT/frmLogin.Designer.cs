@@ -85,7 +85,7 @@
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(165, 22);
             this.txtpass.TabIndex = 3;
-            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
+ 
             // 
             // txtuser
             // 
