@@ -14,8 +14,6 @@ using Libreria;
 
 namespace JUDYSOFT
 {
-
-    
     public partial class frmLogin : Form
     {
         public static String Codigo = "";
@@ -58,9 +56,6 @@ namespace JUDYSOFT
                     frmHab.Show();
                     this.FormClosing += Form1_FormClosing;
                 }
-                
-
-
             }
             catch(Exception ex)
             {
