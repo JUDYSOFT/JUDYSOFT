@@ -137,10 +137,5 @@ namespace JUDYSOFT
 
             }
         }
-
-        private void tBoxNumeroIdClienteNuevareservacion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
