@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace JUDYSOFT
 {
-    public class clsHabitacion
+    
+    class clsHabitacion
     {
-
         private string estado;
         public string Estado
         {
             get { return estado; }
             set { estado = value; }
-
         }
     }
 }

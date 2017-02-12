@@ -60,7 +60,7 @@ namespace JUDYSOFT
             this.btnh18 = new System.Windows.Forms.Button();
             this.btnh17 = new System.Windows.Forms.Button();
             this.btnh16 = new System.Windows.Forms.Button();
-            this.lblfecha = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
@@ -75,7 +75,7 @@ namespace JUDYSOFT
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(726, 468);
+            this.groupBox1.Size = new System.Drawing.Size(700, 441);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "HABITACIONES";
@@ -103,6 +103,7 @@ namespace JUDYSOFT
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Segundo Piso";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // lblh27
             // 
@@ -362,21 +363,21 @@ namespace JUDYSOFT
             this.btnh16.UseVisualStyleBackColor = true;
             this.btnh16.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // lblfecha
+            // label3
             // 
-            this.lblfecha.AutoSize = true;
-            this.lblfecha.Location = new System.Drawing.Point(501, 29);
-            this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(35, 13);
-            this.lblfecha.TabIndex = 2;
-            this.lblfecha.Text = "label1";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(501, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Hora";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Location = new System.Drawing.Point(41, 9);
+            this.groupBox2.Location = new System.Drawing.Point(12, 9);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(290, 42);
+            this.groupBox2.Size = new System.Drawing.Size(180, 42);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar";
@@ -388,10 +389,11 @@ namespace JUDYSOFT
             "Disponible",
             "Limpieza",
             "Ocupado"});
-            this.comboBox1.Location = new System.Drawing.Point(103, 17);
+            this.comboBox1.Location = new System.Drawing.Point(59, 12);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(90, 21);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // frmAdministracionHabitaciones
             // 
@@ -399,7 +401,7 @@ namespace JUDYSOFT
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 562);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.lblfecha);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -420,7 +422,7 @@ namespace JUDYSOFT
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblfecha;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnh15;
         private System.Windows.Forms.Button btnh16;
         private System.Windows.Forms.Button btnh26;

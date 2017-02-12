@@ -40,7 +40,11 @@ namespace JUDYSOFT
        
         private void btningresar_Click(object sender, EventArgs e)
         {
-            try {
+            frmMenuPrincipal frmHab = new frmMenuPrincipal();
+            this.Hide();
+            frmHab.Show();
+            //this.FormClosing += Form1_FormClosing;
+            /*try {
                 string CMD = string.Format("SELECT * FROM usuario WHERE Cuenta = '{0}' AND password = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
                 DataSet ds = Utilidades.Ejecutar(CMD);
                 string cuenta = ds.Tables[0].Rows[0]["Cuenta"].ToString().Trim();
@@ -61,8 +65,8 @@ namespace JUDYSOFT
             catch(Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-            }
-          
+            }*/
+
 
 
         }
