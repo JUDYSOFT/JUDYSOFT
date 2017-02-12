@@ -36,10 +36,10 @@
             // 
             // btnAtrasReservacionesPasadas
             // 
-            this.btnAtrasReservacionesPasadas.Location = new System.Drawing.Point(405, 382);
-            this.btnAtrasReservacionesPasadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAtrasReservacionesPasadas.Location = new System.Drawing.Point(303, 334);
+            this.btnAtrasReservacionesPasadas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAtrasReservacionesPasadas.Name = "btnAtrasReservacionesPasadas";
-            this.btnAtrasReservacionesPasadas.Size = new System.Drawing.Size(129, 30);
+            this.btnAtrasReservacionesPasadas.Size = new System.Drawing.Size(97, 24);
             this.btnAtrasReservacionesPasadas.TabIndex = 5;
             this.btnAtrasReservacionesPasadas.Text = "Atrás";
             this.btnAtrasReservacionesPasadas.UseVisualStyleBackColor = true;
@@ -47,10 +47,10 @@
             // 
             // btnConsultarReservacionesPasadas
             // 
-            this.btnConsultarReservacionesPasadas.Location = new System.Drawing.Point(236, 382);
-            this.btnConsultarReservacionesPasadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConsultarReservacionesPasadas.Location = new System.Drawing.Point(178, 334);
+            this.btnConsultarReservacionesPasadas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConsultarReservacionesPasadas.Name = "btnConsultarReservacionesPasadas";
-            this.btnConsultarReservacionesPasadas.Size = new System.Drawing.Size(128, 30);
+            this.btnConsultarReservacionesPasadas.Size = new System.Drawing.Size(96, 24);
             this.btnConsultarReservacionesPasadas.TabIndex = 4;
             this.btnConsultarReservacionesPasadas.Text = "Consultar";
             this.btnConsultarReservacionesPasadas.UseVisualStyleBackColor = true;
@@ -58,23 +58,24 @@
             // 
             // tablaReservacionesPasadas
             // 
+            this.tablaReservacionesPasadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.tablaReservacionesPasadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaReservacionesPasadas.Location = new System.Drawing.Point(23, 16);
-            this.tablaReservacionesPasadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tablaReservacionesPasadas.Location = new System.Drawing.Point(17, 13);
+            this.tablaReservacionesPasadas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tablaReservacionesPasadas.Name = "tablaReservacionesPasadas";
             this.tablaReservacionesPasadas.RowTemplate.Height = 24;
-            this.tablaReservacionesPasadas.Size = new System.Drawing.Size(511, 352);
+            this.tablaReservacionesPasadas.Size = new System.Drawing.Size(383, 286);
             this.tablaReservacionesPasadas.TabIndex = 3;
             // 
             // reservacionesPasadas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 439);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(430, 388);
             this.Controls.Add(this.btnAtrasReservacionesPasadas);
             this.Controls.Add(this.btnConsultarReservacionesPasadas);
             this.Controls.Add(this.tablaReservacionesPasadas);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "reservacionesPasadas";
             this.Text = "Reservaciones Pasadas";
             this.Load += new System.EventHandler(this.reservacionesPasadas_Load);

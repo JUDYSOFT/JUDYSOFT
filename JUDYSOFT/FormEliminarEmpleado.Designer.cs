@@ -57,15 +57,15 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panelInsertarId = new System.Windows.Forms.Panel();
-            this.panelCargo = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.panelApellidosNombres = new System.Windows.Forms.Panel();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.panelCedula = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panelCargo = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panelEliminarEmpleado.SuspendLayout();
@@ -76,14 +76,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelMultiple.SuspendLayout();
             this.panelInsertarId.SuspendLayout();
-            this.panelCargo.SuspendLayout();
             this.panelApellidosNombres.SuspendLayout();
             this.panelCedula.SuspendLayout();
+            this.panelCargo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelEliminarEmpleado
             // 
-            this.panelEliminarEmpleado.BackColor = System.Drawing.SystemColors.Control;
+            this.panelEliminarEmpleado.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelEliminarEmpleado.Controls.Add(this.button2);
             this.panelEliminarEmpleado.Controls.Add(this.button1);
             this.panelEliminarEmpleado.Controls.Add(this.panelMarcoDatosSeleccionados);
@@ -201,7 +201,7 @@
             this.panelTablaCargo.TabIndex = 8;
             this.panelTablaCargo.Visible = false;
             // 
-            // DGVGenerarFactura
+            // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -209,10 +209,11 @@
             this.Nombres,
             this.Apellidos,
             this.Cargo});
-            this.dataGridView1.Location = new System.Drawing.Point(108, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 6);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
-            this.dataGridView1.Name = "DGVGenerarFactura";
-            this.dataGridView1.Size = new System.Drawing.Size(445, 150);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 26;
+            this.dataGridView1.Size = new System.Drawing.Size(690, 167);
             this.dataGridView1.TabIndex = 0;
             // 
             // Identificación
@@ -350,37 +351,6 @@
             this.panelInsertarId.TabIndex = 8;
             this.panelInsertarId.Visible = false;
             // 
-            // panelCargo
-            // 
-            this.panelCargo.Controls.Add(this.comboBox1);
-            this.panelCargo.Controls.Add(this.label25);
-            this.panelCargo.Location = new System.Drawing.Point(17, 8);
-            this.panelCargo.Name = "panelCargo";
-            this.panelCargo.Size = new System.Drawing.Size(691, 85);
-            this.panelCargo.TabIndex = 8;
-            this.panelCargo.Visible = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Administrador",
-            "Recepcionista",
-            "Limpieza"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(288, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(9, 10);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(101, 13);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Seleccione el cargo";
-            // 
             // panelApellidosNombres
             // 
             this.panelApellidosNombres.Controls.Add(this.textBox7);
@@ -436,6 +406,37 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_TextChanged);
             // 
+            // panelCargo
+            // 
+            this.panelCargo.Controls.Add(this.comboBox1);
+            this.panelCargo.Controls.Add(this.label25);
+            this.panelCargo.Location = new System.Drawing.Point(17, 8);
+            this.panelCargo.Name = "panelCargo";
+            this.panelCargo.Size = new System.Drawing.Size(691, 85);
+            this.panelCargo.TabIndex = 8;
+            this.panelCargo.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Administrador",
+            "Recepcionista",
+            "Limpieza"});
+            this.comboBox1.Location = new System.Drawing.Point(12, 30);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(288, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(9, 10);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(101, 13);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Seleccione el cargo";
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -462,6 +463,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(775, 542);
             this.Controls.Add(this.panelEliminarEmpleado);
             this.Name = "FormEliminarEmpleado";
@@ -478,12 +480,12 @@
             this.panelMultiple.ResumeLayout(false);
             this.panelMultiple.PerformLayout();
             this.panelInsertarId.ResumeLayout(false);
-            this.panelCargo.ResumeLayout(false);
-            this.panelCargo.PerformLayout();
             this.panelApellidosNombres.ResumeLayout(false);
             this.panelApellidosNombres.PerformLayout();
             this.panelCedula.ResumeLayout(false);
             this.panelCedula.PerformLayout();
+            this.panelCargo.ResumeLayout(false);
+            this.panelCargo.PerformLayout();
             this.ResumeLayout(false);
 
         }

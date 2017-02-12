@@ -65,6 +65,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.BackColor = System.Drawing.Color.Moccasin;
             this.textBox7.Location = new System.Drawing.Point(16, 33);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(299, 20);
@@ -119,6 +120,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.BackColor = System.Drawing.Color.Moccasin;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "Cédula",
@@ -133,6 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(754, 481);
             this.Controls.Add(this.panelInsertarId);
             this.Controls.Add(this.label17);

@@ -63,6 +63,26 @@ namespace JUDYSOFT.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1484546293_Save {
+            get {
+                object obj = ResourceManager.GetObject("1484546293_Save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1484546293_Save1 {
+            get {
+                object obj = ResourceManager.GetObject("1484546293_Save1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1484546297_Cancel {
             get {
                 object obj = ResourceManager.GetObject("1484546297_Cancel", resourceCulture);

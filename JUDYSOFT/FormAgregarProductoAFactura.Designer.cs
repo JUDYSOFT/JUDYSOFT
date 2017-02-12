@@ -34,15 +34,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // DGVGenerarFactura
+            // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(7, 12);
-            this.dataGridView1.Name = "DGVGenerarFactura";
+            this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 80;
             this.dataGridView1.Size = new System.Drawing.Size(685, 198);
             this.dataGridView1.TabIndex = 0;
@@ -72,6 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(703, 274);
             this.Controls.Add(this.btmCancelar);
             this.Controls.Add(this.bttnAceptar);
