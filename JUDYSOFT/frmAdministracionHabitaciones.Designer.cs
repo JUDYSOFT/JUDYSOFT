@@ -299,7 +299,7 @@ namespace JUDYSOFT
             // 
             // lblh15
             // 
-            this.lblh15.BackColor = System.Drawing.Color.Silver;
+            this.lblh15.BackColor = System.Drawing.Color.Transparent;
             this.lblh15.Location = new System.Drawing.Point(15, 103);
             this.lblh15.Name = "lblh15";
             this.lblh15.Size = new System.Drawing.Size(90, 19);
@@ -384,6 +384,7 @@ namespace JUDYSOFT
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Disponible",
@@ -399,6 +400,7 @@ namespace JUDYSOFT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(760, 562);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label3);

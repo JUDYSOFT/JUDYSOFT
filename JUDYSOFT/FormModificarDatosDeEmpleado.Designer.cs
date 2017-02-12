@@ -32,9 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.radioButtonNo = new System.Windows.Forms.RadioButton();
-            this.radioButtonSi = new System.Windows.Forms.RadioButton();
-            this.label15 = new System.Windows.Forms.Label();
             this.comboBoxCargo = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimePickerFechaDeEntrada = new System.Windows.Forms.DateTimePicker();
@@ -96,9 +93,6 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.radioButtonNo);
-            this.panel4.Controls.Add(this.radioButtonSi);
-            this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.comboBoxCargo);
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.dateTimePickerFechaDeEntrada);
@@ -107,42 +101,12 @@
             this.panel4.Controls.Add(this.label12);
             this.panel4.Location = new System.Drawing.Point(5, 230);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(756, 100);
+            this.panel4.Size = new System.Drawing.Size(756, 77);
             this.panel4.TabIndex = 96;
-            // 
-            // radioButtonNo
-            // 
-            this.radioButtonNo.AutoSize = true;
-            this.radioButtonNo.Location = new System.Drawing.Point(181, 76);
-            this.radioButtonNo.Name = "radioButtonNo";
-            this.radioButtonNo.Size = new System.Drawing.Size(39, 17);
-            this.radioButtonNo.TabIndex = 102;
-            this.radioButtonNo.TabStop = true;
-            this.radioButtonNo.Text = "No";
-            this.radioButtonNo.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonSi
-            // 
-            this.radioButtonSi.AutoSize = true;
-            this.radioButtonSi.Location = new System.Drawing.Point(20, 76);
-            this.radioButtonSi.Name = "radioButtonSi";
-            this.radioButtonSi.Size = new System.Drawing.Size(34, 17);
-            this.radioButtonSi.TabIndex = 101;
-            this.radioButtonSi.TabStop = true;
-            this.radioButtonSi.Text = "Si";
-            this.radioButtonSi.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(17, 60);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 13);
-            this.label15.TabIndex = 100;
-            this.label15.Text = "Afiliación al IESS (*)";
             // 
             // comboBoxCargo
             // 
+            this.comboBoxCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCargo.FormattingEnabled = true;
             this.comboBoxCargo.Items.AddRange(new object[] {
             "Administrador",
@@ -164,6 +128,7 @@
             // 
             // dateTimePickerFechaDeEntrada
             // 
+            this.dateTimePickerFechaDeEntrada.CalendarMonthBackground = System.Drawing.Color.Moccasin;
             this.dateTimePickerFechaDeEntrada.Enabled = false;
             this.dateTimePickerFechaDeEntrada.Location = new System.Drawing.Point(20, 23);
             this.dateTimePickerFechaDeEntrada.Name = "dateTimePickerFechaDeEntrada";
@@ -181,6 +146,7 @@
             // 
             // textBoxSalario
             // 
+            this.textBoxSalario.BackColor = System.Drawing.Color.Moccasin;
             this.textBoxSalario.Location = new System.Drawing.Point(251, 23);
             this.textBoxSalario.Name = "textBoxSalario";
             this.textBoxSalario.Size = new System.Drawing.Size(177, 20);
@@ -222,6 +188,7 @@
             // 
             // textBoxCelular
             // 
+            this.textBoxCelular.BackColor = System.Drawing.Color.Moccasin;
             this.textBoxCelular.Location = new System.Drawing.Point(250, 187);
             this.textBoxCelular.Name = "textBoxCelular";
             this.textBoxCelular.Size = new System.Drawing.Size(177, 20);
@@ -229,6 +196,7 @@
             // 
             // textBoxTelefonoConvencional
             // 
+            this.textBoxTelefonoConvencional.BackColor = System.Drawing.Color.Moccasin;
             this.textBoxTelefonoConvencional.Location = new System.Drawing.Point(16, 187);
             this.textBoxTelefonoConvencional.Name = "textBoxTelefonoConvencional";
             this.textBoxTelefonoConvencional.Size = new System.Drawing.Size(200, 20);
@@ -272,6 +240,7 @@
             // 
             // dateTimePickerFechaDeNacimiento
             // 
+            this.dateTimePickerFechaDeNacimiento.CalendarMonthBackground = System.Drawing.Color.Moccasin;
             this.dateTimePickerFechaDeNacimiento.Enabled = false;
             this.dateTimePickerFechaDeNacimiento.Location = new System.Drawing.Point(17, 140);
             this.dateTimePickerFechaDeNacimiento.Name = "dateTimePickerFechaDeNacimiento";
@@ -280,6 +249,7 @@
             // 
             // textBoxCorreoElectronico
             // 
+            this.textBoxCorreoElectronico.BackColor = System.Drawing.Color.Moccasin;
             this.textBoxCorreoElectronico.Location = new System.Drawing.Point(244, 140);
             this.textBoxCorreoElectronico.Name = "textBoxCorreoElectronico";
             this.textBoxCorreoElectronico.Size = new System.Drawing.Size(177, 20);
@@ -287,6 +257,7 @@
             // 
             // textBoxDireccion
             // 
+            this.textBoxDireccion.BackColor = System.Drawing.Color.Moccasin;
             this.textBoxDireccion.Location = new System.Drawing.Point(460, 81);
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(255, 20);
@@ -303,6 +274,8 @@
             // 
             // comboBoxProvincia
             // 
+            this.comboBoxProvincia.BackColor = System.Drawing.Color.Moccasin;
+            this.comboBoxProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxProvincia.Enabled = false;
             this.comboBoxProvincia.FormattingEnabled = true;
             this.comboBoxProvincia.Location = new System.Drawing.Point(17, 81);
@@ -312,6 +285,7 @@
             // 
             // textBoxCiudad
             // 
+            this.textBoxCiudad.BackColor = System.Drawing.Color.Moccasin;
             this.textBoxCiudad.Enabled = false;
             this.textBoxCiudad.Location = new System.Drawing.Point(251, 81);
             this.textBoxCiudad.Name = "textBoxCiudad";
@@ -338,6 +312,7 @@
             // 
             // textBoxApellidos
             // 
+            this.textBoxApellidos.BackColor = System.Drawing.Color.Moccasin;
             this.textBoxApellidos.Enabled = false;
             this.textBoxApellidos.Location = new System.Drawing.Point(251, 19);
             this.textBoxApellidos.Name = "textBoxApellidos";
@@ -346,6 +321,7 @@
             // 
             // textBoxNombres
             // 
+            this.textBoxNombres.BackColor = System.Drawing.Color.Moccasin;
             this.textBoxNombres.Enabled = false;
             this.textBoxNombres.Location = new System.Drawing.Point(17, 19);
             this.textBoxNombres.Name = "textBoxNombres";
@@ -412,6 +388,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.Moccasin;
             this.textBox1.Location = new System.Drawing.Point(38, 36);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(273, 20);
@@ -421,6 +398,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(789, 486);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -460,9 +438,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.RadioButton radioButtonNo;
-        private System.Windows.Forms.RadioButton radioButtonSi;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBoxCargo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaDeEntrada;
