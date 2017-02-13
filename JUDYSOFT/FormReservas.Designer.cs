@@ -67,11 +67,11 @@
             // lblFuturasReservasReservaciones
             // 
             this.lblFuturasReservasReservaciones.AutoSize = true;
-            this.lblFuturasReservasReservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFuturasReservasReservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFuturasReservasReservaciones.Location = new System.Drawing.Point(22, 40);
             this.lblFuturasReservasReservaciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFuturasReservasReservaciones.Name = "lblFuturasReservasReservaciones";
-            this.lblFuturasReservasReservaciones.Size = new System.Drawing.Size(114, 16);
+            this.lblFuturasReservasReservaciones.Size = new System.Drawing.Size(125, 18);
             this.lblFuturasReservasReservaciones.TabIndex = 8;
             this.lblFuturasReservasReservaciones.Text = "Futuras Reservas";
             // 
