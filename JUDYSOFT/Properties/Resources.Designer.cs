@@ -93,6 +93,16 @@ namespace JUDYSOFT.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1484546334_Apply {
+            get {
+                object obj = ResourceManager.GetObject("1484546334_Apply", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1484548483_Edit_page {
             get {
                 object obj = ResourceManager.GetObject("1484548483_Edit_page", resourceCulture);

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIngresarNuevoEmpleado));
             this.panelNuevoEmpleado = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxIdentificacion = new System.Windows.Forms.TextBox();
@@ -68,6 +67,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.textBoxSalario = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelNuevoEmpleado.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -101,20 +101,6 @@
             this.label16.Size = new System.Drawing.Size(323, 16);
             this.label16.TabIndex = 34;
             this.label16.Text = "Campos con (*) deben ser llenados obligatoriamente";
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(619, 450);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 42);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Cancelar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -346,10 +332,10 @@
             // 
             this.dateTimePickerFechaDeNacimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaDeNacimiento.CalendarMonthBackground = System.Drawing.Color.Moccasin;
-            this.dateTimePickerFechaDeNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerFechaDeNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaDeNacimiento.Location = new System.Drawing.Point(16, 151);
             this.dateTimePickerFechaDeNacimiento.Name = "dateTimePickerFechaDeNacimiento";
-            this.dateTimePickerFechaDeNacimiento.Size = new System.Drawing.Size(200, 24);
+            this.dateTimePickerFechaDeNacimiento.Size = new System.Drawing.Size(200, 26);
             this.dateTimePickerFechaDeNacimiento.TabIndex = 56;
             // 
             // label8
@@ -365,19 +351,19 @@
             // textBoxCelular
             // 
             this.textBoxCelular.BackColor = System.Drawing.Color.Moccasin;
-            this.textBoxCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCelular.Location = new System.Drawing.Point(250, 205);
             this.textBoxCelular.Name = "textBoxCelular";
-            this.textBoxCelular.Size = new System.Drawing.Size(177, 24);
+            this.textBoxCelular.Size = new System.Drawing.Size(177, 26);
             this.textBoxCelular.TabIndex = 54;
             // 
             // textBoxTelefonoConvencional
             // 
             this.textBoxTelefonoConvencional.BackColor = System.Drawing.Color.Moccasin;
-            this.textBoxTelefonoConvencional.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTelefonoConvencional.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefonoConvencional.Location = new System.Drawing.Point(16, 205);
             this.textBoxTelefonoConvencional.Name = "textBoxTelefonoConvencional";
-            this.textBoxTelefonoConvencional.Size = new System.Drawing.Size(200, 24);
+            this.textBoxTelefonoConvencional.Size = new System.Drawing.Size(200, 26);
             this.textBoxTelefonoConvencional.TabIndex = 53;
             // 
             // label7
@@ -403,10 +389,10 @@
             // textBoxCorreoElectronico
             // 
             this.textBoxCorreoElectronico.BackColor = System.Drawing.Color.Moccasin;
-            this.textBoxCorreoElectronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCorreoElectronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCorreoElectronico.Location = new System.Drawing.Point(250, 151);
             this.textBoxCorreoElectronico.Name = "textBoxCorreoElectronico";
-            this.textBoxCorreoElectronico.Size = new System.Drawing.Size(177, 24);
+            this.textBoxCorreoElectronico.Size = new System.Drawing.Size(177, 26);
             this.textBoxCorreoElectronico.TabIndex = 50;
             // 
             // label5
@@ -475,7 +461,7 @@
             // comboBoxCargo
             // 
             this.comboBoxCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCargo.FormattingEnabled = true;
             this.comboBoxCargo.Items.AddRange(new object[] {
             "Administrador",
@@ -483,7 +469,7 @@
             "Limpieza"});
             this.comboBoxCargo.Location = new System.Drawing.Point(462, 37);
             this.comboBoxCargo.Name = "comboBoxCargo";
-            this.comboBoxCargo.Size = new System.Drawing.Size(256, 26);
+            this.comboBoxCargo.Size = new System.Drawing.Size(256, 28);
             this.comboBoxCargo.TabIndex = 45;
             // 
             // label14
@@ -500,10 +486,10 @@
             // 
             this.dateTimePickerFechaDeEntrada.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaDeEntrada.Enabled = false;
-            this.dateTimePickerFechaDeEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerFechaDeEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaDeEntrada.Location = new System.Drawing.Point(15, 39);
             this.dateTimePickerFechaDeEntrada.Name = "dateTimePickerFechaDeEntrada";
-            this.dateTimePickerFechaDeEntrada.Size = new System.Drawing.Size(200, 24);
+            this.dateTimePickerFechaDeEntrada.Size = new System.Drawing.Size(200, 26);
             this.dateTimePickerFechaDeEntrada.TabIndex = 43;
             // 
             // label13
@@ -519,10 +505,10 @@
             // textBoxSalario
             // 
             this.textBoxSalario.BackColor = System.Drawing.Color.Moccasin;
-            this.textBoxSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSalario.Location = new System.Drawing.Point(249, 39);
             this.textBoxSalario.Name = "textBoxSalario";
-            this.textBoxSalario.Size = new System.Drawing.Size(177, 24);
+            this.textBoxSalario.Size = new System.Drawing.Size(177, 26);
             this.textBoxSalario.TabIndex = 41;
             // 
             // label12
@@ -534,6 +520,20 @@
             this.label12.Size = new System.Drawing.Size(67, 16);
             this.label12.TabIndex = 40;
             this.label12.Text = "Salario (*)";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(619, 450);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(122, 42);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Cancelar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // FormIngresarNuevoEmpleado
             // 
