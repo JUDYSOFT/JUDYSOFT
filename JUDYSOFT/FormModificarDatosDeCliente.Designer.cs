@@ -79,9 +79,10 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.Moccasin;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(149, 37);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
+            this.textBox1.Size = new System.Drawing.Size(130, 26);
             this.textBox1.TabIndex = 2;
             // 
             // panelInformación
@@ -112,7 +113,7 @@
             this.panelInformación.Controls.Add(this.lbltelefono2ModificarDatosCliente);
             this.panelInformación.Controls.Add(this.lblTelefono1ModificarDatosCliente);
             this.panelInformación.Location = new System.Drawing.Point(52, 119);
-            this.panelInformación.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInformación.Margin = new System.Windows.Forms.Padding(2);
             this.panelInformación.Name = "panelInformación";
             this.panelInformación.Size = new System.Drawing.Size(590, 303);
             this.panelInformación.TabIndex = 61;
@@ -120,11 +121,12 @@
             // fechaNacIngresoCliente
             // 
             this.fechaNacIngresoCliente.CustomFormat = "";
+            this.fechaNacIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fechaNacIngresoCliente.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fechaNacIngresoCliente.Location = new System.Drawing.Point(422, 258);
-            this.fechaNacIngresoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaNacIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.fechaNacIngresoCliente.Name = "fechaNacIngresoCliente";
-            this.fechaNacIngresoCliente.Size = new System.Drawing.Size(131, 20);
+            this.fechaNacIngresoCliente.Size = new System.Drawing.Size(131, 26);
             this.fechaNacIngresoCliente.TabIndex = 122;
             // 
             // lblFechaNacModificarDatosCliente
@@ -141,10 +143,11 @@
             // txtDireccionIngresoCliente
             // 
             this.txtDireccionIngresoCliente.BackColor = System.Drawing.Color.Moccasin;
+            this.txtDireccionIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccionIngresoCliente.Location = new System.Drawing.Point(148, 260);
-            this.txtDireccionIngresoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccionIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccionIngresoCliente.Name = "txtDireccionIngresoCliente";
-            this.txtDireccionIngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtDireccionIngresoCliente.Size = new System.Drawing.Size(130, 26);
             this.txtDireccionIngresoCliente.TabIndex = 120;
             this.txtDireccionIngresoCliente.Validar = false;
             // 
@@ -162,100 +165,110 @@
             // txtCorreoIngresoCLiente
             // 
             this.txtCorreoIngresoCLiente.BackColor = System.Drawing.Color.Moccasin;
+            this.txtCorreoIngresoCLiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreoIngresoCLiente.Location = new System.Drawing.Point(422, 218);
-            this.txtCorreoIngresoCLiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreoIngresoCLiente.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreoIngresoCLiente.Name = "txtCorreoIngresoCLiente";
-            this.txtCorreoIngresoCLiente.Size = new System.Drawing.Size(130, 20);
+            this.txtCorreoIngresoCLiente.Size = new System.Drawing.Size(130, 26);
             this.txtCorreoIngresoCLiente.TabIndex = 118;
             this.txtCorreoIngresoCLiente.Validar = false;
             // 
             // txtProcedenciaIngresoCliente
             // 
             this.txtProcedenciaIngresoCliente.BackColor = System.Drawing.Color.Moccasin;
+            this.txtProcedenciaIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProcedenciaIngresoCliente.Location = new System.Drawing.Point(422, 173);
-            this.txtProcedenciaIngresoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProcedenciaIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtProcedenciaIngresoCliente.Name = "txtProcedenciaIngresoCliente";
-            this.txtProcedenciaIngresoCliente.Size = new System.Drawing.Size(131, 20);
+            this.txtProcedenciaIngresoCliente.Size = new System.Drawing.Size(131, 26);
             this.txtProcedenciaIngresoCliente.TabIndex = 117;
             this.txtProcedenciaIngresoCliente.Validar = false;
             // 
             // txtTelefono2IngresoCliente
             // 
             this.txtTelefono2IngresoCliente.BackColor = System.Drawing.Color.Moccasin;
+            this.txtTelefono2IngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono2IngresoCliente.Location = new System.Drawing.Point(422, 117);
-            this.txtTelefono2IngresoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono2IngresoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono2IngresoCliente.Name = "txtTelefono2IngresoCliente";
-            this.txtTelefono2IngresoCliente.Size = new System.Drawing.Size(129, 20);
+            this.txtTelefono2IngresoCliente.Size = new System.Drawing.Size(129, 26);
             this.txtTelefono2IngresoCliente.TabIndex = 116;
             this.txtTelefono2IngresoCliente.Validar = false;
             // 
             // txtApellido2IngresoCliente
             // 
             this.txtApellido2IngresoCliente.BackColor = System.Drawing.Color.Moccasin;
+            this.txtApellido2IngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido2IngresoCliente.Location = new System.Drawing.Point(422, 66);
-            this.txtApellido2IngresoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido2IngresoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido2IngresoCliente.Name = "txtApellido2IngresoCliente";
-            this.txtApellido2IngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtApellido2IngresoCliente.Size = new System.Drawing.Size(130, 26);
             this.txtApellido2IngresoCliente.TabIndex = 115;
             this.txtApellido2IngresoCliente.Validar = false;
             // 
             // txtNombre2IngresoCliente
             // 
             this.txtNombre2IngresoCliente.BackColor = System.Drawing.Color.Moccasin;
+            this.txtNombre2IngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre2IngresoCliente.Location = new System.Drawing.Point(422, 25);
-            this.txtNombre2IngresoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre2IngresoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre2IngresoCliente.Name = "txtNombre2IngresoCliente";
-            this.txtNombre2IngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtNombre2IngresoCliente.Size = new System.Drawing.Size(130, 26);
             this.txtNombre2IngresoCliente.TabIndex = 114;
             this.txtNombre2IngresoCliente.Validar = false;
             // 
             // txtEstadoCivilIngresoCliente
             // 
             this.txtEstadoCivilIngresoCliente.BackColor = System.Drawing.Color.Moccasin;
+            this.txtEstadoCivilIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstadoCivilIngresoCliente.Location = new System.Drawing.Point(148, 218);
-            this.txtEstadoCivilIngresoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEstadoCivilIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtEstadoCivilIngresoCliente.Name = "txtEstadoCivilIngresoCliente";
-            this.txtEstadoCivilIngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtEstadoCivilIngresoCliente.Size = new System.Drawing.Size(130, 26);
             this.txtEstadoCivilIngresoCliente.TabIndex = 113;
             this.txtEstadoCivilIngresoCliente.Validar = false;
             // 
             // txtNombre1IngresoCliente
             // 
             this.txtNombre1IngresoCliente.BackColor = System.Drawing.Color.Moccasin;
+            this.txtNombre1IngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre1IngresoCliente.Location = new System.Drawing.Point(148, 21);
-            this.txtNombre1IngresoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre1IngresoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre1IngresoCliente.Name = "txtNombre1IngresoCliente";
-            this.txtNombre1IngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtNombre1IngresoCliente.Size = new System.Drawing.Size(130, 26);
             this.txtNombre1IngresoCliente.TabIndex = 112;
             this.txtNombre1IngresoCliente.Validar = true;
             // 
             // txtApellido1IngresoCliente
             // 
             this.txtApellido1IngresoCliente.BackColor = System.Drawing.Color.Moccasin;
+            this.txtApellido1IngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido1IngresoCliente.Location = new System.Drawing.Point(148, 66);
-            this.txtApellido1IngresoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido1IngresoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido1IngresoCliente.Name = "txtApellido1IngresoCliente";
-            this.txtApellido1IngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtApellido1IngresoCliente.Size = new System.Drawing.Size(130, 26);
             this.txtApellido1IngresoCliente.TabIndex = 111;
             this.txtApellido1IngresoCliente.Validar = true;
             // 
             // txtTelefono1IngresoCliente
             // 
             this.txtTelefono1IngresoCliente.BackColor = System.Drawing.Color.Moccasin;
+            this.txtTelefono1IngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono1IngresoCliente.Location = new System.Drawing.Point(148, 114);
-            this.txtTelefono1IngresoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono1IngresoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono1IngresoCliente.Name = "txtTelefono1IngresoCliente";
-            this.txtTelefono1IngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtTelefono1IngresoCliente.Size = new System.Drawing.Size(130, 26);
             this.txtTelefono1IngresoCliente.TabIndex = 110;
             this.txtTelefono1IngresoCliente.Validar = true;
             // 
             // txtNacionalidadIngresoCliente
             // 
             this.txtNacionalidadIngresoCliente.BackColor = System.Drawing.Color.Moccasin;
+            this.txtNacionalidadIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNacionalidadIngresoCliente.Location = new System.Drawing.Point(148, 171);
-            this.txtNacionalidadIngresoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNacionalidadIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtNacionalidadIngresoCliente.Name = "txtNacionalidadIngresoCliente";
-            this.txtNacionalidadIngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtNacionalidadIngresoCliente.Size = new System.Drawing.Size(130, 26);
             this.txtNacionalidadIngresoCliente.TabIndex = 109;
             this.txtNacionalidadIngresoCliente.Validar = true;
             // 
@@ -377,9 +390,9 @@
             this.groupBoxDocumento.Controls.Add(this.textBox1);
             this.groupBoxDocumento.Controls.Add(this.lblDocumentoIdentificaciónModificarDatosCliente);
             this.groupBoxDocumento.Location = new System.Drawing.Point(52, 18);
-            this.groupBoxDocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxDocumento.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxDocumento.Name = "groupBoxDocumento";
-            this.groupBoxDocumento.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxDocumento.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxDocumento.Size = new System.Drawing.Size(305, 81);
             this.groupBoxDocumento.TabIndex = 62;
             this.groupBoxDocumento.TabStop = false;
@@ -387,9 +400,9 @@
             // 
             // btnModificarModificarDatosCliente
             // 
-            this.btnModificarModificarDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarModificarDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarModificarDatosCliente.Location = new System.Drawing.Point(202, 443);
-            this.btnModificarModificarDatosCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificarModificarDatosCliente.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificarModificarDatosCliente.Name = "btnModificarModificarDatosCliente";
             this.btnModificarModificarDatosCliente.Size = new System.Drawing.Size(81, 43);
             this.btnModificarModificarDatosCliente.TabIndex = 63;
@@ -398,9 +411,9 @@
             // 
             // btnCancelarModificarDatosCliente
             // 
-            this.btnCancelarModificarDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarModificarDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarModificarDatosCliente.Location = new System.Drawing.Point(335, 443);
-            this.btnCancelarModificarDatosCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarModificarDatosCliente.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarModificarDatosCliente.Name = "btnCancelarModificarDatosCliente";
             this.btnCancelarModificarDatosCliente.Size = new System.Drawing.Size(81, 43);
             this.btnCancelarModificarDatosCliente.TabIndex = 64;
@@ -409,18 +422,20 @@
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(476, 46);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 37);
+            this.button2.Size = new System.Drawing.Size(129, 37);
             this.button2.TabIndex = 66;
             this.button2.Text = "Lista de Clientes";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(370, 46);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 37);
             this.button1.TabIndex = 65;
@@ -429,9 +444,9 @@
             // 
             // btnSalirModificarDatosCliente
             // 
-            this.btnSalirModificarDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirModificarDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalirModificarDatosCliente.Location = new System.Drawing.Point(476, 443);
-            this.btnSalirModificarDatosCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalirModificarDatosCliente.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalirModificarDatosCliente.Name = "btnSalirModificarDatosCliente";
             this.btnSalirModificarDatosCliente.Size = new System.Drawing.Size(80, 43);
             this.btnSalirModificarDatosCliente.TabIndex = 67;
