@@ -49,10 +49,11 @@
             // 
             // btnListaClientesNuevaReservacion
             // 
-            this.btnListaClientesNuevaReservacion.Location = new System.Drawing.Point(350, 18);
-            this.btnListaClientesNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListaClientesNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaClientesNuevaReservacion.Location = new System.Drawing.Point(423, 18);
+            this.btnListaClientesNuevaReservacion.Margin = new System.Windows.Forms.Padding(2);
             this.btnListaClientesNuevaReservacion.Name = "btnListaClientesNuevaReservacion";
-            this.btnListaClientesNuevaReservacion.Size = new System.Drawing.Size(94, 21);
+            this.btnListaClientesNuevaReservacion.Size = new System.Drawing.Size(136, 29);
             this.btnListaClientesNuevaReservacion.TabIndex = 32;
             this.btnListaClientesNuevaReservacion.Text = "Lista de Clientes";
             this.btnListaClientesNuevaReservacion.UseVisualStyleBackColor = true;
@@ -61,95 +62,105 @@
             // lblAvisoNuevaReservacion
             // 
             this.lblAvisoNuevaReservacion.AutoSize = true;
-            this.lblAvisoNuevaReservacion.Location = new System.Drawing.Point(204, 212);
+            this.lblAvisoNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvisoNuevaReservacion.Location = new System.Drawing.Point(202, 236);
             this.lblAvisoNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAvisoNuevaReservacion.Name = "lblAvisoNuevaReservacion";
-            this.lblAvisoNuevaReservacion.Size = new System.Drawing.Size(185, 13);
+            this.lblAvisoNuevaReservacion.Size = new System.Drawing.Size(259, 18);
             this.lblAvisoNuevaReservacion.TabIndex = 31;
             this.lblAvisoNuevaReservacion.Text = "* Niño se considera hasta los 12 años";
             // 
             // tBoxNumeroNiniosNuevaReserva
             // 
             this.tBoxNumeroNiniosNuevaReserva.BackColor = System.Drawing.Color.Moccasin;
+            this.tBoxNumeroNiniosNuevaReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBoxNumeroNiniosNuevaReserva.Location = new System.Drawing.Point(146, 236);
-            this.tBoxNumeroNiniosNuevaReserva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tBoxNumeroNiniosNuevaReserva.Margin = new System.Windows.Forms.Padding(2);
             this.tBoxNumeroNiniosNuevaReserva.Name = "tBoxNumeroNiniosNuevaReserva";
-            this.tBoxNumeroNiniosNuevaReserva.Size = new System.Drawing.Size(33, 20);
+            this.tBoxNumeroNiniosNuevaReserva.Size = new System.Drawing.Size(42, 26);
             this.tBoxNumeroNiniosNuevaReserva.TabIndex = 29;
             // 
             // lblNumeroNiniosNuevaReservacion
             // 
             this.lblNumeroNiniosNuevaReservacion.AutoSize = true;
+            this.lblNumeroNiniosNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumeroNiniosNuevaReservacion.Location = new System.Drawing.Point(22, 236);
             this.lblNumeroNiniosNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNumeroNiniosNuevaReservacion.Name = "lblNumeroNiniosNuevaReservacion";
-            this.lblNumeroNiniosNuevaReservacion.Size = new System.Drawing.Size(87, 13);
+            this.lblNumeroNiniosNuevaReservacion.Size = new System.Drawing.Size(110, 16);
             this.lblNumeroNiniosNuevaReservacion.TabIndex = 28;
             this.lblNumeroNiniosNuevaReservacion.Text = "Número de niños";
             // 
             // lblNumeroAdultosNuevaReservacion
             // 
             this.lblNumeroAdultosNuevaReservacion.AutoSize = true;
+            this.lblNumeroAdultosNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumeroAdultosNuevaReservacion.Location = new System.Drawing.Point(22, 188);
             this.lblNumeroAdultosNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNumeroAdultosNuevaReservacion.Name = "lblNumeroAdultosNuevaReservacion";
-            this.lblNumeroAdultosNuevaReservacion.Size = new System.Drawing.Size(96, 13);
+            this.lblNumeroAdultosNuevaReservacion.Size = new System.Drawing.Size(122, 16);
             this.lblNumeroAdultosNuevaReservacion.TabIndex = 27;
             this.lblNumeroAdultosNuevaReservacion.Text = "Número de adultos";
             // 
             // tBoxNumeroAdultosNuevaReserva
             // 
             this.tBoxNumeroAdultosNuevaReserva.BackColor = System.Drawing.Color.Moccasin;
+            this.tBoxNumeroAdultosNuevaReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBoxNumeroAdultosNuevaReserva.Location = new System.Drawing.Point(146, 188);
-            this.tBoxNumeroAdultosNuevaReserva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tBoxNumeroAdultosNuevaReserva.Margin = new System.Windows.Forms.Padding(2);
             this.tBoxNumeroAdultosNuevaReserva.Name = "tBoxNumeroAdultosNuevaReserva";
-            this.tBoxNumeroAdultosNuevaReserva.Size = new System.Drawing.Size(33, 20);
+            this.tBoxNumeroAdultosNuevaReserva.Size = new System.Drawing.Size(42, 26);
             this.tBoxNumeroAdultosNuevaReserva.TabIndex = 26;
             // 
             // lblFechaSalidaNuevaReservacion
             // 
             this.lblFechaSalidaNuevaReservacion.AutoSize = true;
+            this.lblFechaSalidaNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaSalidaNuevaReservacion.Location = new System.Drawing.Point(22, 143);
             this.lblFechaSalidaNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaSalidaNuevaReservacion.Name = "lblFechaSalidaNuevaReservacion";
-            this.lblFechaSalidaNuevaReservacion.Size = new System.Drawing.Size(82, 13);
+            this.lblFechaSalidaNuevaReservacion.Size = new System.Drawing.Size(105, 16);
             this.lblFechaSalidaNuevaReservacion.TabIndex = 25;
             this.lblFechaSalidaNuevaReservacion.Text = "Fecha de salida";
             // 
             // fechaSalidaNuevaReservacion
             // 
             this.fechaSalidaNuevaReservacion.CalendarMonthBackground = System.Drawing.Color.Moccasin;
+            this.fechaSalidaNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fechaSalidaNuevaReservacion.Location = new System.Drawing.Point(146, 143);
-            this.fechaSalidaNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaSalidaNuevaReservacion.Margin = new System.Windows.Forms.Padding(2);
             this.fechaSalidaNuevaReservacion.Name = "fechaSalidaNuevaReservacion";
-            this.fechaSalidaNuevaReservacion.Size = new System.Drawing.Size(187, 20);
+            this.fechaSalidaNuevaReservacion.Size = new System.Drawing.Size(253, 26);
             this.fechaSalidaNuevaReservacion.TabIndex = 24;
             // 
             // lblFechaArrivoNuevaReservacion
             // 
             this.lblFechaArrivoNuevaReservacion.AutoSize = true;
+            this.lblFechaArrivoNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaArrivoNuevaReservacion.Location = new System.Drawing.Point(22, 102);
             this.lblFechaArrivoNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaArrivoNuevaReservacion.Name = "lblFechaArrivoNuevaReservacion";
-            this.lblFechaArrivoNuevaReservacion.Size = new System.Drawing.Size(81, 13);
+            this.lblFechaArrivoNuevaReservacion.Size = new System.Drawing.Size(102, 16);
             this.lblFechaArrivoNuevaReservacion.TabIndex = 23;
             this.lblFechaArrivoNuevaReservacion.Text = "Fecha de arrivo";
             // 
             // fechaArrivoNuevaReservacion
             // 
             this.fechaArrivoNuevaReservacion.CalendarMonthBackground = System.Drawing.Color.Moccasin;
+            this.fechaArrivoNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fechaArrivoNuevaReservacion.Location = new System.Drawing.Point(146, 102);
-            this.fechaArrivoNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaArrivoNuevaReservacion.Margin = new System.Windows.Forms.Padding(2);
             this.fechaArrivoNuevaReservacion.Name = "fechaArrivoNuevaReservacion";
-            this.fechaArrivoNuevaReservacion.Size = new System.Drawing.Size(187, 20);
+            this.fechaArrivoNuevaReservacion.Size = new System.Drawing.Size(253, 26);
             this.fechaArrivoNuevaReservacion.TabIndex = 22;
             // 
             // btnConsultarNuevaReservacion
             // 
-            this.btnConsultarNuevaReservacion.Location = new System.Drawing.Point(263, 18);
-            this.btnConsultarNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultarNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarNuevaReservacion.Location = new System.Drawing.Point(311, 18);
+            this.btnConsultarNuevaReservacion.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultarNuevaReservacion.Name = "btnConsultarNuevaReservacion";
-            this.btnConsultarNuevaReservacion.Size = new System.Drawing.Size(69, 21);
+            this.btnConsultarNuevaReservacion.Size = new System.Drawing.Size(88, 29);
             this.btnConsultarNuevaReservacion.TabIndex = 21;
             this.btnConsultarNuevaReservacion.Text = "Consultar";
             this.btnConsultarNuevaReservacion.UseVisualStyleBackColor = true;
@@ -158,51 +169,62 @@
             // lblNumeroIdentificacionNuevaReservacion
             // 
             this.lblNumeroIdentificacionNuevaReservacion.AutoSize = true;
+            this.lblNumeroIdentificacionNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumeroIdentificacionNuevaReservacion.Location = new System.Drawing.Point(22, 21);
             this.lblNumeroIdentificacionNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNumeroIdentificacionNuevaReservacion.Name = "lblNumeroIdentificacionNuevaReservacion";
-            this.lblNumeroIdentificacionNuevaReservacion.Size = new System.Drawing.Size(122, 13);
+            this.lblNumeroIdentificacionNuevaReservacion.Size = new System.Drawing.Size(152, 16);
             this.lblNumeroIdentificacionNuevaReservacion.TabIndex = 20;
             this.lblNumeroIdentificacionNuevaReservacion.Text = "Identificación del Cliente";
             // 
             // btnIngresarNuevaReservacion
             // 
-            this.btnIngresarNuevaReservacion.Location = new System.Drawing.Point(256, 277);
-            this.btnIngresarNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIngresarNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresarNuevaReservacion.Image = global::JUDYSOFT.Properties.Resources._1484546293_Save;
+            this.btnIngresarNuevaReservacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIngresarNuevaReservacion.Location = new System.Drawing.Point(258, 277);
+            this.btnIngresarNuevaReservacion.Margin = new System.Windows.Forms.Padding(2);
             this.btnIngresarNuevaReservacion.Name = "btnIngresarNuevaReservacion";
-            this.btnIngresarNuevaReservacion.Size = new System.Drawing.Size(76, 24);
+            this.btnIngresarNuevaReservacion.Size = new System.Drawing.Size(141, 45);
             this.btnIngresarNuevaReservacion.TabIndex = 18;
             this.btnIngresarNuevaReservacion.Text = "Ingresar Reservación";
+            this.btnIngresarNuevaReservacion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIngresarNuevaReservacion.UseVisualStyleBackColor = true;
             this.btnIngresarNuevaReservacion.Click += new System.EventHandler(this.botonReservacion_Click);
             // 
             // btnCancelarNuevaReservacion
             // 
-            this.btnCancelarNuevaReservacion.Location = new System.Drawing.Point(369, 277);
-            this.btnCancelarNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarNuevaReservacion.Image = global::JUDYSOFT.Properties.Resources._1484546297_Cancel;
+            this.btnCancelarNuevaReservacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelarNuevaReservacion.Location = new System.Drawing.Point(445, 277);
+            this.btnCancelarNuevaReservacion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarNuevaReservacion.Name = "btnCancelarNuevaReservacion";
-            this.btnCancelarNuevaReservacion.Size = new System.Drawing.Size(76, 24);
+            this.btnCancelarNuevaReservacion.Size = new System.Drawing.Size(114, 45);
             this.btnCancelarNuevaReservacion.TabIndex = 17;
             this.btnCancelarNuevaReservacion.Text = "Cancelar";
+            this.btnCancelarNuevaReservacion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelarNuevaReservacion.UseVisualStyleBackColor = true;
             this.btnCancelarNuevaReservacion.Click += new System.EventHandler(this.botonCancelarReservacion_Click);
             // 
             // tBoxNumeroIdClienteNuevareservacion
             // 
             this.tBoxNumeroIdClienteNuevareservacion.BackColor = System.Drawing.Color.Moccasin;
-            this.tBoxNumeroIdClienteNuevareservacion.Location = new System.Drawing.Point(146, 20);
-            this.tBoxNumeroIdClienteNuevareservacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tBoxNumeroIdClienteNuevareservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBoxNumeroIdClienteNuevareservacion.Location = new System.Drawing.Point(191, 21);
+            this.tBoxNumeroIdClienteNuevareservacion.Margin = new System.Windows.Forms.Padding(2);
             this.tBoxNumeroIdClienteNuevareservacion.Name = "tBoxNumeroIdClienteNuevareservacion";
-            this.tBoxNumeroIdClienteNuevareservacion.Size = new System.Drawing.Size(97, 20);
+            this.tBoxNumeroIdClienteNuevareservacion.Size = new System.Drawing.Size(97, 26);
             this.tBoxNumeroIdClienteNuevareservacion.TabIndex = 33;
             // 
             // lblNombreClienteNuevaReservacion
             // 
             this.lblNombreClienteNuevaReservacion.AutoSize = true;
+            this.lblNombreClienteNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreClienteNuevaReservacion.Location = new System.Drawing.Point(22, 63);
             this.lblNombreClienteNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreClienteNuevaReservacion.Name = "lblNombreClienteNuevaReservacion";
-            this.lblNombreClienteNuevaReservacion.Size = new System.Drawing.Size(94, 13);
+            this.lblNombreClienteNuevaReservacion.Size = new System.Drawing.Size(120, 16);
             this.lblNombreClienteNuevaReservacion.TabIndex = 34;
             this.lblNombreClienteNuevaReservacion.Text = "Nombre de Cliente";
             // 
@@ -210,10 +232,11 @@
             // 
             this.tBoxNombreClienteNuevaReservacion.BackColor = System.Drawing.Color.Moccasin;
             this.tBoxNombreClienteNuevaReservacion.Enabled = false;
+            this.tBoxNombreClienteNuevaReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBoxNombreClienteNuevaReservacion.Location = new System.Drawing.Point(146, 61);
-            this.tBoxNombreClienteNuevaReservacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tBoxNombreClienteNuevaReservacion.Margin = new System.Windows.Forms.Padding(2);
             this.tBoxNombreClienteNuevaReservacion.Name = "tBoxNombreClienteNuevaReservacion";
-            this.tBoxNombreClienteNuevaReservacion.Size = new System.Drawing.Size(187, 20);
+            this.tBoxNombreClienteNuevaReservacion.Size = new System.Drawing.Size(253, 26);
             this.tBoxNombreClienteNuevaReservacion.TabIndex = 35;
             // 
             // FormNuevaReservacion
@@ -221,7 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(473, 310);
+            this.ClientSize = new System.Drawing.Size(579, 339);
             this.Controls.Add(this.tBoxNombreClienteNuevaReservacion);
             this.Controls.Add(this.lblNombreClienteNuevaReservacion);
             this.Controls.Add(this.tBoxNumeroIdClienteNuevareservacion);
