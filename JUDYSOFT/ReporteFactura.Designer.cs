@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+           /* this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
@@ -57,12 +57,12 @@
             this.Name = "ReporteFactura";
             this.Text = "ReporteFactura";
             this.Load += new System.EventHandler(this.ReporteFactura_Load);
-            this.ResumeLayout(false);
+            this.ResumeLayout(false);*/
 
         }
 
         #endregion
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
-        public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        /*private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
+        public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;*/
     }
 }

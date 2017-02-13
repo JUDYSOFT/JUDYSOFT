@@ -16,10 +16,10 @@ namespace JUDYSOFT
         {
             InitializeComponent();
             btnocupado.TextImageRelation = TextImageRelation.TextAboveImage;
-            btndisponible.TextImageRelation = TextImageRelation.TextAboveImage;
-            button2.TextImageRelation = TextImageRelation.TextAboveImage;
+            //btndisponible.TextImageRelation = TextImageRelation.TextAboveImage;
+            //button2.TextImageRelation = TextImageRelation.TextAboveImage;
             button3.TextImageRelation = TextImageRelation.TextAboveImage;
-            button4.TextImageRelation = TextImageRelation.TextAboveImage;
+            //button4.TextImageRelation = TextImageRelation.TextAboveImage;
             try
             {
                 btnocupado.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");   
@@ -29,14 +29,14 @@ namespace JUDYSOFT
                 MessageBox.Show("Exception Message: " + ex.Message, "JUDYSOFT Mensaje Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
             }
 
-            try
+           /* try
             {
                 btndisponible.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Exception Message: " + ex.Message, "JUDYSOFT Mensaje Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-            }
+            }*/
 
             try
             {
@@ -84,6 +84,11 @@ namespace JUDYSOFT
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
         {
 
         }

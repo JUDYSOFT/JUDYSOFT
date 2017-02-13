@@ -183,7 +183,7 @@
             this.tBoxNumeroIdClienteNuevareservacion.Name = "tBoxNumeroIdClienteNuevareservacion";
             this.tBoxNumeroIdClienteNuevareservacion.Size = new System.Drawing.Size(128, 22);
             this.tBoxNumeroIdClienteNuevareservacion.TabIndex = 33;
-            this.tBoxNumeroIdClienteNuevareservacion.TextChanged += new System.EventHandler(this.tBoxNumeroIdClienteNuevareservacion_TextChanged);
+            //this.tBoxNumeroIdClienteNuevareservacion.TextChanged += new System.EventHandler(this.tBoxNumeroIdClienteNuevareservacion_TextChanged);
             // 
             // lblNombreClienteNuevaReservacion
             // 

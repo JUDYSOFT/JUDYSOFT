@@ -1,6 +1,6 @@
 ﻿namespace JUDYSOFT
 {
-    partial class IngresarCliente
+    partial class FormIngresarNuevoCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             this.radioF = new System.Windows.Forms.RadioButton();
             this.radioM = new System.Windows.Forms.RadioButton();
             this.panelInformación = new System.Windows.Forms.Panel();
+            this.comboBoxEstadoCivil = new System.Windows.Forms.ComboBox();
             this.fechaNacIngresoCliente = new System.Windows.Forms.DateTimePicker();
             this.lblFecha = new System.Windows.Forms.Label();
             this.txtDireccionIngresoCliente = new Libreria.ErrorTxtBox();
@@ -50,7 +51,6 @@
             this.txtTelefono2IngresoCliente = new Libreria.ErrorTxtBox();
             this.txtApellido2IngresoCliente = new Libreria.ErrorTxtBox();
             this.txtNombre2IngresoCliente = new Libreria.ErrorTxtBox();
-            this.txtEstadoCivilIngresoCliente = new Libreria.ErrorTxtBox();
             this.txtNombre1IngresoCliente = new Libreria.ErrorTxtBox();
             this.txtApellido1IngresoCliente = new Libreria.ErrorTxtBox();
             this.txtTelefono1IngresoCliente = new Libreria.ErrorTxtBox();
@@ -65,6 +65,7 @@
             this.lblApellido2 = new System.Windows.Forms.Label();
             this.lbltelefono2 = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
+            this.btnSalirCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.groupBoxDocumento.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -90,7 +91,7 @@
             this.btnCancelarIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarIngresoCliente.ForeColor = System.Drawing.Color.Black;
             this.btnCancelarIngresoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelarIngresoCliente.Location = new System.Drawing.Point(422, 561);
+            this.btnCancelarIngresoCliente.Location = new System.Drawing.Point(372, 561);
             this.btnCancelarIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelarIngresoCliente.Name = "btnCancelarIngresoCliente";
             this.btnCancelarIngresoCliente.Size = new System.Drawing.Size(159, 49);
@@ -106,7 +107,7 @@
             this.btnAceptarIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptarIngresoCliente.ForeColor = System.Drawing.Color.Black;
             this.btnAceptarIngresoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptarIngresoCliente.Location = new System.Drawing.Point(212, 561);
+            this.btnAceptarIngresoCliente.Location = new System.Drawing.Point(188, 561);
             this.btnAceptarIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAceptarIngresoCliente.Name = "btnAceptarIngresoCliente";
             this.btnAceptarIngresoCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -150,10 +151,10 @@
             this.radioPasaporteIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioPasaporteIngresoCliente.Location = new System.Drawing.Point(50, 63);
             this.radioPasaporteIngresoCliente.Name = "radioPasaporteIngresoCliente";
-            this.radioPasaporteIngresoCliente.Size = new System.Drawing.Size(106, 24);
+            this.radioPasaporteIngresoCliente.Size = new System.Drawing.Size(131, 24);
             this.radioPasaporteIngresoCliente.TabIndex = 20;
             this.radioPasaporteIngresoCliente.TabStop = true;
-            this.radioPasaporteIngresoCliente.Text = "Pasaporte";
+            this.radioPasaporteIngresoCliente.Text = "PASAPORTE";
             this.radioPasaporteIngresoCliente.UseVisualStyleBackColor = true;
             this.radioPasaporteIngresoCliente.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
@@ -163,9 +164,9 @@
             this.radioCedulaIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioCedulaIngresoCliente.Location = new System.Drawing.Point(50, 33);
             this.radioCedulaIngresoCliente.Name = "radioCedulaIngresoCliente";
-            this.radioCedulaIngresoCliente.Size = new System.Drawing.Size(82, 24);
+            this.radioCedulaIngresoCliente.Size = new System.Drawing.Size(99, 24);
             this.radioCedulaIngresoCliente.TabIndex = 19;
-            this.radioCedulaIngresoCliente.Text = "Cédula";
+            this.radioCedulaIngresoCliente.Text = "CÉDULA";
             this.radioCedulaIngresoCliente.UseVisualStyleBackColor = true;
             this.radioCedulaIngresoCliente.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
@@ -187,10 +188,10 @@
             this.radioF.Location = new System.Drawing.Point(158, 46);
             this.radioF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioF.Name = "radioF";
-            this.radioF.Size = new System.Drawing.Size(103, 24);
+            this.radioF.Size = new System.Drawing.Size(117, 24);
             this.radioF.TabIndex = 4;
             this.radioF.TabStop = true;
-            this.radioF.Text = "Femenino";
+            this.radioF.Text = "FEMENINO";
             this.radioF.UseVisualStyleBackColor = true;
             // 
             // radioM
@@ -201,15 +202,16 @@
             this.radioM.Location = new System.Drawing.Point(17, 46);
             this.radioM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioM.Name = "radioM";
-            this.radioM.Size = new System.Drawing.Size(106, 24);
+            this.radioM.Size = new System.Drawing.Size(129, 24);
             this.radioM.TabIndex = 3;
             this.radioM.TabStop = true;
-            this.radioM.Text = "Masculino";
+            this.radioM.Text = "MASCULINO";
             this.radioM.UseVisualStyleBackColor = true;
             // 
             // panelInformación
             // 
             this.panelInformación.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelInformación.Controls.Add(this.comboBoxEstadoCivil);
             this.panelInformación.Controls.Add(this.fechaNacIngresoCliente);
             this.panelInformación.Controls.Add(this.lblFecha);
             this.panelInformación.Controls.Add(this.txtDireccionIngresoCliente);
@@ -219,7 +221,6 @@
             this.panelInformación.Controls.Add(this.txtTelefono2IngresoCliente);
             this.panelInformación.Controls.Add(this.txtApellido2IngresoCliente);
             this.panelInformación.Controls.Add(this.txtNombre2IngresoCliente);
-            this.panelInformación.Controls.Add(this.txtEstadoCivilIngresoCliente);
             this.panelInformación.Controls.Add(this.txtNombre1IngresoCliente);
             this.panelInformación.Controls.Add(this.txtApellido1IngresoCliente);
             this.panelInformación.Controls.Add(this.txtTelefono1IngresoCliente);
@@ -238,6 +239,20 @@
             this.panelInformación.Name = "panelInformación";
             this.panelInformación.Size = new System.Drawing.Size(785, 372);
             this.panelInformación.TabIndex = 60;
+            // 
+            // comboBoxEstadoCivil
+            // 
+            this.comboBoxEstadoCivil.FormattingEnabled = true;
+            this.comboBoxEstadoCivil.Items.AddRange(new object[] {
+            "CASADO/(A)",
+            "SOLTERO/(A)",
+            "VIUDO/(A)",
+            "DIVORCIADO/(A)",
+            "COMPROMETIDO/(A)"});
+            this.comboBoxEstadoCivil.Location = new System.Drawing.Point(197, 268);
+            this.comboBoxEstadoCivil.Name = "comboBoxEstadoCivil";
+            this.comboBoxEstadoCivil.Size = new System.Drawing.Size(172, 24);
+            this.comboBoxEstadoCivil.TabIndex = 123;
             // 
             // fechaNacIngresoCliente
             // 
@@ -322,15 +337,6 @@
             this.txtNombre2IngresoCliente.TabIndex = 114;
             this.txtNombre2IngresoCliente.Validar = false;
             this.txtNombre2IngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre2_KeyPress);
-            // 
-            // txtEstadoCivilIngresoCliente
-            // 
-            this.txtEstadoCivilIngresoCliente.Location = new System.Drawing.Point(197, 268);
-            this.txtEstadoCivilIngresoCliente.Name = "txtEstadoCivilIngresoCliente";
-            this.txtEstadoCivilIngresoCliente.Size = new System.Drawing.Size(172, 22);
-            this.txtEstadoCivilIngresoCliente.TabIndex = 113;
-            this.txtEstadoCivilIngresoCliente.Validar = false;
-            this.txtEstadoCivilIngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstadoCivil_KeyPress);
             // 
             // txtNombre1IngresoCliente
             // 
@@ -471,12 +477,25 @@
             this.lblTelefono.TabIndex = 103;
             this.lblTelefono.Text = "Teléfono 1 (*)";
             // 
-            // IngresarCliente
+            // btnSalirCliente
+            // 
+            this.btnSalirCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirCliente.Location = new System.Drawing.Point(562, 561);
+            this.btnSalirCliente.Name = "btnSalirCliente";
+            this.btnSalirCliente.Size = new System.Drawing.Size(159, 49);
+            this.btnSalirCliente.TabIndex = 61;
+            this.btnSalirCliente.Text = "Salir";
+            this.btnSalirCliente.UseVisualStyleBackColor = false;
+            this.btnSalirCliente.Click += new System.EventHandler(this.btnSalirCliente_Click);
+            // 
+            // FormIngresarNuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(876, 642);
+            this.Controls.Add(this.btnSalirCliente);
             this.Controls.Add(this.panelInformación);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxDocumento);
@@ -484,7 +503,7 @@
             this.Controls.Add(this.btnCancelarIngresoCliente);
             this.Controls.Add(this.label4);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "IngresarCliente";
+            this.Name = "FormIngresarNuevoCliente";
             this.Text = "IngresarCliente";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormIngresarNuevoCliente_FormClosing);
             this.Load += new System.EventHandler(this.FormIngresarNuevoCliente_Load);
@@ -518,7 +537,6 @@
         private Libreria.ErrorTxtBox txtTelefono2IngresoCliente;
         private Libreria.ErrorTxtBox txtApellido2IngresoCliente;
         private Libreria.ErrorTxtBox txtNombre2IngresoCliente;
-        private Libreria.ErrorTxtBox txtEstadoCivilIngresoCliente;
         private Libreria.ErrorTxtBox txtNombre1IngresoCliente;
         private Libreria.ErrorTxtBox txtApellido1IngresoCliente;
         private Libreria.ErrorTxtBox txtTelefono1IngresoCliente;
@@ -537,5 +555,7 @@
         private Libreria.ErrorTxtBox txtDireccionIngresoCliente;
         private System.Windows.Forms.DateTimePicker fechaNacIngresoCliente;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.ComboBox comboBoxEstadoCivil;
+        private System.Windows.Forms.Button btnSalirCliente;
     }
 }

@@ -118,7 +118,7 @@ namespace JUDYSOFT
 
             btnh27.Cursor = Cursors.Hand;
             lblh27.BackColor = Color.Silver;
-
+             
         }
 
         /*private void groupBox1_MouseHover(object sender, System.EventArgs e)
@@ -130,7 +130,7 @@ namespace JUDYSOFT
         private void frmAdministracionHabitaciones_Load(object sender, EventArgs e)
         {
             DateTime thisDay = DateTime.Today;
-            lblfecha.Text = (thisDay.ToString("D"));
+            label3.Text = (thisDay.ToString("D"));
             objHab15.Estado = "Ocupado";
             objHab16.Estado = "Disponible";
             objHab17.Estado = "Limpieza";
@@ -621,15 +621,15 @@ namespace JUDYSOFT
                 MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem", "consultarToolStripMenuItem");
             }
         }
-
+   
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
-            objHab15.Estado = comboBox1.Text.Trim();
+            
+        objHab15.Estado=comboBox1.Text.Trim();
             switch (objHab15.Estado)
             {
                 case "Disponible":
-
+             
 
 
 
@@ -637,12 +637,12 @@ namespace JUDYSOFT
                     {
                         l.Text = "bla bla";
                     }*/
-
-
+                    
+                  
                     lblh15.ForeColor = Color.Blue;
                     break;
                 case "Ocupado":
-
+                    
                     break;
                 default:
                     break;
@@ -653,46 +653,41 @@ namespace JUDYSOFT
         {
 
         }
-
-        private void btnh21_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 
-    /*      private void btnh20_Click_1(object sender, EventArgs e)
-          {
+        /*      private void btnh20_Click_1(object sender, EventArgs e)
+              {
 
-          }
-          */
+              }
+              */
 
 
-    /*private void button2_MouseHover(object sender, System.EventArgs e)
-    {
-        // Update the mouse event label to indicate the MouseHover event occurred.
-        lblfecha.Text = "BTN 2";
-        btnh16.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
-        // The text is displayed vertically above the image of a control.
-        btnh16.TextImageRelation = TextImageRelation.TextAboveImage;
-
-    }
-
-    private void button2_MouseLeave(object sender, System.EventArgs e)
-    {
-        // Update the mouse event label to indicate the MouseHover event occurred.
-        lblfecha.Text = "BTN 2";
-        try
+        /*private void button2_MouseHover(object sender, System.EventArgs e)
         {
-            btnh16.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Exception Message: " + ex.Message, "JUDYSOFT Mensaje Error",MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+            // Update the mouse event label to indicate the MouseHover event occurred.
+            lblfecha.Text = "BTN 2";
+            btnh16.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+            // The text is displayed vertically above the image of a control.
+            btnh16.TextImageRelation = TextImageRelation.TextAboveImage;
+  
         }
 
-        // The text is displayed vertically above the image of a control.
-        btnh16.TextImageRelation = TextImageRelation.TextAboveImage;
+        private void button2_MouseLeave(object sender, System.EventArgs e)
+        {
+            // Update the mouse event label to indicate the MouseHover event occurred.
+            lblfecha.Text = "BTN 2";
+            try
+            {
+                btnh16.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception Message: " + ex.Message, "JUDYSOFT Mensaje Error",MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+            }
+           
+            // The text is displayed vertically above the image of a control.
+            btnh16.TextImageRelation = TextImageRelation.TextAboveImage;
 
-    }*/
+        }*/
 }
 

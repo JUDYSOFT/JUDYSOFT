@@ -45,5 +45,15 @@ namespace JUDYSOFT
             DS = Utilidades.Ejecutar(cmd);
             return DS;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Eliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
