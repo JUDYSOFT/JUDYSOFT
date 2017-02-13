@@ -30,13 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIngresarNuevoEmpleado));
             this.panelNuevoEmpleado = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBoxCargo = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.dateTimePickerFechaDeEntrada = new System.Windows.Forms.DateTimePicker();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBoxSalario = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -68,20 +61,27 @@
             this.textBoxNombres = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBoxCargo = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dateTimePickerFechaDeEntrada = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBoxSalario = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panelNuevoEmpleado.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelNuevoEmpleado
             // 
             this.panelNuevoEmpleado.AutoSize = true;
             this.panelNuevoEmpleado.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelNuevoEmpleado.Controls.Add(this.groupBox3);
             this.panelNuevoEmpleado.Controls.Add(this.groupBox2);
             this.panelNuevoEmpleado.Controls.Add(this.button3);
             this.panelNuevoEmpleado.Controls.Add(this.groupBox1);
-            this.panelNuevoEmpleado.Controls.Add(this.panel3);
             this.panelNuevoEmpleado.Controls.Add(this.label16);
             this.panelNuevoEmpleado.Controls.Add(this.button2);
             this.panelNuevoEmpleado.Controls.Add(this.button1);
@@ -90,84 +90,6 @@
             this.panelNuevoEmpleado.Size = new System.Drawing.Size(768, 501);
             this.panelNuevoEmpleado.TabIndex = 2;
             this.panelNuevoEmpleado.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNuevoEmpleado_Paint);
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.comboBoxCargo);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.dateTimePickerFechaDeEntrada);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.textBoxSalario);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Location = new System.Drawing.Point(10, 344);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(731, 84);
-            this.panel3.TabIndex = 37;
-            // 
-            // comboBoxCargo
-            // 
-            this.comboBoxCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxCargo.FormattingEnabled = true;
-            this.comboBoxCargo.Items.AddRange(new object[] {
-            "Administrador",
-            "Recepcionista",
-            "Limpieza"});
-            this.comboBoxCargo.Location = new System.Drawing.Point(460, 40);
-            this.comboBoxCargo.Name = "comboBoxCargo";
-            this.comboBoxCargo.Size = new System.Drawing.Size(256, 26);
-            this.comboBoxCargo.TabIndex = 39;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(457, 23);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 16);
-            this.label14.TabIndex = 38;
-            this.label14.Text = "Cargo (*)";
-            // 
-            // dateTimePickerFechaDeEntrada
-            // 
-            this.dateTimePickerFechaDeEntrada.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerFechaDeEntrada.Enabled = false;
-            this.dateTimePickerFechaDeEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerFechaDeEntrada.Location = new System.Drawing.Point(13, 42);
-            this.dateTimePickerFechaDeEntrada.Name = "dateTimePickerFechaDeEntrada";
-            this.dateTimePickerFechaDeEntrada.Size = new System.Drawing.Size(200, 24);
-            this.dateTimePickerFechaDeEntrada.TabIndex = 37;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(10, 23);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(129, 16);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "Fecha de registro (*)";
-            // 
-            // textBoxSalario
-            // 
-            this.textBoxSalario.BackColor = System.Drawing.Color.Moccasin;
-            this.textBoxSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSalario.Location = new System.Drawing.Point(247, 42);
-            this.textBoxSalario.Name = "textBoxSalario";
-            this.textBoxSalario.Size = new System.Drawing.Size(177, 24);
-            this.textBoxSalario.TabIndex = 35;
-            this.textBoxSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSalario_TextChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(245, 23);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 16);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "Salario (*)";
             // 
             // label16
             // 
@@ -535,6 +457,84 @@
             this.label3.TabIndex = 45;
             this.label3.Text = "Nombres (*)";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.comboBoxCargo);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.dateTimePickerFechaDeEntrada);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.textBoxSalario);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Location = new System.Drawing.Point(10, 345);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(731, 83);
+            this.groupBox3.TabIndex = 41;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Registro";
+            // 
+            // comboBoxCargo
+            // 
+            this.comboBoxCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCargo.FormattingEnabled = true;
+            this.comboBoxCargo.Items.AddRange(new object[] {
+            "Administrador",
+            "Recepcionista",
+            "Limpieza"});
+            this.comboBoxCargo.Location = new System.Drawing.Point(462, 37);
+            this.comboBoxCargo.Name = "comboBoxCargo";
+            this.comboBoxCargo.Size = new System.Drawing.Size(256, 26);
+            this.comboBoxCargo.TabIndex = 45;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(459, 20);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 16);
+            this.label14.TabIndex = 44;
+            this.label14.Text = "Cargo (*)";
+            // 
+            // dateTimePickerFechaDeEntrada
+            // 
+            this.dateTimePickerFechaDeEntrada.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerFechaDeEntrada.Enabled = false;
+            this.dateTimePickerFechaDeEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerFechaDeEntrada.Location = new System.Drawing.Point(15, 39);
+            this.dateTimePickerFechaDeEntrada.Name = "dateTimePickerFechaDeEntrada";
+            this.dateTimePickerFechaDeEntrada.Size = new System.Drawing.Size(200, 24);
+            this.dateTimePickerFechaDeEntrada.TabIndex = 43;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(12, 20);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(129, 16);
+            this.label13.TabIndex = 42;
+            this.label13.Text = "Fecha de registro (*)";
+            // 
+            // textBoxSalario
+            // 
+            this.textBoxSalario.BackColor = System.Drawing.Color.Moccasin;
+            this.textBoxSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSalario.Location = new System.Drawing.Point(249, 39);
+            this.textBoxSalario.Name = "textBoxSalario";
+            this.textBoxSalario.Size = new System.Drawing.Size(177, 24);
+            this.textBoxSalario.TabIndex = 41;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(247, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 16);
+            this.label12.TabIndex = 40;
+            this.label12.Text = "Salario (*)";
+            // 
             // FormIngresarNuevoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,12 +552,12 @@
             this.Load += new System.EventHandler(this.FormIngresarNuevoEmpleado_Load);
             this.panelNuevoEmpleado.ResumeLayout(false);
             this.panelNuevoEmpleado.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -569,13 +569,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox comboBoxCargo;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dateTimePickerFechaDeEntrada;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBoxSalario;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxIdentificacion;
@@ -604,5 +597,12 @@
         private System.Windows.Forms.TextBox textBoxNombres;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox comboBoxCargo;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaDeEntrada;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBoxSalario;
+        private System.Windows.Forms.Label label12;
     }
 }
