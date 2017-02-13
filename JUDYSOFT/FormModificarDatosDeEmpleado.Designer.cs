@@ -71,25 +71,27 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(783, 485);
+            this.panel1.Size = new System.Drawing.Size(763, 485);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(35, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 13);
+            this.label1.Size = new System.Drawing.Size(260, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ingrese cedula o pasaporte del empleado";
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.Moccasin;
-            this.textBox1.Location = new System.Drawing.Point(38, 36);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(35, 37);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(273, 20);
+            this.textBox1.Size = new System.Drawing.Size(273, 24);
             this.textBox1.TabIndex = 0;
             // 
             // groupBox2
@@ -106,7 +108,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(26, 67);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(746, 212);
+            this.groupBox2.Size = new System.Drawing.Size(721, 212);
             this.groupBox2.TabIndex = 102;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Personales";
@@ -136,15 +138,16 @@
             this.comboBoxProvincia.BackColor = System.Drawing.Color.Moccasin;
             this.comboBoxProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxProvincia.Enabled = false;
+            this.comboBoxProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxProvincia.FormattingEnabled = true;
             this.comboBoxProvincia.Location = new System.Drawing.Point(9, 98);
             this.comboBoxProvincia.Name = "comboBoxProvincia";
-            this.comboBoxProvincia.Size = new System.Drawing.Size(276, 21);
+            this.comboBoxProvincia.Size = new System.Drawing.Size(276, 26);
             this.comboBoxProvincia.TabIndex = 108;
             // 
             // textBoxCiudad
             // 
-            this.textBoxCiudad.BackColor = System.Drawing.Color.Moccasin;
+            this.textBoxCiudad.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBoxCiudad.Enabled = false;
             this.textBoxCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCiudad.Location = new System.Drawing.Point(354, 99);
@@ -174,20 +177,22 @@
             // 
             // textBoxApellidos
             // 
-            this.textBoxApellidos.BackColor = System.Drawing.Color.Moccasin;
+            this.textBoxApellidos.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBoxApellidos.Enabled = false;
+            this.textBoxApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxApellidos.Location = new System.Drawing.Point(353, 45);
             this.textBoxApellidos.Name = "textBoxApellidos";
-            this.textBoxApellidos.Size = new System.Drawing.Size(292, 20);
+            this.textBoxApellidos.Size = new System.Drawing.Size(292, 24);
             this.textBoxApellidos.TabIndex = 104;
             // 
             // textBoxNombres
             // 
-            this.textBoxNombres.BackColor = System.Drawing.Color.Moccasin;
+            this.textBoxNombres.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBoxNombres.Enabled = false;
+            this.textBoxNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombres.Location = new System.Drawing.Point(9, 45);
             this.textBoxNombres.Name = "textBoxNombres";
-            this.textBoxNombres.Size = new System.Drawing.Size(276, 20);
+            this.textBoxNombres.Size = new System.Drawing.Size(276, 24);
             this.textBoxNombres.TabIndex = 103;
             // 
             // label4
@@ -222,7 +227,7 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Location = new System.Drawing.Point(26, 293);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(746, 112);
+            this.groupBox1.Size = new System.Drawing.Size(721, 112);
             this.groupBox1.TabIndex = 101;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Modificar";
@@ -306,30 +311,39 @@
             // labelObligatorios
             // 
             this.labelObligatorios.AutoSize = true;
+            this.labelObligatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelObligatorios.ForeColor = System.Drawing.Color.Red;
             this.labelObligatorios.Location = new System.Drawing.Point(32, 422);
             this.labelObligatorios.Name = "labelObligatorios";
-            this.labelObligatorios.Size = new System.Drawing.Size(251, 13);
+            this.labelObligatorios.Size = new System.Drawing.Size(323, 16);
             this.labelObligatorios.TabIndex = 100;
             this.labelObligatorios.Text = "Campos con (*) deben ser llenados obligatoriamente";
             this.labelObligatorios.Visible = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(400, 438);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::JUDYSOFT.Properties.Resources._1484546297_Cancel;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(629, 428);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(177, 23);
+            this.button2.Size = new System.Drawing.Size(118, 44);
             this.button2.TabIndex = 99;
             this.button2.Text = "Cancelar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(106, 438);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::JUDYSOFT.Properties.Resources._1484546293_Save;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(490, 428);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 23);
+            this.button1.Size = new System.Drawing.Size(120, 44);
             this.button1.TabIndex = 98;
             this.button1.Text = "Aceptar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             // 
             // FormModificarDatosDeEmpleado
@@ -337,7 +351,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(789, 486);
+            this.ClientSize = new System.Drawing.Size(770, 486);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormModificarDatosDeEmpleado";
