@@ -61,25 +61,23 @@ namespace JUDYSOFT
             this.btnh17 = new System.Windows.Forms.Button();
             this.btnh16 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 57);
+            this.groupBox1.Location = new System.Drawing.Point(30, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(700, 441);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "HABITACIONES";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.groupBox1.MouseHover += new System.EventHandler(this.groupBox1_MouseHover);
             // 
             // groupBox4
             // 
@@ -104,6 +102,7 @@ namespace JUDYSOFT
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Segundo Piso";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            this.groupBox4.MouseHover += new System.EventHandler(this.groupBox4_MouseHover);
             // 
             // lblh27
             // 
@@ -176,6 +175,7 @@ namespace JUDYSOFT
             this.btnh26.TabIndex = 16;
             this.btnh26.Text = "button11";
             this.btnh26.UseVisualStyleBackColor = true;
+            this.btnh26.Click += new System.EventHandler(this.btnh26_Click_1);
             // 
             // btnh25
             // 
@@ -185,6 +185,7 @@ namespace JUDYSOFT
             this.btnh25.TabIndex = 15;
             this.btnh25.Text = "button12";
             this.btnh25.UseVisualStyleBackColor = true;
+            this.btnh25.Click += new System.EventHandler(this.btnh25_Click_1);
             // 
             // btnh27
             // 
@@ -194,6 +195,7 @@ namespace JUDYSOFT
             this.btnh27.TabIndex = 14;
             this.btnh27.Text = "button13";
             this.btnh27.UseVisualStyleBackColor = true;
+            this.btnh27.Click += new System.EventHandler(this.btnh27_Click_1);
             // 
             // btnh24
             // 
@@ -203,6 +205,7 @@ namespace JUDYSOFT
             this.btnh24.TabIndex = 10;
             this.btnh24.Text = "button7";
             this.btnh24.UseVisualStyleBackColor = true;
+            this.btnh24.Click += new System.EventHandler(this.btnh24_Click_1);
             // 
             // btnh23
             // 
@@ -212,6 +215,7 @@ namespace JUDYSOFT
             this.btnh23.TabIndex = 9;
             this.btnh23.Text = "button8";
             this.btnh23.UseVisualStyleBackColor = true;
+            this.btnh23.Click += new System.EventHandler(this.btnh23_Click_1);
             // 
             // btnh21
             // 
@@ -221,6 +225,7 @@ namespace JUDYSOFT
             this.btnh21.TabIndex = 7;
             this.btnh21.Text = "button9";
             this.btnh21.UseVisualStyleBackColor = true;
+            this.btnh21.Click += new System.EventHandler(this.btnh21_Click_1);
             // 
             // btnh22
             // 
@@ -230,6 +235,7 @@ namespace JUDYSOFT
             this.btnh22.TabIndex = 8;
             this.btnh22.Text = "button10";
             this.btnh22.UseVisualStyleBackColor = true;
+            this.btnh22.Click += new System.EventHandler(this.btnh22_Click_1);
             // 
             // groupBox3
             // 
@@ -251,6 +257,8 @@ namespace JUDYSOFT
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Primer Piso";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter_1);
+            this.groupBox3.MouseHover += new System.EventHandler(this.groupBox3_MouseHover);
             // 
             // lblh20
             // 
@@ -315,6 +323,7 @@ namespace JUDYSOFT
             this.btnh20.TabIndex = 11;
             this.btnh20.Text = "button6";
             this.btnh20.UseVisualStyleBackColor = true;
+            this.btnh20.Click += new System.EventHandler(this.btnh20_Click_1);
             // 
             // btnh15
             // 
@@ -334,6 +343,7 @@ namespace JUDYSOFT
             this.btnh19.TabIndex = 6;
             this.btnh19.Text = "button5";
             this.btnh19.UseVisualStyleBackColor = true;
+            this.btnh19.Click += new System.EventHandler(this.btnh19_Click_1);
             // 
             // btnh18
             // 
@@ -343,6 +353,7 @@ namespace JUDYSOFT
             this.btnh18.TabIndex = 5;
             this.btnh18.Text = "button4";
             this.btnh18.UseVisualStyleBackColor = true;
+            this.btnh18.Click += new System.EventHandler(this.btnh18_Click_1);
             // 
             // btnh17
             // 
@@ -352,6 +363,7 @@ namespace JUDYSOFT
             this.btnh17.TabIndex = 4;
             this.btnh17.Text = "button3";
             this.btnh17.UseVisualStyleBackColor = true;
+            this.btnh17.Click += new System.EventHandler(this.btnh17_Click_1);
             // 
             // btnh16
             // 
@@ -366,41 +378,17 @@ namespace JUDYSOFT
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(501, 29);
+            this.label3.Location = new System.Drawing.Point(501, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Hora";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 9);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(180, 42);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Buscar";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Disponible",
-            "Limpieza",
-            "Ocupado"});
-            this.comboBox1.Location = new System.Drawing.Point(59, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(90, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // frmAdministracionHabitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 562);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.HelpButton = true;
@@ -408,12 +396,14 @@ namespace JUDYSOFT
             this.Name = "frmAdministracionHabitaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administracion de Habitaciones";
+            this.Activated += new System.EventHandler(this.frmAdministracionHabitaciones_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAdministracionHabitaciones_FormClosed);
             this.Load += new System.EventHandler(this.frmAdministracionHabitaciones_Load);
+            this.MdiChildActivate += new System.EventHandler(this.frmAdministracionHabitaciones_MdiChildActivate);
+            this.MouseHover += new System.EventHandler(this.frmAdministracionHabitaciones_MouseHover);
             this.groupBox1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,7 +426,6 @@ namespace JUDYSOFT
         private System.Windows.Forms.Button btnh19;
         private System.Windows.Forms.Button btnh18;
         private System.Windows.Forms.Button btnh17;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label lblh20;
@@ -452,7 +441,6 @@ namespace JUDYSOFT
         private System.Windows.Forms.Label lblh23;
         private System.Windows.Forms.Label lblh22;
         private System.Windows.Forms.Label lblh21;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

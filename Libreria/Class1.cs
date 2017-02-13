@@ -24,7 +24,7 @@ namespace Libreria
 
                 //SqlConnection con = new SqlConnection("Data Source=DESKTOP-TPC97N2;Initial Catalog=JUDYSOFT;Integrated Security=True");
             //Alexis
-            SqlConnection con = new SqlConnection("Data Source=JORGE Catalog=JUDYSOFT;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=JORGE\\SQLEXPRESS;Initial Catalog=JUDYSOFT;Integrated Security=True");
 
 
 
