@@ -59,28 +59,29 @@
             this.textBoxNombres = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxIdentificacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxTipoDeIdentificacion = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panelNuevoEmpleado.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelNuevoEmpleado
             // 
             this.panelNuevoEmpleado.AutoSize = true;
             this.panelNuevoEmpleado.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelNuevoEmpleado.Controls.Add(this.button3);
+            this.panelNuevoEmpleado.Controls.Add(this.groupBox1);
             this.panelNuevoEmpleado.Controls.Add(this.panel3);
             this.panelNuevoEmpleado.Controls.Add(this.panel2);
-            this.panelNuevoEmpleado.Controls.Add(this.panel1);
             this.panelNuevoEmpleado.Controls.Add(this.label16);
             this.panelNuevoEmpleado.Controls.Add(this.button2);
             this.panelNuevoEmpleado.Controls.Add(this.button1);
@@ -439,72 +440,6 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Nombres (*)";
             // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.textBoxIdentificacion);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.comboBoxTipoDeIdentificacion);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(9, 11);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(732, 73);
-            this.panel1.TabIndex = 35;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(461, 28);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(255, 26);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Validar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // textBoxIdentificacion
-            // 
-            this.textBoxIdentificacion.BackColor = System.Drawing.Color.Moccasin;
-            this.textBoxIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIdentificacion.Location = new System.Drawing.Point(248, 29);
-            this.textBoxIdentificacion.Name = "textBoxIdentificacion";
-            this.textBoxIdentificacion.Size = new System.Drawing.Size(177, 24);
-            this.textBoxIdentificacion.TabIndex = 7;
-            this.textBoxIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxIdentificacion_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(245, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Identificación (*)";
-            // 
-            // comboBoxTipoDeIdentificacion
-            // 
-            this.comboBoxTipoDeIdentificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTipoDeIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxTipoDeIdentificacion.FormattingEnabled = true;
-            this.comboBoxTipoDeIdentificacion.Items.AddRange(new object[] {
-            "Cédula",
-            "Pasaporte"});
-            this.comboBoxTipoDeIdentificacion.Location = new System.Drawing.Point(14, 28);
-            this.comboBoxTipoDeIdentificacion.Name = "comboBoxTipoDeIdentificacion";
-            this.comboBoxTipoDeIdentificacion.Size = new System.Drawing.Size(200, 26);
-            this.comboBoxTipoDeIdentificacion.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Tipo de Identificación";
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -543,6 +478,71 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBoxIdentificacion);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.comboBoxTipoDeIdentificacion);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(10, 11);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(448, 73);
+            this.groupBox1.TabIndex = 38;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Identifiación";
+            // 
+            // textBoxIdentificacion
+            // 
+            this.textBoxIdentificacion.BackColor = System.Drawing.Color.Moccasin;
+            this.textBoxIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxIdentificacion.Location = new System.Drawing.Point(256, 32);
+            this.textBoxIdentificacion.Name = "textBoxIdentificacion";
+            this.textBoxIdentificacion.Size = new System.Drawing.Size(177, 24);
+            this.textBoxIdentificacion.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(253, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 16);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Identificación (*)";
+            // 
+            // comboBoxTipoDeIdentificacion
+            // 
+            this.comboBoxTipoDeIdentificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoDeIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTipoDeIdentificacion.FormattingEnabled = true;
+            this.comboBoxTipoDeIdentificacion.Items.AddRange(new object[] {
+            "Cédula",
+            "Pasaporte"});
+            this.comboBoxTipoDeIdentificacion.Location = new System.Drawing.Point(22, 31);
+            this.comboBoxTipoDeIdentificacion.Name = "comboBoxTipoDeIdentificacion";
+            this.comboBoxTipoDeIdentificacion.Size = new System.Drawing.Size(200, 26);
+            this.comboBoxTipoDeIdentificacion.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Tipo de Identificación";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(464, 41);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(255, 26);
+            this.button3.TabIndex = 39;
+            this.button3.Text = "Validar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // FormIngresarNuevoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -564,8 +564,8 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -577,11 +577,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBoxIdentificacion;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBoxTipoDeIdentificacion;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox comboBoxCargo;
         private System.Windows.Forms.Label label14;
@@ -612,5 +607,10 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox comboBoxCiudad;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBoxIdentificacion;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxTipoDeIdentificacion;
+        private System.Windows.Forms.Label label1;
     }
 }
