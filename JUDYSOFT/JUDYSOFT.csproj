@@ -313,6 +313,12 @@
   <ItemGroup>
     <None Include="Images\1484546334_Apply.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\1484548470_Zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\1484546336_Back.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

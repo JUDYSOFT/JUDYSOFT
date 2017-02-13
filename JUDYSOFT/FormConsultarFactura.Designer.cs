@@ -66,9 +66,10 @@
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.Color.Moccasin;
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(16, 33);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(299, 20);
+            this.textBox7.Size = new System.Drawing.Size(299, 24);
             this.textBox7.TabIndex = 1;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_TextChanged);
@@ -76,9 +77,10 @@
             // label24
             // 
             this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(13, 7);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(137, 13);
+            this.label24.Size = new System.Drawing.Size(177, 16);
             this.label24.TabIndex = 0;
             this.label24.Text = "Inserte Apellidos y Nombres";
             // 
@@ -112,15 +114,18 @@
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(19, 11);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(165, 13);
+            this.label17.Size = new System.Drawing.Size(211, 16);
             this.label17.TabIndex = 10;
             this.label17.Text = "Seleccione el modo de busqueda";
             // 
             // comboBox3
             // 
             this.comboBox3.BackColor = System.Drawing.Color.Moccasin;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "Cédula",
@@ -128,7 +133,7 @@
             "Cargo"});
             this.comboBox3.Location = new System.Drawing.Point(22, 27);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(300, 21);
+            this.comboBox3.Size = new System.Drawing.Size(300, 26);
             this.comboBox3.TabIndex = 9;
             // 
             // FormConsultarFactura

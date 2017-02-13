@@ -103,6 +103,26 @@ namespace JUDYSOFT.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1484546336_Back {
+            get {
+                object obj = ResourceManager.GetObject("1484546336_Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1484548470_Zoom {
+            get {
+                object obj = ResourceManager.GetObject("1484548470_Zoom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1484548483_Edit_page {
             get {
                 object obj = ResourceManager.GetObject("1484548483_Edit_page", resourceCulture);
