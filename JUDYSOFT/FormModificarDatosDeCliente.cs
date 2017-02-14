@@ -109,7 +109,7 @@ namespace JUDYSOFT
             FormListaClientes frm = new FormListaClientes();
            frm.StartPosition = FormStartPosition.CenterScreen;
             frm.WindowState = FormWindowState.Normal;
-            frm.Show();
+            frm.ShowDialog();
         }
     }
 }
