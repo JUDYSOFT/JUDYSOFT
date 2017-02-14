@@ -140,8 +140,8 @@ namespace JUDYSOFT
             if (Clientes.dataGridView1.Rows.Count != 0)
             {
                 textBox1.Text = Clientes.dataGridView1.Rows[Clientes.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
-                textBox2.Text = Clientes.dataGridView1.Rows[Clientes.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
-                textBox3.Text = Clientes.dataGridView1.Rows[Clientes.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                textBox2.Text = Clientes.dataGridView1.Rows[Clientes.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                textBox3.Text = Clientes.dataGridView1.Rows[Clientes.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
             }
         }
 
@@ -196,6 +196,7 @@ namespace JUDYSOFT
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+
 
         }
     }

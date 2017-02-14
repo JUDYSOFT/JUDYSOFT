@@ -50,5 +50,11 @@ namespace JUDYSOFT
         {
 
         }
+
+        private void bttmCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }
