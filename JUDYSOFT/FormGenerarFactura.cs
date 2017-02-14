@@ -247,10 +247,10 @@ namespace JUDYSOFT
             {
                 //Administración-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-                txtidClienteGenerarFactura.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
-                txtBoxClienteGenerarFactura.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString() +" "+ nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
-                txtDireccionGenerarFactura.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[12].Value.ToString();
-                txtTelefonoGenerarFactura.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[13].Value.ToString();
+                txtidClienteGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[0].Value.ToString();
+                txtBoxClienteGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[1].Value.ToString() +" "+ nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[3].Value.ToString();
+                txtDireccionGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[12].Value.ToString();
+                txtTelefonoGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[13].Value.ToString();
 
                 //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
