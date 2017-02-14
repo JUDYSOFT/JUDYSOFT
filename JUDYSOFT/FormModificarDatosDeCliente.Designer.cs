@@ -126,11 +126,11 @@
             this.comboBoxEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEstadoCivil.FormattingEnabled = true;
             this.comboBoxEstadoCivil.Items.AddRange(new object[] {
-            "CASADO/(A)",
-            "SOLTERO/(A)",
-            "VIUDO/(A)",
-            "DIVORCIADO/(A)",
-            "COMPROMETIDO/(A)"});
+            "Casado/(a)",
+            "Soltero/(a)",
+            "Viudo(a)",
+            "Divorciado/(a)",
+            "Comprometido/(a)"});
             this.comboBoxEstadoCivil.Location = new System.Drawing.Point(197, 268);
             this.comboBoxEstadoCivil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxEstadoCivil.Name = "comboBoxEstadoCivil";

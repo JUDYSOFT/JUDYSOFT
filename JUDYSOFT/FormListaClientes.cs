@@ -75,7 +75,7 @@ namespace JUDYSOFT
 
         private void FormListaClientes_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult confirmacion = MessageBox.Show("¿Está seguro que desea salir?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+           /* DialogResult confirmacion = MessageBox.Show("¿Está seguro que desea salir?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
 
             if (confirmacion == System.Windows.Forms.DialogResult.OK)
             {
@@ -86,7 +86,7 @@ namespace JUDYSOFT
             {
 
                 e.Cancel = true;
-            }
+            }*/
 
         }
     }

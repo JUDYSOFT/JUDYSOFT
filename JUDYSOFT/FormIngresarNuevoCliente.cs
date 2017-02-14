@@ -60,7 +60,7 @@ namespace JUDYSOFT
                 objCliente.EstadoCivil = comboBoxEstadoCivil.SelectedText.ToString();
                 objCliente.Correo = txtCorreoIngresoCLiente.Text.ToString();
                 objCliente.Direccion = txtDireccionIngresoCliente.Text.ToString();
-                //objCliente.FechaNac = Convert.ToDateTime( fechaNacIngresoCliente.Text.ToString());
+                objCliente.FechaNac = Convert.ToDateTime( fechaNacIngresoCliente.Text.ToString());
                 if (radioF.Checked)
                 {
                     objCliente.Sexo = radioF.Text.ToString();
@@ -74,13 +74,14 @@ namespace JUDYSOFT
                 
              string val = string.Format("exec verificarCliente '{0}' ", objCliente.NumDocumento);
              DataSet   DS = Utilidades.Ejecutar(val);
-                string codCliente = DS.Tables[0].Rows[0]["CODCLIENTE"].ToString().Trim();
+                //string codCliente = DS.Tables["CODCLIENTE"].ToString().Trim();
+                //Console.Write(codCliente);
 
-                if (codCliente==null)
+                if (DS.Tables[0].Rows.Count==0)
                 {
                     try
                     {
-                        string cmd = string.Format("Exec registrarCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}', '{8}', '{9}','{10}','{11}','{12}','{13}'", objCliente.Nombre1, objCliente.Nombre2, objCliente.Telefono1, objCliente.Telefono2, objCliente.Direccion, objCliente.Documento, objCliente.NumDocumento, objCliente.Nacionalidad, objCliente.Procedencia, objCliente.FechaNac, objCliente.Sexo, objCliente.Apellido1, objCliente.Apellido2, objCliente.Correo);
+                        string cmd = string.Format("Exec registrarCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}', '{8}', '{9}','{10}','{11}','{12}','{13}','{14}'", objCliente.Nombre1, objCliente.Nombre2, objCliente.Apellido1, objCliente.Apellido2,objCliente.Telefono1,objCliente.Telefono2, objCliente.Direccion, objCliente.Documento, objCliente.NumDocumento, objCliente.Nacionalidad, objCliente.Procedencia, objCliente.FechaNac, objCliente.Sexo,objCliente.Correo,objCliente.EstadoCivil);
                       DataSet  DS1 = Utilidades.Ejecutar(cmd);
 
                     }

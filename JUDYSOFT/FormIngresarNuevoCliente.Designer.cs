@@ -77,10 +77,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Copperplate Gothic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(196, -38);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(261, -47);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(305, 26);
+            this.label4.Size = new System.Drawing.Size(377, 34);
             this.label4.TabIndex = 26;
             this.label4.Text = "Judy\'s Palace Hostal";
             // 
@@ -93,10 +92,10 @@
             this.btnCancelarIngresoCliente.ForeColor = System.Drawing.Color.Black;
             this.btnCancelarIngresoCliente.Image = global::JUDYSOFT.Properties.Resources._1484546297_Cancel;
             this.btnCancelarIngresoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelarIngresoCliente.Location = new System.Drawing.Point(279, 456);
-            this.btnCancelarIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelarIngresoCliente.Location = new System.Drawing.Point(372, 561);
+            this.btnCancelarIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelarIngresoCliente.Name = "btnCancelarIngresoCliente";
-            this.btnCancelarIngresoCliente.Size = new System.Drawing.Size(119, 40);
+            this.btnCancelarIngresoCliente.Size = new System.Drawing.Size(159, 49);
             this.btnCancelarIngresoCliente.TabIndex = 28;
             this.btnCancelarIngresoCliente.Text = "Cancelar";
             this.btnCancelarIngresoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -111,11 +110,11 @@
             this.btnAceptarIngresoCliente.ForeColor = System.Drawing.Color.Black;
             this.btnAceptarIngresoCliente.Image = global::JUDYSOFT.Properties.Resources._1484546293_Save;
             this.btnAceptarIngresoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptarIngresoCliente.Location = new System.Drawing.Point(119, 456);
-            this.btnAceptarIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAceptarIngresoCliente.Location = new System.Drawing.Point(159, 561);
+            this.btnAceptarIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAceptarIngresoCliente.Name = "btnAceptarIngresoCliente";
             this.btnAceptarIngresoCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAceptarIngresoCliente.Size = new System.Drawing.Size(127, 40);
+            this.btnAceptarIngresoCliente.Size = new System.Drawing.Size(169, 49);
             this.btnAceptarIngresoCliente.TabIndex = 27;
             this.btnAceptarIngresoCliente.Text = "Guardar";
             this.btnAceptarIngresoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -132,11 +131,11 @@
             this.groupBoxDocumento.Controls.Add(this.txtNumIdentificacionIngresoCliente);
             this.groupBoxDocumento.Controls.Add(this.radioPasaporteIngresoCliente);
             this.groupBoxDocumento.Controls.Add(this.radioCedulaIngresoCliente);
-            this.groupBoxDocumento.Location = new System.Drawing.Point(32, 19);
-            this.groupBoxDocumento.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxDocumento.Location = new System.Drawing.Point(43, 23);
+            this.groupBoxDocumento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxDocumento.Name = "groupBoxDocumento";
-            this.groupBoxDocumento.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxDocumento.Size = new System.Drawing.Size(314, 81);
+            this.groupBoxDocumento.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxDocumento.Size = new System.Drawing.Size(419, 100);
             this.groupBoxDocumento.TabIndex = 3;
             this.groupBoxDocumento.TabStop = false;
             this.groupBoxDocumento.Text = "Documento de Identificación (*)";
@@ -144,10 +143,10 @@
             // txtNumIdentificacionIngresoCliente
             // 
             this.txtNumIdentificacionIngresoCliente.BackColor = System.Drawing.Color.Moccasin;
-            this.txtNumIdentificacionIngresoCliente.Location = new System.Drawing.Point(149, 39);
-            this.txtNumIdentificacionIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNumIdentificacionIngresoCliente.Location = new System.Drawing.Point(199, 48);
+            this.txtNumIdentificacionIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNumIdentificacionIngresoCliente.Name = "txtNumIdentificacionIngresoCliente";
-            this.txtNumIdentificacionIngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtNumIdentificacionIngresoCliente.Size = new System.Drawing.Size(172, 22);
             this.txtNumIdentificacionIngresoCliente.TabIndex = 21;
             this.txtNumIdentificacionIngresoCliente.Validar = true;
             this.txtNumIdentificacionIngresoCliente.TextChanged += new System.EventHandler(this.txtDocumento_TextChanged);
@@ -158,13 +157,13 @@
             // 
             this.radioPasaporteIngresoCliente.AutoSize = true;
             this.radioPasaporteIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioPasaporteIngresoCliente.Location = new System.Drawing.Point(38, 51);
-            this.radioPasaporteIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.radioPasaporteIngresoCliente.Location = new System.Drawing.Point(51, 63);
+            this.radioPasaporteIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioPasaporteIngresoCliente.Name = "radioPasaporteIngresoCliente";
-            this.radioPasaporteIngresoCliente.Size = new System.Drawing.Size(110, 21);
+            this.radioPasaporteIngresoCliente.Size = new System.Drawing.Size(106, 24);
             this.radioPasaporteIngresoCliente.TabIndex = 20;
             this.radioPasaporteIngresoCliente.TabStop = true;
-            this.radioPasaporteIngresoCliente.Text = "PASAPORTE";
+            this.radioPasaporteIngresoCliente.Text = "Pasaporte";
             this.radioPasaporteIngresoCliente.UseVisualStyleBackColor = true;
             this.radioPasaporteIngresoCliente.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
@@ -172,12 +171,12 @@
             // 
             this.radioCedulaIngresoCliente.AutoSize = true;
             this.radioCedulaIngresoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioCedulaIngresoCliente.Location = new System.Drawing.Point(38, 27);
-            this.radioCedulaIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.radioCedulaIngresoCliente.Location = new System.Drawing.Point(51, 33);
+            this.radioCedulaIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioCedulaIngresoCliente.Name = "radioCedulaIngresoCliente";
-            this.radioCedulaIngresoCliente.Size = new System.Drawing.Size(81, 21);
+            this.radioCedulaIngresoCliente.Size = new System.Drawing.Size(82, 24);
             this.radioCedulaIngresoCliente.TabIndex = 19;
-            this.radioCedulaIngresoCliente.Text = "CÉDULA";
+            this.radioCedulaIngresoCliente.Text = "Cédula";
             this.radioCedulaIngresoCliente.UseVisualStyleBackColor = true;
             this.radioCedulaIngresoCliente.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
@@ -185,11 +184,11 @@
             // 
             this.groupBox1.Controls.Add(this.radioF);
             this.groupBox1.Controls.Add(this.radioM);
-            this.groupBox1.Location = new System.Drawing.Point(409, 19);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(545, 23);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(212, 81);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(283, 100);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sexo (*)";
@@ -198,13 +197,13 @@
             // 
             this.radioF.AutoSize = true;
             this.radioF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioF.Location = new System.Drawing.Point(118, 37);
-            this.radioF.Margin = new System.Windows.Forms.Padding(2);
+            this.radioF.Location = new System.Drawing.Point(157, 46);
+            this.radioF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioF.Name = "radioF";
-            this.radioF.Size = new System.Drawing.Size(96, 20);
+            this.radioF.Size = new System.Drawing.Size(103, 24);
             this.radioF.TabIndex = 4;
             this.radioF.TabStop = true;
-            this.radioF.Text = "FEMENINO";
+            this.radioF.Text = "Femenino";
             this.radioF.UseVisualStyleBackColor = true;
             // 
             // radioM
@@ -212,13 +211,13 @@
             this.radioM.AutoSize = true;
             this.radioM.Checked = true;
             this.radioM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioM.Location = new System.Drawing.Point(13, 37);
-            this.radioM.Margin = new System.Windows.Forms.Padding(2);
+            this.radioM.Location = new System.Drawing.Point(17, 46);
+            this.radioM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioM.Name = "radioM";
-            this.radioM.Size = new System.Drawing.Size(104, 20);
+            this.radioM.Size = new System.Drawing.Size(106, 24);
             this.radioM.TabIndex = 3;
             this.radioM.TabStop = true;
-            this.radioM.Text = "MASCULINO";
+            this.radioM.Text = "Masculino";
             this.radioM.UseVisualStyleBackColor = true;
             // 
             // panelInformación
@@ -248,10 +247,10 @@
             this.panelInformación.Controls.Add(this.lblApellido2);
             this.panelInformación.Controls.Add(this.lbltelefono2);
             this.panelInformación.Controls.Add(this.lblTelefono);
-            this.panelInformación.Location = new System.Drawing.Point(32, 119);
-            this.panelInformación.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInformación.Location = new System.Drawing.Point(43, 146);
+            this.panelInformación.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelInformación.Name = "panelInformación";
-            this.panelInformación.Size = new System.Drawing.Size(590, 303);
+            this.panelInformación.Size = new System.Drawing.Size(785, 372);
             this.panelInformación.TabIndex = 60;
             // 
             // comboBoxEstadoCivil
@@ -259,15 +258,15 @@
             this.comboBoxEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEstadoCivil.FormattingEnabled = true;
             this.comboBoxEstadoCivil.Items.AddRange(new object[] {
-            "CASADO/(A)",
-            "SOLTERO/(A)",
-            "VIUDO/(A)",
-            "DIVORCIADO/(A)",
-            "COMPROMETIDO/(A)"});
-            this.comboBoxEstadoCivil.Location = new System.Drawing.Point(148, 218);
-            this.comboBoxEstadoCivil.Margin = new System.Windows.Forms.Padding(2);
+            "Casado/(a)",
+            "Soltero/(a)",
+            "Viudo/(a)",
+            "Divorciado/(a)",
+            "Comprometido/(a)"});
+            this.comboBoxEstadoCivil.Location = new System.Drawing.Point(197, 268);
+            this.comboBoxEstadoCivil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxEstadoCivil.Name = "comboBoxEstadoCivil";
-            this.comboBoxEstadoCivil.Size = new System.Drawing.Size(130, 21);
+            this.comboBoxEstadoCivil.Size = new System.Drawing.Size(172, 24);
             this.comboBoxEstadoCivil.TabIndex = 123;
             // 
             // fechaNacIngresoCliente
@@ -275,30 +274,29 @@
             this.fechaNacIngresoCliente.CalendarMonthBackground = System.Drawing.Color.Moccasin;
             this.fechaNacIngresoCliente.CustomFormat = "";
             this.fechaNacIngresoCliente.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechaNacIngresoCliente.Location = new System.Drawing.Point(422, 258);
-            this.fechaNacIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.fechaNacIngresoCliente.Location = new System.Drawing.Point(563, 318);
+            this.fechaNacIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fechaNacIngresoCliente.Name = "fechaNacIngresoCliente";
-            this.fechaNacIngresoCliente.Size = new System.Drawing.Size(131, 20);
+            this.fechaNacIngresoCliente.Size = new System.Drawing.Size(173, 22);
             this.fechaNacIngresoCliente.TabIndex = 122;
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(316, 258);
-            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFecha.Location = new System.Drawing.Point(421, 318);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(78, 34);
+            this.lblFecha.Size = new System.Drawing.Size(93, 40);
             this.lblFecha.TabIndex = 121;
             this.lblFecha.Text = "Fecha de \r\nNacimiento";
             // 
             // txtDireccionIngresoCliente
             // 
             this.txtDireccionIngresoCliente.BackColor = System.Drawing.Color.Moccasin;
-            this.txtDireccionIngresoCliente.Location = new System.Drawing.Point(148, 260);
-            this.txtDireccionIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDireccionIngresoCliente.Location = new System.Drawing.Point(197, 320);
+            this.txtDireccionIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDireccionIngresoCliente.Name = "txtDireccionIngresoCliente";
-            this.txtDireccionIngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtDireccionIngresoCliente.Size = new System.Drawing.Size(172, 22);
             this.txtDireccionIngresoCliente.TabIndex = 120;
             this.txtDireccionIngresoCliente.Validar = false;
             this.txtDireccionIngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
@@ -307,20 +305,19 @@
             // 
             this.lbldireccion.AutoSize = true;
             this.lbldireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldireccion.Location = new System.Drawing.Point(33, 258);
-            this.lbldireccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbldireccion.Location = new System.Drawing.Point(44, 318);
             this.lbldireccion.Name = "lbldireccion";
-            this.lbldireccion.Size = new System.Drawing.Size(71, 34);
+            this.lbldireccion.Size = new System.Drawing.Size(86, 40);
             this.lbldireccion.TabIndex = 119;
             this.lbldireccion.Text = "Dirección \r\nDomicilio";
             // 
             // txtCorreoIngresoCLiente
             // 
             this.txtCorreoIngresoCLiente.BackColor = System.Drawing.Color.Moccasin;
-            this.txtCorreoIngresoCLiente.Location = new System.Drawing.Point(422, 218);
-            this.txtCorreoIngresoCLiente.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreoIngresoCLiente.Location = new System.Drawing.Point(563, 268);
+            this.txtCorreoIngresoCLiente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreoIngresoCLiente.Name = "txtCorreoIngresoCLiente";
-            this.txtCorreoIngresoCLiente.Size = new System.Drawing.Size(130, 20);
+            this.txtCorreoIngresoCLiente.Size = new System.Drawing.Size(172, 22);
             this.txtCorreoIngresoCLiente.TabIndex = 118;
             this.txtCorreoIngresoCLiente.Validar = false;
             this.txtCorreoIngresoCLiente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
@@ -328,10 +325,10 @@
             // txtProcedenciaIngresoCliente
             // 
             this.txtProcedenciaIngresoCliente.BackColor = System.Drawing.Color.Moccasin;
-            this.txtProcedenciaIngresoCliente.Location = new System.Drawing.Point(422, 173);
-            this.txtProcedenciaIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProcedenciaIngresoCliente.Location = new System.Drawing.Point(563, 213);
+            this.txtProcedenciaIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProcedenciaIngresoCliente.Name = "txtProcedenciaIngresoCliente";
-            this.txtProcedenciaIngresoCliente.Size = new System.Drawing.Size(131, 20);
+            this.txtProcedenciaIngresoCliente.Size = new System.Drawing.Size(173, 22);
             this.txtProcedenciaIngresoCliente.TabIndex = 117;
             this.txtProcedenciaIngresoCliente.Validar = false;
             this.txtProcedenciaIngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProcedencia_KeyPress);
@@ -339,10 +336,10 @@
             // txtTelefono2IngresoCliente
             // 
             this.txtTelefono2IngresoCliente.BackColor = System.Drawing.Color.Moccasin;
-            this.txtTelefono2IngresoCliente.Location = new System.Drawing.Point(422, 117);
-            this.txtTelefono2IngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTelefono2IngresoCliente.Location = new System.Drawing.Point(563, 144);
+            this.txtTelefono2IngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono2IngresoCliente.Name = "txtTelefono2IngresoCliente";
-            this.txtTelefono2IngresoCliente.Size = new System.Drawing.Size(129, 20);
+            this.txtTelefono2IngresoCliente.Size = new System.Drawing.Size(171, 22);
             this.txtTelefono2IngresoCliente.TabIndex = 116;
             this.txtTelefono2IngresoCliente.Validar = false;
             this.txtTelefono2IngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono2_KeyPress);
@@ -350,10 +347,10 @@
             // txtApellido2IngresoCliente
             // 
             this.txtApellido2IngresoCliente.BackColor = System.Drawing.Color.Moccasin;
-            this.txtApellido2IngresoCliente.Location = new System.Drawing.Point(422, 66);
-            this.txtApellido2IngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellido2IngresoCliente.Location = new System.Drawing.Point(563, 81);
+            this.txtApellido2IngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellido2IngresoCliente.Name = "txtApellido2IngresoCliente";
-            this.txtApellido2IngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtApellido2IngresoCliente.Size = new System.Drawing.Size(172, 22);
             this.txtApellido2IngresoCliente.TabIndex = 115;
             this.txtApellido2IngresoCliente.Validar = false;
             this.txtApellido2IngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido2_KeyPress);
@@ -361,10 +358,10 @@
             // txtNombre2IngresoCliente
             // 
             this.txtNombre2IngresoCliente.BackColor = System.Drawing.Color.Moccasin;
-            this.txtNombre2IngresoCliente.Location = new System.Drawing.Point(422, 25);
-            this.txtNombre2IngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre2IngresoCliente.Location = new System.Drawing.Point(563, 31);
+            this.txtNombre2IngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre2IngresoCliente.Name = "txtNombre2IngresoCliente";
-            this.txtNombre2IngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtNombre2IngresoCliente.Size = new System.Drawing.Size(172, 22);
             this.txtNombre2IngresoCliente.TabIndex = 114;
             this.txtNombre2IngresoCliente.Validar = false;
             this.txtNombre2IngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre2_KeyPress);
@@ -372,10 +369,10 @@
             // txtNombre1IngresoCliente
             // 
             this.txtNombre1IngresoCliente.BackColor = System.Drawing.Color.Moccasin;
-            this.txtNombre1IngresoCliente.Location = new System.Drawing.Point(148, 21);
-            this.txtNombre1IngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre1IngresoCliente.Location = new System.Drawing.Point(197, 26);
+            this.txtNombre1IngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre1IngresoCliente.Name = "txtNombre1IngresoCliente";
-            this.txtNombre1IngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtNombre1IngresoCliente.Size = new System.Drawing.Size(172, 22);
             this.txtNombre1IngresoCliente.TabIndex = 112;
             this.txtNombre1IngresoCliente.Validar = true;
             this.txtNombre1IngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre1_KeyPress);
@@ -383,10 +380,10 @@
             // txtApellido1IngresoCliente
             // 
             this.txtApellido1IngresoCliente.BackColor = System.Drawing.Color.Moccasin;
-            this.txtApellido1IngresoCliente.Location = new System.Drawing.Point(148, 66);
-            this.txtApellido1IngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellido1IngresoCliente.Location = new System.Drawing.Point(197, 81);
+            this.txtApellido1IngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellido1IngresoCliente.Name = "txtApellido1IngresoCliente";
-            this.txtApellido1IngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtApellido1IngresoCliente.Size = new System.Drawing.Size(172, 22);
             this.txtApellido1IngresoCliente.TabIndex = 111;
             this.txtApellido1IngresoCliente.Validar = true;
             this.txtApellido1IngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido1_KeyPress);
@@ -394,10 +391,10 @@
             // txtTelefono1IngresoCliente
             // 
             this.txtTelefono1IngresoCliente.BackColor = System.Drawing.Color.Moccasin;
-            this.txtTelefono1IngresoCliente.Location = new System.Drawing.Point(148, 114);
-            this.txtTelefono1IngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTelefono1IngresoCliente.Location = new System.Drawing.Point(197, 140);
+            this.txtTelefono1IngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono1IngresoCliente.Name = "txtTelefono1IngresoCliente";
-            this.txtTelefono1IngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtTelefono1IngresoCliente.Size = new System.Drawing.Size(172, 22);
             this.txtTelefono1IngresoCliente.TabIndex = 110;
             this.txtTelefono1IngresoCliente.Validar = true;
             this.txtTelefono1IngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono1_KeyPress);
@@ -406,10 +403,10 @@
             // txtNacionalidadIngresoCliente
             // 
             this.txtNacionalidadIngresoCliente.BackColor = System.Drawing.Color.Moccasin;
-            this.txtNacionalidadIngresoCliente.Location = new System.Drawing.Point(148, 171);
-            this.txtNacionalidadIngresoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNacionalidadIngresoCliente.Location = new System.Drawing.Point(197, 210);
+            this.txtNacionalidadIngresoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNacionalidadIngresoCliente.Name = "txtNacionalidadIngresoCliente";
-            this.txtNacionalidadIngresoCliente.Size = new System.Drawing.Size(130, 20);
+            this.txtNacionalidadIngresoCliente.Size = new System.Drawing.Size(172, 22);
             this.txtNacionalidadIngresoCliente.TabIndex = 109;
             this.txtNacionalidadIngresoCliente.Validar = true;
             this.txtNacionalidadIngresoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNacionalidad_KeyPress);
@@ -418,10 +415,9 @@
             // 
             this.labelCorreo.AutoSize = true;
             this.labelCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCorreo.Location = new System.Drawing.Point(313, 216);
-            this.labelCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCorreo.Location = new System.Drawing.Point(417, 266);
             this.labelCorreo.Name = "labelCorreo";
-            this.labelCorreo.Size = new System.Drawing.Size(78, 34);
+            this.labelCorreo.Size = new System.Drawing.Size(93, 40);
             this.labelCorreo.TabIndex = 108;
             this.labelCorreo.Text = "Correo \r\nElectrónico";
             // 
@@ -429,10 +425,9 @@
             // 
             this.lblEstadoCivil.AutoSize = true;
             this.lblEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoCivil.Location = new System.Drawing.Point(34, 216);
-            this.lblEstadoCivil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEstadoCivil.Location = new System.Drawing.Point(45, 266);
             this.lblEstadoCivil.Name = "lblEstadoCivil";
-            this.lblEstadoCivil.Size = new System.Drawing.Size(79, 16);
+            this.lblEstadoCivil.Size = new System.Drawing.Size(98, 20);
             this.lblEstadoCivil.TabIndex = 107;
             this.lblEstadoCivil.Text = "Estado Civil";
             // 
@@ -440,10 +435,9 @@
             // 
             this.lblNacionalidad.AutoSize = true;
             this.lblNacionalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNacionalidad.Location = new System.Drawing.Point(34, 172);
-            this.lblNacionalidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNacionalidad.Location = new System.Drawing.Point(45, 212);
             this.lblNacionalidad.Name = "lblNacionalidad";
-            this.lblNacionalidad.Size = new System.Drawing.Size(105, 16);
+            this.lblNacionalidad.Size = new System.Drawing.Size(128, 20);
             this.lblNacionalidad.TabIndex = 106;
             this.lblNacionalidad.Text = "Nacionalidad (*)";
             // 
@@ -451,10 +445,9 @@
             // 
             this.labelProcedencia.AutoSize = true;
             this.labelProcedencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProcedencia.Location = new System.Drawing.Point(313, 164);
-            this.labelProcedencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelProcedencia.Location = new System.Drawing.Point(417, 202);
             this.labelProcedencia.Name = "labelProcedencia";
-            this.labelProcedencia.Size = new System.Drawing.Size(88, 32);
+            this.labelProcedencia.Size = new System.Drawing.Size(107, 40);
             this.labelProcedencia.TabIndex = 105;
             this.labelProcedencia.Text = "Lugar de \r\nProcedencia ";
             // 
@@ -462,10 +455,9 @@
             // 
             this.lblNombre1.AutoSize = true;
             this.lblNombre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre1.Location = new System.Drawing.Point(34, 21);
-            this.lblNombre1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre1.Location = new System.Drawing.Point(45, 26);
             this.lblNombre1.Name = "lblNombre1";
-            this.lblNombre1.Size = new System.Drawing.Size(86, 16);
+            this.lblNombre1.Size = new System.Drawing.Size(110, 20);
             this.lblNombre1.TabIndex = 99;
             this.lblNombre1.Text = " Nombre 1 (*)";
             this.lblNombre1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -474,10 +466,9 @@
             // 
             this.labelNombre2.AutoSize = true;
             this.labelNombre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre2.Location = new System.Drawing.Point(313, 21);
-            this.labelNombre2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelNombre2.Location = new System.Drawing.Point(417, 26);
             this.labelNombre2.Name = "labelNombre2";
-            this.labelNombre2.Size = new System.Drawing.Size(67, 16);
+            this.labelNombre2.Size = new System.Drawing.Size(82, 20);
             this.labelNombre2.TabIndex = 102;
             this.labelNombre2.Text = "Nombre 2";
             // 
@@ -485,10 +476,9 @@
             // 
             this.lblApellido1.AutoSize = true;
             this.lblApellido1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido1.Location = new System.Drawing.Point(34, 67);
-            this.lblApellido1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApellido1.Location = new System.Drawing.Point(45, 82);
             this.lblApellido1.Name = "lblApellido1";
-            this.lblApellido1.Size = new System.Drawing.Size(84, 16);
+            this.lblApellido1.Size = new System.Drawing.Size(105, 20);
             this.lblApellido1.TabIndex = 100;
             this.lblApellido1.Text = "Apellido 1 (*)";
             this.lblApellido1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -497,10 +487,9 @@
             // 
             this.lblApellido2.AutoSize = true;
             this.lblApellido2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido2.Location = new System.Drawing.Point(313, 67);
-            this.lblApellido2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApellido2.Location = new System.Drawing.Point(417, 82);
             this.lblApellido2.Name = "lblApellido2";
-            this.lblApellido2.Size = new System.Drawing.Size(68, 16);
+            this.lblApellido2.Size = new System.Drawing.Size(82, 20);
             this.lblApellido2.TabIndex = 101;
             this.lblApellido2.Text = "Apellido 2";
             // 
@@ -508,10 +497,9 @@
             // 
             this.lbltelefono2.AutoSize = true;
             this.lbltelefono2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltelefono2.Location = new System.Drawing.Point(313, 117);
-            this.lbltelefono2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbltelefono2.Location = new System.Drawing.Point(417, 144);
             this.lbltelefono2.Name = "lbltelefono2";
-            this.lbltelefono2.Size = new System.Drawing.Size(75, 16);
+            this.lbltelefono2.Size = new System.Drawing.Size(92, 20);
             this.lbltelefono2.TabIndex = 104;
             this.lbltelefono2.Text = "Teléfono 2 ";
             // 
@@ -519,10 +507,9 @@
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(34, 115);
-            this.lblTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTelefono.Location = new System.Drawing.Point(45, 142);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(88, 16);
+            this.lblTelefono.Size = new System.Drawing.Size(110, 20);
             this.lblTelefono.TabIndex = 103;
             this.lblTelefono.Text = "Teléfono 1 (*)";
             // 
@@ -530,10 +517,10 @@
             // 
             this.btnSalirCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSalirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalirCliente.Location = new System.Drawing.Point(422, 456);
-            this.btnSalirCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalirCliente.Location = new System.Drawing.Point(563, 561);
+            this.btnSalirCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalirCliente.Name = "btnSalirCliente";
-            this.btnSalirCliente.Size = new System.Drawing.Size(119, 40);
+            this.btnSalirCliente.Size = new System.Drawing.Size(159, 49);
             this.btnSalirCliente.TabIndex = 61;
             this.btnSalirCliente.Text = "Salir";
             this.btnSalirCliente.UseVisualStyleBackColor = false;
@@ -541,10 +528,10 @@
             // 
             // FormIngresarNuevoCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(657, 522);
+            this.ClientSize = new System.Drawing.Size(876, 642);
             this.Controls.Add(this.btnSalirCliente);
             this.Controls.Add(this.panelInformación);
             this.Controls.Add(this.groupBox1);
@@ -552,6 +539,7 @@
             this.Controls.Add(this.btnAceptarIngresoCliente);
             this.Controls.Add(this.btnCancelarIngresoCliente);
             this.Controls.Add(this.label4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormIngresarNuevoCliente";
             this.Text = "IngresarCliente";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormIngresarNuevoCliente_FormClosing);
