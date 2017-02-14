@@ -61,16 +61,16 @@
             this.txtSubtotalGenerarFactura = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.DGVGenerarFactura = new System.Windows.Forms.DataGridView();
-            this.txtCantidadGenerarFactura = new Libreria.ErrorTxtBox();
-            this.txtValUniGenerarFactura = new Libreria.ErrorTxtBox();
-            this.txtDescripcionGenerarFactura = new Libreria.ErrorTxtBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtCodigoGenerarFactura = new Libreria.ErrorTxtBox();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtCantidadGenerarFactura = new Libreria.ErrorTxtBox();
+            this.txtValUniGenerarFactura = new Libreria.ErrorTxtBox();
+            this.txtDescripcionGenerarFactura = new Libreria.ErrorTxtBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtCodigoGenerarFactura = new Libreria.ErrorTxtBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -104,7 +104,7 @@
             // 
             // botonListaClientesGenerarFactura
             // 
-            this.botonListaClientesGenerarFactura.Location = new System.Drawing.Point(204, 72);
+            this.botonListaClientesGenerarFactura.Location = new System.Drawing.Point(210, 70);
             this.botonListaClientesGenerarFactura.Name = "botonListaClientesGenerarFactura";
             this.botonListaClientesGenerarFactura.Size = new System.Drawing.Size(98, 22);
             this.botonListaClientesGenerarFactura.TabIndex = 32;
@@ -115,7 +115,7 @@
             // txtBoxClienteGenerarFactura
             // 
             this.txtBoxClienteGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
-            this.txtBoxClienteGenerarFactura.Location = new System.Drawing.Point(85, 101);
+            this.txtBoxClienteGenerarFactura.Location = new System.Drawing.Point(91, 101);
             this.txtBoxClienteGenerarFactura.Name = "txtBoxClienteGenerarFactura";
             this.txtBoxClienteGenerarFactura.Size = new System.Drawing.Size(217, 20);
             this.txtBoxClienteGenerarFactura.TabIndex = 31;
@@ -132,7 +132,7 @@
             // lblAtendidoPorGenerarFactura
             // 
             this.lblAtendidoPorGenerarFactura.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblAtendidoPorGenerarFactura.Location = new System.Drawing.Point(82, 39);
+            this.lblAtendidoPorGenerarFactura.Location = new System.Drawing.Point(88, 42);
             this.lblAtendidoPorGenerarFactura.Name = "lblAtendidoPorGenerarFactura";
             this.lblAtendidoPorGenerarFactura.Size = new System.Drawing.Size(200, 16);
             this.lblAtendidoPorGenerarFactura.TabIndex = 28;
@@ -200,7 +200,7 @@
             // txtidClienteGenerarFactura
             // 
             this.txtidClienteGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
-            this.txtidClienteGenerarFactura.Location = new System.Drawing.Point(85, 72);
+            this.txtidClienteGenerarFactura.Location = new System.Drawing.Point(91, 73);
             this.txtidClienteGenerarFactura.Name = "txtidClienteGenerarFactura";
             this.txtidClienteGenerarFactura.Size = new System.Drawing.Size(113, 20);
             this.txtidClienteGenerarFactura.TabIndex = 19;
@@ -217,13 +217,13 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 70);
+            this.label3.Location = new System.Drawing.Point(3, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.Size = new System.Drawing.Size(89, 28);
             this.label3.TabIndex = 8;
-            this.label3.Text = "idCliente:";
+            this.label3.Text = "Documento Identidad Cliente:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel1
             // 
@@ -323,7 +323,7 @@
             "12%",
             "14%"});
             this.comboBoxTAX.Location = new System.Drawing.Point(274, 230);
-            this.comboBoxTAX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxTAX.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTAX.Name = "comboBoxTAX";
             this.comboBoxTAX.Size = new System.Drawing.Size(92, 21);
             this.comboBoxTAX.TabIndex = 8;
@@ -402,6 +402,36 @@
             this.DGVGenerarFactura.Size = new System.Drawing.Size(465, 174);
             this.DGVGenerarFactura.TabIndex = 0;
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 53;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 63;
+            // 
+            // Descripción
+            // 
+            this.Descripción.HeaderText = "Descripción";
+            this.Descripción.Name = "Descripción";
+            this.Descripción.Width = 132;
+            // 
+            // ValorUnitario
+            // 
+            this.ValorUnitario.HeaderText = "Valor Unitario";
+            this.ValorUnitario.Name = "ValorUnitario";
+            this.ValorUnitario.Width = 93;
+            // 
+            // ValorTotal
+            // 
+            this.ValorTotal.HeaderText = "Valor Total";
+            this.ValorTotal.Name = "ValorTotal";
+            this.ValorTotal.Width = 81;
+            // 
             // txtCantidadGenerarFactura
             // 
             this.txtCantidadGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
@@ -441,36 +471,6 @@
             this.txtCodigoGenerarFactura.Size = new System.Drawing.Size(43, 20);
             this.txtCodigoGenerarFactura.TabIndex = 53;
             this.txtCodigoGenerarFactura.Validar = true;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 53;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 63;
-            // 
-            // Descripción
-            // 
-            this.Descripción.HeaderText = "Descripción";
-            this.Descripción.Name = "Descripción";
-            this.Descripción.Width = 132;
-            // 
-            // ValorUnitario
-            // 
-            this.ValorUnitario.HeaderText = "Valor Unitario";
-            this.ValorUnitario.Name = "ValorUnitario";
-            this.ValorUnitario.Width = 93;
-            // 
-            // ValorTotal
-            // 
-            this.ValorTotal.HeaderText = "Valor Total";
-            this.ValorTotal.Name = "ValorTotal";
-            this.ValorTotal.Width = 81;
             // 
             // FormGenerarFactura
             // 

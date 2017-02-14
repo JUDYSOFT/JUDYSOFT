@@ -39,15 +39,15 @@ namespace JUDYSOFT
 
             //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------
 
-                String cmd = "SELECT * FROM EMPLEADO WHERE CODEMPLEADO= " + frmLogin.Codigo;
-                DataSet DS = Utilidades.Ejecutar(cmd);
-                lblAtendidoPorGenerarFactura.Text = DS.Tables[0].Rows[0]["NOMBRE1EMPLEADO"].ToString().Trim() + " "+DS.Tables[0].Rows[0]["APELLIDO1EMPLEADO"].ToString().Trim();
+            String cmd = "SELECT * FROM EMPLEADO WHERE CODEMPLEADO= " + frmLogin.Codigo;
+            DataSet DS = Utilidades.Ejecutar(cmd);
+            lblAtendidoPorGenerarFactura.Text = DS.Tables[0].Rows[0]["NOMBRE1EMPLEADO"].ToString().Trim() + " " + DS.Tables[0].Rows[0]["APELLIDO1EMPLEADO"].ToString().Trim();
 
             //Administración--------------------------------------------------------------------------------------------------------------------------------------
 
-                //String cmd = "SELECT * FROM usuario WHERE idUsuario= " + frmLogin.Codigo;
-                //DataSet DS = Utilidades.Ejecutar(cmd);
-                //lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NombreUsuario"].ToString().Trim();
+            //String cmd = "SELECT * FROM usuario WHERE idUsuario= " + frmLogin.Codigo;
+            //DataSet DS = Utilidades.Ejecutar(cmd);
+            //lblAtendidoPor.Text = DS.Tables[0].Rows[0]["NombreUsuario"].ToString().Trim();
 
         }
 
@@ -247,10 +247,10 @@ namespace JUDYSOFT
             {
                 //Administración-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-                txtidClienteGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[0].Value.ToString();
+                txtidClienteGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[9].Value.ToString();
                 txtBoxClienteGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[1].Value.ToString() +" "+ nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[3].Value.ToString();
-                txtDireccionGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[12].Value.ToString();
-                txtTelefonoGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[13].Value.ToString();
+                txtDireccionGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[7].Value.ToString();
+                txtTelefonoGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[5].Value.ToString();
 
                 //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -369,6 +369,11 @@ namespace JUDYSOFT
         }
 
         private void BotonFacturarGenerarFactura_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

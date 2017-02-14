@@ -38,16 +38,16 @@ namespace JUDYSOFT
        
         private void btningresar_Click(object sender, EventArgs e)
         {
-            frmMenuPrincipal frmHab = new frmMenuPrincipal();
-            this.Hide();
-            frmHab.Show();
+            //frmMenuPrincipal frmHab = new frmMenuPrincipal();
+            //this.Hide();
+            //frmHab.Show();
             //this.FormClosing += Form1_FormClosing;
-            /*try {
-                string CMD = string.Format("SELECT * FROM usuario WHERE Cuenta = '{0}' AND password = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
+            try {
+                string CMD = string.Format("SELECT * FROM EMPLEADO WHERE USUARIO = '{0}' AND PASSWORD = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
                 DataSet ds = Utilidades.Ejecutar(CMD);
-                string cuenta = ds.Tables[0].Rows[0]["Cuenta"].ToString().Trim();
-                string psd = ds.Tables[0].Rows[0]["password"].ToString().Trim();
-                Codigo = ds.Tables[0].Rows[0]["idUsuario"].ToString().Trim();
+                string cuenta = ds.Tables[0].Rows[0]["USUARIO"].ToString().Trim();
+                string psd = ds.Tables[0].Rows[0]["PASSWORD"].ToString().Trim();
+                Codigo = ds.Tables[0].Rows[0]["CODEMPLEADO"].ToString().Trim();
 
                 if (cuenta == txtuser.Text.Trim() && psd == txtpass.Text.Trim())
                 {
@@ -60,7 +60,7 @@ namespace JUDYSOFT
             catch(Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-            }*/
+            }
 
 
 
