@@ -58,11 +58,11 @@ namespace JUDYSOFT
             objCliente.Telefono2 = txtTelefono2IngresoCliente.Text.ToString();
             objCliente.Nacionalidad = txtNacionalidadIngresoCliente.Text.ToString();
             objCliente.Procedencia = txtProcedenciaIngresoCliente.Text.ToString();
-            objCliente.EstadoCivil = comboBoxEstadoCivil.SelectedText.ToString();
+            objCliente.EstadoCivil = comboBoxEstadoCivil.Text.ToString();
             objCliente.Correo = txtCorreoIngresoCLiente.Text.ToString();
             objCliente.Direccion = txtDireccionIngresoCliente.Text.ToString();
             objCliente.FechaNac = Convert.ToDateTime(fechaNacIngresoCliente.Text.ToString());
-            objCliente.EstadoCivil = comboBoxEstadoCivil.SelectedItem.ToString();
+            
             string cmd = string.Format("exec verificarCliente '{0}'", objCliente.NumDocumento);
             DataSet DS = Utilidades.Ejecutar(cmd);
             int codCliente = Convert.ToInt32( DS.Tables[0].Rows[0]["CODCLIENTE"].ToString().Trim());
@@ -85,6 +85,7 @@ namespace JUDYSOFT
         private void btnCancelarModificarDatosCliente_Click(object sender, EventArgs e)
         {
             limpiarCampos();
+            desabilitarCampos();
         }
 
         private void btnSalirModificarDatosCliente_Click(object sender, EventArgs e)
@@ -180,8 +181,40 @@ namespace JUDYSOFT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            MessageBox.Show("El cliente no se encuentra registrado en la base de datos","JUDYSOFT",MessageBoxButtons.OK,MessageBoxIcon.Error);
+
+            objCliente.NumDocumento = txtNumDocumentoModificarCliente.Text;
+            try
+            {
+                string cmd3 = string.Format("select * from CLIENTE where NUMERODOCUMENTOCLIENTE= '{0}' ", objCliente.NumDocumento);
+                DataSet DS3 = Utilidades.Ejecutar(cmd3);
+                if (DS3.Tables[0].Rows.Count == 0)
+                {
+                    MessageBox.Show("El cliente no se encuentra registrado en la base de datos", "JUDYSOFT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    txtNombre1IngresoCliente.Text = DS3.Tables[0].Rows[0]["NOMBRE1CLIENTE"].ToString().Trim();
+                    txtNombre2IngresoCliente.Text = DS3.Tables[0].Rows[0]["NOMBRE2CLIENTE"].ToString().Trim();
+                    txtApellido1IngresoCliente.Text = DS3.Tables[0].Rows[0]["APELLIDO1CLIENTE"].ToString().Trim();
+                    txtApellido2IngresoCliente.Text = DS3.Tables[0].Rows[0]["APELLIDO2CLIENTE"].ToString().Trim();
+                    txtTelefono1IngresoCliente.Text = DS3.Tables[0].Rows[0]["TELEFONO1CLIENTE"].ToString().Trim();
+                    txtTelefono2IngresoCliente.Text = DS3.Tables[0].Rows[0]["TELEFONO2CLIENTE"].ToString().Trim();
+                    txtDireccionIngresoCliente.Text = DS3.Tables[0].Rows[0]["DIRECCIONCLIENTE"].ToString().Trim();
+                    txtNacionalidadIngresoCliente.Text = DS3.Tables[0].Rows[0]["NACIONALIDADCLIENTE"].ToString().Trim();
+                    txtProcedenciaIngresoCliente.Text = DS3.Tables[0].Rows[0]["LUGARPROCEDENCIACLIENTE"].ToString().Trim();
+                    fechaNacIngresoCliente.Text = DS3.Tables[0].Rows[0]["FECHANACCLIENTE"].ToString().Trim();
+                    txtCorreoIngresoCLiente.Text = DS3.Tables[0].Rows[0]["CORREOCLIENTE"].ToString().Trim();
+                    comboBoxEstadoCivil.SelectedItem = DS3.Tables[0].Rows[0]["ESTADOCIVILCLIENTE"].ToString().Trim();
+                }
+
+                
+                habilitarCampos();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error"+ex);
+            }
         }
     }
 }
