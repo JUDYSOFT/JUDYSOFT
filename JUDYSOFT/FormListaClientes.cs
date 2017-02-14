@@ -21,15 +21,15 @@ namespace JUDYSOFT
 
         private void bttnSeleccionar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count >  0)
+            if (dataGridView1.Rows.Count == 0)
             {
-                this.Dispose();
+                return;
             }
             else
             {
-                MessageBox.Show("Debe selecionar un Cliente", "JUDYSOFT");
+                DialogResult = DialogResult.OK;
             }
-
+ 
         }
 
         private void FormListaClientes_Load(object sender, EventArgs e)
@@ -45,10 +45,6 @@ namespace JUDYSOFT
             return DS;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void Eliminar_Click(object sender, EventArgs e)
         {

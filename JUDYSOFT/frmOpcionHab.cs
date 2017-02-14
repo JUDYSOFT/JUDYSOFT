@@ -19,9 +19,7 @@ namespace JUDYSOFT
             InitializeComponent();
             btnocupado.TextImageRelation = TextImageRelation.TextAboveImage;
             btndisponible.TextImageRelation = TextImageRelation.TextAboveImage;
-            //button2.TextImageRelation = TextImageRelation.TextAboveImage;
             button3.TextImageRelation = TextImageRelation.TextAboveImage;
-            //button4.TextImageRelation = TextImageRelation.TextAboveImage;
             try
             {
                 btnocupado.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");   
@@ -136,14 +134,14 @@ namespace JUDYSOFT
         private void btnlistar_Click(object sender, EventArgs e)
         {
             FormListaClientes Clientes = new FormListaClientes();
-            Clientes.Show();
+            Clientes.ShowDialog();
             Clientes.StartPosition = FormStartPosition.CenterScreen;
 
             if (Clientes.dataGridView1.Rows.Count != 0)
             {
                 textBox1.Text = Clientes.dataGridView1.Rows[Clientes.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
                 textBox2.Text = Clientes.dataGridView1.Rows[Clientes.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
-                textBox3.Text = Clientes.dataGridView1.Rows[Clientes.dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
+                textBox3.Text = Clientes.dataGridView1.Rows[Clientes.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
             }
         }
 
