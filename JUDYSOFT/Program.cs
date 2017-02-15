@@ -16,9 +16,9 @@ namespace JUDYSOFT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmLogin());
+            Application.Run(new frmLogin());
             //Application.Run(new FormGenerarFactura());
-            Application.Run(new frmMenuPrincipal());
+           // Application.Run(new frmMenuPrincipal());
         }
     }
 }
