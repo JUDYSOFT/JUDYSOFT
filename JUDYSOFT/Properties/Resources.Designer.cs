@@ -63,9 +63,69 @@ namespace JUDYSOFT.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1484546293_Save {
+            get {
+                object obj = ResourceManager.GetObject("1484546293_Save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1484546293_Save1 {
+            get {
+                object obj = ResourceManager.GetObject("1484546293_Save1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1484546297_Cancel {
             get {
                 object obj = ResourceManager.GetObject("1484546297_Cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1484546334_Apply {
+            get {
+                object obj = ResourceManager.GetObject("1484546334_Apply", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1484546336_Back {
+            get {
+                object obj = ResourceManager.GetObject("1484546336_Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1484546336_Back1 {
+            get {
+                object obj = ResourceManager.GetObject("1484546336_Back1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1484548470_Zoom {
+            get {
+                object obj = ResourceManager.GetObject("1484548470_Zoom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +146,16 @@ namespace JUDYSOFT.Properties {
         internal static System.Drawing.Bitmap _1484548508_Pencil {
             get {
                 object obj = ResourceManager.GetObject("1484548508_Pencil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1484548508_Pencil1 {
+            get {
+                object obj = ResourceManager.GetObject("1484548508_Pencil1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -21,7 +21,7 @@ namespace JUDYSOFT
 
         private void bttnSeleccionar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count == 0)
+            if (dataGridViewModificarClientes.Rows.Count == 0)
             {
                 return;
             }
@@ -29,32 +29,67 @@ namespace JUDYSOFT
             {
                 DialogResult = DialogResult.OK;
             }
- 
+
         }
 
         private void FormListaClientes_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = LLenarDGv("CLIENTE").Tables[0];  
+           
+           dataGridViewModificarClientes.DataSource = LLenarDGv("CLIENTE").Tables[0];
+            dataGridViewModificarClientes.Columns["CODCLIENTE"].Visible = false;
+            dataGridViewModificarClientes.Columns["TELEFONO1CLIENTE"].Visible = false;
+            dataGridViewModificarClientes.Columns["TELEFONO2CLIENTE"].Visible = false;
+            dataGridViewModificarClientes.Columns["DIRECCIONCLIENTE"].Visible = false;
+            dataGridViewModificarClientes.Columns["NACIONALIDADCLIENTE"].Visible = false;
+            dataGridViewModificarClientes.Columns["LUGARPROCEDENCIACLIENTE"].Visible = false;
+            dataGridViewModificarClientes.Columns["FECHANACCLIENTE"].Visible = false;
+            dataGridViewModificarClientes.Columns["SEXOCLIENTE"].Visible = false;
+            dataGridViewModificarClientes.Columns["CORREOCLIENTE"].Visible = false;
+            dataGridViewModificarClientes.Columns[1].HeaderCell.Value = "Nombre 1";
+            dataGridViewModificarClientes.Columns[2].HeaderCell.Value = "Nombre 2";
+            dataGridViewModificarClientes.Columns[3].HeaderCell.Value = "Apellido 1";
+            dataGridViewModificarClientes.Columns[4].HeaderCell.Value = "Apellido 2";
+            dataGridViewModificarClientes.Columns[8].HeaderCell.Value = "Documento de Indentificación";
+            dataGridViewModificarClientes.Columns[9].HeaderCell.Value = "Número de Indentificación";
+
+
         }
 
         public DataSet LLenarDGv(string tabla)
         {
             DataSet DS;
-            string cmd = string.Format("SELECT NUMERODOCUMENTOCLIENTE Numero_Identificacion,DOCUMENTOIDENTIDADCLIENTE Tipo_Documento,NOMBRE1CLIENTE Nombre,APELLIDO1CLIENTE Primer_Apellido,APELLIDO2CLIENTE Segundo_Apellido,DIRECCIONCLIENTE Direccion,FECHANACCLIENTE Fecha_Nacimiento FROM " + tabla);
+            string cmd = string.Format("SELECT * FROM "+tabla);
             DS = Utilidades.Ejecutar(cmd);
             return DS;
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
 
         private void Eliminar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void bttmCancelar_Click(object sender, EventArgs e)
+        private void FormListaClientes_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Close();
+           /* DialogResult confirmacion = MessageBox.Show("¿Está seguro que desea salir?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+
+            if (confirmacion == System.Windows.Forms.DialogResult.OK)
+            {
+                this.Dispose();
+                MenuSettings.EnableMenuItem("clientesToolStripMenuItem", "modificarDatosDeClienteToolStripMenuItem");
+            }
+            else
+            {
+
+                e.Cancel = true;
+            }*/
 
         }
     }
+    
+
 }

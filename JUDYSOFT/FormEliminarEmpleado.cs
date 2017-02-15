@@ -28,7 +28,7 @@ namespace JUDYSOFT
                 panelCargo.Visible = false;
                 panelMultiple.Visible = true;
                 panelTablaCargo.Visible = false;
-                panelSeleccion.Visible = false;
+                groupBoxSeleccion.Visible = false;
                 panelMarcoTabla.Visible = true;
                
           
@@ -41,7 +41,7 @@ namespace JUDYSOFT
                 panelCargo.Visible = false;
                 panelMultiple.Visible = true;
                 panelTablaCargo.Visible = false;
-                panelSeleccion.Visible = false;
+                groupBoxSeleccion.Visible = false;
                 panelMarcoTabla.Visible = true;
                
             }
@@ -53,7 +53,7 @@ namespace JUDYSOFT
                 panelCargo.Visible = true;
                 panelTablaCargo.Visible = true;
                 panelMultiple.Visible = false;
-                panelSeleccion.Visible = true;
+                groupBoxSeleccion.Visible = true;
                 panelMarcoDatosSeleccionados.Visible = true;
                 panelMarcoTabla.Visible = true;
             }

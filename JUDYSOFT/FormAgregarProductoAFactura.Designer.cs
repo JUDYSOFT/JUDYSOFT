@@ -34,15 +34,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // DGVGenerarFactura
+            // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(7, 12);
-            this.dataGridView1.Name = "DGVGenerarFactura";
+            this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 80;
             this.dataGridView1.Size = new System.Drawing.Size(685, 198);
             this.dataGridView1.TabIndex = 0;
@@ -50,21 +51,29 @@
             // 
             // bttnAceptar
             // 
-            this.bttnAceptar.Location = new System.Drawing.Point(365, 237);
+            this.bttnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnAceptar.Image = global::JUDYSOFT.Properties.Resources._1484546293_Save;
+            this.bttnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttnAceptar.Location = new System.Drawing.Point(411, 230);
             this.bttnAceptar.Name = "bttnAceptar";
-            this.bttnAceptar.Size = new System.Drawing.Size(160, 23);
+            this.bttnAceptar.Size = new System.Drawing.Size(138, 46);
             this.bttnAceptar.TabIndex = 3;
             this.bttnAceptar.Text = "Aceptar";
+            this.bttnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bttnAceptar.UseVisualStyleBackColor = true;
             this.bttnAceptar.Click += new System.EventHandler(this.button1_Click);
             // 
             // btmCancelar
             // 
-            this.btmCancelar.Location = new System.Drawing.Point(531, 238);
+            this.btmCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmCancelar.Image = global::JUDYSOFT.Properties.Resources._1484546297_Cancel;
+            this.btmCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btmCancelar.Location = new System.Drawing.Point(570, 231);
             this.btmCancelar.Name = "btmCancelar";
-            this.btmCancelar.Size = new System.Drawing.Size(166, 23);
+            this.btmCancelar.Size = new System.Drawing.Size(122, 45);
             this.btmCancelar.TabIndex = 4;
             this.btmCancelar.Text = "Cancelar";
+            this.btmCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btmCancelar.UseVisualStyleBackColor = true;
             this.btmCancelar.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -72,7 +81,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 274);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(703, 288);
             this.Controls.Add(this.btmCancelar);
             this.Controls.Add(this.bttnAceptar);
             this.Controls.Add(this.dataGridView1);
