@@ -34,8 +34,7 @@ namespace JUDYSOFT
 
         private void FormListaClientes_Load(object sender, EventArgs e)
         {
-           
-           dataGridViewModificarClientes.DataSource = LLenarDGv("CLIENTE").Tables[0];
+            dataGridViewModificarClientes.DataSource = LLenarDGv("CLIENTE").Tables[0];
             dataGridViewModificarClientes.Columns["CODCLIENTE"].Visible = false;
             dataGridViewModificarClientes.Columns["TELEFONO1CLIENTE"].Visible = false;
             dataGridViewModificarClientes.Columns["TELEFONO2CLIENTE"].Visible = false;
@@ -51,8 +50,6 @@ namespace JUDYSOFT
             dataGridViewModificarClientes.Columns[4].HeaderCell.Value = "Apellido 2";
             dataGridViewModificarClientes.Columns[8].HeaderCell.Value = "Documento de Indentificación";
             dataGridViewModificarClientes.Columns[9].HeaderCell.Value = "Número de Indentificación";
-
-
         }
 
         public DataSet LLenarDGv(string tabla)
