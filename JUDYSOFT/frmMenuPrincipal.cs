@@ -118,7 +118,6 @@ namespace JUDYSOFT
             frm.StartPosition = FormStartPosition.CenterScreen;
             ingresarNuevoClienteToolStripMenuItem.Enabled = false;
             frm.WindowState = FormWindowState.Maximized;
-            
             frm.Show();
         }
 
@@ -138,6 +137,11 @@ namespace JUDYSOFT
         }
 
         private void adnibistracionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gestionUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

@@ -354,12 +354,12 @@ namespace JUDYSOFT
         {
             if (comboBoxTAX.SelectedIndex == 0)
             {
-                txtImpuestoGenerarFactura.Text = "0.12";
+                txtImpuestoGenerarFactura.Text = "0,12";
                 CalculoMontoTotalGenerarFactura(txtImpuestoGenerarFactura.Text, txtSubtotalGenerarFactura.Text);
             }
             else if (comboBoxTAX.SelectedIndex == 1)
             {
-                txtImpuestoGenerarFactura.Text = "0.14";
+                txtImpuestoGenerarFactura.Text = "0,14";
                 CalculoMontoTotalGenerarFactura(txtImpuestoGenerarFactura.Text, txtSubtotalGenerarFactura.Text);
             }
             else
@@ -376,6 +376,11 @@ namespace JUDYSOFT
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BotonSalirGenerarFactura_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

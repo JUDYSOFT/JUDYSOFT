@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.botonListaClientesGenerarFactura = new System.Windows.Forms.Button();
             this.txtBoxClienteGenerarFactura = new System.Windows.Forms.TextBox();
@@ -66,11 +66,11 @@
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCantidadGenerarFactura = new Libreria.ErrorTxtBox();
-            this.txtValUniGenerarFactura = new Libreria.ErrorTxtBox();
-            this.txtDescripcionGenerarFactura = new Libreria.ErrorTxtBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtCodigoGenerarFactura = new Libreria.ErrorTxtBox();
+            this.txtDescripcionGenerarFactura = new Libreria.ErrorTxtBox();
+            this.txtValUniGenerarFactura = new Libreria.ErrorTxtBox();
+            this.txtCantidadGenerarFactura = new Libreria.ErrorTxtBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -117,6 +117,7 @@
             this.txtBoxClienteGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtBoxClienteGenerarFactura.Location = new System.Drawing.Point(91, 101);
             this.txtBoxClienteGenerarFactura.Name = "txtBoxClienteGenerarFactura";
+            this.txtBoxClienteGenerarFactura.ReadOnly = true;
             this.txtBoxClienteGenerarFactura.Size = new System.Drawing.Size(217, 20);
             this.txtBoxClienteGenerarFactura.TabIndex = 31;
             // 
@@ -151,6 +152,7 @@
             this.txtTelefonoGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtTelefonoGenerarFactura.Location = new System.Drawing.Point(437, 94);
             this.txtTelefonoGenerarFactura.Name = "txtTelefonoGenerarFactura";
+            this.txtTelefonoGenerarFactura.ReadOnly = true;
             this.txtTelefonoGenerarFactura.Size = new System.Drawing.Size(199, 20);
             this.txtTelefonoGenerarFactura.TabIndex = 25;
             // 
@@ -185,6 +187,7 @@
             this.txtDireccionGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtDireccionGenerarFactura.Location = new System.Drawing.Point(437, 67);
             this.txtDireccionGenerarFactura.Name = "txtDireccionGenerarFactura";
+            this.txtDireccionGenerarFactura.ReadOnly = true;
             this.txtDireccionGenerarFactura.Size = new System.Drawing.Size(197, 20);
             this.txtDireccionGenerarFactura.TabIndex = 21;
             // 
@@ -202,6 +205,7 @@
             this.txtidClienteGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtidClienteGenerarFactura.Location = new System.Drawing.Point(91, 73);
             this.txtidClienteGenerarFactura.Name = "txtidClienteGenerarFactura";
+            this.txtidClienteGenerarFactura.ReadOnly = true;
             this.txtidClienteGenerarFactura.Size = new System.Drawing.Size(113, 20);
             this.txtidClienteGenerarFactura.TabIndex = 19;
             // 
@@ -298,6 +302,7 @@
             this.BotonSalirGenerarFactura.TabIndex = 44;
             this.BotonSalirGenerarFactura.Text = "Salir";
             this.BotonSalirGenerarFactura.UseVisualStyleBackColor = true;
+            this.BotonSalirGenerarFactura.Click += new System.EventHandler(this.BotonSalirGenerarFactura_Click_1);
             // 
             // panel3
             // 
@@ -343,6 +348,7 @@
             this.txtTotalGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtTotalGenerarFactura.Location = new System.Drawing.Point(372, 272);
             this.txtTotalGenerarFactura.Name = "txtTotalGenerarFactura";
+            this.txtTotalGenerarFactura.ReadOnly = true;
             this.txtTotalGenerarFactura.Size = new System.Drawing.Size(100, 20);
             this.txtTotalGenerarFactura.TabIndex = 6;
             // 
@@ -351,6 +357,7 @@
             this.txtImpuestoGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtImpuestoGenerarFactura.Location = new System.Drawing.Point(372, 231);
             this.txtImpuestoGenerarFactura.Name = "txtImpuestoGenerarFactura";
+            this.txtImpuestoGenerarFactura.ReadOnly = true;
             this.txtImpuestoGenerarFactura.Size = new System.Drawing.Size(100, 20);
             this.txtImpuestoGenerarFactura.TabIndex = 5;
             // 
@@ -368,6 +375,7 @@
             this.txtSubtotalGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtSubtotalGenerarFactura.Location = new System.Drawing.Point(372, 192);
             this.txtSubtotalGenerarFactura.Name = "txtSubtotalGenerarFactura";
+            this.txtSubtotalGenerarFactura.ReadOnly = true;
             this.txtSubtotalGenerarFactura.Size = new System.Drawing.Size(100, 20);
             this.txtSubtotalGenerarFactura.TabIndex = 2;
             this.txtSubtotalGenerarFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -397,8 +405,8 @@
             this.ValorTotal});
             this.DGVGenerarFactura.Location = new System.Drawing.Point(9, 12);
             this.DGVGenerarFactura.Name = "DGVGenerarFactura";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DGVGenerarFactura.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DGVGenerarFactura.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DGVGenerarFactura.Size = new System.Drawing.Size(465, 174);
             this.DGVGenerarFactura.TabIndex = 0;
             // 
@@ -432,33 +440,6 @@
             this.ValorTotal.Name = "ValorTotal";
             this.ValorTotal.Width = 81;
             // 
-            // txtCantidadGenerarFactura
-            // 
-            this.txtCantidadGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
-            this.txtCantidadGenerarFactura.Location = new System.Drawing.Point(112, 138);
-            this.txtCantidadGenerarFactura.Name = "txtCantidadGenerarFactura";
-            this.txtCantidadGenerarFactura.Size = new System.Drawing.Size(59, 20);
-            this.txtCantidadGenerarFactura.TabIndex = 45;
-            this.txtCantidadGenerarFactura.Validar = true;
-            // 
-            // txtValUniGenerarFactura
-            // 
-            this.txtValUniGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
-            this.txtValUniGenerarFactura.Location = new System.Drawing.Point(299, 138);
-            this.txtValUniGenerarFactura.Name = "txtValUniGenerarFactura";
-            this.txtValUniGenerarFactura.Size = new System.Drawing.Size(79, 20);
-            this.txtValUniGenerarFactura.TabIndex = 51;
-            this.txtValUniGenerarFactura.Validar = true;
-            // 
-            // txtDescripcionGenerarFactura
-            // 
-            this.txtDescripcionGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
-            this.txtDescripcionGenerarFactura.Location = new System.Drawing.Point(177, 138);
-            this.txtDescripcionGenerarFactura.Name = "txtDescripcionGenerarFactura";
-            this.txtDescripcionGenerarFactura.Size = new System.Drawing.Size(116, 20);
-            this.txtDescripcionGenerarFactura.TabIndex = 52;
-            this.txtDescripcionGenerarFactura.Validar = true;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -468,14 +449,45 @@
             this.txtCodigoGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtCodigoGenerarFactura.Location = new System.Drawing.Point(63, 138);
             this.txtCodigoGenerarFactura.Name = "txtCodigoGenerarFactura";
+            this.txtCodigoGenerarFactura.ReadOnly = true;
             this.txtCodigoGenerarFactura.Size = new System.Drawing.Size(43, 20);
             this.txtCodigoGenerarFactura.TabIndex = 53;
             this.txtCodigoGenerarFactura.Validar = true;
+            // 
+            // txtDescripcionGenerarFactura
+            // 
+            this.txtDescripcionGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
+            this.txtDescripcionGenerarFactura.Location = new System.Drawing.Point(177, 138);
+            this.txtDescripcionGenerarFactura.Name = "txtDescripcionGenerarFactura";
+            this.txtDescripcionGenerarFactura.ReadOnly = true;
+            this.txtDescripcionGenerarFactura.Size = new System.Drawing.Size(116, 20);
+            this.txtDescripcionGenerarFactura.TabIndex = 52;
+            this.txtDescripcionGenerarFactura.Validar = true;
+            // 
+            // txtValUniGenerarFactura
+            // 
+            this.txtValUniGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
+            this.txtValUniGenerarFactura.Location = new System.Drawing.Point(299, 138);
+            this.txtValUniGenerarFactura.Name = "txtValUniGenerarFactura";
+            this.txtValUniGenerarFactura.ReadOnly = true;
+            this.txtValUniGenerarFactura.Size = new System.Drawing.Size(79, 20);
+            this.txtValUniGenerarFactura.TabIndex = 51;
+            this.txtValUniGenerarFactura.Validar = true;
+            // 
+            // txtCantidadGenerarFactura
+            // 
+            this.txtCantidadGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
+            this.txtCantidadGenerarFactura.Location = new System.Drawing.Point(112, 138);
+            this.txtCantidadGenerarFactura.Name = "txtCantidadGenerarFactura";
+            this.txtCantidadGenerarFactura.Size = new System.Drawing.Size(59, 20);
+            this.txtCantidadGenerarFactura.TabIndex = 45;
+            this.txtCantidadGenerarFactura.Validar = true;
             // 
             // FormGenerarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(709, 501);
             this.Controls.Add(this.txtCodigoGenerarFactura);
