@@ -28,16 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(284, 261);
+            this.reportViewer1.TabIndex = 0;
             // 
             // ReporteFactura
             // 
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.reportViewer1);
             this.Name = "ReporteFactura";
+            this.Load += new System.EventHandler(this.ReporteFactura_Load_1);
             this.ResumeLayout(false);
 
         }
+
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
 
         #endregion
         /*private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
