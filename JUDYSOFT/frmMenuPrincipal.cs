@@ -113,13 +113,13 @@ namespace JUDYSOFT
 
         private void ingresarNuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*//FormIngresarNuevoCliente frm = new FormIngresarNuevoCliente();
+            FormIngresarNuevoCliente frm = new FormIngresarNuevoCliente();
             frm.MdiParent = this;
             frm.StartPosition = FormStartPosition.CenterScreen;
             ingresarNuevoClienteToolStripMenuItem.Enabled = false;
             frm.WindowState = FormWindowState.Maximized;
             
-            frm.Show();*/
+            frm.Show();
         }
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
