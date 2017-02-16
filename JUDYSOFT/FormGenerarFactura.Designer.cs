@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.botonListaClientesGenerarFactura = new System.Windows.Forms.Button();
             this.txtBoxClienteGenerarFactura = new System.Windows.Forms.TextBox();
@@ -302,6 +302,7 @@
             this.BotonSalirGenerarFactura.TabIndex = 44;
             this.BotonSalirGenerarFactura.Text = "Salir";
             this.BotonSalirGenerarFactura.UseVisualStyleBackColor = true;
+            this.BotonSalirGenerarFactura.Click += new System.EventHandler(this.BotonSalirGenerarFactura_Click_1);
             // 
             // panel3
             // 
@@ -404,8 +405,8 @@
             this.ValorTotal});
             this.DGVGenerarFactura.Location = new System.Drawing.Point(9, 12);
             this.DGVGenerarFactura.Name = "DGVGenerarFactura";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DGVGenerarFactura.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DGVGenerarFactura.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DGVGenerarFactura.Size = new System.Drawing.Size(465, 174);
             this.DGVGenerarFactura.TabIndex = 0;
             // 
@@ -486,6 +487,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(709, 501);
             this.Controls.Add(this.txtCodigoGenerarFactura);
