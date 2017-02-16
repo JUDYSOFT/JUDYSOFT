@@ -59,7 +59,7 @@
             this.btnModificarModificarDatosCliente = new System.Windows.Forms.Button();
             this.btnCancelarModificarDatosCliente = new System.Windows.Forms.Button();
             this.listaClientesModificarCliente = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.botonConsultar = new System.Windows.Forms.Button();
             this.btnSalirModificarDatosCliente = new System.Windows.Forms.Button();
             this.panelInformación.SuspendLayout();
             this.groupBoxDocumento.SuspendLayout();
@@ -430,16 +430,17 @@
             this.listaClientesModificarCliente.UseVisualStyleBackColor = true;
             this.listaClientesModificarCliente.Click += new System.EventHandler(this.listaClientesModificarCliente_Click);
             // 
-            // button1
+            // botonConsultar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(493, 57);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 46);
-            this.button1.TabIndex = 65;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.botonConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonConsultar.Location = new System.Drawing.Point(493, 57);
+            this.botonConsultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.botonConsultar.Name = "botonConsultar";
+            this.botonConsultar.Size = new System.Drawing.Size(117, 46);
+            this.botonConsultar.TabIndex = 65;
+            this.botonConsultar.Text = "Consultar";
+            this.botonConsultar.UseVisualStyleBackColor = true;
+            this.botonConsultar.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSalirModificarDatosCliente
             // 
@@ -461,7 +462,7 @@
             this.ClientSize = new System.Drawing.Size(937, 610);
             this.Controls.Add(this.btnSalirModificarDatosCliente);
             this.Controls.Add(this.listaClientesModificarCliente);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.botonConsultar);
             this.Controls.Add(this.btnCancelarModificarDatosCliente);
             this.Controls.Add(this.btnModificarModificarDatosCliente);
             this.Controls.Add(this.groupBoxDocumento);
@@ -510,7 +511,7 @@
         private System.Windows.Forms.Button btnModificarModificarDatosCliente;
         private System.Windows.Forms.Button btnCancelarModificarDatosCliente;
         private System.Windows.Forms.Button listaClientesModificarCliente;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button botonConsultar;
         private System.Windows.Forms.Button btnSalirModificarDatosCliente;
         private System.Windows.Forms.ComboBox comboBoxEstadoCivil;
     }

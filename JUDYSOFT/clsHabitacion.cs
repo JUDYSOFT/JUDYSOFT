@@ -10,10 +10,16 @@ namespace JUDYSOFT
     class clsHabitacion
     {
         private string estado;
+        private string numHabitacion;
         public string Estado
         {
             get { return estado; }
             set { estado = value; }
+        }
+        public string Numero
+        {
+            get { return numHabitacion; }
+            set { numHabitacion = value; }
         }
     }
 }

@@ -22,9 +22,12 @@ namespace Libreria
 
             //pequeñin-------------------------------------------------------------------------------------------------------------------
 
-                SqlConnection con = new SqlConnection("Data Source=DESKTOP-TPC97N2;Initial Catalog=JUDYSOFT;Integrated Security=True");
+                //SqlConnection con = new SqlConnection("Data Source=DESKTOP-TPC97N2;Initial Catalog=JUDYSOFT;Integrated Security=True");
             //Alexis
-           // SqlConnection con = new SqlConnection("Data Source=BRYANGERMANPC;Initial Catalog=JUDYSOFT;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=JORGE\\SQLEXPRESS;Initial Catalog=JUDYSOFT;Integrated Security=True");
+
+
+
             con.Open();
 
             DataSet DS = new DataSet();

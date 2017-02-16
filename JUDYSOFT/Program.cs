@@ -18,6 +18,7 @@ namespace JUDYSOFT
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
             //Application.Run(new FormGenerarFactura());
+           // Application.Run(new frmMenuPrincipal());
         }
     }
 }

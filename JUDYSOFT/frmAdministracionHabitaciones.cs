@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Libreria;
 
 
 namespace JUDYSOFT
@@ -33,6 +34,19 @@ namespace JUDYSOFT
         public event FormClosingEventHandler FormClosing;
         public frmAdministracionHabitaciones()
         {
+            objHab15.Numero = "15";
+            objHab16.Numero = "16";
+            objHab17.Numero = "17";
+            objHab18.Numero = "18";
+            objHab19.Numero = "19";
+            objHab20.Numero = "20";
+            objHab21.Numero = "21";
+            objHab22.Numero = "22";
+            objHab23.Numero = "23";
+            objHab24.Numero = "24";
+            objHab25.Numero = "25";
+            objHab26.Numero = "26";
+            objHab27.Numero = "27";
 
             DateTime thisDay = DateTime.Today;
             InitializeComponent();
@@ -121,29 +135,143 @@ namespace JUDYSOFT
              
         }
 
-        /*private void groupBox1_MouseHover(object sender, System.EventArgs e)
+        public void actualizarHabitaciones()
         {
-            // Update the mouse event label to indicate the MouseHover event occurred.
-            lblfecha.Text = sender.GetType().ToString() + ": MouseHover";
-        }*/
+            try
+            {
+                string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab15.Numero);
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                objHab15.Estado = ds.Tables[0].Rows[0]["ESTADOHABITACION"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
 
-        private void frmAdministracionHabitaciones_Load(object sender, EventArgs e)
-        {
-            DateTime thisDay = DateTime.Today;
-            label3.Text = (thisDay.ToString("D"));
-            objHab15.Estado = "Ocupado";
-            objHab16.Estado = "Disponible";
-            objHab17.Estado = "Limpieza";
-            objHab18.Estado = "Ocupado";
-            objHab19.Estado = "Disponible";
-            objHab20.Estado = "Limpieza";
-            objHab21.Estado = "Ocupado";
-            objHab22.Estado = "Disponible";
-            objHab23.Estado = "Limpieza";
-            objHab24.Estado = "Limpieza";
-            objHab25.Estado = "Limpieza";
-            objHab26.Estado = "Limpieza";
-            objHab27.Estado = "Limpieza";
+            try
+            {
+                string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab16.Numero);
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                objHab16.Estado = ds.Tables[0].Rows[0]["ESTADOHABITACION"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            try
+            {
+                string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab17.Numero);
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                objHab17.Estado = ds.Tables[0].Rows[0]["ESTADOHABITACION"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            try
+            {
+                string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab18.Numero);
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                objHab18.Estado = ds.Tables[0].Rows[0]["ESTADOHABITACION"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            try
+            {
+                string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab19.Numero);
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                objHab19.Estado = ds.Tables[0].Rows[0]["ESTADOHABITACION"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            try
+            {
+                string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab20.Numero);
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                objHab20.Estado = ds.Tables[0].Rows[0]["ESTADOHABITACION"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            try
+            {
+                string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab21.Numero);
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                objHab21.Estado = ds.Tables[0].Rows[0]["ESTADOHABITACION"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            try
+            {
+                string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab22.Numero);
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                objHab22.Estado = ds.Tables[0].Rows[0]["ESTADOHABITACION"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            try
+            {
+                string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab23.Numero);
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                objHab23.Estado = ds.Tables[0].Rows[0]["ESTADOHABITACION"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            try
+            {
+                string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab24.Numero);
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                objHab24.Estado = ds.Tables[0].Rows[0]["ESTADOHABITACION"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            try
+            {
+                string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab25.Numero);
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                objHab25.Estado = ds.Tables[0].Rows[0]["ESTADOHABITACION"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            try
+            {
+                string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab26.Numero);
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                objHab26.Estado = ds.Tables[0].Rows[0]["ESTADOHABITACION"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            try
+            {
+                string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab27.Numero);
+                DataSet ds = Utilidades.Ejecutar(CMD);
+                objHab27.Estado = ds.Tables[0].Rows[0]["ESTADOHABITACION"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
             //Habitacion 15
             try
             {
@@ -512,20 +640,31 @@ namespace JUDYSOFT
                 MessageBox.Show("Exception Message: " + ex.Message, "JUDYSOFT Mensaje Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
             }
 
+        }
+        /*private void groupBox1_MouseHover(object sender, System.EventArgs e)
+        {
+            // Update the mouse event label to indicate the MouseHover event occurred.
+            lblfecha.Text = sender.GetType().ToString() + ": MouseHover";
+        }*/
 
-
-
+        private void frmAdministracionHabitaciones_Load(object sender, EventArgs e)
+        {
+            DateTime thisDay = DateTime.Today;
+            label3.Text = (thisDay.ToString("D"));
+            actualizarHabitaciones();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.LoadNumeroHabitacion("15");
             frmOpcion.Show();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.LoadNumeroHabitacion("16");
             frmOpcion.Show();
 
         }
@@ -625,14 +764,10 @@ namespace JUDYSOFT
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             
-        objHab15.Estado=comboBox1.Text.Trim();
             switch (objHab15.Estado)
             {
                 case "Disponible":
-             
-
-
-
+       
                     /*foreach (Label l in this.Controls.OfType<Label>().Where(l => l.Name.StartsWith("")))
                     {
                         l.Text = "bla bla";
@@ -650,6 +785,120 @@ namespace JUDYSOFT
         }
 
         private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnh17_Click_1(object sender, EventArgs e)
+        {
+            frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.Show();
+            frmOpcion.LoadNumeroHabitacion("17");
+        }
+
+        private void btnh18_Click_1(object sender, EventArgs e)
+        {
+            frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.Show();
+            frmOpcion.LoadNumeroHabitacion("18");
+        }
+
+        private void btnh19_Click_1(object sender, EventArgs e)
+        {
+            frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.Show();
+            frmOpcion.LoadNumeroHabitacion("19");
+        }
+
+        private void btnh20_Click_1(object sender, EventArgs e)
+        {
+            frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.Show();
+            frmOpcion.LoadNumeroHabitacion("20");
+        }
+
+        private void btnh21_Click_1(object sender, EventArgs e)
+        {
+            frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.Show();
+            frmOpcion.LoadNumeroHabitacion("21");
+        }
+
+        private void btnh22_Click_1(object sender, EventArgs e)
+        {
+            frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.Show();
+            frmOpcion.LoadNumeroHabitacion("22");
+        }
+
+        private void btnh23_Click_1(object sender, EventArgs e)
+        {
+            frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.Show();
+            frmOpcion.LoadNumeroHabitacion("23");
+        }
+
+        private void btnh24_Click_1(object sender, EventArgs e)
+        {
+            frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.Show();
+            frmOpcion.LoadNumeroHabitacion("24");
+        }
+
+        private void btnh25_Click_1(object sender, EventArgs e)
+        {
+            frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.Show();
+            frmOpcion.LoadNumeroHabitacion("25");
+        }
+
+        private void btnh26_Click_1(object sender, EventArgs e)
+        {
+            frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.Show();
+            frmOpcion.LoadNumeroHabitacion("26");
+        }
+
+        private void btnh27_Click_1(object sender, EventArgs e)
+        {
+            frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.Show();
+            frmOpcion.LoadNumeroHabitacion("27");
+        }
+
+        private void frmAdministracionHabitaciones_MdiChildActivate(object sender, EventArgs e)
+        {
+            actualizarHabitaciones();
+        }
+
+        private void frmAdministracionHabitaciones_MouseHover(object sender, EventArgs e)
+        {
+            actualizarHabitaciones();
+        }
+
+        private void frmAdministracionHabitaciones_Activated(object sender, EventArgs e)
+        {
+            actualizarHabitaciones();
+        }
+
+        private void groupBox1_MouseHover(object sender, EventArgs e)
+        {
+            actualizarHabitaciones();
+
+        }
+
+        private void groupBox3_MouseHover(object sender, EventArgs e)
+        {
+            actualizarHabitaciones();
+        }
+
+        private void groupBox4_MouseHover(object sender, EventArgs e)
+        {
+            actualizarHabitaciones();
+
+        }
+
+        private void groupBox3_Enter_1(object sender, EventArgs e)
         {
 
         }
