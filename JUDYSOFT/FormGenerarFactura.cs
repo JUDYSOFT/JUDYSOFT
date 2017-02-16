@@ -354,12 +354,12 @@ namespace JUDYSOFT
         {
             if (comboBoxTAX.SelectedIndex == 0)
             {
-                txtImpuestoGenerarFactura.Text = "0.12";
+                txtImpuestoGenerarFactura.Text = "0,12";
                 CalculoMontoTotalGenerarFactura(txtImpuestoGenerarFactura.Text, txtSubtotalGenerarFactura.Text);
             }
             else if (comboBoxTAX.SelectedIndex == 1)
             {
-                txtImpuestoGenerarFactura.Text = "0.14";
+                txtImpuestoGenerarFactura.Text = "0,14";
                 CalculoMontoTotalGenerarFactura(txtImpuestoGenerarFactura.Text, txtSubtotalGenerarFactura.Text);
             }
             else
