@@ -36,6 +36,7 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresarNuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarDatosDeClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +50,6 @@
             this.gestionUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,6 +121,13 @@
             this.modificarDatosDeClienteToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.modificarDatosDeClienteToolStripMenuItem.Text = "Modificar Datos de Cliente";
             this.modificarDatosDeClienteToolStripMenuItem.Click += new System.EventHandler(this.modificarDatosDeClienteToolStripMenuItem_Click);
+            // 
+            // consultarClientesToolStripMenuItem
+            // 
+            this.consultarClientesToolStripMenuItem.Image = global::JUDYSOFT.Properties.Resources._1484548470_Zoom;
+            this.consultarClientesToolStripMenuItem.Name = "consultarClientesToolStripMenuItem";
+            this.consultarClientesToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.consultarClientesToolStripMenuItem.Text = "Consultar Clientes";
             // 
             // toolStripMenuItem1
             // 
@@ -218,7 +225,7 @@
             // parametrosToolStripMenuItem
             // 
             this.parametrosToolStripMenuItem.Name = "parametrosToolStripMenuItem";
-            this.parametrosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.parametrosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.parametrosToolStripMenuItem.Text = "Parametros";
             // 
             // modificarClientesToolStripMenuItem
@@ -226,13 +233,6 @@
             this.modificarClientesToolStripMenuItem.Name = "modificarClientesToolStripMenuItem";
             this.modificarClientesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.modificarClientesToolStripMenuItem.Text = "Modificar Clientes";
-            // 
-            // consultarClientesToolStripMenuItem
-            // 
-            this.consultarClientesToolStripMenuItem.Image = global::JUDYSOFT.Properties.Resources._1484548470_Zoom;
-            this.consultarClientesToolStripMenuItem.Name = "consultarClientesToolStripMenuItem";
-            this.consultarClientesToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
-            this.consultarClientesToolStripMenuItem.Text = "Consultar Clientes";
             // 
             // frmMenuPrincipal
             // 
@@ -246,6 +246,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "JUDYSOFT";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenuPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);

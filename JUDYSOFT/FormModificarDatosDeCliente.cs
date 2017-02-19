@@ -161,7 +161,7 @@ namespace JUDYSOFT
             if (frm.DialogResult == DialogResult.OK)
             {
 
-                txtNumDocumentoModificarCliente.Text= frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[9].Value.ToString();
+                txtNumDocumentoModificarCliente.Text= frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[6].Value.ToString();
                 txtNombre1IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[1].Value.ToString();
                 txtNombre2IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[2].Value.ToString();
                 txtApellido1IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[3].Value.ToString();
@@ -171,9 +171,9 @@ namespace JUDYSOFT
                 txtDireccionIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[7].Value.ToString();
                 txtNacionalidadIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[10].Value.ToString();
                 txtProcedenciaIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[11].Value.ToString();
-                fechaNacIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[12].Value.ToString();
+                fechaNacIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[10].Value.ToString();
                 txtCorreoIngresoCLiente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[14].Value.ToString();
-                comboBoxEstadoCivil.SelectedItem = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[15].Value.ToString();
+                comboBoxEstadoCivil.SelectedItem = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[11].Value.ToString();
                 habilitarCampos();
             }
 

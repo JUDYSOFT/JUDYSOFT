@@ -43,19 +43,17 @@
             this.dataGridViewModificarClientes.AllowUserToResizeRows = false;
             this.dataGridViewModificarClientes.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewModificarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewModificarClientes.Location = new System.Drawing.Point(68, 47);
-            this.dataGridViewModificarClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewModificarClientes.Location = new System.Drawing.Point(51, 38);
             this.dataGridViewModificarClientes.Name = "dataGridViewModificarClientes";
-            this.dataGridViewModificarClientes.Size = new System.Drawing.Size(748, 202);
+            this.dataGridViewModificarClientes.Size = new System.Drawing.Size(561, 164);
             this.dataGridViewModificarClientes.TabIndex = 0;
             this.dataGridViewModificarClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // bttnSeleccionar
             // 
-            this.bttnSeleccionar.Location = new System.Drawing.Point(151, 272);
-            this.bttnSeleccionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bttnSeleccionar.Location = new System.Drawing.Point(144, 221);
             this.bttnSeleccionar.Name = "bttnSeleccionar";
-            this.bttnSeleccionar.Size = new System.Drawing.Size(100, 28);
+            this.bttnSeleccionar.Size = new System.Drawing.Size(75, 23);
             this.bttnSeleccionar.TabIndex = 1;
             this.bttnSeleccionar.Text = "Seleccionar";
             this.bttnSeleccionar.UseVisualStyleBackColor = true;
@@ -63,36 +61,35 @@
             // 
             // bttmCancelar
             // 
-            this.bttmCancelar.Location = new System.Drawing.Point(616, 272);
-            this.bttmCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bttmCancelar.Location = new System.Drawing.Point(438, 221);
             this.bttmCancelar.Name = "bttmCancelar";
-            this.bttmCancelar.Size = new System.Drawing.Size(100, 28);
+            this.bttmCancelar.Size = new System.Drawing.Size(75, 23);
             this.bttmCancelar.TabIndex = 2;
             this.bttmCancelar.Text = "Cancelar";
             this.bttmCancelar.UseVisualStyleBackColor = true;
             // 
             // Eliminar
             // 
-            this.Eliminar.Location = new System.Drawing.Point(371, 272);
-            this.Eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Eliminar.Location = new System.Drawing.Point(278, 221);
+            this.Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Size = new System.Drawing.Size(120, 28);
+            this.Eliminar.Size = new System.Drawing.Size(90, 23);
             this.Eliminar.TabIndex = 3;
             this.Eliminar.Text = "Eliminar";
             this.Eliminar.UseVisualStyleBackColor = true;
+            this.Eliminar.Visible = false;
             this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
             // FormListaClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(883, 340);
+            this.ClientSize = new System.Drawing.Size(662, 276);
             this.Controls.Add(this.Eliminar);
             this.Controls.Add(this.bttmCancelar);
             this.Controls.Add(this.bttnSeleccionar);
             this.Controls.Add(this.dataGridViewModificarClientes);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormListaClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión CLIENTES";

@@ -657,6 +657,7 @@ namespace JUDYSOFT
         private void button1_Click(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = this.MdiParent;
             frmOpcion.LoadNumeroHabitacion("15");
             frmOpcion.Show();
         }
@@ -664,6 +665,7 @@ namespace JUDYSOFT
         private void button2_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = this.MdiParent;
             frmOpcion.LoadNumeroHabitacion("16");
             frmOpcion.Show();
 
@@ -792,6 +794,7 @@ namespace JUDYSOFT
         private void btnh17_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = this.MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("17");
         }
@@ -799,6 +802,7 @@ namespace JUDYSOFT
         private void btnh18_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = this.MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("18");
         }
@@ -806,6 +810,7 @@ namespace JUDYSOFT
         private void btnh19_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = this.MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("19");
         }
@@ -813,6 +818,7 @@ namespace JUDYSOFT
         private void btnh20_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = this.MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("20");
         }
@@ -820,6 +826,7 @@ namespace JUDYSOFT
         private void btnh21_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = this.MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("21");
         }
@@ -827,6 +834,7 @@ namespace JUDYSOFT
         private void btnh22_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = this.MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("22");
         }
@@ -834,6 +842,7 @@ namespace JUDYSOFT
         private void btnh23_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = this.MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("23");
         }
@@ -841,6 +850,7 @@ namespace JUDYSOFT
         private void btnh24_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = this.MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("24");
         }
@@ -848,6 +858,7 @@ namespace JUDYSOFT
         private void btnh25_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = this.MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("25");
         }
@@ -855,6 +866,7 @@ namespace JUDYSOFT
         private void btnh26_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = this.MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("26");
         }
@@ -862,39 +874,40 @@ namespace JUDYSOFT
         private void btnh27_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = this.MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("27");
         }
 
-        private void frmAdministracionHabitaciones_MdiChildActivate(object sender, EventArgs e)
+       private void frmAdministracionHabitaciones_MdiChildActivate(object sender, EventArgs e)
         {
-            actualizarHabitaciones();
+           // actualizarHabitaciones();
         }
 
         private void frmAdministracionHabitaciones_MouseHover(object sender, EventArgs e)
         {
-            actualizarHabitaciones();
+           // actualizarHabitaciones();
         }
 
         private void frmAdministracionHabitaciones_Activated(object sender, EventArgs e)
         {
-            actualizarHabitaciones();
+            //actualizarHabitaciones();
         }
 
         private void groupBox1_MouseHover(object sender, EventArgs e)
         {
-            actualizarHabitaciones();
+            //actualizarHabitaciones();
 
         }
 
         private void groupBox3_MouseHover(object sender, EventArgs e)
         {
-            actualizarHabitaciones();
+            //actualizarHabitaciones();
         }
 
         private void groupBox4_MouseHover(object sender, EventArgs e)
         {
-            actualizarHabitaciones();
+            //actualizarHabitaciones();
 
         }
 
