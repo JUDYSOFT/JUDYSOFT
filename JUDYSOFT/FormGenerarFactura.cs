@@ -42,6 +42,7 @@ namespace JUDYSOFT
             String cmd = "SELECT * FROM EMPLEADO WHERE CODEMPLEADO= " + frmLogin.Codigo;
             DataSet DS = Utilidades.Ejecutar(cmd);
             lblAtendidoPorGenerarFactura.Text = DS.Tables[0].Rows[0]["NOMBRE1EMPLEADO"].ToString().Trim() + " " + DS.Tables[0].Rows[0]["APELLIDO1EMPLEADO"].ToString().Trim();
+            lblCodCli.Text = DS.Tables[0].Rows[0]["CODEMPLEADO"].ToString();
 
             //Administración--------------------------------------------------------------------------------------------------------------------------------------
 
@@ -251,7 +252,7 @@ namespace JUDYSOFT
                 txtBoxClienteGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[1].Value.ToString() +" "+ nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[3].Value.ToString();
                 txtDireccionGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[7].Value.ToString();
                 txtTelefonoGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[5].Value.ToString();
-
+                labID.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[0].Value.ToString();
                 //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
                 //txtidCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[6].Value.ToString();
@@ -286,17 +287,31 @@ namespace JUDYSOFT
                 //{
                 //    cmd = string.Format("Exec ActualizarDetalle '{0}','{1}','{2}','{3}','{4}','{6}'", NumFac, Fila.Cells[0].Value.ToString(), Fila.Cells[3].Value.ToString(), Fila.Cells[1].Value.ToString(), txtSubtotalGenerarFactura.Text.ToString(), txtTotalGenerarFactura.Text.ToString());
                 //    DS = Utilidades.Ejecutar(cmd);
-                     
+
                 //}
 
                 //cmd = "Exec DatosFacturaAct " + NumFac;
                 //DS = Utilidades.Ejecutar(cmd);
                 //JUDYSOFT------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                string cmd = string.Format("Exec ActualizarCabecera '{0}','{1}'", labID.Text, lblCodCli.Text);
+                DataSet DS = Utilidades.Ejecutar(cmd);
+
+                string NumFac = DS.Tables[0].Rows[0]["IDFACTURA"].ToString().Trim();
+
+                foreach (DataGridViewRow Fila in DGVGenerarFactura.Rows)
+                {
+                    cmd = string.Format("Exec ActualizarDetalle '{0}','{1}','{2}','{3}','{4}','{6}'", NumFac, Fila.Cells[0].Value.ToString(), Fila.Cells[3].Value.ToString(), Fila.Cells[1].Value.ToString(), txtSubtotalGenerarFactura.Text.ToString(), txtTotalGenerarFactura.Text.ToString());
+                    DS = Utilidades.Ejecutar(cmd);
+
+                }
+
+                cmd = "Exec DatosFacturaAct " + NumFac;
+                DS = Utilidades.Ejecutar(cmd);
 
 
-                /*ReporteFactura report = new ReporteFactura();
+                ReporteFactura report = new ReporteFactura();
                 report.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
-                report.ShowDialog();*/
+                report.ShowDialog();
                 Limpiar();
 
 
@@ -354,12 +369,12 @@ namespace JUDYSOFT
         {
             if (comboBoxTAX.SelectedIndex == 0)
             {
-                txtImpuestoGenerarFactura.Text = "0.12";
+                txtImpuestoGenerarFactura.Text = "0,12";
                 CalculoMontoTotalGenerarFactura(txtImpuestoGenerarFactura.Text, txtSubtotalGenerarFactura.Text);
             }
             else if (comboBoxTAX.SelectedIndex == 1)
             {
-                txtImpuestoGenerarFactura.Text = "0.14";
+                txtImpuestoGenerarFactura.Text = "0,14";
                 CalculoMontoTotalGenerarFactura(txtImpuestoGenerarFactura.Text, txtSubtotalGenerarFactura.Text);
             }
             else
@@ -376,6 +391,11 @@ namespace JUDYSOFT
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BotonSalirGenerarFactura_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

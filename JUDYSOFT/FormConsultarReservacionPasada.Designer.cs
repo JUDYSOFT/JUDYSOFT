@@ -38,22 +38,23 @@
             // 
             this.tablaReservacionesPasadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.tablaReservacionesPasadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaReservacionesPasadas.Location = new System.Drawing.Point(17, 13);
-            this.tablaReservacionesPasadas.Margin = new System.Windows.Forms.Padding(2);
+            this.tablaReservacionesPasadas.Location = new System.Drawing.Point(23, 16);
+            this.tablaReservacionesPasadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tablaReservacionesPasadas.Name = "tablaReservacionesPasadas";
             this.tablaReservacionesPasadas.RowTemplate.Height = 24;
-            this.tablaReservacionesPasadas.Size = new System.Drawing.Size(383, 306);
+            this.tablaReservacionesPasadas.Size = new System.Drawing.Size(511, 377);
             this.tablaReservacionesPasadas.TabIndex = 3;
+            this.tablaReservacionesPasadas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaReservacionesPasadas_CellContentClick);
             // 
             // btnAtrasReservacionesPasadas
             // 
             this.btnAtrasReservacionesPasadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtrasReservacionesPasadas.Image = global::JUDYSOFT.Properties.Resources._1484546336_Back;
             this.btnAtrasReservacionesPasadas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtrasReservacionesPasadas.Location = new System.Drawing.Point(288, 334);
-            this.btnAtrasReservacionesPasadas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAtrasReservacionesPasadas.Location = new System.Drawing.Point(384, 411);
+            this.btnAtrasReservacionesPasadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAtrasReservacionesPasadas.Name = "btnAtrasReservacionesPasadas";
-            this.btnAtrasReservacionesPasadas.Size = new System.Drawing.Size(112, 43);
+            this.btnAtrasReservacionesPasadas.Size = new System.Drawing.Size(149, 53);
             this.btnAtrasReservacionesPasadas.TabIndex = 5;
             this.btnAtrasReservacionesPasadas.Text = "Atrás";
             this.btnAtrasReservacionesPasadas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -65,10 +66,10 @@
             this.btnConsultarReservacionesPasadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarReservacionesPasadas.Image = global::JUDYSOFT.Properties.Resources._1484548470_Zoom;
             this.btnConsultarReservacionesPasadas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarReservacionesPasadas.Location = new System.Drawing.Point(163, 334);
-            this.btnConsultarReservacionesPasadas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConsultarReservacionesPasadas.Location = new System.Drawing.Point(217, 411);
+            this.btnConsultarReservacionesPasadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConsultarReservacionesPasadas.Name = "btnConsultarReservacionesPasadas";
-            this.btnConsultarReservacionesPasadas.Size = new System.Drawing.Size(121, 43);
+            this.btnConsultarReservacionesPasadas.Size = new System.Drawing.Size(161, 53);
             this.btnConsultarReservacionesPasadas.TabIndex = 4;
             this.btnConsultarReservacionesPasadas.Text = "Consultar";
             this.btnConsultarReservacionesPasadas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -77,13 +78,14 @@
             // 
             // reservacionesPasadas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(430, 388);
+            this.ClientSize = new System.Drawing.Size(573, 478);
             this.Controls.Add(this.btnAtrasReservacionesPasadas);
             this.Controls.Add(this.btnConsultarReservacionesPasadas);
             this.Controls.Add(this.tablaReservacionesPasadas);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "reservacionesPasadas";
             this.Text = "Reservaciones Pasadas";
             this.Load += new System.EventHandler(this.reservacionesPasadas_Load);

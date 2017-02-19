@@ -55,6 +55,10 @@ namespace JUDYSOFT
                         frmHab.Show();
                         this.FormClosing += Form1_FormClosing;
                     }
+                    else if(cuenta!=txtuser.Text.Trim() || psd!=txtpass.Text.Trim())
+                    {
+                        MessageBox.Show("Nombre de usuario o contraseña incorrectos","JUDYSOFT",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -63,7 +67,7 @@ namespace JUDYSOFT
             }
             else
             {
-                MessageBox.Show("Debe ingresar el Usuario y su Contraseña: ","Error de Acceso");
+                MessageBox.Show("Debe ingresar el Usuario y su Contraseña: ","JUDYSOFT");
 
             }
 
