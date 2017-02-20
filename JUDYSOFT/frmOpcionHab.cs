@@ -16,13 +16,16 @@ namespace JUDYSOFT
         clsHabitacion objHab = new clsHabitacion();
         public frmOpcionHab()
         {
+            System.Drawing.Bitmap limpieza = JUDYSOFT.Properties.Resources.l;
+            System.Drawing.Bitmap disponible = JUDYSOFT.Properties.Resources.a;
+            System.Drawing.Bitmap ocupado = JUDYSOFT.Properties.Resources.o;
             InitializeComponent();
             btnocupado.TextImageRelation = TextImageRelation.TextAboveImage;
             btndisponible.TextImageRelation = TextImageRelation.TextAboveImage;
             button3.TextImageRelation = TextImageRelation.TextAboveImage;
             try
             {
-                btnocupado.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");   
+                btnocupado.Image = ocupado;   
             }
             catch (Exception ex)
             {
@@ -31,7 +34,7 @@ namespace JUDYSOFT
 
             try
             {
-                btndisponible.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                btndisponible.Image = disponible;
             }
             catch (Exception ex)
             {
@@ -40,7 +43,7 @@ namespace JUDYSOFT
 
             try
             {
-                button3.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                button3.Image = limpieza;
             }
             catch (Exception ex)
             {
@@ -56,7 +59,9 @@ namespace JUDYSOFT
             textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
-
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
         }
 
         private void frmOpcionHab_Load(object sender, EventArgs e)
@@ -88,6 +93,9 @@ namespace JUDYSOFT
             textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -112,7 +120,7 @@ namespace JUDYSOFT
             {
                 string CMD = string.Format("UPDATE HABITACION SET ESTADOHABITACION='Disponible' WHERE NUMEROHABITACION='{0}'", objHab.Numero);
                 DataSet ds = Utilidades.Ejecutar(CMD);
-                this.Close();
+                Close();
             }
             catch (Exception ex)
             {
@@ -133,15 +141,16 @@ namespace JUDYSOFT
 
         private void btnlistar_Click(object sender, EventArgs e)
         {
-            FormListaClientes Clientes = new FormListaClientes();
-            Clientes.ShowDialog();
-            Clientes.StartPosition = FormStartPosition.CenterScreen;
+            frmNomina Listar = new frmNomina();
+            Listar.LoadTipoNomina(btnlistar.Text.Trim());
+            Listar.ShowDialog();
+            Listar.StartPosition = FormStartPosition.CenterScreen;
 
-            if (Clientes.dataGridViewModificarClientes.Rows.Count != 0)
+            if (Listar.dataGridViewNomina.Rows.Count != 0)
             {
-                textBox1.Text = Clientes.dataGridViewModificarClientes.Rows[Clientes.dataGridViewModificarClientes.CurrentRow.Index].Cells[7].Value.ToString();
-                textBox2.Text = Clientes.dataGridViewModificarClientes.Rows[Clientes.dataGridViewModificarClientes.CurrentRow.Index].Cells[1].Value.ToString();
-                textBox3.Text = Clientes.dataGridViewModificarClientes.Rows[Clientes.dataGridViewModificarClientes.CurrentRow.Index].Cells[12].Value.ToString();
+                textBox1.Text = Listar.dataGridViewNomina.Rows[Listar.dataGridViewNomina.CurrentRow.Index].Cells[0].Value.ToString();
+                textBox2.Text = Listar.dataGridViewNomina.Rows[Listar.dataGridViewNomina.CurrentRow.Index].Cells[2].Value.ToString();
+                textBox3.Text = Listar.dataGridViewNomina.Rows[Listar.dataGridViewNomina.CurrentRow.Index].Cells[4].Value.ToString();
             }
         }
 
@@ -153,17 +162,17 @@ namespace JUDYSOFT
             }
             else
             {
-                string CMD1 = string.Format("SELECT CODCLIENTE FROM CLIENTE WHERE NUMERODOCUMENTOCLIENTE='{0}'", textBox1.Text.Trim());
-                DataSet ds1 = Utilidades.Ejecutar(CMD1);
-                string CodCliente=ds1.Tables[0].Rows[0]["CODCLIENTE"].ToString().Trim();
                 switch (btnlistar.Text)
                 {
                     case "Clientes":
                         try
                         {
+                            string CMD1 = string.Format("SELECT CODCLIENTE FROM CLIENTE WHERE NUMERODOCUMENTOCLIENTE='{0}'", textBox1.Text.Trim());
+                            DataSet ds1 = Utilidades.Ejecutar(CMD1);
+                            string CodCliente = ds1.Tables[0].Rows[0]["CODCLIENTE"].ToString().Trim();
                             string CMD = string.Format("UPDATE HABITACION SET ESTADOHABITACION='Ocupado',CODCLIENTE='{0}' WHERE NUMEROHABITACION='{1}'", CodCliente,objHab.Numero);
                             DataSet ds = Utilidades.Ejecutar(CMD);
-                            this.Close();
+                            Close();
                         }
                         catch (Exception ex)
                         {
@@ -173,9 +182,12 @@ namespace JUDYSOFT
                     case "Empleados":
                         try
                         {
+                            string CMD1 = string.Format("SELECT CODEMPLEADO FROM EMPLEADO WHERE NUMERODOCUMENTOEMPLEADO='{0}'", textBox1.Text.Trim());
+                            DataSet ds1 = Utilidades.Ejecutar(CMD1);
+                            string CodEmpleado = ds1.Tables[0].Rows[0]["CODEMPLEADO"].ToString().Trim();
                             string CMD = string.Format("UPDATE HABITACION SET ESTADOHABITACION='Limpieza' WHERE NUMEROHABITACION='{0}'", objHab.Numero);
                             DataSet ds = Utilidades.Ejecutar(CMD);
-                            this.Close();
+                            Close();
                         }
                         catch (Exception ex)
                         {
@@ -196,8 +208,6 @@ namespace JUDYSOFT
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
-
         }
     }
 }

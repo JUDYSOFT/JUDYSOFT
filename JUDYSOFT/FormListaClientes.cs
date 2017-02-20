@@ -55,7 +55,7 @@ namespace JUDYSOFT
         public DataSet LLenarDGv(string tabla)
         {
             DataSet DS;
-            string cmd = string.Format("SELECT * FROM "+tabla);
+            string cmd = string.Format("SELECT * FROM " + tabla);
             DS = Utilidades.Ejecutar(cmd);
             return DS;
         }
@@ -72,24 +72,11 @@ namespace JUDYSOFT
 
         private void FormListaClientes_FormClosing(object sender, FormClosingEventArgs e)
         {
-           /* DialogResult confirmacion = MessageBox.Show("¿Está seguro que desea salir?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-
-            if (confirmacion == System.Windows.Forms.DialogResult.OK)
-            {
-                this.Dispose();
-                MenuSettings.EnableMenuItem("clientesToolStripMenuItem", "modificarDatosDeClienteToolStripMenuItem");
-            }
-            else
-            {
-
-                e.Cancel = true;
-            }*/
-
         }
 
         private void bttmCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
     

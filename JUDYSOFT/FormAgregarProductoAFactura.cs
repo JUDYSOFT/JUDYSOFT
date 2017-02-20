@@ -33,13 +33,13 @@ namespace JUDYSOFT
             else
             {
                 DialogResult = DialogResult.OK;
-                this.Close();
+                Close();
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
         }
 
         private void label2_Click(object sender, EventArgs e)

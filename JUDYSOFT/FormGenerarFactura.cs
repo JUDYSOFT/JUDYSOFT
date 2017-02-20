@@ -150,7 +150,7 @@ namespace JUDYSOFT
 
         private void BotonSalirGenerarFactura_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void BotonBuscarGenerarFactura_Click(object sender, EventArgs e)
@@ -252,7 +252,7 @@ namespace JUDYSOFT
                 txtBoxClienteGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[1].Value.ToString() +" "+ nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[3].Value.ToString();
                 txtDireccionGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[7].Value.ToString();
                 txtTelefonoGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[5].Value.ToString();
-                labID.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[0].Value.ToString();
+                //labID.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[0].Value.ToString();
                 //JUDYSOFT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
                 //txtidCliente.Text = nuevaLista.dataGridView1.Rows[nuevaLista.dataGridView1.CurrentRow.Index].Cells[6].Value.ToString();
@@ -309,10 +309,10 @@ namespace JUDYSOFT
                 DS = Utilidades.Ejecutar(cmd);
 
 
-                ReporteFactura report = new ReporteFactura();
+               /* ReporteFactura report = new ReporteFactura();
                 report.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
                 report.ShowDialog();
-                Limpiar();
+                Limpiar();*/
 
 
 
@@ -395,7 +395,7 @@ namespace JUDYSOFT
 
         private void BotonSalirGenerarFactura_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

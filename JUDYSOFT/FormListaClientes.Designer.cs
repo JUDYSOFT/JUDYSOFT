@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaClientes));
             this.dataGridViewModificarClientes = new System.Windows.Forms.DataGridView();
             this.bttnSeleccionar = new System.Windows.Forms.Button();
             this.bttmCancelar = new System.Windows.Forms.Button();
@@ -42,16 +43,16 @@
             this.dataGridViewModificarClientes.AllowUserToResizeRows = false;
             this.dataGridViewModificarClientes.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewModificarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewModificarClientes.Location = new System.Drawing.Point(51, 38);
+            this.dataGridViewModificarClientes.Location = new System.Drawing.Point(12, 38);
             this.dataGridViewModificarClientes.Name = "dataGridViewModificarClientes";
             this.dataGridViewModificarClientes.ReadOnly = true;
-            this.dataGridViewModificarClientes.Size = new System.Drawing.Size(561, 164);
+            this.dataGridViewModificarClientes.Size = new System.Drawing.Size(645, 164);
             this.dataGridViewModificarClientes.TabIndex = 0;
             this.dataGridViewModificarClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // bttnSeleccionar
             // 
-            this.bttnSeleccionar.Location = new System.Drawing.Point(113, 221);
+            this.bttnSeleccionar.Location = new System.Drawing.Point(220, 221);
             this.bttnSeleccionar.Name = "bttnSeleccionar";
             this.bttnSeleccionar.Size = new System.Drawing.Size(75, 23);
             this.bttnSeleccionar.TabIndex = 1;
@@ -61,7 +62,7 @@
             // 
             // bttmCancelar
             // 
-            this.bttmCancelar.Location = new System.Drawing.Point(462, 221);
+            this.bttmCancelar.Location = new System.Drawing.Point(397, 221);
             this.bttmCancelar.Name = "bttmCancelar";
             this.bttmCancelar.Size = new System.Drawing.Size(75, 23);
             this.bttmCancelar.TabIndex = 2;
@@ -75,13 +76,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(662, 276);
+            this.ClientSize = new System.Drawing.Size(669, 257);
             this.ControlBox = false;
             this.Controls.Add(this.bttmCancelar);
             this.Controls.Add(this.bttnSeleccionar);
             this.Controls.Add(this.dataGridViewModificarClientes);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormListaClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión CLIENTES";

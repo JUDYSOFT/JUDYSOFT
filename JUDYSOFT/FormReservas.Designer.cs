@@ -41,7 +41,7 @@
             // btnConsultarReservasPasadasReservaciones
             // 
             this.btnConsultarReservasPasadasReservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarReservasPasadasReservaciones.Image = global::JUDYSOFT.Properties.Resources._1484548470_Zoom;
+            //this.btnConsultarReservasPasadasReservaciones.Image = global::JUDYSOFT.Properties.Resources._1484548470_Zoom;
             this.btnConsultarReservasPasadasReservaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarReservasPasadasReservaciones.Location = new System.Drawing.Point(472, 14);
             this.btnConsultarReservasPasadasReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -108,7 +108,7 @@
             // btnConsultarReservaciones
             // 
             this.btnConsultarReservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarReservaciones.Image = global::JUDYSOFT.Properties.Resources._1484548470_Zoom;
+            //this.btnConsultarReservaciones.Image = global::JUDYSOFT.Properties.Resources._1484548470_Zoom;
             this.btnConsultarReservaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarReservaciones.Location = new System.Drawing.Point(29, 313);
             this.btnConsultarReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

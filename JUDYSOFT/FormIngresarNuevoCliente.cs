@@ -121,7 +121,7 @@ namespace JUDYSOFT
 
             if (confirmacion == System.Windows.Forms.DialogResult.OK)
             {
-                this.Dispose();
+                Dispose();
                 MenuSettings.EnableMenuItem("clientesToolStripMenuItem", "ingresarNuevoClienteToolStripMenuItem");
             }
             else
@@ -387,7 +387,7 @@ namespace JUDYSOFT
 
             if (confirmacion == System.Windows.Forms.DialogResult.OK)
             {
-                this.Dispose();
+                Dispose();
                 MenuSettings.EnableMenuItem("clientesToolStripMenuItem", "ingresarNuevoClienteToolStripMenuItem");
             }
             else

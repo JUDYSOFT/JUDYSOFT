@@ -26,7 +26,7 @@ namespace JUDYSOFT
         private void ReporteFactura_Load_1(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
     }
 }

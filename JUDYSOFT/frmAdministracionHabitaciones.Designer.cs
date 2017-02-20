@@ -274,14 +274,13 @@ namespace JUDYSOFT
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Primer Piso";
             this.groupBox3.UseWaitCursor = true;
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter_1);
             this.groupBox3.MouseHover += new System.EventHandler(this.groupBox3_MouseHover);
             // 
             // lblh20
             // 
-            this.lblh20.Location = new System.Drawing.Point(547, 105);
+            this.lblh20.Location = new System.Drawing.Point(548, 105);
             this.lblh20.Name = "lblh20";
-            this.lblh20.Size = new System.Drawing.Size(87, 17);
+            this.lblh20.Size = new System.Drawing.Size(86, 17);
             this.lblh20.TabIndex = 21;
             this.lblh20.Text = "label6";
             this.lblh20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -289,9 +288,9 @@ namespace JUDYSOFT
             // 
             // lblh19
             // 
-            this.lblh19.Location = new System.Drawing.Point(442, 105);
+            this.lblh19.Location = new System.Drawing.Point(443, 105);
             this.lblh19.Name = "lblh19";
-            this.lblh19.Size = new System.Drawing.Size(87, 17);
+            this.lblh19.Size = new System.Drawing.Size(86, 17);
             this.lblh19.TabIndex = 20;
             this.lblh19.Text = "label5";
             this.lblh19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -299,9 +298,9 @@ namespace JUDYSOFT
             // 
             // lblh18
             // 
-            this.lblh18.Location = new System.Drawing.Point(333, 105);
+            this.lblh18.Location = new System.Drawing.Point(336, 104);
             this.lblh18.Name = "lblh18";
-            this.lblh18.Size = new System.Drawing.Size(93, 17);
+            this.lblh18.Size = new System.Drawing.Size(90, 18);
             this.lblh18.TabIndex = 19;
             this.lblh18.Text = "label4";
             this.lblh18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -309,9 +308,9 @@ namespace JUDYSOFT
             // 
             // lblh17
             // 
-            this.lblh17.Location = new System.Drawing.Point(234, 105);
+            this.lblh17.Location = new System.Drawing.Point(231, 105);
             this.lblh17.Name = "lblh17";
-            this.lblh17.Size = new System.Drawing.Size(87, 17);
+            this.lblh17.Size = new System.Drawing.Size(90, 17);
             this.lblh17.TabIndex = 14;
             this.lblh17.Text = "label3";
             this.lblh17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -425,7 +424,7 @@ namespace JUDYSOFT
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdministracionHabitaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Administracion de Habitaciones";
+            this.Text = "Administración de Habitaciones";
             this.UseWaitCursor = true;
             this.Activated += new System.EventHandler(this.frmAdministracionHabitaciones_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAdministracionHabitaciones_FormClosed);
