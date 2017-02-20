@@ -41,7 +41,7 @@ namespace JUDYSOFT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace JUDYSOFT
 
             if (confirmacion == System.Windows.Forms.DialogResult.OK)
             {
-                this.Dispose();
+                Dispose();
                 MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem", "reservacionesToolStripMenuItem");
             }
         }

@@ -33,6 +33,8 @@
             this.btnocupado = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btncancelar = new System.Windows.Forms.Button();
+            this.btnguardar = new System.Windows.Forms.Button();
             this.btnlistar = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -41,14 +43,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblHabitacion = new System.Windows.Forms.Label();
-            this.btnguardar = new System.Windows.Forms.Button();
-            this.btncancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btndisponible
             // 
-            this.btndisponible.Location = new System.Drawing.Point(22, 24);
+            this.btndisponible.Location = new System.Drawing.Point(44, 24);
             this.btndisponible.Name = "btndisponible";
             this.btndisponible.Size = new System.Drawing.Size(75, 71);
             this.btndisponible.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             // btnocupado
             // 
-            this.btnocupado.Location = new System.Drawing.Point(149, 24);
+            this.btnocupado.Location = new System.Drawing.Point(162, 24);
             this.btnocupado.Name = "btnocupado";
             this.btnocupado.Size = new System.Drawing.Size(75, 71);
             this.btnocupado.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(275, 24);
+            this.button3.Location = new System.Drawing.Point(277, 24);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 71);
             this.button3.TabIndex = 2;
@@ -94,6 +94,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Habitacion";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btncancelar
+            // 
+            this.btncancelar.Location = new System.Drawing.Point(182, 123);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(75, 23);
+            this.btncancelar.TabIndex = 9;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
+            // 
+            // btnguardar
+            // 
+            this.btnguardar.Location = new System.Drawing.Point(65, 124);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(75, 23);
+            this.btnguardar.TabIndex = 8;
+            this.btnguardar.Text = "Guardar";
+            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // btnlistar
             // 
@@ -162,26 +182,6 @@
             this.lblHabitacion.TabIndex = 6;
             this.lblHabitacion.Text = "Habitacion";
             this.lblHabitacion.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // btnguardar
-            // 
-            this.btnguardar.Location = new System.Drawing.Point(65, 124);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(75, 23);
-            this.btnguardar.TabIndex = 8;
-            this.btnguardar.Text = "Guardar";
-            this.btnguardar.UseVisualStyleBackColor = true;
-            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
-            // 
-            // btncancelar
-            // 
-            this.btncancelar.Location = new System.Drawing.Point(182, 123);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(75, 23);
-            this.btncancelar.TabIndex = 9;
-            this.btncancelar.Text = "Cancelar";
-            this.btncancelar.UseVisualStyleBackColor = true;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // frmOpcionHab
             // 

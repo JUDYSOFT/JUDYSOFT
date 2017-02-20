@@ -16,8 +16,8 @@ namespace JUDYSOFT
         public FormNuevaReservacion()
         {
             InitializeComponent();
-            this.fechaArrivoNuevaReservacion.Value = DateTime.Now;
-            this.fechaSalidaNuevaReservacion.Value = DateTime.Now;
+            fechaArrivoNuevaReservacion.Value = DateTime.Now;
+            fechaSalidaNuevaReservacion.Value = DateTime.Now;
 
 
         }
@@ -26,17 +26,17 @@ namespace JUDYSOFT
         {
 
 
-            if (this.fechaSalidaNuevaReservacion.Value.Year < this.fechaArrivoNuevaReservacion.Value.Year)
+            if (fechaSalidaNuevaReservacion.Value.Year < fechaArrivoNuevaReservacion.Value.Year)
             {
                 MessageBox.Show("La fecha de salida no puede ser anterior a la fecha de llegada del cliente",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (this.fechaSalidaNuevaReservacion.Value.Month < this.fechaArrivoNuevaReservacion.Value.Month)
+            else if (fechaSalidaNuevaReservacion.Value.Month < fechaArrivoNuevaReservacion.Value.Month)
             {
                 MessageBox.Show("La fecha de salida no puede ser anterior a la fecha de llegada del cliente",
                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (this.fechaSalidaNuevaReservacion.Value.Day < this.fechaArrivoNuevaReservacion.Value.Day)
+            else if (fechaSalidaNuevaReservacion.Value.Day < fechaArrivoNuevaReservacion.Value.Day)
             {
                 MessageBox.Show("La fecha de salida no puede ser anterior a la fecha de llegada del cliente",
                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -52,7 +52,7 @@ namespace JUDYSOFT
 
         private void botonCancelarReservacion_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
         }
 
         private void button2_Click(object sender, EventArgs e)

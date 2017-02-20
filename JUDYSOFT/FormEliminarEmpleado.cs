@@ -67,7 +67,7 @@ namespace JUDYSOFT
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Datos Eliminados Correctamente", "JUDYSOFT");
-            this.Close();
+            Close();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace JUDYSOFT
 
             if (confirmacion == System.Windows.Forms.DialogResult.OK)
             {
-                this.Dispose();
+                Dispose();
             }
             else if (confirmacion == System.Windows.Forms.DialogResult.Cancel)
             {
@@ -90,7 +90,7 @@ namespace JUDYSOFT
 
             if (confirmacion == System.Windows.Forms.DialogResult.OK)
             {
-                this.Dispose();
+                Dispose();
             }
             else if (confirmacion == System.Windows.Forms.DialogResult.Cancel)
             {
@@ -101,7 +101,7 @@ namespace JUDYSOFT
         private void button1_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Datos Eliminados Correctamente", "JUDYSOFT");
-            this.Close();
+            Close();
         }
 
         private void FormEliminarEmpleado_FormClosing(object sender, FormClosingEventArgs e)

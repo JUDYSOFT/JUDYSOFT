@@ -137,6 +137,9 @@ namespace JUDYSOFT
 
         public void actualizarHabitaciones()
         {
+            System.Drawing.Bitmap limpieza = JUDYSOFT.Properties.Resources.l;
+            System.Drawing.Bitmap disponible = JUDYSOFT.Properties.Resources.a;
+            System.Drawing.Bitmap ocupado = JUDYSOFT.Properties.Resources.o;
             try
             {
                 string CMD = string.Format("SELECT ESTADOHABITACION FROM HABITACION WHERE NUMEROHABITACION='{0}'", objHab15.Numero);
@@ -278,19 +281,19 @@ namespace JUDYSOFT
                 switch (objHab15.Estado.Trim())
                 {
                     case "Ocupado":
-                        btnh15.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+                        btnh15.Image = ocupado;
                         lblh15.Text = "Ocupado";
                         lblh15.BackColor = Color.FromArgb(230, 115, 130);
                         break;
                     case "Limpieza":
                         lblh15.Text = "Limpieza";
                         lblh15.BackColor = Color.FromArgb(200, 200, 180);
-                        btnh15.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                        btnh15.Image = limpieza;
                         break;
                     case "Disponible":
                         lblh15.Text = "Disponible";
                         lblh15.BackColor = Color.FromArgb(110, 205, 228);
-                        btnh15.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                        btnh15.Image = disponible;
                         break;
                     default:
                         break;
@@ -307,19 +310,19 @@ namespace JUDYSOFT
                 switch (objHab16.Estado.Trim())
                 {
                     case "Ocupado":
-                        btnh16.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+                        btnh16.Image = ocupado;
                         lblh16.Text = "Ocupado";
                         lblh16.BackColor = Color.FromArgb(230, 115, 130);
                         break;
                     case "Limpieza":
                         lblh16.Text = "Limpieza";
                         lblh16.BackColor = Color.FromArgb(200, 200, 180);
-                        btnh16.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                        btnh16.Image = limpieza;
                         break;
                     case "Disponible":
                         lblh16.Text = "Disponible";
                         lblh16.BackColor = Color.FromArgb(110, 205, 228);
-                        btnh16.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                        btnh16.Image = disponible;
                         break;
                     default:
                         break;
@@ -336,19 +339,19 @@ namespace JUDYSOFT
                 switch (objHab17.Estado.Trim())
                 {
                     case "Ocupado":
-                        btnh17.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+                        btnh17.Image = ocupado;
                         lblh17.Text = "Ocupado";
                         lblh17.BackColor = Color.FromArgb(230, 115, 130);
                         break;
                     case "Limpieza":
                         lblh17.Text = "Limpieza";
                         lblh17.BackColor = Color.FromArgb(200, 200, 180);
-                        btnh17.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                        btnh17.Image = limpieza;
                         break;
                     case "Disponible":
                         lblh17.Text = "Disponible";
                         lblh17.BackColor = Color.FromArgb(110, 205, 228);
-                        btnh17.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                        btnh17.Image = disponible;
                         break;
                     default:
                         break;
@@ -364,19 +367,19 @@ namespace JUDYSOFT
                 switch (objHab18.Estado.Trim())
                 {
                     case "Ocupado":
-                        btnh18.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+                        btnh18.Image = ocupado;
                         lblh18.Text = "Ocupado";
                         lblh18.BackColor = Color.FromArgb(230, 115, 130);
                         break;
                     case "Limpieza":
                         lblh18.Text = "Limpieza";
                         lblh18.BackColor = Color.FromArgb(200, 200, 180);
-                        btnh18.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                        btnh18.Image = limpieza;
                         break;
                     case "Disponible":
                         lblh18.Text = "Disponible";
                         lblh18.BackColor = Color.FromArgb(110, 205, 228);
-                        btnh18.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                        btnh18.Image = disponible;
                         break;
                     default:
                         break;
@@ -392,19 +395,19 @@ namespace JUDYSOFT
                 switch (objHab19.Estado.Trim())
                 {
                     case "Ocupado":
-                        btnh19.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+                        btnh19.Image = ocupado;
                         lblh19.Text = "Ocupado";
                         lblh19.BackColor = Color.FromArgb(230, 115, 130);
                         break;
                     case "Limpieza":
                         lblh19.Text = "Limpieza";
                         lblh19.BackColor = Color.FromArgb(200, 200, 180);
-                        btnh19.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                        btnh19.Image = limpieza;
                         break;
                     case "Disponible":
                         lblh19.Text = "Disponible";
                         lblh19.BackColor = Color.FromArgb(110, 205, 228);
-                        btnh19.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                        btnh19.Image = disponible;
                         break;
                     default:
                         break;
@@ -420,19 +423,19 @@ namespace JUDYSOFT
                 switch (objHab20.Estado.Trim())
                 {
                     case "Ocupado":
-                        btnh20.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+                        btnh20.Image = ocupado;
                         lblh20.Text = "Ocupado";
                         lblh20.BackColor = Color.FromArgb(230, 115, 130);
                         break;
                     case "Limpieza":
                         lblh20.Text = "Limpieza";
                         lblh20.BackColor = Color.FromArgb(200, 200, 180);
-                        btnh20.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                        btnh20.Image = limpieza;
                         break;
                     case "Disponible":
                         lblh20.Text = "Disponible";
                         lblh20.BackColor = Color.FromArgb(110, 205, 228);
-                        btnh20.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                        btnh20.Image = disponible;
                         break;
                     default:
                         break;
@@ -448,19 +451,19 @@ namespace JUDYSOFT
                 switch (objHab21.Estado.Trim())
                 {
                     case "Ocupado":
-                        btnh21.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+                        btnh21.Image = ocupado;
                         lblh21.Text = "Ocupado";
                         lblh21.BackColor = Color.FromArgb(230, 115, 130);
                         break;
                     case "Limpieza":
                         lblh21.Text = "Limpieza";
                         lblh21.BackColor = Color.FromArgb(200, 200, 180);
-                        btnh21.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                        btnh21.Image = limpieza;
                         break;
                     case "Disponible":
                         lblh21.Text = "Disponible";
                         lblh21.BackColor = Color.FromArgb(110, 205, 228);
-                        btnh21.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                        btnh21.Image = disponible;
                         break;
                     default:
                         break;
@@ -476,19 +479,19 @@ namespace JUDYSOFT
                 switch (objHab22.Estado.Trim())
                 {
                     case "Ocupado":
-                        btnh22.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+                        btnh22.Image = ocupado;
                         lblh22.Text = "Ocupado";
                         lblh22.BackColor = Color.FromArgb(230, 115, 130);
                         break;
                     case "Limpieza":
                         lblh22.Text = "Limpieza";
                         lblh22.BackColor = Color.FromArgb(200, 200, 180);
-                        btnh22.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                        btnh22.Image = limpieza;
                         break;
                     case "Disponible":
                         lblh22.Text = "Disponible";
                         lblh22.BackColor = Color.FromArgb(110, 205, 228);
-                        btnh22.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                        btnh22.Image = disponible;
                         break;
                     default:
                         break;
@@ -504,19 +507,19 @@ namespace JUDYSOFT
                 switch (objHab23.Estado.Trim())
                 {
                     case "Ocupado":
-                        btnh23.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+                        btnh23.Image = ocupado;
                         lblh23.Text = "Ocupado";
                         lblh23.BackColor = Color.FromArgb(230, 115, 130);
                         break;
                     case "Limpieza":
                         lblh23.Text = "Limpieza";
                         lblh23.BackColor = Color.FromArgb(200, 200, 180);
-                        btnh23.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                        btnh23.Image = limpieza;
                         break;
                     case "Disponible":
                         lblh23.Text = "Disponible";
                         lblh23.BackColor = Color.FromArgb(110, 205, 228);
-                        btnh23.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                        btnh23.Image = disponible;
                         break;
                     default:
                         break;
@@ -532,19 +535,19 @@ namespace JUDYSOFT
                 switch (objHab24.Estado.Trim())
                 {
                     case "Ocupado":
-                        btnh24.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+                        btnh24.Image = ocupado;
                         lblh24.Text = "Ocupado";
                         lblh24.BackColor = Color.FromArgb(230, 115, 130);
                         break;
                     case "Limpieza":
                         lblh24.Text = "Limpieza";
                         lblh24.BackColor = Color.FromArgb(200, 200, 180);
-                        btnh24.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                        btnh24.Image = limpieza;
                         break;
                     case "Disponible":
                         lblh24.Text = "Disponible";
                         lblh24.BackColor = Color.FromArgb(110, 205, 228);
-                        btnh24.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                        btnh24.Image = disponible;
                         break;
                     default:
                         break;
@@ -560,19 +563,19 @@ namespace JUDYSOFT
                 switch (objHab25.Estado.Trim())
                 {
                     case "Ocupado":
-                        btnh25.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+                        btnh25.Image = ocupado;
                         lblh25.Text = "Ocupado";
                         lblh25.BackColor = Color.FromArgb(230, 115, 130);
                         break;
                     case "Limpieza":
                         lblh25.Text = "Limpieza";
                         lblh25.BackColor = Color.FromArgb(200, 200, 180);
-                        btnh25.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                        btnh25.Image = limpieza;
                         break;
                     case "Disponible":
                         lblh25.Text = "Disponible";
                         lblh25.BackColor = Color.FromArgb(110, 205, 228);
-                        btnh25.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                        btnh25.Image = disponible;
                         break;
                     default:
                         break;
@@ -588,19 +591,19 @@ namespace JUDYSOFT
                 switch (objHab26.Estado.Trim())
                 {
                     case "Ocupado":
-                        btnh26.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+                        btnh26.Image = ocupado;
                         lblh26.Text = "Ocupado";
                         lblh26.BackColor = Color.FromArgb(230, 115, 130);
                         break;
                     case "Limpieza":
                         lblh26.Text = "Limpieza";
                         lblh26.BackColor = Color.FromArgb(200, 200, 180);
-                        btnh26.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                        btnh26.Image = limpieza;
                         break;
                     case "Disponible":
                         lblh26.Text = "Disponible";
                         lblh26.BackColor = Color.FromArgb(110, 205, 228);
-                        btnh26.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                        btnh26.Image = disponible;
                         break;
                     default:
                         break;
@@ -614,22 +617,23 @@ namespace JUDYSOFT
             //Habitacion 27
             try
             {
+                
                 switch (objHab27.Estado.Trim())
                 {
                     case "Ocupado":
-                        btnh27.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\o.png");
+                        btnh27.Image = ocupado;
                         lblh27.Text = "Ocupado";
                         lblh27.BackColor = Color.FromArgb(230, 115, 130);
                         break;
                     case "Limpieza":
                         lblh27.Text = "Limpieza";
                         lblh27.BackColor = Color.FromArgb(200, 200, 180);
-                        btnh27.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\l.png");
+                        btnh27.Image = limpieza;
                         break;
                     case "Disponible":
                         lblh27.Text = "Disponible";
                         lblh27.BackColor = Color.FromArgb(110, 205, 228);
-                        btnh27.Image = Image.FromFile("C:\\JUDYSOFT\\JUDYSOFT\\Images\\a.png");
+                        btnh27.Image = disponible;
                         break;
                     default:
                         break;
@@ -657,6 +661,7 @@ namespace JUDYSOFT
         private void button1_Click(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = MdiParent;
             frmOpcion.LoadNumeroHabitacion("15");
             frmOpcion.Show();
         }
@@ -664,6 +669,7 @@ namespace JUDYSOFT
         private void button2_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = MdiParent;
             frmOpcion.LoadNumeroHabitacion("16");
             frmOpcion.Show();
 
@@ -756,7 +762,7 @@ namespace JUDYSOFT
 
             if (confirmacion == System.Windows.Forms.DialogResult.OK)
             {
-                this.Dispose();
+                Dispose();
                 MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem", "consultarToolStripMenuItem");
             }
         }
@@ -792,6 +798,7 @@ namespace JUDYSOFT
         private void btnh17_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("17");
         }
@@ -799,6 +806,7 @@ namespace JUDYSOFT
         private void btnh18_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("18");
         }
@@ -806,6 +814,7 @@ namespace JUDYSOFT
         private void btnh19_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("19");
         }
@@ -813,6 +822,7 @@ namespace JUDYSOFT
         private void btnh20_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("20");
         }
@@ -820,6 +830,7 @@ namespace JUDYSOFT
         private void btnh21_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("21");
         }
@@ -827,6 +838,7 @@ namespace JUDYSOFT
         private void btnh22_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("22");
         }
@@ -834,6 +846,7 @@ namespace JUDYSOFT
         private void btnh23_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("23");
         }
@@ -841,6 +854,7 @@ namespace JUDYSOFT
         private void btnh24_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("24");
         }
@@ -848,6 +862,7 @@ namespace JUDYSOFT
         private void btnh25_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("25");
         }
@@ -855,6 +870,7 @@ namespace JUDYSOFT
         private void btnh26_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("26");
         }
@@ -862,11 +878,12 @@ namespace JUDYSOFT
         private void btnh27_Click_1(object sender, EventArgs e)
         {
             frmOpcionHab frmOpcion = new frmOpcionHab();
+            frmOpcion.MdiParent = MdiParent;
             frmOpcion.Show();
             frmOpcion.LoadNumeroHabitacion("27");
         }
 
-        private void frmAdministracionHabitaciones_MdiChildActivate(object sender, EventArgs e)
+       private void frmAdministracionHabitaciones_MdiChildActivate(object sender, EventArgs e)
         {
             actualizarHabitaciones();
         }
@@ -878,7 +895,7 @@ namespace JUDYSOFT
 
         private void frmAdministracionHabitaciones_Activated(object sender, EventArgs e)
         {
-            actualizarHabitaciones();
+            //actualizarHabitaciones();
         }
 
         private void groupBox1_MouseHover(object sender, EventArgs e)
@@ -898,10 +915,6 @@ namespace JUDYSOFT
 
         }
 
-        private void groupBox3_Enter_1(object sender, EventArgs e)
-        {
-
-        }
     }
 
         /*      private void btnh20_Click_1(object sender, EventArgs e)
