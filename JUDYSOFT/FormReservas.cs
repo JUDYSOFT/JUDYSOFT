@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Libreria;
 
 namespace JUDYSOFT
 {
     public partial class FormReservas : Form
     {
-        private SqlDataAdapter dataAdapter = new SqlDataAdapter();
-        private BindingSource bindingSource1 = new BindingSource();
+        
         public FormReservas()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace JUDYSOFT
 
             FormNuevaReservacion nueva = new FormNuevaReservacion();
             nueva.Show();
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,10 +51,16 @@ namespace JUDYSOFT
 
         private void FormReservas_Load(object sender, EventArgs e)
         {
-            tablaReservaciones.DataSource = bindingSource1;
-            GetData("SELECT R.CODRESERVACION,C.NOMBRE1CLIENTE,C.APELLIDO1CLIENTE,R.FECHAINGRESORESERVACION,R.FECHASALIDARESERVACION FROM  CLIENTE C JOIN RESERVACION R ON R.CODCLIENTE=C.CODCLIENTE");
+            SqlDataAdapter SDA = new SqlDataAdapter();
+            BindingSource bs = new BindingSource();
+            tablaReservaciones.DataSource = bs;
+            Utilidades.GetData(    "SELECT R.CODRESERVACION,C.NOMBRE1CLIENTE,C.APELLIDO1CLIENTE,R.FECHAINGRESORESERVACION,R.FECHASALIDARESERVACION " +
+                        "FROM  CLIENTE C JOIN RESERVACION R ON R.CODCLIENTE = C.CODCLIENTE " +
+                        "WHERE R.FECHASALIDARESERVACION >= GETDATE()",bs,SDA);
+            tablaReservaciones.AutoResizeColumns(
+                    DataGridViewAutoSizeColumnsMode.AllCells);
         }
-            
+
         private void FormReservas_FormClosed(object sender, FormClosedEventArgs e)
         {
             DialogResult confirmacion = MessageBox.Show("Esta seguro que desea salir", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
@@ -66,7 +72,12 @@ namespace JUDYSOFT
             }
         }
 
-        private void GetData(string selectCommand)
+        private void tablaReservaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        /*private void GetData(string selectCommand)
         {
             try
             {
@@ -100,7 +111,7 @@ namespace JUDYSOFT
                     "connectionString variable with a connection string that is " +
                     "valid for your system.");
             }
-        }
+        }*/
 
     }
 }

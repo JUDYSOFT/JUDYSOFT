@@ -56,14 +56,18 @@
             // tablaReservaciones
             // 
             this.tablaReservaciones.AllowUserToAddRows = false;
+            this.tablaReservaciones.AllowUserToDeleteRows = false;
+            this.tablaReservaciones.AllowUserToOrderColumns = true;
             this.tablaReservaciones.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.tablaReservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaReservaciones.Enabled = false;
             this.tablaReservaciones.Location = new System.Drawing.Point(29, 74);
             this.tablaReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tablaReservaciones.Name = "tablaReservaciones";
             this.tablaReservaciones.RowTemplate.Height = 24;
             this.tablaReservaciones.Size = new System.Drawing.Size(696, 199);
             this.tablaReservaciones.TabIndex = 9;
+            this.tablaReservaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaReservaciones_CellContentClick);
             // 
             // lblFuturasReservasReservaciones
             // 
@@ -148,7 +152,7 @@
             this.Controls.Add(this.tablaReservaciones);
             this.Controls.Add(this.lblFuturasReservasReservaciones);
             this.Controls.Add(this.btnSalirReservaciones);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormReservas";
             this.Text = "Reservaciones";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormReservas_FormClosed);

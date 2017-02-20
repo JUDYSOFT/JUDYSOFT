@@ -36,8 +36,11 @@
             // 
             // tablaReservacionesPasadas
             // 
+            this.tablaReservacionesPasadas.AllowUserToAddRows = false;
+            this.tablaReservacionesPasadas.AllowUserToDeleteRows = false;
             this.tablaReservacionesPasadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.tablaReservacionesPasadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaReservacionesPasadas.Enabled = false;
             this.tablaReservacionesPasadas.Location = new System.Drawing.Point(23, 16);
             this.tablaReservacionesPasadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tablaReservacionesPasadas.Name = "tablaReservacionesPasadas";
@@ -85,7 +88,7 @@
             this.Controls.Add(this.btnAtrasReservacionesPasadas);
             this.Controls.Add(this.btnConsultarReservacionesPasadas);
             this.Controls.Add(this.tablaReservacionesPasadas);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "reservacionesPasadas";
             this.Text = "Reservaciones Pasadas";
             this.Load += new System.EventHandler(this.reservacionesPasadas_Load);
