@@ -48,7 +48,7 @@ namespace JUDYSOFT
             if (Utilidades.ValidarFormulario(panelInformación,errorProvider2)==false)
             {
 
-                objCliente.FechaNac = null; 
+               // objCliente.FechaNac = null; 
                 objCliente.Nombre1 = txtNombre1IngresoCliente.Text.ToString();
                 objCliente.Nombre2 = txtNombre2IngresoCliente.Text.ToString();
                 objCliente.Apellido1 = txtApellido1IngresoCliente.Text.ToString();
@@ -57,7 +57,7 @@ namespace JUDYSOFT
                 objCliente.Telefono2 = txtTelefono2IngresoCliente.Text.ToString();
                 objCliente.Nacionalidad = txtNacionalidadIngresoCliente.Text.ToString();
                 objCliente.Procedencia = txtProcedenciaIngresoCliente.Text.ToString();
-                objCliente.EstadoCivil = comboBoxEstadoCivil.SelectedText.ToString();
+                objCliente.EstadoCivil = comboBoxEstadoCivil.Text.ToString();
                 objCliente.Correo = txtCorreoIngresoCLiente.Text.ToString();
                 objCliente.Direccion = txtDireccionIngresoCliente.Text.ToString();
                
@@ -80,7 +80,7 @@ namespace JUDYSOFT
                 {
                     try
                     {
-                        string cmd = string.Format("Exec registrarCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}', '{8}', '{9}','{10}','{11}','{12}','{13}','{14}'", objCliente.Nombre1, objCliente.Nombre2, objCliente.Apellido1, objCliente.Apellido2,objCliente.Telefono1,objCliente.Telefono2, objCliente.Direccion, objCliente.Documento, objCliente.NumDocumento, objCliente.Nacionalidad, objCliente.Procedencia, objCliente.FechaNac, objCliente.Sexo,objCliente.Correo,objCliente.EstadoCivil);
+                        string cmd = string.Format("Exec registrarCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}', '{8}', '{9}','{10}','{11}','{12}','{13}'", objCliente.Nombre1, objCliente.Nombre2, objCliente.Apellido1, objCliente.Apellido2,objCliente.Telefono1,objCliente.Telefono2, objCliente.Direccion, objCliente.Documento, objCliente.NumDocumento, objCliente.Nacionalidad, objCliente.Procedencia, objCliente.Sexo,objCliente.Correo,objCliente.EstadoCivil);
                       DataSet  DS1 = Utilidades.Ejecutar(cmd);
 
                     }

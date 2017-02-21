@@ -41,7 +41,6 @@ namespace JUDYSOFT
             dataGridViewModificarClientes.Columns["DIRECCIONCLIENTE"].Visible = false;
             dataGridViewModificarClientes.Columns["NACIONALIDADCLIENTE"].Visible = false;
             dataGridViewModificarClientes.Columns["LUGARPROCEDENCIACLIENTE"].Visible = false;
-            dataGridViewModificarClientes.Columns["FECHANACCLIENTE"].Visible = false;
             dataGridViewModificarClientes.Columns["SEXOCLIENTE"].Visible = false;
             dataGridViewModificarClientes.Columns["CORREOCLIENTE"].Visible = false;
             dataGridViewModificarClientes.Columns[1].HeaderCell.Value = "Nombre 1";
