@@ -145,5 +145,15 @@ namespace JUDYSOFT
         {
 
         }
+
+        private void consultarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormConsultarCliente frm = new FormConsultarCliente();
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            consultarClientesToolStripMenuItem.Enabled = false;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
     }
 }

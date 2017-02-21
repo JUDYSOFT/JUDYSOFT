@@ -17,7 +17,7 @@ namespace Libreria
             //colocar aqui la conexión a la base con su nombre y su respectivo nombre del servidor---------------------------------------
             //Andy----------------------------------------------------------------------------------------------------------------------
 
-            //SqlConnection con = new SqlConnection("Data Source=LENOVO-PC\\SQLSERVER_SAL_A;Initial Catalog=JUDYSOFT;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=LENOVO-PC\\SQLSERVER_SAL_A;Initial Catalog=JUDYSOFT;Integrated Security=True");
 
 
             //pequeñin-------------------------------------------------------------------------------------------------------------------
@@ -26,7 +26,7 @@ namespace Libreria
             //Alexis
             //SqlConnection con = new SqlConnection("Data Source=JORGE\\SQLEXPRESS;Initial Catalog=JUDYSOFT;Integrated Security=True");
             //Bryan
-            SqlConnection con = new SqlConnection("Data Source=BRYANGERMANPC;Initial Catalog=JUDYSOFT;Integrated Security=True");
+           // SqlConnection con = new SqlConnection("Data Source=BRYANGERMANPC;Initial Catalog=JUDYSOFT;Integrated Security=True");
             con.Open();
             DataSet DS = new DataSet();
             SqlDataAdapter da = new SqlDataAdapter(cmd,con);

@@ -61,7 +61,7 @@ namespace JUDYSOFT
             objCliente.EstadoCivil = comboBoxEstadoCivil.Text.ToString();
             objCliente.Correo = txtCorreoIngresoCLiente.Text.ToString();
             objCliente.Direccion = txtDireccionIngresoCliente.Text.ToString();
-            objCliente.FechaNac = Convert.ToDateTime(fechaNacIngresoCliente.Text.ToString());
+            objCliente.FechaNac = null;
             
             string cmd = string.Format("exec verificarCliente '{0}'", objCliente.NumDocumento);
             DataSet DS = Utilidades.Ejecutar(cmd);
@@ -133,7 +133,7 @@ namespace JUDYSOFT
             txtCorreoIngresoCLiente.Enabled = false;
             txtProcedenciaIngresoCliente.Enabled = false;
             txtDireccionIngresoCliente.Enabled = false;
-            fechaNacIngresoCliente.Enabled = false;
+           
         }
         private void habilitarCampos()
         {
@@ -148,7 +148,7 @@ namespace JUDYSOFT
             txtCorreoIngresoCLiente.Enabled = true;
             txtProcedenciaIngresoCliente.Enabled = true;
             txtDireccionIngresoCliente.Enabled = true;
-            fechaNacIngresoCliente.Enabled = true;
+            
         }
 
         private void listaClientesModificarCliente_Click(object sender, EventArgs e)
@@ -161,7 +161,7 @@ namespace JUDYSOFT
             if (frm.DialogResult == DialogResult.OK)
             {
 
-                txtNumDocumentoModificarCliente.Text= frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[6].Value.ToString();
+                txtNumDocumentoModificarCliente.Text= frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[9].Value.ToString();
                 txtNombre1IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[1].Value.ToString();
                 txtNombre2IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[2].Value.ToString();
                 txtApellido1IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[3].Value.ToString();
@@ -171,7 +171,6 @@ namespace JUDYSOFT
                 txtDireccionIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[7].Value.ToString();
                 txtNacionalidadIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[10].Value.ToString();
                 txtProcedenciaIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[11].Value.ToString();
-                fechaNacIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[10].Value.ToString();
                 txtCorreoIngresoCLiente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[14].Value.ToString();
                 comboBoxEstadoCivil.SelectedItem = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[11].Value.ToString();
                 habilitarCampos();
@@ -202,7 +201,6 @@ namespace JUDYSOFT
                     txtDireccionIngresoCliente.Text = DS3.Tables[0].Rows[0]["DIRECCIONCLIENTE"].ToString().Trim();
                     txtNacionalidadIngresoCliente.Text = DS3.Tables[0].Rows[0]["NACIONALIDADCLIENTE"].ToString().Trim();
                     txtProcedenciaIngresoCliente.Text = DS3.Tables[0].Rows[0]["LUGARPROCEDENCIACLIENTE"].ToString().Trim();
-                    fechaNacIngresoCliente.Text = DS3.Tables[0].Rows[0]["FECHANACCLIENTE"].ToString().Trim();
                     txtCorreoIngresoCLiente.Text = DS3.Tables[0].Rows[0]["CORREOCLIENTE"].ToString().Trim();
                     comboBoxEstadoCivil.SelectedItem = DS3.Tables[0].Rows[0]["ESTADOCIVILCLIENTE"].ToString().Trim();
                 }

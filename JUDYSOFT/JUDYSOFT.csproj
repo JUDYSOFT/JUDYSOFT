@@ -73,6 +73,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultarCliente.Designer.cs">
+      <DependentUpon>FormConsultarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNomina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     <Compile Include="MenuSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormConsultarCliente.resx">
+      <DependentUpon>FormConsultarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarProductoAFactura.resx">
       <DependentUpon>FormAgregarProductoAFactura.cs</DependentUpon>
     </EmbeddedResource>

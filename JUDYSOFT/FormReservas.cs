@@ -54,11 +54,11 @@ namespace JUDYSOFT
             SqlDataAdapter SDA = new SqlDataAdapter();
             BindingSource bs = new BindingSource();
             tablaReservaciones.DataSource = bs;
-            Utilidades.GetData(    "SELECT R.CODRESERVACION,C.NOMBRE1CLIENTE,C.APELLIDO1CLIENTE,R.FECHAINGRESORESERVACION,R.FECHASALIDARESERVACION " +
-                        "FROM  CLIENTE C JOIN RESERVACION R ON R.CODCLIENTE = C.CODCLIENTE " +
-                        "WHERE R.FECHASALIDARESERVACION >= GETDATE()",bs,SDA);
-            tablaReservaciones.AutoResizeColumns(
-                    DataGridViewAutoSizeColumnsMode.AllCells);
+            //Utilidades.GetData(    "SELECT R.CODRESERVACION,C.NOMBRE1CLIENTE,C.APELLIDO1CLIENTE,R.FECHAINGRESORESERVACION,R.FECHASALIDARESERVACION " +
+            //            "FROM  CLIENTE C JOIN RESERVACION R ON R.CODCLIENTE = C.CODCLIENTE " +
+            //            "WHERE R.FECHASALIDARESERVACION >= GETDATE()",bs,SDA);
+            //tablaReservaciones.AutoResizeColumns(
+            //        DataGridViewAutoSizeColumnsMode.AllCells);
         }
 
         private void FormReservas_FormClosed(object sender, FormClosedEventArgs e)

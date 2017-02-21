@@ -21,7 +21,7 @@ namespace JUDYSOFT
         public FormIngresarNuevoCliente()
         {
             InitializeComponent();
-            //txtDocumento.Visible = false;
+            
             desabilitarCampos();
            
         }
@@ -47,8 +47,8 @@ namespace JUDYSOFT
 
             if (Utilidades.ValidarFormulario(panelInformación,errorProvider2)==false)
             {
-               
 
+                objCliente.FechaNac = null; 
                 objCliente.Nombre1 = txtNombre1IngresoCliente.Text.ToString();
                 objCliente.Nombre2 = txtNombre2IngresoCliente.Text.ToString();
                 objCliente.Apellido1 = txtApellido1IngresoCliente.Text.ToString();
@@ -60,7 +60,7 @@ namespace JUDYSOFT
                 objCliente.EstadoCivil = comboBoxEstadoCivil.SelectedText.ToString();
                 objCliente.Correo = txtCorreoIngresoCLiente.Text.ToString();
                 objCliente.Direccion = txtDireccionIngresoCliente.Text.ToString();
-                objCliente.FechaNac = Convert.ToDateTime( fechaNacIngresoCliente.Text.ToString());
+               
                 if (radioF.Checked)
                 {
                     objCliente.Sexo = radioF.Text.ToString();
@@ -74,8 +74,7 @@ namespace JUDYSOFT
                 
              string val = string.Format("exec verificarCliente '{0}' ", objCliente.NumDocumento);
              DataSet   DS = Utilidades.Ejecutar(val);
-                //string codCliente = DS.Tables["CODCLIENTE"].ToString().Trim();
-                //Console.Write(codCliente);
+               
 
                 if (DS.Tables[0].Rows.Count==0)
                 {
@@ -94,7 +93,7 @@ namespace JUDYSOFT
                 }
                 else {
 
-                    MessageBox.Show("El cliente ya se encuentra registrado en la base de datos", "JUDYSOFT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El cliente ya se encuentra registrado en el sistema", "JUDYSOFT", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiarCampos();
                 }
                 
@@ -134,10 +133,19 @@ namespace JUDYSOFT
 
         private void FormIngresarNuevoCliente_Load(object sender, EventArgs e)
         {
-
+            convertirMayusulas();
         }
 
-      
+        private void convertirMayusulas()
+        {
+            txtNombre1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtApellido1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtNacionalidadIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtNombre2IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtApellido2IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtProcedenciaIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtDireccionIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+        }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
@@ -215,29 +223,15 @@ namespace JUDYSOFT
 
         private void txtNombre1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //txtNombre1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = false;
-            }
+
+            if (val.validarCadenasDeTexto(e,txtNombre1IngresoCliente))
+                return;
         }
 
         private void txtApellido1_KeyPress(object sender, KeyPressEventArgs e)
            
         {
-           // txtApellido1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+           
             if (val.validarCadenasDeTexto(e, txtApellido1IngresoCliente))
                 return;
         }
@@ -278,7 +272,7 @@ namespace JUDYSOFT
 
         private void txtNacionalidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-           // txtNacionalidadIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+           
             if (val.validarCadenasDeTexto(e,txtNacionalidadIngresoCliente))
                 return;
 
@@ -297,7 +291,7 @@ namespace JUDYSOFT
             txtCorreoIngresoCLiente.Enabled = false;
             txtProcedenciaIngresoCliente.Enabled = false;
             txtDireccionIngresoCliente.Enabled = false;
-            fechaNacIngresoCliente.Enabled = false;
+            
         }
         private void habilitarCampos()
         {
@@ -312,7 +306,7 @@ namespace JUDYSOFT
             txtCorreoIngresoCLiente.Enabled = true;
             txtProcedenciaIngresoCliente.Enabled = true;
             txtDireccionIngresoCliente.Enabled = true;
-            fechaNacIngresoCliente.Enabled = true;
+            
         }
 
         private void limpiarCampos()
@@ -336,20 +330,20 @@ namespace JUDYSOFT
 
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtDireccionIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            
             
         }
 
         private void txtNombre2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtNombre2IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+           
             if (val.validarCadenasDeTexto(e,txtNombre2IngresoCliente))
                 return;
         }
 
         private void txtApellido2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtApellido2IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+          
             if (val.validarCadenasDeTexto(e,txtApellido2IngresoCliente))
                 return;
             
@@ -363,7 +357,7 @@ namespace JUDYSOFT
 
         private void txtProcedencia_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtProcedenciaIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            
             if (val.validarCadenasDeTexto(e, txtProcedenciaIngresoCliente))
                 return;
 

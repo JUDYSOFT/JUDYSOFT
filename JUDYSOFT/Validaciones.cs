@@ -151,6 +151,14 @@ namespace JUDYSOFT
                     sumatotal += numero;
                 }
                 sumatotal = 10 - (sumatotal % 10);
+                
+                if (Convert.ToInt32(vector[9].ToString()) == 0)
+                {
+                    sumatotal = sumatotal % 10;
+                   
+                    
+                   
+                }
                 if (sumatotal == Convert.ToInt32(vector[9].ToString()))
                 {
                     //toolTip1.Show("la cédula es correcta",txtDocumento,1000);
@@ -168,6 +176,8 @@ namespace JUDYSOFT
                 return false;
             }
         }
+
+        
 
 
     }

@@ -84,7 +84,7 @@
             // 
             this.consultarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultarToolStripMenuItem.Image")));
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.consultarToolStripMenuItem.Text = "Gestión de Habitación";
             this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
@@ -92,7 +92,7 @@
             // 
             this.reservacionesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reservacionesToolStripMenuItem.Image")));
             this.reservacionesToolStripMenuItem.Name = "reservacionesToolStripMenuItem";
-            this.reservacionesToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.reservacionesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.reservacionesToolStripMenuItem.Text = "Reservaciones";
             this.reservacionesToolStripMenuItem.Click += new System.EventHandler(this.reservacionesToolStripMenuItem_Click);
             // 
@@ -108,7 +108,6 @@
             // 
             // ingresarNuevoClienteToolStripMenuItem
             // 
-            //this.ingresarNuevoClienteToolStripMenuItem.Image = global::JUDYSOFT.Properties.Resources._1484548508_Pencil;
             this.ingresarNuevoClienteToolStripMenuItem.Name = "ingresarNuevoClienteToolStripMenuItem";
             this.ingresarNuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.ingresarNuevoClienteToolStripMenuItem.Text = "Ingresar Nuevo Cliente";
@@ -116,7 +115,6 @@
             // 
             // modificarDatosDeClienteToolStripMenuItem
             // 
-            //this.modificarDatosDeClienteToolStripMenuItem.Image = global::JUDYSOFT.Properties.Resources._1484548483_Edit_page;
             this.modificarDatosDeClienteToolStripMenuItem.Name = "modificarDatosDeClienteToolStripMenuItem";
             this.modificarDatosDeClienteToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.modificarDatosDeClienteToolStripMenuItem.Text = "Modificar Datos de Cliente";
@@ -124,10 +122,10 @@
             // 
             // consultarClientesToolStripMenuItem
             // 
-            //this.consultarClientesToolStripMenuItem.Image = global::JUDYSOFT.Properties.Resources._1484548470_Zoom;
             this.consultarClientesToolStripMenuItem.Name = "consultarClientesToolStripMenuItem";
             this.consultarClientesToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.consultarClientesToolStripMenuItem.Text = "Consultar Clientes";
+            this.consultarClientesToolStripMenuItem.Click += new System.EventHandler(this.consultarClientesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -142,7 +140,6 @@
             // 
             // nuevoToolStripMenuItem
             // 
-            //this.nuevoToolStripMenuItem.Image = global::JUDYSOFT.Properties.Resources._1484548508_Pencil;
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
             this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
             this.nuevoToolStripMenuItem.Text = "Ingresar nuevo empleado";
@@ -150,7 +147,6 @@
             // 
             // modificarToolStripMenuItem
             // 
-            //this.modificarToolStripMenuItem.Image = global::JUDYSOFT.Properties.Resources._1484548483_Edit_page;
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
             this.modificarToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
             this.modificarToolStripMenuItem.Text = "Modificar datos de un empleado";
@@ -174,7 +170,6 @@
             // 
             // generarFacturaToolStripMenuItem
             // 
-            //this.generarFacturaToolStripMenuItem.Image = global::JUDYSOFT.Properties.Resources._1484548508_Pencil;
             this.generarFacturaToolStripMenuItem.Name = "generarFacturaToolStripMenuItem";
             this.generarFacturaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.generarFacturaToolStripMenuItem.Text = "Generar factura";
