@@ -275,52 +275,37 @@ namespace JUDYSOFT
 
         private void botonNuevaFacturaGenerarFactura_Click(object sender, EventArgs e)
         {
-            try
-            {
-                //Administración------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                //string cmd = string.Format("Exec ActualizarFactura '{0}'", txtidClienteGenerarFactura.Text.Trim());
-                //DataSet DS = Utilidades.Ejecutar(cmd);
+            //try
+            //{
+              
+            //    string cmd = string.Format("Exec ActualizarCabecera '{0}','{1}'", labID.Text, lblCodCli.Text);
+            //    DataSet DS = Utilidades.Ejecutar(cmd);
 
-                //string NumFac = DS.Tables[0].Rows[0]["NumFactura"].ToString().Trim();
+            //    string NumFac = DS.Tables[0].Rows[0]["IDFACTURA"].ToString().Trim();
 
-                //foreach(DataGridViewRow Fila in DGVGenerarFactura.Rows)
-                //{
-                //    cmd = string.Format("Exec ActualizarDetalle '{0}','{1}','{2}','{3}','{4}','{6}'", NumFac, Fila.Cells[0].Value.ToString(), Fila.Cells[3].Value.ToString(), Fila.Cells[1].Value.ToString(), txtSubtotalGenerarFactura.Text.ToString(), txtTotalGenerarFactura.Text.ToString());
-                //    DS = Utilidades.Ejecutar(cmd);
+            //    foreach (DataGridViewRow Fila in DGVGenerarFactura.Rows)
+            //    {
+            //        cmd = string.Format("Exec ActualizarDetalle '{0}','{1}','{2}','{3}','{4}','{6}'", NumFac, Fila.Cells[0].Value.ToString(), Fila.Cells[3].Value.ToString(), Fila.Cells[1].Value.ToString(), txtSubtotalGenerarFactura.Text.ToString(), txtTotalGenerarFactura.Text.ToString());
+            //        DS = Utilidades.Ejecutar(cmd);
 
-                //}
+            //    }
 
-                //cmd = "Exec DatosFacturaAct " + NumFac;
-                //DS = Utilidades.Ejecutar(cmd);
-                //JUDYSOFT------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                string cmd = string.Format("Exec ActualizarCabecera '{0}','{1}'", labID.Text, lblCodCli.Text);
-                DataSet DS = Utilidades.Ejecutar(cmd);
-
-                string NumFac = DS.Tables[0].Rows[0]["IDFACTURA"].ToString().Trim();
-
-                foreach (DataGridViewRow Fila in DGVGenerarFactura.Rows)
-                {
-                    cmd = string.Format("Exec ActualizarDetalle '{0}','{1}','{2}','{3}','{4}','{6}'", NumFac, Fila.Cells[0].Value.ToString(), Fila.Cells[3].Value.ToString(), Fila.Cells[1].Value.ToString(), txtSubtotalGenerarFactura.Text.ToString(), txtTotalGenerarFactura.Text.ToString());
-                    DS = Utilidades.Ejecutar(cmd);
-
-                }
-
-                cmd = "Exec DatosFacturaAct " + NumFac;
-                DS = Utilidades.Ejecutar(cmd);
+            //    cmd = "Exec DatosFacturaAct " + NumFac;
+            //    DS = Utilidades.Ejecutar(cmd);
 
 
-               /* ReporteFactura report = new ReporteFactura();
-                report.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
-                report.ShowDialog();
-                Limpiar();*/
+            //   ReporteFactura report = new ReporteFactura();
+            //    report.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
+            //    report.ShowDialog();
+            //    Limpiar();
 
 
 
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(error.Message);
-            }
+            //}
+            //catch (Exception error)
+            //{
+            //    MessageBox.Show(error.Message);
+            //}
         }
 
         private void txtCodigoGenerarFactura_TextChanged(object sender, EventArgs e)
@@ -385,7 +370,37 @@ namespace JUDYSOFT
 
         private void BotonFacturarGenerarFactura_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+                string cmd = string.Format("Exec ActualizarCabecera '{0}','{1}'", labID.Text, lblCodCli.Text);
+                DataSet DS = Utilidades.Ejecutar(cmd);
+
+                string NumFac = DS.Tables[0].Rows[0]["IDFACTURA"].ToString().Trim();
+
+                foreach (DataGridViewRow Fila in DGVGenerarFactura.Rows)
+                {
+                    cmd = string.Format("Exec ActualizarDetalle '{0}','{1}','{2}','{3}','{4}','{6}'", NumFac, Fila.Cells[0].Value.ToString(), Fila.Cells[3].Value.ToString(), Fila.Cells[1].Value.ToString(), txtSubtotalGenerarFactura.Text.ToString(), txtTotalGenerarFactura.Text.ToString());
+                    DS = Utilidades.Ejecutar(cmd);
+
+                }
+
+                cmd = "Exec DatosFacturaAct " + NumFac;
+                DS = Utilidades.Ejecutar(cmd);
+
+
+                ReporteFactura report = new ReporteFactura();
+                report.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
+                report.ShowDialog();
+                Limpiar();
+
+
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
