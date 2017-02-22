@@ -68,15 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsCliente.cs" />
-    <Compile Include="DataSet2.Designer.cs">
+    <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSetfac.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetfac.xsd</DependentUpon>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="FormConsultarCliente.cs">
       <SubType>Form</SubType>
@@ -209,6 +204,7 @@
     <Compile Include="MenuSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Factura.rdlc" />
     <EmbeddedResource Include="FormConsultarCliente.resx">
       <DependentUpon>FormConsultarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,7 +262,6 @@
     <EmbeddedResource Include="frmSoporte.resx">
       <DependentUpon>frmSoporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Informe.rdlc" />
     <EmbeddedResource Include="InformeFactura.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -276,27 +271,16 @@
     <EmbeddedResource Include="ReporteFactura.resx">
       <DependentUpon>ReporteFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataSet2.xsc">
-      <DependentUpon>DataSet2.xsd</DependentUpon>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="DataSet2.xsd">
+    <None Include="DataSet1.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DataSet2.xss">
-      <DependentUpon>DataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetfac.xsc">
-      <DependentUpon>DataSetfac.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetfac.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetfac.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSetfac.xss">
-      <DependentUpon>DataSetfac.xsd</DependentUpon>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -433,6 +417,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\judysoft.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
