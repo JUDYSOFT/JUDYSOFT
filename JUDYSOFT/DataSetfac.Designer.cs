@@ -20,9 +20,9 @@ namespace JUDYSOFT {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSet2")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSetfac")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSet2 : global::System.Data.DataSet {
+    public partial class DataSetfac : global::System.Data.DataSet {
         
         private pruebaDataTable tableprueba;
         
@@ -30,7 +30,7 @@ namespace JUDYSOFT {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DataSet2() {
+        public DataSetfac() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace JUDYSOFT {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSetfac(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace JUDYSOFT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSet2 cln = ((DataSet2)(base.Clone()));
+            DataSetfac cln = ((DataSetfac)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace JUDYSOFT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSet2";
+            this.DataSetName = "DataSetfac";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSet2.xsd";
+            this.Namespace = "http://tempuri.org/DataSetfac.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableprueba = new pruebaDataTable();
@@ -225,7 +225,7 @@ namespace JUDYSOFT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSet2 ds = new DataSet2();
+            DataSetfac ds = new DataSetfac();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -290,8 +290,6 @@ namespace JUDYSOFT {
             private global::System.Data.DataColumn columnTOTAL;
             
             private global::System.Data.DataColumn columnPRECIOPRODUCTO;
-            
-            private global::System.Data.DataColumn columnimporte;
             
             private global::System.Data.DataColumn columnNOMBREPRODUCTO;
             
@@ -391,14 +389,6 @@ namespace JUDYSOFT {
             public global::System.Data.DataColumn PRECIOPRODUCTOColumn {
                 get {
                     return this.columnPRECIOPRODUCTO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn importeColumn {
-                get {
-                    return this.columnimporte;
                 }
             }
             
@@ -526,7 +516,6 @@ namespace JUDYSOFT {
                         double SUBTOTAL, 
                         double TOTAL, 
                         double PRECIOPRODUCTO, 
-                        double importe, 
                         string NOMBREPRODUCTO, 
                         string NOMBRE1EMPLEADO, 
                         string APELLIDO1EMPLEADO, 
@@ -545,7 +534,6 @@ namespace JUDYSOFT {
                         SUBTOTAL,
                         TOTAL,
                         PRECIOPRODUCTO,
-                        importe,
                         NOMBREPRODUCTO,
                         NOMBRE1EMPLEADO,
                         APELLIDO1EMPLEADO,
@@ -584,7 +572,6 @@ namespace JUDYSOFT {
                 this.columnSUBTOTAL = base.Columns["SUBTOTAL"];
                 this.columnTOTAL = base.Columns["TOTAL"];
                 this.columnPRECIOPRODUCTO = base.Columns["PRECIOPRODUCTO"];
-                this.columnimporte = base.Columns["importe"];
                 this.columnNOMBREPRODUCTO = base.Columns["NOMBREPRODUCTO"];
                 this.columnNOMBRE1EMPLEADO = base.Columns["NOMBRE1EMPLEADO"];
                 this.columnAPELLIDO1EMPLEADO = base.Columns["APELLIDO1EMPLEADO"];
@@ -612,8 +599,6 @@ namespace JUDYSOFT {
                 base.Columns.Add(this.columnTOTAL);
                 this.columnPRECIOPRODUCTO = new global::System.Data.DataColumn("PRECIOPRODUCTO", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPRECIOPRODUCTO);
-                this.columnimporte = new global::System.Data.DataColumn("importe", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnimporte);
                 this.columnNOMBREPRODUCTO = new global::System.Data.DataColumn("NOMBREPRODUCTO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNOMBREPRODUCTO);
                 this.columnNOMBRE1EMPLEADO = new global::System.Data.DataColumn("NOMBRE1EMPLEADO", typeof(string), null, global::System.Data.MappingType.Element);
@@ -640,7 +625,6 @@ namespace JUDYSOFT {
                 this.columnSUBTOTAL.AllowDBNull = false;
                 this.columnTOTAL.AllowDBNull = false;
                 this.columnPRECIOPRODUCTO.AllowDBNull = false;
-                this.columnimporte.ReadOnly = true;
                 this.columnNOMBREPRODUCTO.AllowDBNull = false;
                 this.columnNOMBREPRODUCTO.MaxLength = 50;
                 this.columnNOMBRE1EMPLEADO.AllowDBNull = false;
@@ -724,7 +708,7 @@ namespace JUDYSOFT {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet2 ds = new DataSet2();
+                DataSetfac ds = new DataSetfac();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -865,22 +849,6 @@ namespace JUDYSOFT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double importe {
-                get {
-                    try {
-                        return ((double)(this[this.tableprueba.importeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'importe\' in table \'prueba\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableprueba.importeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string NOMBREPRODUCTO {
                 get {
                     return ((string)(this[this.tableprueba.NOMBREPRODUCTOColumn]));
@@ -1001,18 +969,6 @@ namespace JUDYSOFT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsimporteNull() {
-                return this.IsNull(this.tableprueba.importeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetimporteNull() {
-                this[this.tableprueba.importeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAPELLIDO1CLIENTENull() {
                 return this.IsNull(this.tableprueba.APELLIDO1CLIENTEColumn);
             }
@@ -1071,7 +1027,7 @@ namespace JUDYSOFT {
         }
     }
 }
-namespace JUDYSOFT.DataSet2TableAdapters {
+namespace JUDYSOFT.DataSetfacTableAdapters {
     
     
     /// <summary>
@@ -1201,7 +1157,6 @@ namespace JUDYSOFT.DataSet2TableAdapters {
             tableMapping.ColumnMappings.Add("SUBTOTAL", "SUBTOTAL");
             tableMapping.ColumnMappings.Add("TOTAL", "TOTAL");
             tableMapping.ColumnMappings.Add("PRECIOPRODUCTO", "PRECIOPRODUCTO");
-            tableMapping.ColumnMappings.Add("importe", "importe");
             tableMapping.ColumnMappings.Add("NOMBREPRODUCTO", "NOMBREPRODUCTO");
             tableMapping.ColumnMappings.Add("NOMBRE1EMPLEADO", "NOMBRE1EMPLEADO");
             tableMapping.ColumnMappings.Add("APELLIDO1EMPLEADO", "APELLIDO1EMPLEADO");
@@ -1238,7 +1193,7 @@ namespace JUDYSOFT.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet2.pruebaDataTable dataTable, global::System.Nullable<int> num) {
+        public virtual int Fill(DataSetfac.pruebaDataTable dataTable, global::System.Nullable<int> num) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((num.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(num.Value));
@@ -1257,7 +1212,7 @@ namespace JUDYSOFT.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet2.pruebaDataTable GetData(global::System.Nullable<int> num) {
+        public virtual DataSetfac.pruebaDataTable GetData(global::System.Nullable<int> num) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((num.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(num.Value));
@@ -1265,7 +1220,7 @@ namespace JUDYSOFT.DataSet2TableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            DataSet2.pruebaDataTable dataTable = new DataSet2.pruebaDataTable();
+            DataSetfac.pruebaDataTable dataTable = new DataSetfac.pruebaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1339,7 +1294,7 @@ namespace JUDYSOFT.DataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(DataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSetfac dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1349,7 +1304,7 @@ namespace JUDYSOFT.DataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(DataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSetfac dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1359,7 +1314,7 @@ namespace JUDYSOFT.DataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(DataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSetfac dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1393,7 +1348,7 @@ namespace JUDYSOFT.DataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(DataSet2 dataSet) {
+        public virtual int UpdateAll(DataSetfac dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

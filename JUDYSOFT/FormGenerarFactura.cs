@@ -363,7 +363,7 @@ namespace JUDYSOFT
                 return;
             }
         }
-        int contador = 287;
+        int contador = 295;
         private void BotonFacturarGenerarFactura_Click(object sender, EventArgs e)
         {
             try
@@ -391,7 +391,7 @@ namespace JUDYSOFT
                 }
                 contador++;
 
-                cmd = "Exec DatosFactura " + NumFac;
+                cmd = string.Format("Exec DatosFactura {0}", NumFac);
                 DS = Utilidades.Ejecutar(cmd);
 
 

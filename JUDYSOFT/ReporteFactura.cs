@@ -25,6 +25,8 @@ namespace JUDYSOFT
 
         private void ReporteFactura_Load_1(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'DataSet2.DatosFactura' Puede moverla o quitarla según sea necesario.
+            this.DatosFacturaTableAdapter.Fill(this.DataSet2.DatosFactura);
 
             reportViewer1.RefreshReport();
         }

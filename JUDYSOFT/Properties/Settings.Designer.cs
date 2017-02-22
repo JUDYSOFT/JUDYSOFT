@@ -33,5 +33,15 @@ namespace JUDYSOFT.Properties {
                 return ((string)(this["AdministracionConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-TPC97N2;Initial Catalog=JUDYSOFT;Integrated Security=True")]
+        public string JUDYSOFTConnectionString {
+            get {
+                return ((string)(this["JUDYSOFTConnectionString"]));
+            }
+        }
     }
 }
