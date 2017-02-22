@@ -54,10 +54,9 @@
             this.lblTelefono = new System.Windows.Forms.Label();
             this.groupBoxDocumento = new System.Windows.Forms.GroupBox();
             this.txtNumIdentificacionConsultarCliente = new Libreria.ErrorTxtBox();
-            this.radioPasaporteConsultarCliente = new System.Windows.Forms.RadioButton();
-            this.radioCedulaConsultarCliente = new System.Windows.Forms.RadioButton();
             this.listaClientesConsultarCliente = new System.Windows.Forms.Button();
             this.botonConsultar = new System.Windows.Forms.Button();
+            this.lblDocumentoIdentificaciónConsultarDatosCliente = new System.Windows.Forms.Label();
             this.panelInformación.SuspendLayout();
             this.groupBoxDocumento.SuspendLayout();
             this.SuspendLayout();
@@ -348,9 +347,8 @@
             // groupBoxDocumento
             // 
             this.groupBoxDocumento.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBoxDocumento.Controls.Add(this.lblDocumentoIdentificaciónConsultarDatosCliente);
             this.groupBoxDocumento.Controls.Add(this.txtNumIdentificacionConsultarCliente);
-            this.groupBoxDocumento.Controls.Add(this.radioPasaporteConsultarCliente);
-            this.groupBoxDocumento.Controls.Add(this.radioCedulaConsultarCliente);
             this.groupBoxDocumento.Location = new System.Drawing.Point(54, 31);
             this.groupBoxDocumento.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxDocumento.Name = "groupBoxDocumento";
@@ -363,37 +361,12 @@
             // txtNumIdentificacionConsultarCliente
             // 
             this.txtNumIdentificacionConsultarCliente.BackColor = System.Drawing.Color.Moccasin;
-            this.txtNumIdentificacionConsultarCliente.Location = new System.Drawing.Point(149, 39);
+            this.txtNumIdentificacionConsultarCliente.Location = new System.Drawing.Point(150, 36);
             this.txtNumIdentificacionConsultarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumIdentificacionConsultarCliente.Name = "txtNumIdentificacionConsultarCliente";
             this.txtNumIdentificacionConsultarCliente.Size = new System.Drawing.Size(130, 20);
             this.txtNumIdentificacionConsultarCliente.TabIndex = 21;
             this.txtNumIdentificacionConsultarCliente.Validar = true;
-            // 
-            // radioPasaporteConsultarCliente
-            // 
-            this.radioPasaporteConsultarCliente.AutoSize = true;
-            this.radioPasaporteConsultarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioPasaporteConsultarCliente.Location = new System.Drawing.Point(38, 51);
-            this.radioPasaporteConsultarCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.radioPasaporteConsultarCliente.Name = "radioPasaporteConsultarCliente";
-            this.radioPasaporteConsultarCliente.Size = new System.Drawing.Size(91, 21);
-            this.radioPasaporteConsultarCliente.TabIndex = 20;
-            this.radioPasaporteConsultarCliente.TabStop = true;
-            this.radioPasaporteConsultarCliente.Text = "Pasaporte";
-            this.radioPasaporteConsultarCliente.UseVisualStyleBackColor = true;
-            // 
-            // radioCedulaConsultarCliente
-            // 
-            this.radioCedulaConsultarCliente.AutoSize = true;
-            this.radioCedulaConsultarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioCedulaConsultarCliente.Location = new System.Drawing.Point(38, 27);
-            this.radioCedulaConsultarCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.radioCedulaConsultarCliente.Name = "radioCedulaConsultarCliente";
-            this.radioCedulaConsultarCliente.Size = new System.Drawing.Size(70, 21);
-            this.radioCedulaConsultarCliente.TabIndex = 19;
-            this.radioCedulaConsultarCliente.Text = "Cédula";
-            this.radioCedulaConsultarCliente.UseVisualStyleBackColor = true;
             // 
             // listaClientesConsultarCliente
             // 
@@ -418,6 +391,17 @@
             this.botonConsultar.Text = "Consultar";
             this.botonConsultar.UseVisualStyleBackColor = true;
             this.botonConsultar.Click += new System.EventHandler(this.botonConsultar_Click);
+            // 
+            // lblDocumentoIdentificaciónConsultarDatosCliente
+            // 
+            this.lblDocumentoIdentificaciónConsultarDatosCliente.AutoSize = true;
+            this.lblDocumentoIdentificaciónConsultarDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDocumentoIdentificaciónConsultarDatosCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblDocumentoIdentificaciónConsultarDatosCliente.Location = new System.Drawing.Point(8, 39);
+            this.lblDocumentoIdentificaciónConsultarDatosCliente.Name = "lblDocumentoIdentificaciónConsultarDatosCliente";
+            this.lblDocumentoIdentificaciónConsultarDatosCliente.Size = new System.Drawing.Size(133, 17);
+            this.lblDocumentoIdentificaciónConsultarDatosCliente.TabIndex = 22;
+            this.lblDocumentoIdentificaciónConsultarDatosCliente.Text = "Cédula o Pasaporte";
             // 
             // FormConsultarCliente
             // 
@@ -470,9 +454,8 @@
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.GroupBox groupBoxDocumento;
         private Libreria.ErrorTxtBox txtNumIdentificacionConsultarCliente;
-        private System.Windows.Forms.RadioButton radioPasaporteConsultarCliente;
-        private System.Windows.Forms.RadioButton radioCedulaConsultarCliente;
         private System.Windows.Forms.Button listaClientesConsultarCliente;
         private System.Windows.Forms.Button botonConsultar;
+        private System.Windows.Forms.Label lblDocumentoIdentificaciónConsultarDatosCliente;
     }
 }

@@ -61,7 +61,7 @@ namespace JUDYSOFT
             objCliente.EstadoCivil = comboBoxEstadoCivil.Text.ToString();
             objCliente.Correo = txtCorreoIngresoCLiente.Text.ToString();
             objCliente.Direccion = txtDireccionIngresoCliente.Text.ToString();
-            objCliente.FechaNac = null;
+           
             
             string cmd = string.Format("exec verificarCliente '{0}'", objCliente.NumDocumento);
             DataSet DS = Utilidades.Ejecutar(cmd);
@@ -69,7 +69,7 @@ namespace JUDYSOFT
 
             try
             {
-                string cmd1 = string.Format("exec modificarCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}', '{8}', '{9}','{10}','{11}','{12}'", objCliente.Nombre1, objCliente.Nombre2, objCliente.Apellido1, objCliente.Apellido2, objCliente.Telefono1, objCliente.Telefono2, objCliente.Direccion, objCliente.Nacionalidad, objCliente.Procedencia, objCliente.FechaNac, objCliente.Correo, objCliente.EstadoCivil, codCliente);
+                string cmd1 = string.Format("exec modificarCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}', '{8}', '{9}','{10}','{11}'", objCliente.Nombre1, objCliente.Nombre2, objCliente.Apellido1, objCliente.Apellido2, objCliente.Telefono1, objCliente.Telefono2, objCliente.Direccion, objCliente.Nacionalidad, objCliente.Procedencia, objCliente.Correo, objCliente.EstadoCivil, codCliente);
                 DataSet DS1 = Utilidades.Ejecutar(cmd1);
             }
             catch (Exception ex)
@@ -137,10 +137,10 @@ namespace JUDYSOFT
         }
         private void habilitarCampos()
         {
-            txtNombre1IngresoCliente.Enabled = true;
-            txtApellido1IngresoCliente.Enabled = true;
-            txtNombre2IngresoCliente.Enabled = true;
-            txtApellido2IngresoCliente.Enabled = true;
+           // txtNombre1IngresoCliente.Enabled = true;
+            //txtApellido1IngresoCliente.Enabled = true;
+            //txtNombre2IngresoCliente.Enabled = true;
+            //txtApellido2IngresoCliente.Enabled = true;
             txtTelefono1IngresoCliente.Enabled = true;
             txtTelefono2IngresoCliente.Enabled = true;
             txtNacionalidadIngresoCliente.Enabled = true;
@@ -148,7 +148,7 @@ namespace JUDYSOFT
             txtCorreoIngresoCLiente.Enabled = true;
             txtProcedenciaIngresoCliente.Enabled = true;
             txtDireccionIngresoCliente.Enabled = true;
-            
+           
         }
 
         private void listaClientesModificarCliente_Click(object sender, EventArgs e)
@@ -171,8 +171,8 @@ namespace JUDYSOFT
                 txtDireccionIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[7].Value.ToString();
                 txtNacionalidadIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[10].Value.ToString();
                 txtProcedenciaIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[11].Value.ToString();
-                txtCorreoIngresoCLiente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[14].Value.ToString();
-                comboBoxEstadoCivil.SelectedItem = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[11].Value.ToString();
+                txtCorreoIngresoCLiente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[13].Value.ToString();
+                comboBoxEstadoCivil.SelectedItem = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[14].Value.ToString();
                 habilitarCampos();
             }
 
