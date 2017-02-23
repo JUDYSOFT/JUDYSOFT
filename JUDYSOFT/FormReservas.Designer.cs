@@ -33,7 +33,6 @@
             this.lblFuturasReservasReservaciones = new System.Windows.Forms.Label();
             this.btnCancelarReservaReservaciones = new System.Windows.Forms.Button();
             this.btnNuevaReservaReservaciones = new System.Windows.Forms.Button();
-            this.btnConsultarReservaciones = new System.Windows.Forms.Button();
             this.btnSalirReservaciones = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaReservaciones)).BeginInit();
             this.SuspendLayout();
@@ -85,10 +84,10 @@
             this.btnCancelarReservaReservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarReservaReservaciones.Image = global::JUDYSOFT.Properties.Resources._1484546297_Cancel;
             this.btnCancelarReservaReservaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelarReservaReservaciones.Location = new System.Drawing.Point(216, 313);
+            this.btnCancelarReservaReservaciones.Location = new System.Drawing.Point(80, 313);
             this.btnCancelarReservaReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelarReservaReservaciones.Name = "btnCancelarReservaReservaciones";
-            this.btnCancelarReservaReservaciones.Size = new System.Drawing.Size(173, 71);
+            this.btnCancelarReservaReservaciones.Size = new System.Drawing.Size(211, 71);
             this.btnCancelarReservaReservaciones.TabIndex = 13;
             this.btnCancelarReservaReservaciones.Text = "Cancelar Reserva";
             this.btnCancelarReservaReservaciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,29 +99,15 @@
             this.btnNuevaReservaReservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevaReservaReservaciones.Image = global::JUDYSOFT.Properties.Resources._1484548508_Pencil1;
             this.btnNuevaReservaReservaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaReservaReservaciones.Location = new System.Drawing.Point(411, 313);
+            this.btnNuevaReservaReservaciones.Location = new System.Drawing.Point(338, 313);
             this.btnNuevaReservaReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNuevaReservaReservaciones.Name = "btnNuevaReservaReservaciones";
-            this.btnNuevaReservaReservaciones.Size = new System.Drawing.Size(155, 71);
+            this.btnNuevaReservaReservaciones.Size = new System.Drawing.Size(200, 71);
             this.btnNuevaReservaReservaciones.TabIndex = 12;
             this.btnNuevaReservaReservaciones.Text = "Nueva Reserva";
             this.btnNuevaReservaReservaciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevaReservaReservaciones.UseVisualStyleBackColor = true;
             this.btnNuevaReservaReservaciones.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btnConsultarReservaciones
-            // 
-            this.btnConsultarReservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarReservaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarReservaciones.Location = new System.Drawing.Point(29, 313);
-            this.btnConsultarReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnConsultarReservaciones.Name = "btnConsultarReservaciones";
-            this.btnConsultarReservaciones.Size = new System.Drawing.Size(167, 71);
-            this.btnConsultarReservaciones.TabIndex = 10;
-            this.btnConsultarReservaciones.Text = "Consultar";
-            this.btnConsultarReservaciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsultarReservaciones.UseVisualStyleBackColor = true;
-            this.btnConsultarReservaciones.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnSalirReservaciones
             // 
@@ -148,7 +133,6 @@
             this.Controls.Add(this.btnCancelarReservaReservaciones);
             this.Controls.Add(this.btnNuevaReservaReservaciones);
             this.Controls.Add(this.btnConsultarReservasPasadasReservaciones);
-            this.Controls.Add(this.btnConsultarReservaciones);
             this.Controls.Add(this.tablaReservaciones);
             this.Controls.Add(this.lblFuturasReservasReservaciones);
             this.Controls.Add(this.btnSalirReservaciones);
@@ -169,7 +153,6 @@
         private System.Windows.Forms.Button btnCancelarReservaReservaciones;
         private System.Windows.Forms.Button btnNuevaReservaReservaciones;
         public System.Windows.Forms.Button btnConsultarReservasPasadasReservaciones;
-        private System.Windows.Forms.Button btnConsultarReservaciones;
         private System.Windows.Forms.DataGridView tablaReservaciones;
         private System.Windows.Forms.Label lblFuturasReservasReservaciones;
         private System.Windows.Forms.Button btnSalirReservaciones;

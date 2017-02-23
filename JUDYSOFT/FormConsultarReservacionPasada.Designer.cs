@@ -30,7 +30,6 @@
         {
             this.tablaReservacionesPasadas = new System.Windows.Forms.DataGridView();
             this.btnAtrasReservacionesPasadas = new System.Windows.Forms.Button();
-            this.btnConsultarReservacionesPasadas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaReservacionesPasadas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,20 +64,6 @@
             this.btnAtrasReservacionesPasadas.UseVisualStyleBackColor = true;
             this.btnAtrasReservacionesPasadas.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnConsultarReservacionesPasadas
-            // 
-            this.btnConsultarReservacionesPasadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarReservacionesPasadas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarReservacionesPasadas.Location = new System.Drawing.Point(217, 411);
-            this.btnConsultarReservacionesPasadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnConsultarReservacionesPasadas.Name = "btnConsultarReservacionesPasadas";
-            this.btnConsultarReservacionesPasadas.Size = new System.Drawing.Size(161, 53);
-            this.btnConsultarReservacionesPasadas.TabIndex = 4;
-            this.btnConsultarReservacionesPasadas.Text = "Consultar";
-            this.btnConsultarReservacionesPasadas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsultarReservacionesPasadas.UseVisualStyleBackColor = true;
-            this.btnConsultarReservacionesPasadas.Click += new System.EventHandler(this.button1_Click);
-            // 
             // reservacionesPasadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -86,7 +71,6 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(573, 478);
             this.Controls.Add(this.btnAtrasReservacionesPasadas);
-            this.Controls.Add(this.btnConsultarReservacionesPasadas);
             this.Controls.Add(this.tablaReservacionesPasadas);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "reservacionesPasadas";
@@ -100,7 +84,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnAtrasReservacionesPasadas;
-        private System.Windows.Forms.Button btnConsultarReservacionesPasadas;
         private System.Windows.Forms.DataGridView tablaReservacionesPasadas;
     }
 }
