@@ -14,9 +14,7 @@ namespace JUDYSOFT
 {
     public partial class FormReservas : Form
     {
-        SqlDataAdapter dataAdapter = new SqlDataAdapter();
-        BindingSource bindingSource1 = new BindingSource();
-
+        
         public FormReservas()
         {
             InitializeComponent();
@@ -30,7 +28,21 @@ namespace JUDYSOFT
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Está seguro que desea cancelar la reserva?", "Confirmacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            DialogResult confirmacion = MessageBox.Show("Está seguro que desea eliminar la reserva?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+
+            if (confirmacion == System.Windows.Forms.DialogResult.OK)
+            {
+                String idR = tablaReservaciones.Rows[tablaReservaciones.CurrentRow.Index].Cells[0].Value.ToString();
+                DataSet DS;
+                string cmd = string.Format("DELETE FROM RESERVACION WHERE CODRESERVACION = {0}", idR);
+                DS = Utilidades.Ejecutar(cmd);
+                tablaRefresco();
+            }
+            else
+            {
+
+            }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -43,7 +55,17 @@ namespace JUDYSOFT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Dispose();
+            DialogResult confirmacion = MessageBox.Show("Está seguro que desea salir?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+
+            if (confirmacion == System.Windows.Forms.DialogResult.OK)
+            {
+                Dispose();
+                MenuSettings.EnableMenuItem("clientesToolStripMenuItem", "ingresarNuevoClienteToolStripMenuItem");
+            }
+            else
+            {
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -53,75 +75,46 @@ namespace JUDYSOFT
 
         private void FormReservas_Load(object sender, EventArgs e)
         {
-           
-            tablaReservaciones.DataSource = bindingSource1;
-            GetData(    "SELECT R.CODRESERVACION,C.NOMBRE1CLIENTE,C.APELLIDO1CLIENTE,R.FECHAINGRESORESERVACION,R.FECHASALIDARESERVACION " +
-                        "FROM  CLIENTE C JOIN RESERVACION R ON R.CODCLIENTE = C.CODCLIENTE " +
-                        "WHERE R.FECHASALIDARESERVACION >= GETDATE()");
-            tablaReservaciones.AutoResizeColumns(
-                    DataGridViewAutoSizeColumnsMode.AllCells);
+            tablaRefresco();
+        }
+
+        public void tablaRefresco()
+        {
+            tablaReservaciones.DataSource = LLenarDGv().Tables[0];
+            tablaReservaciones.Columns[0].HeaderCell.Value = "Código de Reservación";
+            tablaReservaciones.Columns[1].HeaderCell.Value = "Apellido Cliente";
+            tablaReservaciones.Columns[2].HeaderCell.Value = "Nombre Cliente";
+            tablaReservaciones.Columns[3].HeaderCell.Value = "Fecha de Ingreso";
+            tablaReservaciones.Columns[4].HeaderCell.Value = "Fecha de Salida";
+        }
+
+        private DataSet LLenarDGv()
+        {
+            DataSet DS;
+            string cmd = string.Format("SELECT CODRESERVACION,APELLIDO1CLIENTE,NOMBRE1CLIENTE,FECHAINGRESORESERVACION,FECHASALIDARESERVACION "+
+                "FROM RESERVACION R JOIN CLIENTE C ON R.CODCLIENTE = C.CODCLIENTE "+
+                "WHERE FECHASALIDARESERVACION >= GETDATE()");
+            DS = Utilidades.Ejecutar(cmd);
+            return DS;
         }
 
         private void FormReservas_FormClosed(object sender, FormClosedEventArgs e)
-        {
-           
-            
-        }
-
-
-        private void tablaReservaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void GetData(string selectCommand)
-        {
-            try
-            {
-                // Specify a connection string. Replace the given value with a 
-                // valid connection string for a Northwind SQL Server sample
-                // database accessible to your system.
-                String connectionString =
-                //"Data Source=DESKTOP-P6D1EH2\\SQLEXPRESS;Initial Catalog=JUDYSOFT;Integrated Security=True";
-                //"Data Source = LENOVO - PC\\SQLSERVER_SAL_A; Initial Catalog = JUDYSOFT; Integrated Security = True";
-                "Data Source=" + Environment.MachineName + "\\SQLSERVER_SAL_A;Initial Catalog=JUDYSOFT;Integrated Security=True";
-                // Create a new data adapter based on the specified query.
-                dataAdapter = new SqlDataAdapter(selectCommand, connectionString);
-
-                // Create a command builder to generate SQL update, insert, and
-                // delete commands based on selectCommand. These are used to
-                // update the database.
-                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
-
-                // Populate a new data table and bind it to the BindingSource.
-                DataTable table = new DataTable();
-                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
-                dataAdapter.Fill(table);
-                bindingSource1.DataSource = table;
-
-                // Resize the DataGridView columns to fit the newly loaded content.
-                tablaReservaciones.AutoResizeColumns(
-                    DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("To run this example, replace the value of the " +
-                    "connectionString variable with a connection string that is " +
-                    "valid for your system.");
-            }
-        }
-
-        private void FormReservas_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult confirmacion = MessageBox.Show("Esta seguro que desea salir", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
 
             if (confirmacion == System.Windows.Forms.DialogResult.OK)
             {
                 Dispose();
-                MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem", "reservacionesToolStripMenuItem");
+                MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem","reservacionesToolStripMenuItem");
             }
-            else
-                e.Cancel = true;
         }
+
+        private void tablaReservaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        
+
     }
 }

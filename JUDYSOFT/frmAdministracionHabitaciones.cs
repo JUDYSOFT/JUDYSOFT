@@ -29,8 +29,6 @@ namespace JUDYSOFT
         private clsHabitacion objHab25 = new clsHabitacion();
         private clsHabitacion objHab26 = new clsHabitacion();
         private clsHabitacion objHab27 = new clsHabitacion();
-
-
         public event FormClosingEventHandler FormClosing;
         public frmAdministracionHabitaciones()
         {

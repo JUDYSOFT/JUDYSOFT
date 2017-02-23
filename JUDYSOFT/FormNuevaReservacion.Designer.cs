@@ -210,6 +210,8 @@
             this.tBoxNumeroIdClienteNuevareservacion.Name = "tBoxNumeroIdClienteNuevareservacion";
             this.tBoxNumeroIdClienteNuevareservacion.Size = new System.Drawing.Size(128, 30);
             this.tBoxNumeroIdClienteNuevareservacion.TabIndex = 33;
+            this.tBoxNumeroIdClienteNuevareservacion.TextChanged += new System.EventHandler(this.tBoxNumeroIdClienteNuevareservacion_TextChanged_1);
+            this.tBoxNumeroIdClienteNuevareservacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxNumeroIdClienteNuevareservacion_KeyPress_1);
             // 
             // lblNombreClienteNuevaReservacion
             // 
@@ -255,9 +257,10 @@
             this.Controls.Add(this.btnIngresarNuevaReservacion);
             this.Controls.Add(this.btnCancelarNuevaReservacion);
             this.HelpButton = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormNuevaReservacion";
             this.Text = "Nueva Reservacion";
+            this.Load += new System.EventHandler(this.FormNuevaReservacion_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -363,7 +363,7 @@ namespace JUDYSOFT
                 return;
             }
         }
-        int contador = 295;
+        int contador = 307;
         private void BotonFacturarGenerarFactura_Click(object sender, EventArgs e)
         {
             try
@@ -391,15 +391,14 @@ namespace JUDYSOFT
                 }
                 contador++;
 
-                cmd = string.Format("Exec DatosFactura {0}", NumFac);
+                cmd = string.Format("Exec prueba {0}", NumFac);
                 DS = Utilidades.Ejecutar(cmd);
 
 
-                 ReporteFactura report = new ReporteFactura();
-                 report.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
-                 report.ShowDialog();
-                 Limpiar();
-
+                ReporteFactura reporte = new ReporteFactura();
+                reporte.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
+                reporte.ShowDialog();
+                Limpiar();
 
 
             }
