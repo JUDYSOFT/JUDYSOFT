@@ -28,12 +28,21 @@ namespace JUDYSOFT
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Está seguro que desea cancelar la reserva?", "Confirmacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            String idR = tablaReservaciones.Rows[tablaReservaciones.CurrentRow.Index].Cells[0].Value.ToString();
-            DataSet DS;
-            string cmd = string.Format("DELETE FROM RESERVACION WHERE CODRESERVACION = {0}",idR);
-            DS = Utilidades.Ejecutar(cmd);
-            tablaRefresco();
+            DialogResult confirmacion = MessageBox.Show("Está seguro que desea eliminar la reserva?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+
+            if (confirmacion == System.Windows.Forms.DialogResult.OK)
+            {
+                String idR = tablaReservaciones.Rows[tablaReservaciones.CurrentRow.Index].Cells[0].Value.ToString();
+                DataSet DS;
+                string cmd = string.Format("DELETE FROM RESERVACION WHERE CODRESERVACION = {0}", idR);
+                DS = Utilidades.Ejecutar(cmd);
+                tablaRefresco();
+            }
+            else
+            {
+
+            }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -46,7 +55,17 @@ namespace JUDYSOFT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Dispose();
+            DialogResult confirmacion = MessageBox.Show("Está seguro que desea salir?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+
+            if (confirmacion == System.Windows.Forms.DialogResult.OK)
+            {
+                Dispose();
+                MenuSettings.EnableMenuItem("clientesToolStripMenuItem", "ingresarNuevoClienteToolStripMenuItem");
+            }
+            else
+            {
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

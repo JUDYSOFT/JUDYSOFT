@@ -41,11 +41,12 @@
             this.tablaReservacionesPasadas.AllowUserToOrderColumns = true;
             this.tablaReservacionesPasadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.tablaReservacionesPasadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaReservacionesPasadas.Enabled = false;
             this.tablaReservacionesPasadas.Location = new System.Drawing.Point(23, 16);
             this.tablaReservacionesPasadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tablaReservacionesPasadas.Name = "tablaReservacionesPasadas";
+            this.tablaReservacionesPasadas.ReadOnly = true;
             this.tablaReservacionesPasadas.RowTemplate.Height = 24;
+            this.tablaReservacionesPasadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaReservacionesPasadas.Size = new System.Drawing.Size(511, 377);
             this.tablaReservacionesPasadas.TabIndex = 3;
             this.tablaReservacionesPasadas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaReservacionesPasadas_CellContentClick);

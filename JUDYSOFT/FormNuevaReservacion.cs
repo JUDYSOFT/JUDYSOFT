@@ -25,21 +25,24 @@ namespace JUDYSOFT
 
         private void botonReservacion_Click(object sender, EventArgs e)
         {
-            if (fechaSalidaNuevaReservacion.Value.Year < fechaArrivoNuevaReservacion.Value.Year)
+            if (fechaSalidaNuevaReservacion.Value.Date < fechaArrivoNuevaReservacion.Value.Date)
             {
                 MessageBox.Show("La fecha de salida no puede ser anterior a la fecha de llegada del cliente",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (fechaSalidaNuevaReservacion.Value.Month < fechaArrivoNuevaReservacion.Value.Month)
+            }else if(tBoxNumeroIdClienteNuevareservacion.Text == "")
             {
-                MessageBox.Show("La fecha de salida no puede ser anterior a la fecha de llegada del cliente",
-                   "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (fechaSalidaNuevaReservacion.Value.Day < fechaArrivoNuevaReservacion.Value.Day)
+                MessageBox.Show("El campo de Identificación no puede estar vacío",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }else if (tBoxNumeroIdClienteNuevareservacion.Text.Length != 8|| tBoxNumeroIdClienteNuevareservacion.Text.Length != 10)
             {
-                MessageBox.Show("La fecha de salida no puede ser anterior a la fecha de llegada del cliente",
-                   "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo de Identificación debe contener 8 dígitos para pasaporte o 10 dígitos para cédula",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }else if(tBoxNumeroNiniosNuevaReserva.Text==""|| tBoxNumeroAdultosNuevaReserva.Text == "")
+            {
+                MessageBox.Show("Algún campo de número de personas se encuentra vacío",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
             else
             {
                 DataSet DS;
@@ -76,7 +79,17 @@ namespace JUDYSOFT
 
         private void botonCancelarReservacion_Click(object sender, EventArgs e)
         {
-            Dispose();
+            DialogResult confirmacion = MessageBox.Show("Está seguro que desea cancelar?", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+
+            if (confirmacion == System.Windows.Forms.DialogResult.OK)
+            {
+                Dispose();
+                MenuSettings.EnableMenuItem("clientesToolStripMenuItem", "ingresarNuevoClienteToolStripMenuItem");
+            }
+            else
+            {
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -93,7 +106,7 @@ namespace JUDYSOFT
 
 
                 habilitarCampos();
-                //tBoxNumeroIdClienteNuevareservacion.Enabled = false;
+                tBoxNumeroIdClienteNuevareservacion.BackColor = Color.Green;
             }
         }
 
@@ -158,32 +171,18 @@ namespace JUDYSOFT
 
         private void tBoxNumeroIdClienteNuevareservacion_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            if (Convert.ToInt32(tBoxNumeroIdClienteNuevareservacion.Text.Length) == 10
-                && e.KeyChar != (char)Keys.Back)
+            
+
+            if (Convert.ToInt32(tBoxNumeroIdClienteNuevareservacion.Text.Length) == 10 && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true;
             }
             if (val.validarCamposNumericos(e, tBoxNumeroIdClienteNuevareservacion))
-            {
                 return;
-
-            }
 
         }
 
-        private void tBoxNumeroAdultosNuevaReserva_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Convert.ToInt32(tBoxNumeroAdultosNuevaReserva.Text.Length) == 2
-                && e.KeyChar != (char)Keys.Back)
-            {
-                e.Handled = true;
-            }
-            if (val.validarCamposNumericos(e, tBoxNumeroAdultosNuevaReserva))
-            {
-                return;
-
-            }
-        }
+        
 
         private void tBoxNumeroNiniosNuevaReserva_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -206,6 +205,11 @@ namespace JUDYSOFT
             tBoxNumeroAdultosNuevaReserva.Enabled = false;
             tBoxNumeroNiniosNuevaReserva.Enabled = false;
             tBoxNombreClienteNuevaReservacion.Enabled = false;
+        }
+
+        private void tBoxNumeroIdClienteNuevareservacion_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
