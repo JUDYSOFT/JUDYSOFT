@@ -19,16 +19,10 @@ namespace JUDYSOFT
 
         private void ReporteFactura_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'DataSet1.prueba' Puede moverla o quitarla según sea necesario.
+            //this.pruebaTableAdapter.Fill(this.DataSet1.prueba);
 
-    
-        }
-
-        private void ReporteFactura_Load_1(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'DataSet2.DatosFactura' Puede moverla o quitarla según sea necesario.
-            //this.DatosFacturaTableAdapter.Fill(this.DataSet2.DatosFactura);
-
-            reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
     }
 }
