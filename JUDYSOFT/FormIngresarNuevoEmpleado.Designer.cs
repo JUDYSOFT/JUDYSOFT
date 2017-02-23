@@ -32,17 +32,16 @@ namespace JUDYSOFT
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIngresarNuevoEmpleado));
             this.panelNuevoEmpleado = new System.Windows.Forms.Panel();
-            this.mensajeAdvertencia = new System.Windows.Forms.Label();
+            this.buttonValidar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBoxCargo = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimePickerFechaDeEntrada = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBoxSalario = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.comboBoxCantones = new System.Windows.Forms.ComboBox();
+            this.radioButtonFemenino = new System.Windows.Forms.RadioButton();
+            this.radioButtonMasculino = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -68,8 +67,9 @@ namespace JUDYSOFT
             this.label1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBoxCantones = new System.Windows.Forms.ComboBox();
+            this.buttonGuardar = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBoxSalario = new System.Windows.Forms.TextBox();
             this.panelNuevoEmpleado.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -80,28 +80,30 @@ namespace JUDYSOFT
             // 
             this.panelNuevoEmpleado.AutoSize = true;
             this.panelNuevoEmpleado.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panelNuevoEmpleado.Controls.Add(this.mensajeAdvertencia);
+            this.panelNuevoEmpleado.Controls.Add(this.buttonValidar);
             this.panelNuevoEmpleado.Controls.Add(this.groupBox3);
             this.panelNuevoEmpleado.Controls.Add(this.groupBox2);
             this.panelNuevoEmpleado.Controls.Add(this.groupBox1);
             this.panelNuevoEmpleado.Controls.Add(this.label16);
             this.panelNuevoEmpleado.Controls.Add(this.button2);
-            this.panelNuevoEmpleado.Controls.Add(this.button1);
+            this.panelNuevoEmpleado.Controls.Add(this.buttonGuardar);
             this.panelNuevoEmpleado.Location = new System.Drawing.Point(3, 2);
             this.panelNuevoEmpleado.Name = "panelNuevoEmpleado";
             this.panelNuevoEmpleado.Size = new System.Drawing.Size(768, 501);
             this.panelNuevoEmpleado.TabIndex = 2;
             this.panelNuevoEmpleado.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNuevoEmpleado_Paint);
             // 
-            // mensajeAdvertencia
+            // buttonValidar
             // 
-            this.mensajeAdvertencia.AutoSize = true;
-            this.mensajeAdvertencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mensajeAdvertencia.ForeColor = System.Drawing.Color.Red;
-            this.mensajeAdvertencia.Location = new System.Drawing.Point(473, 28);
-            this.mensajeAdvertencia.Name = "mensajeAdvertencia";
-            this.mensajeAdvertencia.Size = new System.Drawing.Size(0, 16);
-            this.mensajeAdvertencia.TabIndex = 42;
+            this.buttonValidar.Enabled = false;
+            this.buttonValidar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonValidar.Location = new System.Drawing.Point(473, 43);
+            this.buttonValidar.Name = "buttonValidar";
+            this.buttonValidar.Size = new System.Drawing.Size(255, 25);
+            this.buttonValidar.TabIndex = 42;
+            this.buttonValidar.Text = "VALIDAR";
+            this.buttonValidar.UseVisualStyleBackColor = true;
+            this.buttonValidar.Click += new System.EventHandler(this.buttonValidar_Click);
             // 
             // groupBox3
             // 
@@ -121,6 +123,7 @@ namespace JUDYSOFT
             // comboBoxCargo
             // 
             this.comboBoxCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCargo.Enabled = false;
             this.comboBoxCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCargo.FormattingEnabled = true;
             this.comboBoxCargo.Items.AddRange(new object[] {
@@ -162,30 +165,11 @@ namespace JUDYSOFT
             this.label13.TabIndex = 42;
             this.label13.Text = "Fecha de registro (*)";
             // 
-            // textBoxSalario
-            // 
-            this.textBoxSalario.BackColor = System.Drawing.Color.Moccasin;
-            this.textBoxSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSalario.Location = new System.Drawing.Point(249, 39);
-            this.textBoxSalario.Name = "textBoxSalario";
-            this.textBoxSalario.Size = new System.Drawing.Size(177, 26);
-            this.textBoxSalario.TabIndex = 41;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(247, 20);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 16);
-            this.label12.TabIndex = 40;
-            this.label12.Text = "Salario (*)";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.comboBoxCantones);
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.Controls.Add(this.radioButtonFemenino);
+            this.groupBox2.Controls.Add(this.radioButtonMasculino);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.textBoxDireccion);
             this.groupBox2.Controls.Add(this.label11);
@@ -211,29 +195,45 @@ namespace JUDYSOFT
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Personales";
             // 
-            // radioButton3
+            // comboBoxCantones
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(594, 41);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(98, 24);
-            this.radioButton3.TabIndex = 64;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Femenino";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.comboBoxCantones.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxCantones.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxCantones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCantones.Enabled = false;
+            this.comboBoxCantones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCantones.FormattingEnabled = true;
+            this.comboBoxCantones.Location = new System.Drawing.Point(249, 97);
+            this.comboBoxCantones.Name = "comboBoxCantones";
+            this.comboBoxCantones.Size = new System.Drawing.Size(177, 26);
+            this.comboBoxCantones.TabIndex = 67;
+            this.comboBoxCantones.SelectedIndexChanged += new System.EventHandler(this.comboBoxCantones_SelectedIndexChanged);
             // 
-            // radioButton2
+            // radioButtonFemenino
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(463, 41);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(98, 24);
-            this.radioButton2.TabIndex = 63;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Masculino";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonFemenino.AutoSize = true;
+            this.radioButtonFemenino.Enabled = false;
+            this.radioButtonFemenino.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonFemenino.Location = new System.Drawing.Point(594, 41);
+            this.radioButtonFemenino.Name = "radioButtonFemenino";
+            this.radioButtonFemenino.Size = new System.Drawing.Size(98, 24);
+            this.radioButtonFemenino.TabIndex = 64;
+            this.radioButtonFemenino.TabStop = true;
+            this.radioButtonFemenino.Text = "Femenino";
+            this.radioButtonFemenino.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMasculino
+            // 
+            this.radioButtonMasculino.AutoSize = true;
+            this.radioButtonMasculino.Enabled = false;
+            this.radioButtonMasculino.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonMasculino.Location = new System.Drawing.Point(463, 41);
+            this.radioButtonMasculino.Name = "radioButtonMasculino";
+            this.radioButtonMasculino.Size = new System.Drawing.Size(98, 24);
+            this.radioButtonMasculino.TabIndex = 63;
+            this.radioButtonMasculino.TabStop = true;
+            this.radioButtonMasculino.Text = "Masculino";
+            this.radioButtonMasculino.UseVisualStyleBackColor = true;
             // 
             // label17
             // 
@@ -241,18 +241,20 @@ namespace JUDYSOFT
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(460, 18);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(39, 16);
+            this.label17.Size = new System.Drawing.Size(55, 16);
             this.label17.TabIndex = 62;
-            this.label17.Text = "Sexo";
+            this.label17.Text = "Sexo (*)";
             // 
             // textBoxDireccion
             // 
             this.textBoxDireccion.BackColor = System.Drawing.Color.Moccasin;
+            this.textBoxDireccion.Enabled = false;
             this.textBoxDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDireccion.Location = new System.Drawing.Point(463, 97);
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(255, 26);
             this.textBoxDireccion.TabIndex = 61;
+            this.textBoxDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDireccion_TextChanged);
             // 
             // label11
             // 
@@ -267,6 +269,7 @@ namespace JUDYSOFT
             // comboBoxProvincia
             // 
             this.comboBoxProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxProvincia.Enabled = false;
             this.comboBoxProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxProvincia.FormattingEnabled = true;
             this.comboBoxProvincia.Items.AddRange(new object[] {
@@ -324,6 +327,7 @@ namespace JUDYSOFT
             // 
             this.dateTimePickerFechaDeNacimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaDeNacimiento.CalendarMonthBackground = System.Drawing.Color.Moccasin;
+            this.dateTimePickerFechaDeNacimiento.Enabled = false;
             this.dateTimePickerFechaDeNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaDeNacimiento.Location = new System.Drawing.Point(16, 151);
             this.dateTimePickerFechaDeNacimiento.Name = "dateTimePickerFechaDeNacimiento";
@@ -343,15 +347,18 @@ namespace JUDYSOFT
             // textBoxCelular
             // 
             this.textBoxCelular.BackColor = System.Drawing.Color.Moccasin;
+            this.textBoxCelular.Enabled = false;
             this.textBoxCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCelular.Location = new System.Drawing.Point(250, 205);
             this.textBoxCelular.Name = "textBoxCelular";
             this.textBoxCelular.Size = new System.Drawing.Size(177, 26);
             this.textBoxCelular.TabIndex = 54;
+            this.textBoxCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCelular_TextChanged);
             // 
             // textBoxTelefonoConvencional
             // 
             this.textBoxTelefonoConvencional.BackColor = System.Drawing.Color.Moccasin;
+            this.textBoxTelefonoConvencional.Enabled = false;
             this.textBoxTelefonoConvencional.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefonoConvencional.Location = new System.Drawing.Point(16, 205);
             this.textBoxTelefonoConvencional.Name = "textBoxTelefonoConvencional";
@@ -382,6 +389,7 @@ namespace JUDYSOFT
             // textBoxCorreoElectronico
             // 
             this.textBoxCorreoElectronico.BackColor = System.Drawing.Color.Moccasin;
+            this.textBoxCorreoElectronico.Enabled = false;
             this.textBoxCorreoElectronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCorreoElectronico.Location = new System.Drawing.Point(250, 151);
             this.textBoxCorreoElectronico.Name = "textBoxCorreoElectronico";
@@ -404,6 +412,7 @@ namespace JUDYSOFT
             this.textBoxApellidos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.textBoxApellidos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxApellidos.BackColor = System.Drawing.Color.Moccasin;
+            this.textBoxApellidos.Enabled = false;
             this.textBoxApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxApellidos.Location = new System.Drawing.Point(250, 41);
             this.textBoxApellidos.Name = "textBoxApellidos";
@@ -416,6 +425,7 @@ namespace JUDYSOFT
             this.textBoxNombres.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.textBoxNombres.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxNombres.BackColor = System.Drawing.Color.Moccasin;
+            this.textBoxNombres.Enabled = false;
             this.textBoxNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombres.Location = new System.Drawing.Point(16, 41);
             this.textBoxNombres.Name = "textBoxNombres";
@@ -459,6 +469,7 @@ namespace JUDYSOFT
             // textBoxIdentificacion
             // 
             this.textBoxIdentificacion.BackColor = System.Drawing.Color.Moccasin;
+            this.textBoxIdentificacion.Enabled = false;
             this.textBoxIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxIdentificacion.Location = new System.Drawing.Point(256, 32);
             this.textBoxIdentificacion.Name = "textBoxIdentificacion";
@@ -482,8 +493,7 @@ namespace JUDYSOFT
             this.comboBoxTipoDeIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTipoDeIdentificacion.FormattingEnabled = true;
             this.comboBoxTipoDeIdentificacion.Items.AddRange(new object[] {
-            "CEDULA",
-            "PASAPORTE"});
+            "CEDULA"});
             this.comboBoxTipoDeIdentificacion.Location = new System.Drawing.Point(22, 31);
             this.comboBoxTipoDeIdentificacion.Name = "comboBoxTipoDeIdentificacion";
             this.comboBoxTipoDeIdentificacion.Size = new System.Drawing.Size(200, 26);
@@ -525,32 +535,41 @@ namespace JUDYSOFT
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // button1
+            // buttonGuardar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::JUDYSOFT.Properties.Resources._1484546293_Save;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(442, 450);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 42);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Guardar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonGuardar.Enabled = false;
+            this.buttonGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGuardar.Image = global::JUDYSOFT.Properties.Resources._1484546293_Save;
+            this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGuardar.Location = new System.Drawing.Point(442, 450);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(128, 42);
+            this.buttonGuardar.TabIndex = 27;
+            this.buttonGuardar.Text = "Guardar";
+            this.buttonGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBoxCantones
+            // label12
             // 
-            this.comboBoxCantones.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxCantones.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxCantones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCantones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxCantones.FormattingEnabled = true;
-            this.comboBoxCantones.Location = new System.Drawing.Point(249, 97);
-            this.comboBoxCantones.Name = "comboBoxCantones";
-            this.comboBoxCantones.Size = new System.Drawing.Size(177, 26);
-            this.comboBoxCantones.TabIndex = 67;
-            this.comboBoxCantones.SelectedIndexChanged += new System.EventHandler(this.comboBoxCantones_SelectedIndexChanged);
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(247, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 16);
+            this.label12.TabIndex = 40;
+            this.label12.Text = "Salario (*)";
+            // 
+            // textBoxSalario
+            // 
+            this.textBoxSalario.BackColor = System.Drawing.Color.Moccasin;
+            this.textBoxSalario.Enabled = false;
+            this.textBoxSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSalario.Location = new System.Drawing.Point(249, 39);
+            this.textBoxSalario.Name = "textBoxSalario";
+            this.textBoxSalario.Size = new System.Drawing.Size(177, 26);
+            this.textBoxSalario.TabIndex = 41;
+            this.textBoxSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSalario_TextChanged);
             // 
             // FormIngresarNuevoEmpleado
             // 
@@ -585,16 +604,13 @@ namespace JUDYSOFT
         private System.Windows.Forms.Panel panelNuevoEmpleado;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxIdentificacion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxTipoDeIdentificacion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBoxDireccion;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBoxProvincia;
@@ -617,9 +633,12 @@ namespace JUDYSOFT
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaDeEntrada;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBoxSalario;
-        private System.Windows.Forms.Label label12;
-        private Label mensajeAdvertencia;
         private ComboBox comboBoxCantones;
+        private Button buttonValidar;
+        private RadioButton radioButtonFemenino;
+        private RadioButton radioButtonMasculino;
+        private Label label17;
+        private TextBox textBoxSalario;
+        private Label label12;
     }
 }
