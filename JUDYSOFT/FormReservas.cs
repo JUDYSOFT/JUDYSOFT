@@ -14,7 +14,9 @@ namespace JUDYSOFT
 {
     public partial class FormReservas : Form
     {
-        
+        SqlDataAdapter dataAdapter = new SqlDataAdapter();
+        BindingSource bindingSource1 = new BindingSource();
+
         public FormReservas()
         {
             InitializeComponent();
@@ -51,33 +53,28 @@ namespace JUDYSOFT
 
         private void FormReservas_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter SDA = new SqlDataAdapter();
-            BindingSource bs = new BindingSource();
-            tablaReservaciones.DataSource = bs;
-            //Utilidades.GetData(    "SELECT R.CODRESERVACION,C.NOMBRE1CLIENTE,C.APELLIDO1CLIENTE,R.FECHAINGRESORESERVACION,R.FECHASALIDARESERVACION " +
-            //            "FROM  CLIENTE C JOIN RESERVACION R ON R.CODCLIENTE = C.CODCLIENTE " +
-            //            "WHERE R.FECHASALIDARESERVACION >= GETDATE()",bs,SDA);
-            //tablaReservaciones.AutoResizeColumns(
-            //        DataGridViewAutoSizeColumnsMode.AllCells);
+           
+            tablaReservaciones.DataSource = bindingSource1;
+            GetData(    "SELECT R.CODRESERVACION,C.NOMBRE1CLIENTE,C.APELLIDO1CLIENTE,R.FECHAINGRESORESERVACION,R.FECHASALIDARESERVACION " +
+                        "FROM  CLIENTE C JOIN RESERVACION R ON R.CODCLIENTE = C.CODCLIENTE " +
+                        "WHERE R.FECHASALIDARESERVACION >= GETDATE()");
+            tablaReservaciones.AutoResizeColumns(
+                    DataGridViewAutoSizeColumnsMode.AllCells);
         }
 
         private void FormReservas_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DialogResult confirmacion = MessageBox.Show("Esta seguro que desea salir", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-
-            if (confirmacion == System.Windows.Forms.DialogResult.OK)
-            {
-                Dispose();
-                MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem", "reservacionesToolStripMenuItem");
-            }
+           
+            
         }
+
 
         private void tablaReservaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        /*private void GetData(string selectCommand)
+        private void GetData(string selectCommand)
         {
             try
             {
@@ -85,8 +82,9 @@ namespace JUDYSOFT
                 // valid connection string for a Northwind SQL Server sample
                 // database accessible to your system.
                 String connectionString =
-                    "Data Source=DESKTOP-P6D1EH2\\SQLEXPRESS;Initial Catalog=JUDYSOFT;Integrated Security=True";
-
+                //"Data Source=DESKTOP-P6D1EH2\\SQLEXPRESS;Initial Catalog=JUDYSOFT;Integrated Security=True";
+                //"Data Source = LENOVO - PC\\SQLSERVER_SAL_A; Initial Catalog = JUDYSOFT; Integrated Security = True";
+                "Data Source=" + Environment.MachineName + "\\SQLSERVER_SAL_A;Initial Catalog=JUDYSOFT;Integrated Security=True";
                 // Create a new data adapter based on the specified query.
                 dataAdapter = new SqlDataAdapter(selectCommand, connectionString);
 
@@ -111,7 +109,19 @@ namespace JUDYSOFT
                     "connectionString variable with a connection string that is " +
                     "valid for your system.");
             }
-        }*/
+        }
 
+        private void FormReservas_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult confirmacion = MessageBox.Show("Esta seguro que desea salir", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+
+            if (confirmacion == System.Windows.Forms.DialogResult.OK)
+            {
+                Dispose();
+                MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem", "reservacionesToolStripMenuItem");
+            }
+            else
+                e.Cancel = true;
+        }
     }
 }

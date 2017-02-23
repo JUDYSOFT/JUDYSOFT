@@ -38,7 +38,7 @@
             this.dataSetfac = new JUDYSOFT.DataSetfac();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pruebaTableAdapter = new JUDYSOFT.DataSetfacTableAdapters.pruebaTableAdapter();
-            this.DatosFacturaTableAdapter = new JUDYSOFT.DataSet2TableAdapters.DatosFacturaTableAdapter();
+            //this.DatosFacturaTableAdapter = new JUDYSOFT.DataSet2TableAdapters.DatosFacturaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DatosFacturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pruebaBindingSource)).BeginInit();
@@ -89,7 +89,7 @@
             // 
             // DatosFacturaTableAdapter
             // 
-            this.DatosFacturaTableAdapter.ClearBeforeFill = true;
+          //  this.DatosFacturaTableAdapter.ClearBeforeFill = true;
             // 
             // ReporteFactura
             // 
@@ -112,7 +112,7 @@
         private System.Windows.Forms.BindingSource pruebaBindingSource;
         private DataSetfac dataSetfac;
         private DataSetfacTableAdapters.pruebaTableAdapter pruebaTableAdapter;
-        private DataSet2TableAdapters.DatosFacturaTableAdapter DatosFacturaTableAdapter;
+        //private DataSet2TableAdapters.DatosFacturaTableAdapter DatosFacturaTableAdapter;
 
         #endregion
         /*private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
