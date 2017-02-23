@@ -54,7 +54,7 @@ namespace JUDYSOFT
         {
 
             bool bandera = false;
-            if (((char.IsLetter(e.KeyChar)) || (char.IsPunctuation(e.KeyChar)) || (char.IsSeparator(e.KeyChar)) || (char.IsSymbol(e.KeyChar))))
+            if (((char.IsLetter(e.KeyChar)) || (char.IsPunctuation(e.KeyChar)) || (char.IsSeparator(e.KeyChar)) || (char.IsSymbol(e.KeyChar))) && (e.KeyChar != (char)Keys.Back))
             {
                 campoActual.BackColor = Color.LightCoral;
                 toolTip1.Show("No se permiten letras ni caracteres especiales", campoActual, 1000);
@@ -76,12 +76,29 @@ namespace JUDYSOFT
             {
                 if (Regex.Replace(email, sFormato, String.Empty).Length == 0)
                 {
+
                     return true;
                 }
                 else
                 {
                     return false;
                 }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public Boolean decimales(String email)
+        {
+            String sFormato;
+            sFormato = "\\d+(\\.\\d+)?$";
+            if (Regex.IsMatch(email, sFormato))
+            {
+
+               // MessageBox.Show("ENTRE!");
+                return true;
+
             }
             else
             {
@@ -134,9 +151,9 @@ namespace JUDYSOFT
         public Boolean verificarCedula(string cedula)
         {
             char[] vector = cedula.ToCharArray();
-            int sumatotal = 0;
             if (vector.Length == 10)
             {
+                int sumatotal = 0;
                 for (int i = 0; i < vector.Length - 1; i++)
                 {
                     int numero = Convert.ToInt32(vector[i].ToString());
@@ -150,34 +167,24 @@ namespace JUDYSOFT
                     }
                     sumatotal += numero;
                 }
+
                 sumatotal = 10 - (sumatotal % 10);
-                
-                if (Convert.ToInt32(vector[9].ToString()) == 0)
+                if (sumatotal == 10 || sumatotal == Convert.ToInt32(vector[9].ToString()))
                 {
-                    sumatotal = sumatotal % 10;
-                   
-                    
-                   
-                }
-                if (sumatotal == Convert.ToInt32(vector[9].ToString()))
-                {
-                    //toolTip1.Show("la cédula es correcta",txtDocumento,1000);
                     return true;
                 }
                 else
                 {
-                    //toolTip1.Show("la cédula es incorrecta", txtDocumento, 1000);
                     return false;
                 }
             }
-            else //if(txtDocumento.Text==""||Convert.ToInt32 (txtDocumento.Text.Length)!=10)
+
+            else
             {
-                // toolTip1.Show("el número de cedula ingresado no contiene 10 dígitos", txtDocumento, 1000);
                 return false;
             }
-        }
 
-        
+        }
 
 
     }

@@ -21,14 +21,159 @@ namespace JUDYSOFT
         public FormIngresarNuevoEmpleado()
         {
             InitializeComponent();
-            
+
 
         }
-
+        String conexion = "Data Source=" + Environment.MachineName + ";Initial Catalog=JUDYSOFT;Integrated Security=True";
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Datos Ingresados Correctamente", "JUDYSOFT");
-            this.Close();
+            SqlConnection con;
+            SqlCommand cmd;
+            SqlDataReader dr;
+            con = new SqlConnection(conexion);
+            try
+            {
+                if (textBoxNombres.Text != String.Empty && textBoxApellidos.Text != String.Empty && textBoxTelefonoConvencional.Text != String.Empty && textBoxCelular.Text != String.Empty && textBoxDireccion.Text != String.Empty && comboBoxTipoDeIdentificacion.SelectedItem.ToString() != String.Empty && textBoxIdentificacion.Text.ToString() != String.Empty && comboBoxProvincia.SelectedItem.ToString() != String.Empty && comboBoxCantones.SelectedItem.ToString() != String.Empty && textBoxCorreoElectronico.Text.ToString() != String.Empty && !dateTimePickerFechaDeNacimiento.Text.ToString().Equals("01-01-2000") && textBoxSalario.Text.ToString() != String.Empty && comboBoxCargo.SelectedItem.ToString() != String.Empty && textBoxNombres.Text.ToString() != String.Empty)
+                {
+
+                    if (radioButtonMasculino.Checked)
+                    {
+                        if (comboBoxCargo.SelectedItem.Equals("Administrador"))
+                        {
+                            try
+                            {
+                                con.Open();
+                                //MessageBox.Show("\n" + textBoxNombres.Text + "\n" + textBoxApellidos.Text + "\n"
+                                //+ textBoxTelefonoConvencional.Text + "\n" + textBoxCelular.Text + "\n" + textBoxDireccion.Text + "\n"
+                                //+ textBoxDireccion.Text + "\n" + comboBoxTipoDeIdentificacion.SelectedItem.ToString() + "\n"
+                                //+ textBoxIdentificacion.Text + "\n" + radioButtonMasculino.Text.ToString() + "\n" + comboBoxProvincia.SelectedItem.ToString() + ""
+                                //+ comboBoxCantones.SelectedItem.ToString() + "\n" + textBoxCorreoElectronico.Text + "\n" + dateTimePickerFechaDeNacimiento.Value.Date
+                                //+ "\n" + dateTimePickerFechaDeEntrada.Value.Month + "\n" + textBoxSalario.Text.ToString() + "\n" +
+                                //comboBoxCargo.SelectedItem.ToString() + "\n" + textBoxNombres.Text.ToString());
+
+                                String fechaNacimiento = "" + dateTimePickerFechaDeNacimiento.Value.Day + "" + dateTimePickerFechaDeNacimiento.Value.Month + "" + dateTimePickerFechaDeNacimiento.Value.Year;
+                                String fechaRegistro = "" + dateTimePickerFechaDeEntrada.Value.Day + "" + dateTimePickerFechaDeEntrada.Value.Month + "" + dateTimePickerFechaDeEntrada.Value.Year;
+                                // cmd = new SqlCommand("insert into EMPLEADO (NOMBRE1EMPLEADO,APELLIDO1EMPLEADO,TELEFONO1EMPLEADO,TELEFONO2EMPLEADO,DIRECCIONEMPLEADO,DOCUMENTOIDENTIFICACIONEMPLEADO,NUMERODOCUMENTOEMPLEADO, SEXOEMPLEADO, PROVINCIAORIGENEMPLEADO, CIUDADORIGENEMPLEADO, CORREOELECTRONICOEMPLEADO, FECHAINGRESOEMPLEADO, FECHASALIDAEMPLEADO, SALARIOEMPLEADO, CARGOEMPLEADO, NIVELACCESOEMPLEADO, USUARIO, EMPLEADO.PASSWORD)values ('" + textBoxNombres.Text + ",'" + textBoxApellidos.Text + "','" + textBoxTelefonoConvencional.Text + "','" + textBoxCelular.Text + "','" + textBoxDireccion.Text + "','" + comboBoxTipoDeIdentificacion.SelectedItem.ToString() + "','" + textBoxIdentificacion.Text + "', '" + radioButtonMasculino.Text.ToString() + "', '" + comboBoxProvincia.SelectedItem.ToString() + "', '" + comboBoxCantones.SelectedItem.ToString() + "', '" + textBoxCorreoElectronico.Text + "', '" + dateTimePickerFechaDeNacimiento.Text.ToString() + "', '" + dateTimePickerFechaDeEntrada.Text.ToString() + "', " + textBoxSalario.Text.ToString() + ", '" + comboBoxCargo.SelectedItem.ToString() + "', 2, '" + textBoxNombres.Text.ToString() + "','12345678')", con);
+                                // cmd = new SqlCommand("insert into EMPLEADO(NOMBRE1EMPLEADO, APELLIDO1EMPLEADO, TELEFONO1EMPLEADO, TELEFONO2EMPLEADO, DIRECCIONEMPLEADO, DOCUMENTOIDENTIFICACIONEMPLEADO,NUMERODOCUMENTOEMPLEADO, SEXOEMPLEADO, PROVINCIAORIGENEMPLEADO, CIUDADORIGENEMPLEADO, CORREOELECTRONICOEMPLEADO, FECHAINGRESOEMPLEADO, FECHASALIDAEMPLEADO, SALARIOEMPLEADO, CARGOEMPLEADO, NIVELACCESOEMPLEADO, USUARIO, EMPLEADO.PASSWORD) values('Jose', 'Gonzalez', '0987142902', '0998833646', 'CALDERON', 'CEDULA','1724101538', 'Masculino', 'PICHINCHA', 'RUMIÑAHUI', 'jose2110@gmail,com', '21-10-1995', '22-02-2015', 301.02, 'Administrador', 3, 'sa', 'cont'");
+                                cmd = new SqlCommand("insert into EMPLEADO(NOMBRE1EMPLEADO, APELLIDO1EMPLEADO, TELEFONO1EMPLEADO, TELEFONO2EMPLEADO, DIRECCIONEMPLEADO, DOCUMENTOIDENTIFICACIONEMPLEADO,NUMERODOCUMENTOEMPLEADO, SEXOEMPLEADO, PROVINCIAORIGENEMPLEADO, CIUDADORIGENEMPLEADO, CORREOELECTRONICOEMPLEADO, FECHAINGRESOEMPLEADO, FECHASALIDAEMPLEADO, SALARIOEMPLEADO, CARGOEMPLEADO, NIVELACCESOEMPLEADO, USUARIO, EMPLEADO.PASSWORD) values('" + textBoxNombres.Text + "', '" + textBoxApellidos.Text + "', '" + textBoxTelefonoConvencional.Text + "', '" + textBoxCelular.Text + "', '" + textBoxDireccion.Text + "', '" + comboBoxTipoDeIdentificacion.SelectedItem.ToString() + "','" + textBoxIdentificacion.Text + "', '" + radioButtonMasculino.Text.ToString() + "', '" + comboBoxProvincia.SelectedItem.ToString() + "', '" + comboBoxCantones.SelectedItem.ToString() + "', '" + textBoxCorreoElectronico.Text + "', '" + dateTimePickerFechaDeNacimiento.Value + "', '" + dateTimePickerFechaDeEntrada.Value + "'," + textBoxSalario.Text.ToString() + ", '" + comboBoxCargo.SelectedItem.ToString() + "', 2, '" + textBoxNombres.Text.ToString() + "', '12345678')", con);
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("Datos ingresados correctamente ");
+                                con.Close();
+                            }
+                            catch (Exception exc)
+                            {
+                                MessageBox.Show("" + exc);
+                            }
+
+                        }
+                        else if (comboBoxCargo.SelectedItem.Equals("Recepcionista"))
+                        {
+                            try
+                            {
+                                con.Open();
+                                //MessageBox.Show("\n" + textBoxNombres.Text + "\n" + textBoxApellidos.Text + "\n"
+                                //+ textBoxTelefonoConvencional.Text + "\n" + textBoxCelular.Text + "\n" + textBoxDireccion.Text + "\n"
+                                //+ textBoxDireccion.Text + "\n" + comboBoxTipoDeIdentificacion.SelectedItem.ToString() + "\n"
+                                //+ textBoxIdentificacion.Text + "\n" + radioButtonMasculino.Text.ToString() + "\n" + comboBoxProvincia.SelectedItem.ToString() + ""
+                                //+ comboBoxCantones.SelectedItem.ToString() + "\n" + textBoxCorreoElectronico.Text + "\n" + dateTimePickerFechaDeNacimiento.Value.Date
+                                //+ "\n" + dateTimePickerFechaDeEntrada.Value.Month + "\n" + textBoxSalario.Text.ToString() + "\n" +
+                                //comboBoxCargo.SelectedItem.ToString() + "\n" + textBoxNombres.Text.ToString());
+
+                                String fechaNacimiento = "" + dateTimePickerFechaDeNacimiento.Value.Day + "" + dateTimePickerFechaDeNacimiento.Value.Month + "" + dateTimePickerFechaDeNacimiento.Value.Year;
+                                String fechaRegistro = "" + dateTimePickerFechaDeEntrada.Value.Day + "" + dateTimePickerFechaDeEntrada.Value.Month + "" + dateTimePickerFechaDeEntrada.Value.Year;
+                                // cmd = new SqlCommand("insert into EMPLEADO (NOMBRE1EMPLEADO,APELLIDO1EMPLEADO,TELEFONO1EMPLEADO,TELEFONO2EMPLEADO,DIRECCIONEMPLEADO,DOCUMENTOIDENTIFICACIONEMPLEADO,NUMERODOCUMENTOEMPLEADO, SEXOEMPLEADO, PROVINCIAORIGENEMPLEADO, CIUDADORIGENEMPLEADO, CORREOELECTRONICOEMPLEADO, FECHAINGRESOEMPLEADO, FECHASALIDAEMPLEADO, SALARIOEMPLEADO, CARGOEMPLEADO, NIVELACCESOEMPLEADO, USUARIO, EMPLEADO.PASSWORD)values ('" + textBoxNombres.Text + ",'" + textBoxApellidos.Text + "','" + textBoxTelefonoConvencional.Text + "','" + textBoxCelular.Text + "','" + textBoxDireccion.Text + "','" + comboBoxTipoDeIdentificacion.SelectedItem.ToString() + "','" + textBoxIdentificacion.Text + "', '" + radioButtonMasculino.Text.ToString() + "', '" + comboBoxProvincia.SelectedItem.ToString() + "', '" + comboBoxCantones.SelectedItem.ToString() + "', '" + textBoxCorreoElectronico.Text + "', '" + dateTimePickerFechaDeNacimiento.Text.ToString() + "', '" + dateTimePickerFechaDeEntrada.Text.ToString() + "', " + textBoxSalario.Text.ToString() + ", '" + comboBoxCargo.SelectedItem.ToString() + "', 2, '" + textBoxNombres.Text.ToString() + "','12345678')", con);
+                                // cmd = new SqlCommand("insert into EMPLEADO(NOMBRE1EMPLEADO, APELLIDO1EMPLEADO, TELEFONO1EMPLEADO, TELEFONO2EMPLEADO, DIRECCIONEMPLEADO, DOCUMENTOIDENTIFICACIONEMPLEADO,NUMERODOCUMENTOEMPLEADO, SEXOEMPLEADO, PROVINCIAORIGENEMPLEADO, CIUDADORIGENEMPLEADO, CORREOELECTRONICOEMPLEADO, FECHAINGRESOEMPLEADO, FECHASALIDAEMPLEADO, SALARIOEMPLEADO, CARGOEMPLEADO, NIVELACCESOEMPLEADO, USUARIO, EMPLEADO.PASSWORD) values('Jose', 'Gonzalez', '0987142902', '0998833646', 'CALDERON', 'CEDULA','1724101538', 'Masculino', 'PICHINCHA', 'RUMIÑAHUI', 'jose2110@gmail,com', '21-10-1995', '22-02-2015', 301.02, 'Administrador', 3, 'sa', 'cont'");
+                                cmd = new SqlCommand("insert into EMPLEADO(NOMBRE1EMPLEADO, APELLIDO1EMPLEADO, TELEFONO1EMPLEADO, TELEFONO2EMPLEADO, DIRECCIONEMPLEADO, DOCUMENTOIDENTIFICACIONEMPLEADO,NUMERODOCUMENTOEMPLEADO, SEXOEMPLEADO, PROVINCIAORIGENEMPLEADO, CIUDADORIGENEMPLEADO, CORREOELECTRONICOEMPLEADO, FECHAINGRESOEMPLEADO, FECHASALIDAEMPLEADO, SALARIOEMPLEADO, CARGOEMPLEADO, NIVELACCESOEMPLEADO, USUARIO, EMPLEADO.PASSWORD) values('" + textBoxNombres.Text + "', '" + textBoxApellidos.Text + "', '" + textBoxTelefonoConvencional.Text + "', '" + textBoxCelular.Text + "', '" + textBoxDireccion.Text + "', '" + comboBoxTipoDeIdentificacion.SelectedItem.ToString() + "','" + textBoxIdentificacion.Text + "', '" + radioButtonMasculino.Text.ToString() + "', '" + comboBoxProvincia.SelectedItem.ToString() + "', '" + comboBoxCantones.SelectedItem.ToString() + "', '" + textBoxCorreoElectronico.Text + "', '" + dateTimePickerFechaDeNacimiento.Value + "', '" + dateTimePickerFechaDeEntrada.Value + "'," + textBoxSalario.Text.ToString() + ", '" + comboBoxCargo.SelectedItem.ToString() + "', 1, '" + textBoxNombres.Text.ToString() + "', '12345678')", con);
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("Datos ingresados correctamente ");
+                                con.Close();
+                            }
+                            catch (Exception exc)
+                            {
+                                MessageBox.Show("" + exc);
+                            }
+                        }
+
+                        }
+                    
+                    else if (radioButtonFemenino.Checked)
+                    {
+                        if (comboBoxCargo.SelectedItem.Equals("Administrador"))
+                        {
+                            try
+                            {
+                                con.Open();
+                                //MessageBox.Show("\n" + textBoxNombres.Text + "\n" + textBoxApellidos.Text + "\n"
+                                //+ textBoxTelefonoConvencional.Text + "\n" + textBoxCelular.Text + "\n" + textBoxDireccion.Text + "\n"
+                                //+ textBoxDireccion.Text + "\n" + comboBoxTipoDeIdentificacion.SelectedItem.ToString() + "\n"
+                                //+ textBoxIdentificacion.Text + "\n" + radioButtonMasculino.Text.ToString() + "\n" + comboBoxProvincia.SelectedItem.ToString() + ""
+                                //+ comboBoxCantones.SelectedItem.ToString() + "\n" + textBoxCorreoElectronico.Text + "\n" + dateTimePickerFechaDeNacimiento.Value.Date
+                                //+ "\n" + dateTimePickerFechaDeEntrada.Value.Month + "\n" + textBoxSalario.Text.ToString() + "\n" +
+                                //comboBoxCargo.SelectedItem.ToString() + "\n" + textBoxNombres.Text.ToString());
+
+                                String fechaNacimiento = "" + dateTimePickerFechaDeNacimiento.Value.Day + "" + dateTimePickerFechaDeNacimiento.Value.Month + "" + dateTimePickerFechaDeNacimiento.Value.Year;
+                                String fechaRegistro = "" + dateTimePickerFechaDeEntrada.Value.Day + "" + dateTimePickerFechaDeEntrada.Value.Month + "" + dateTimePickerFechaDeEntrada.Value.Year;
+                                // cmd = new SqlCommand("insert into EMPLEADO (NOMBRE1EMPLEADO,APELLIDO1EMPLEADO,TELEFONO1EMPLEADO,TELEFONO2EMPLEADO,DIRECCIONEMPLEADO,DOCUMENTOIDENTIFICACIONEMPLEADO,NUMERODOCUMENTOEMPLEADO, SEXOEMPLEADO, PROVINCIAORIGENEMPLEADO, CIUDADORIGENEMPLEADO, CORREOELECTRONICOEMPLEADO, FECHAINGRESOEMPLEADO, FECHASALIDAEMPLEADO, SALARIOEMPLEADO, CARGOEMPLEADO, NIVELACCESOEMPLEADO, USUARIO, EMPLEADO.PASSWORD)values ('" + textBoxNombres.Text + ",'" + textBoxApellidos.Text + "','" + textBoxTelefonoConvencional.Text + "','" + textBoxCelular.Text + "','" + textBoxDireccion.Text + "','" + comboBoxTipoDeIdentificacion.SelectedItem.ToString() + "','" + textBoxIdentificacion.Text + "', '" + radioButtonMasculino.Text.ToString() + "', '" + comboBoxProvincia.SelectedItem.ToString() + "', '" + comboBoxCantones.SelectedItem.ToString() + "', '" + textBoxCorreoElectronico.Text + "', '" + dateTimePickerFechaDeNacimiento.Text.ToString() + "', '" + dateTimePickerFechaDeEntrada.Text.ToString() + "', " + textBoxSalario.Text.ToString() + ", '" + comboBoxCargo.SelectedItem.ToString() + "', 2, '" + textBoxNombres.Text.ToString() + "','12345678')", con);
+                                // cmd = new SqlCommand("insert into EMPLEADO(NOMBRE1EMPLEADO, APELLIDO1EMPLEADO, TELEFONO1EMPLEADO, TELEFONO2EMPLEADO, DIRECCIONEMPLEADO, DOCUMENTOIDENTIFICACIONEMPLEADO,NUMERODOCUMENTOEMPLEADO, SEXOEMPLEADO, PROVINCIAORIGENEMPLEADO, CIUDADORIGENEMPLEADO, CORREOELECTRONICOEMPLEADO, FECHAINGRESOEMPLEADO, FECHASALIDAEMPLEADO, SALARIOEMPLEADO, CARGOEMPLEADO, NIVELACCESOEMPLEADO, USUARIO, EMPLEADO.PASSWORD) values('Jose', 'Gonzalez', '0987142902', '0998833646', 'CALDERON', 'CEDULA','1724101538', 'Masculino', 'PICHINCHA', 'RUMIÑAHUI', 'jose2110@gmail,com', '21-10-1995', '22-02-2015', 301.02, 'Administrador', 3, 'sa', 'cont'");
+                                cmd = new SqlCommand("insert into EMPLEADO(NOMBRE1EMPLEADO, APELLIDO1EMPLEADO, TELEFONO1EMPLEADO, TELEFONO2EMPLEADO, DIRECCIONEMPLEADO, DOCUMENTOIDENTIFICACIONEMPLEADO,NUMERODOCUMENTOEMPLEADO, SEXOEMPLEADO, PROVINCIAORIGENEMPLEADO, CIUDADORIGENEMPLEADO, CORREOELECTRONICOEMPLEADO, FECHAINGRESOEMPLEADO, FECHASALIDAEMPLEADO, SALARIOEMPLEADO, CARGOEMPLEADO, NIVELACCESOEMPLEADO, USUARIO, EMPLEADO.PASSWORD) values('" + textBoxNombres.Text + "', '" + textBoxApellidos.Text + "', '" + textBoxTelefonoConvencional.Text + "', '" + textBoxCelular.Text + "', '" + textBoxDireccion.Text + "', '" + comboBoxTipoDeIdentificacion.SelectedItem.ToString() + "','" + textBoxIdentificacion.Text + "', '" + radioButtonFemenino.Text.ToString() + "', '" + comboBoxProvincia.SelectedItem.ToString() + "', '" + comboBoxCantones.SelectedItem.ToString() + "', '" + textBoxCorreoElectronico.Text + "', '" + dateTimePickerFechaDeNacimiento.Value + "', '" + dateTimePickerFechaDeEntrada.Value + "'," + textBoxSalario.Text.ToString() + ", '" + comboBoxCargo.SelectedItem.ToString() + "', 2, '" + textBoxNombres.Text.ToString() + "', '12345678')", con);
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("Datos ingresados correctamente ");
+                                con.Close();
+                            }
+                            catch (Exception exc)
+                            {
+                                MessageBox.Show("" + exc);
+                            }
+                        }
+                        else if (comboBoxCargo.SelectedItem.Equals("Recepcionista"))
+                        {
+                            try
+                            {
+                                con.Open();
+                                //MessageBox.Show("\n" + textBoxNombres.Text + "\n" + textBoxApellidos.Text + "\n"
+                                //+ textBoxTelefonoConvencional.Text + "\n" + textBoxCelular.Text + "\n" + textBoxDireccion.Text + "\n"
+                                //+ textBoxDireccion.Text + "\n" + comboBoxTipoDeIdentificacion.SelectedItem.ToString() + "\n"
+                                //+ textBoxIdentificacion.Text + "\n" + radioButtonMasculino.Text.ToString() + "\n" + comboBoxProvincia.SelectedItem.ToString() + ""
+                                //+ comboBoxCantones.SelectedItem.ToString() + "\n" + textBoxCorreoElectronico.Text + "\n" + dateTimePickerFechaDeNacimiento.Value.Date
+                                //+ "\n" + dateTimePickerFechaDeEntrada.Value.Month + "\n" + textBoxSalario.Text.ToString() + "\n" +
+                                //comboBoxCargo.SelectedItem.ToString() + "\n" + textBoxNombres.Text.ToString());
+
+                                String fechaNacimiento = "" + dateTimePickerFechaDeNacimiento.Value.Day + "" + dateTimePickerFechaDeNacimiento.Value.Month + "" + dateTimePickerFechaDeNacimiento.Value.Year;
+                                String fechaRegistro = "" + dateTimePickerFechaDeEntrada.Value.Day + "" + dateTimePickerFechaDeEntrada.Value.Month + "" + dateTimePickerFechaDeEntrada.Value.Year;
+                                // cmd = new SqlCommand("insert into EMPLEADO (NOMBRE1EMPLEADO,APELLIDO1EMPLEADO,TELEFONO1EMPLEADO,TELEFONO2EMPLEADO,DIRECCIONEMPLEADO,DOCUMENTOIDENTIFICACIONEMPLEADO,NUMERODOCUMENTOEMPLEADO, SEXOEMPLEADO, PROVINCIAORIGENEMPLEADO, CIUDADORIGENEMPLEADO, CORREOELECTRONICOEMPLEADO, FECHAINGRESOEMPLEADO, FECHASALIDAEMPLEADO, SALARIOEMPLEADO, CARGOEMPLEADO, NIVELACCESOEMPLEADO, USUARIO, EMPLEADO.PASSWORD)values ('" + textBoxNombres.Text + ",'" + textBoxApellidos.Text + "','" + textBoxTelefonoConvencional.Text + "','" + textBoxCelular.Text + "','" + textBoxDireccion.Text + "','" + comboBoxTipoDeIdentificacion.SelectedItem.ToString() + "','" + textBoxIdentificacion.Text + "', '" + radioButtonMasculino.Text.ToString() + "', '" + comboBoxProvincia.SelectedItem.ToString() + "', '" + comboBoxCantones.SelectedItem.ToString() + "', '" + textBoxCorreoElectronico.Text + "', '" + dateTimePickerFechaDeNacimiento.Text.ToString() + "', '" + dateTimePickerFechaDeEntrada.Text.ToString() + "', " + textBoxSalario.Text.ToString() + ", '" + comboBoxCargo.SelectedItem.ToString() + "', 2, '" + textBoxNombres.Text.ToString() + "','12345678')", con);
+                                // cmd = new SqlCommand("insert into EMPLEADO(NOMBRE1EMPLEADO, APELLIDO1EMPLEADO, TELEFONO1EMPLEADO, TELEFONO2EMPLEADO, DIRECCIONEMPLEADO, DOCUMENTOIDENTIFICACIONEMPLEADO,NUMERODOCUMENTOEMPLEADO, SEXOEMPLEADO, PROVINCIAORIGENEMPLEADO, CIUDADORIGENEMPLEADO, CORREOELECTRONICOEMPLEADO, FECHAINGRESOEMPLEADO, FECHASALIDAEMPLEADO, SALARIOEMPLEADO, CARGOEMPLEADO, NIVELACCESOEMPLEADO, USUARIO, EMPLEADO.PASSWORD) values('Jose', 'Gonzalez', '0987142902', '0998833646', 'CALDERON', 'CEDULA','1724101538', 'Masculino', 'PICHINCHA', 'RUMIÑAHUI', 'jose2110@gmail,com', '21-10-1995', '22-02-2015', 301.02, 'Administrador', 3, 'sa', 'cont'");
+                                cmd = new SqlCommand("insert into EMPLEADO(NOMBRE1EMPLEADO, APELLIDO1EMPLEADO, TELEFONO1EMPLEADO, TELEFONO2EMPLEADO, DIRECCIONEMPLEADO, DOCUMENTOIDENTIFICACIONEMPLEADO,NUMERODOCUMENTOEMPLEADO, SEXOEMPLEADO, PROVINCIAORIGENEMPLEADO, CIUDADORIGENEMPLEADO, CORREOELECTRONICOEMPLEADO, FECHAINGRESOEMPLEADO, FECHASALIDAEMPLEADO, SALARIOEMPLEADO, CARGOEMPLEADO, NIVELACCESOEMPLEADO, USUARIO, EMPLEADO.PASSWORD) values('" + textBoxNombres.Text + "', '" + textBoxApellidos.Text + "', '" + textBoxTelefonoConvencional.Text + "', '" + textBoxCelular.Text + "', '" + textBoxDireccion.Text + "', '" + comboBoxTipoDeIdentificacion.SelectedItem.ToString() + "','" + textBoxIdentificacion.Text + "', '" + radioButtonFemenino.Text.ToString() + "', '" + comboBoxProvincia.SelectedItem.ToString() + "', '" + comboBoxCantones.SelectedItem.ToString() + "', '" + textBoxCorreoElectronico.Text + "', '" + dateTimePickerFechaDeNacimiento.Value + "', '" + dateTimePickerFechaDeEntrada.Value + "'," + textBoxSalario.Text.ToString() + ", '" + comboBoxCargo.SelectedItem.ToString() + "', 1, '" + textBoxNombres.Text.ToString() + "', '12345678')", con);
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("Datos ingresados correctamente ");
+                                con.Close();
+                            }
+                            catch (Exception exc)
+                            {
+                                MessageBox.Show("" + exc);
+                            }
+                        }
+                    }
+
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Campos vacios");
+                    if (textBoxNombres.Text == String.Empty)
+                    {
+                        textBoxNombres.BackColor = Color.LightCoral;
+                        MessageBox.Show("Campos vacios");
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show("No se puede autocompletar el textBox");
+            }
+            con.Close();
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -61,7 +206,7 @@ namespace JUDYSOFT
 
         private void comboBoxProvincia_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -76,157 +221,8 @@ namespace JUDYSOFT
 
         private void textBoxIdentificacion_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (comboBoxTipoDeIdentificacion.SelectedItem.Equals(""))
-            {
-                textBoxNombres.Enabled = false;
-                textBoxApellidos.Enabled = false;
-                textBoxDireccion.Enabled = false;
-                textBoxCorreoElectronico.Enabled = false;
-                textBoxTelefonoConvencional.Enabled = false;
-                textBoxCelular.Enabled = false;
-                textBoxSalario.Enabled = false;
-                comboBoxCargo.Enabled = false;
-                comboBoxProvincia.Enabled = false;
-                comboBoxCantones.Enabled = false;
-                dateTimePickerFechaDeNacimiento.Enabled = false;
-            }
             validar.validarCamposNumericos(e, textBoxIdentificacion);
-            mensajeAdvertencia.Text = "...";
-            mensajeAdvertencia.Text = ".....";
-            mensajeAdvertencia.Text = "...";
-            mensajeAdvertencia.Text = ".....";
-            mensajeAdvertencia.Text = "...";
 
-            if ((textBoxIdentificacion.Text.Length == 10 && comboBoxTipoDeIdentificacion.SelectedItem.Equals("CEDULA")))
-            {
-                
-                if (existeCedula(textBoxIdentificacion.Text))
-                {
-                    mensajeAdvertencia.Text = "EMPLEADO YA REGISTRADO!";
-                    textBoxNombres.Enabled = false;
-                    textBoxApellidos.Enabled = false;
-                    textBoxDireccion.Enabled = false;
-                    textBoxCorreoElectronico.Enabled = false;
-                    textBoxTelefonoConvencional.Enabled = false;
-                    textBoxCelular.Enabled = false;
-                    textBoxSalario.Enabled = false;
-                    comboBoxCargo.Enabled = false;
-                    comboBoxProvincia.Enabled = false;
-                    comboBoxCantones.Enabled = false;
-                    comboBoxTipoDeIdentificacion.Enabled = false;
-                    dateTimePickerFechaDeNacimiento.Enabled = false;
-
-                    rellenar(textBoxIdentificacion.Text, "NOMBRE1EMPLEADO", textBoxNombres);
-                    rellenar(textBoxIdentificacion.Text, "APELLIDO1EMPLEADO", textBoxApellidos);
-                    rellenar(textBoxIdentificacion.Text, "DIRECCIONEMPLEADO", textBoxDireccion);
-                    rellenar(textBoxIdentificacion.Text, "CORREOELECTRONICOEMPLEADO", textBoxCorreoElectronico);
-                    rellenar(textBoxIdentificacion.Text, "TELEFONO1EMPLEADO", textBoxCelular);
-                    rellenar(textBoxIdentificacion.Text, "TELEFONO2EMPLEADO", textBoxTelefonoConvencional);
-                    rellenar(textBoxIdentificacion.Text, "SALARIOEMPLEADO", textBoxSalario);
-                    rellenar(textBoxIdentificacion.Text, "CARGOEMPLEADO", comboBoxCargo);
-                    rellenar(textBoxIdentificacion.Text, "PROVINCIAORIGENEMPLEADO", comboBoxProvincia);
-                    rellenar(textBoxIdentificacion.Text, "CIUDADORIGENEMPLEADO", comboBoxCantones);
-                    rellenar(textBoxIdentificacion.Text, "DOCUMENTOIDENTIFICACIONEMPLEADO", comboBoxTipoDeIdentificacion);
-                    rellenar(textBoxIdentificacion.Text, "FECHAINGRESOEMPLEADO", dateTimePickerFechaDeNacimiento);
-                    rellenar(textBoxIdentificacion.Text, "FECHASALIDAEMPLEADO", dateTimePickerFechaDeEntrada);
-                }
-                else
-                {
-                    mensajeAdvertencia.Text = "ESTA INGRESANDO UN NUEVO EMPLEADO!";
-                    textBoxNombres.Enabled = true;
-                    textBoxApellidos.Enabled = true;
-                    textBoxDireccion.Enabled = true;
-                    textBoxCorreoElectronico.Enabled = true;
-                    textBoxTelefonoConvencional.Enabled = true;
-                    textBoxCelular.Enabled = true;
-                    textBoxSalario.Enabled = true;
-                    comboBoxCargo.Enabled = true;
-                    comboBoxProvincia.Enabled = true;
-                    comboBoxCantones.Enabled = true;
-                    comboBoxTipoDeIdentificacion.Enabled = true;
-                    dateTimePickerFechaDeNacimiento.Enabled = true;
-
-                    textBoxNombres.Text = "";
-                    textBoxApellidos.Text = "";
-                    textBoxDireccion.Text = "";
-                    textBoxCorreoElectronico.Text = "";
-                    textBoxTelefonoConvencional.Text = "";
-                    textBoxCelular.Text = "";
-                    textBoxSalario.Text = "";
-                    comboBoxCargo.SelectedIndex = 0;
-                    comboBoxProvincia.SelectedIndex = 0;
-                    comboBoxCantones.SelectedIndex = 0;
-                    comboBoxTipoDeIdentificacion.SelectedIndex = 0;
-                    dateTimePickerFechaDeEntrada.Value = DateTime.Today;
-                    dateTimePickerFechaDeNacimiento.Text = "01-01-2000";
-
-                }
-            }
-            else if ((textBoxIdentificacion.Text.Length < 10 && textBoxIdentificacion.Text.Length >= 8 
-                && comboBoxTipoDeIdentificacion.SelectedItem.Equals("PASAPORTE")))
-            {
-                if (existeCedula(textBoxIdentificacion.Text))
-                {
-                    mensajeAdvertencia.Text = "EMPLEADO YA REGISTRADO!";
-                    textBoxNombres.Enabled = false;
-                    textBoxApellidos.Enabled = false;
-                    textBoxDireccion.Enabled = false;
-                    textBoxCorreoElectronico.Enabled = false;
-                    textBoxTelefonoConvencional.Enabled = false;
-                    textBoxCelular.Enabled = false;
-                    textBoxSalario.Enabled = false;
-                    comboBoxCargo.Enabled = false;
-                    comboBoxProvincia.Enabled = false;
-                    comboBoxCantones.Enabled = false;
-                    comboBoxTipoDeIdentificacion.Enabled = false;
-                    dateTimePickerFechaDeNacimiento.Enabled = false;
-
-                    rellenar(textBoxIdentificacion.Text, "NOMBRE1EMPLEADO", textBoxNombres);
-                    rellenar(textBoxIdentificacion.Text, "APELLIDO1EMPLEADO", textBoxApellidos);
-                    rellenar(textBoxIdentificacion.Text, "DIRECCIONEMPLEADO", textBoxDireccion);
-                    rellenar(textBoxIdentificacion.Text, "CORREOELECTRONICOEMPLEADO", textBoxCorreoElectronico);
-                    rellenar(textBoxIdentificacion.Text, "TELEFONO1EMPLEADO", textBoxCelular);
-                    rellenar(textBoxIdentificacion.Text, "TELEFONO2EMPLEADO", textBoxTelefonoConvencional);
-                    rellenar(textBoxIdentificacion.Text, "SALARIOEMPLEADO", textBoxSalario);
-                    rellenar(textBoxIdentificacion.Text, "CARGOEMPLEADO", comboBoxCargo);
-                    rellenar(textBoxIdentificacion.Text, "PROVINCIAORIGENEMPLEADO", comboBoxProvincia);
-                    rellenar(textBoxIdentificacion.Text, "CIUDADORIGENEMPLEADO", comboBoxCantones);
-                    rellenar(textBoxIdentificacion.Text, "DOCUMENTOIDENTIFICACIONEMPLEADO", comboBoxTipoDeIdentificacion);
-                    rellenar(textBoxIdentificacion.Text, "FECHAINGRESOEMPLEADO", dateTimePickerFechaDeNacimiento);
-                    rellenar(textBoxIdentificacion.Text, "FECHASALIDAEMPLEADO", dateTimePickerFechaDeEntrada);
-                }
-                else
-                {
-                    mensajeAdvertencia.Text = "ESTA INGRESANDO UN NUEVO EMPLEADO!";
-                    textBoxNombres.Enabled = true;
-                    textBoxApellidos.Enabled = true;
-                    textBoxDireccion.Enabled = true;
-                    textBoxCorreoElectronico.Enabled = true;
-                    textBoxTelefonoConvencional.Enabled = true;
-                    textBoxCelular.Enabled = true;
-                    textBoxSalario.Enabled = true;
-                    comboBoxCargo.Enabled = true;
-                    comboBoxProvincia.Enabled = true;
-                    comboBoxCantones.Enabled = true;
-                    comboBoxTipoDeIdentificacion.Enabled = true;
-                    dateTimePickerFechaDeNacimiento.Enabled = true;
-
-                    textBoxNombres.Text = "";
-                    textBoxApellidos.Text = "";
-                    textBoxDireccion.Text = "";
-                    textBoxCorreoElectronico.Text = "";
-                    textBoxTelefonoConvencional.Text = "";
-                    textBoxCelular.Text = "";
-                    textBoxSalario.Text = "";
-                    comboBoxCargo.SelectedIndex = 0;
-                    comboBoxProvincia.SelectedIndex = 0;
-                    comboBoxCantones.SelectedIndex = 0;
-                    comboBoxTipoDeIdentificacion.SelectedIndex = 0;
-                    dateTimePickerFechaDeEntrada.Value = DateTime.Today;
-                    dateTimePickerFechaDeNacimiento.Text = "01-01-2000";
-
-                }
-            }
 
 
         }
@@ -242,32 +238,88 @@ namespace JUDYSOFT
         {
 
             validar.validarCadenasDeTexto(e, textBoxApellidos);
-            
+
         }
 
         private void textBoxDireccion_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-                validar.validarCadenasDeTexto(e, textBoxDireccion);
+            if ((char.IsLetter(e.KeyChar)) || (char.IsSeparator(e.KeyChar)) || (char.IsNumber(e.KeyChar)) || (e.KeyChar == (char)Keys.Back))
+            {
+                textBoxDireccion.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                textBoxDireccion.BackColor = Color.LightCoral;
+                e.Handled = true;
+            }
+
         }
 
         private void textBoxCorreoElectronico_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-                validar.emailBienEscrito(textBoxCorreoElectronico.Text);
+            if (validar.emailBienEscrito(textBoxCorreoElectronico.Text))
+            {
+                textBoxCorreoElectronico.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                textBoxCorreoElectronico.BackColor = Color.LightCoral;
+            }
+
         }
 
         private void textBoxTelefonoConvencional_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-                validar.validarCamposNumericos(e, textBoxTelefonoConvencional);
-        }
 
+            if (validar.validartelefono(textBoxTelefonoConvencional.Text) && textBoxTelefonoConvencional.Text.Length == 10 && validar.validarCamposNumericos(e, textBoxTelefonoConvencional))
+            {
+                textBoxTelefonoConvencional.BackColor = Color.LightGreen;
+            }
+            else if (textBoxTelefonoConvencional.Text.Length > 10)
+            {
+                ToolTip toolTip1 = new ToolTip();
+                toolTip1.Show("SOLO SE PUEDEN INGRESAR 10 DIGITOS", textBoxTelefonoConvencional, 1000);
+                textBoxTelefonoConvencional.BackColor = Color.LightCoral;
+                e.Handled = true;
+            }
+
+        }
         private void textBoxCelular_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (textBoxCelular.Focused)
-                validar.validarCamposNumericos(e, textBoxCelular);
+            validar.validarCamposNumericos(e, textBoxCelular);
+            if (validar.validartelefono(textBoxCelular.Text) && textBoxCelular.Text.Length == 10)
+            {
+                textBoxCelular.BackColor = Color.LightGreen;
+            }
+            else if (textBoxCelular.Text.Length > 10)
+            {
+                ToolTip toolTip1 = new ToolTip();
+                toolTip1.Show("NSOLO SE PUEDEN INGRESAR 10 DIGITOS", textBoxCelular, 1000);
+                textBoxCelular.BackColor = Color.LightCoral;
+                e.Handled = true;
+            }
+
         }
 
         private void textBoxSalario_TextChanged(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
+            if (textBoxSalario.Focused)
+            {
+                //MessageBox.Show("Para el numero " + textBoxSalario.Text + " se valida que " + validar.decimales(textBoxSalario.Text));
+                if (!validar.decimales(textBoxSalario.Text))
+                {
+                    ToolTip toolTip1 = new ToolTip();
+                    toolTip1.Show("DIGITO NO VALIDO", textBoxCelular, 1000);
+                    textBoxSalario.BackColor = Color.LightCoral;
+
+
+                }
+                else
+                {
+                    textBoxSalario.BackColor = Color.LightGreen;
+
+                }
+            }
 
         }
 
@@ -276,7 +328,7 @@ namespace JUDYSOFT
             SqlConnection con;
             SqlCommand cmd;
             SqlDataReader dr;
-            con = new SqlConnection("Data Source=BRYANGERMANPC;Initial Catalog=JUDYSOFT;Integrated Security=True");
+            con = new SqlConnection(conexion);
             if (id.Length >= 10)
             {
                 try
@@ -314,7 +366,7 @@ namespace JUDYSOFT
             SqlConnection con;
             SqlCommand cmd;
             SqlDataReader dr;
-            con = new SqlConnection("Data Source=BRYANGERMANPC;Initial Catalog=JUDYSOFT;Integrated Security=True");
+            con = new SqlConnection(conexion);
             try
             {
                 con.Open();
@@ -343,7 +395,7 @@ namespace JUDYSOFT
             SqlConnection con;
             SqlCommand cmd;
             SqlDataReader dr;
-            con = new SqlConnection("Data Source=BRYANGERMANPC;Initial Catalog=JUDYSOFT;Integrated Security=True");
+            con = new SqlConnection(conexion);
             try
             {
 
@@ -373,7 +425,7 @@ namespace JUDYSOFT
             SqlConnection con;
             SqlCommand cmd;
             SqlDataReader dr;
-            con = new SqlConnection("Data Source=BRYANGERMANPC;Initial Catalog=JUDYSOFT;Integrated Security=True");
+            con = new SqlConnection(conexion);
             try
             {
 
@@ -387,6 +439,42 @@ namespace JUDYSOFT
                 {
                     String busqueda = dr["" + nombreBase].ToString();
                     campo.Text = busqueda;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show("No se puede autocompletar el textBox");
+            }
+            con.Close();
+        }
+
+        private void rellenar(String id, String nombreBase)
+        {
+            SqlConnection con;
+            SqlCommand cmd;
+            SqlDataReader dr;
+            con = new SqlConnection(conexion);
+            try
+            {
+
+                con.Open();
+
+                cmd = new SqlCommand("select " + nombreBase + " from EMPLEADO where NUMERODOCUMENTOEMPLEADO like '%" + id + "%'", con);
+
+                dr = cmd.ExecuteReader();
+                //mensajeAdvertencia.Text = "Coincidencia encontrada: " + dr["NUMERODOCUMENTOEMPLEADO"].ToString();
+                while (dr.Read())
+                {
+                    String busqueda = dr["" + nombreBase].ToString();
+                    if (busqueda.Equals("M"))
+                    {
+                        radioButtonMasculino.Checked = true;
+                    }
+                    else if (busqueda.Equals("F"))
+                    {
+                        radioButtonFemenino.Checked = true;
+                    }
 
                 }
             }
@@ -920,11 +1008,134 @@ namespace JUDYSOFT
 
         private void comboBoxTipoDeIdentificacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (comboBoxTipoDeIdentificacion.SelectedItem.Equals("CEDULA") || comboBoxTipoDeIdentificacion.SelectedItem.Equals("PASAPORTE"))
+            {
+                textBoxIdentificacion.Enabled = true;
+                buttonValidar.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ningun tipo de documento");
+            }
 
 
         }
 
+        private void buttonValidar_Click(object sender, EventArgs e)
+        {
+            if (validar.verificarCedula(textBoxIdentificacion.Text))
+            {
+                if (existeCedula(textBoxIdentificacion.Text))
+                {
+                    deshabilitarCampos();
+                    rellenarCampos();
+                }
+
+                else
+                {
+                    if (textBoxIdentificacion.Text.Length == 10)
+                    {
+                        comboBoxTipoDeIdentificacion.SelectedItem = "CEDULA";
+                        vaciarCampos();
+                        habilitarCampos();
+                    }
+                    else
+                    {
+                        ToolTip toolTip1 = new ToolTip();
+                        toolTip1.Show("LOGITUD DE LA CEDULA: 10 DIGITOS", textBoxIdentificacion, 1000);
+                        textBoxIdentificacion.BackColor = Color.LightCoral;
+                        vaciarCampos();
+                    }
+                    //else if (textBoxIdentificacion.Text.Length < 10)
+                    //{
+                    //    comboBoxTipoDeIdentificacion.SelectedItem = "PASAPORTE";
+                    //    habilitarCampos();
+                    //}
+                }
+            }
+            else
+            {
+                ToolTip toolTip1 = new ToolTip();
+                toolTip1.Show("NUMERO DE CEDULA NO VALIDO", textBoxIdentificacion, 1000);
+                textBoxIdentificacion.BackColor = Color.LightCoral;
+                vaciarCampos();
+                deshabilitarCampos();
+            }
+
+        }
+        public void rellenarCampos()
+        {
+            rellenar(textBoxIdentificacion.Text, "NOMBRE1EMPLEADO", textBoxNombres);
+            rellenar(textBoxIdentificacion.Text, "APELLIDO1EMPLEADO", textBoxApellidos);
+            rellenar(textBoxIdentificacion.Text, "DIRECCIONEMPLEADO", textBoxDireccion);
+            rellenar(textBoxIdentificacion.Text, "CORREOELECTRONICOEMPLEADO", textBoxCorreoElectronico);
+            rellenar(textBoxIdentificacion.Text, "TELEFONO1EMPLEADO", textBoxCelular);
+            rellenar(textBoxIdentificacion.Text, "TELEFONO2EMPLEADO", textBoxTelefonoConvencional);
+            rellenar(textBoxIdentificacion.Text, "SALARIOEMPLEADO", textBoxSalario);
+            rellenar(textBoxIdentificacion.Text, "CARGOEMPLEADO", comboBoxCargo);
+            rellenar(textBoxIdentificacion.Text, "PROVINCIAORIGENEMPLEADO", comboBoxProvincia);
+            rellenar(textBoxIdentificacion.Text, "CIUDADORIGENEMPLEADO", comboBoxCantones);
+            rellenar(textBoxIdentificacion.Text, "DOCUMENTOIDENTIFICACIONEMPLEADO", comboBoxTipoDeIdentificacion);
+            rellenar(textBoxIdentificacion.Text, "FECHAINGRESOEMPLEADO", dateTimePickerFechaDeNacimiento);
+            rellenar(textBoxIdentificacion.Text, "FECHASALIDAEMPLEADO", dateTimePickerFechaDeEntrada);
+            rellenar(textBoxIdentificacion.Text, "SEXOEMPLEADO");
+        }
+        public void habilitarCampos()
+        {
+            textBoxNombres.Enabled = true;
+            textBoxApellidos.Enabled = true;
+            textBoxDireccion.Enabled = true;
+            textBoxCorreoElectronico.Enabled = true;
+            textBoxTelefonoConvencional.Enabled = true;
+            textBoxCelular.Enabled = true;
+            textBoxSalario.Enabled = true;
+            comboBoxCargo.Enabled = true;
+            comboBoxProvincia.Enabled = true;
+            comboBoxCantones.Enabled = true;
+            comboBoxTipoDeIdentificacion.Enabled = true;
+            dateTimePickerFechaDeNacimiento.Enabled = true;
+            buttonValidar.Enabled = true;
+            textBoxIdentificacion.Enabled = true;
+            radioButtonMasculino.Enabled = true;
+            radioButtonFemenino.Enabled = true;
+            buttonGuardar.Enabled = true;
+
+        }
+        public void vaciarCampos()
+        {
+            textBoxNombres.Text = "";
+            textBoxApellidos.Text = "";
+            textBoxDireccion.Text = "";
+            textBoxCorreoElectronico.Text = "";
+            textBoxTelefonoConvencional.Text = "";
+            textBoxCelular.Text = "";
+            textBoxSalario.Text = "";
+            comboBoxCargo.SelectedIndex = 0;
+            comboBoxProvincia.SelectedIndex = 0;
+            comboBoxCantones.SelectedIndex = 0;
+            dateTimePickerFechaDeEntrada.Value = DateTime.Today;
+            dateTimePickerFechaDeNacimiento.Text = "01-01-2000";
+        }
+        public void deshabilitarCampos()
+        {
+            textBoxNombres.Enabled = false;
+            textBoxApellidos.Enabled = false;
+            textBoxDireccion.Enabled = false;
+            textBoxCorreoElectronico.Enabled = false;
+            textBoxTelefonoConvencional.Enabled = false;
+            textBoxCelular.Enabled = false;
+            textBoxSalario.Enabled = false;
+            comboBoxCargo.Enabled = false;
+            comboBoxProvincia.Enabled = false;
+            comboBoxCantones.Enabled = false;
+            comboBoxTipoDeIdentificacion.Enabled = false;
+            dateTimePickerFechaDeNacimiento.Enabled = false;
+            radioButtonFemenino.Enabled = false;
+            radioButtonMasculino.Enabled = false;
+            buttonValidar.Enabled = true;
+            textBoxIdentificacion.Enabled = true;
+            buttonGuardar.Enabled = false;
+        }
+
     }
 }
-
