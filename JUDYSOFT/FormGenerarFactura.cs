@@ -249,10 +249,10 @@ namespace JUDYSOFT
             if (nuevaLista.DialogResult == DialogResult.OK)
             {
 
-                txtidClienteGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[9].Value.ToString();
+                txtidClienteGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[6].Value.ToString();
                 txtBoxClienteGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[1].Value.ToString() +" "+ nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[3].Value.ToString();
-                txtDireccionGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[7].Value.ToString();
-                txtTelefonoGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[5].Value.ToString();
+                txtDireccionGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[12].Value.ToString();
+                txtTelefonoGenerarFactura.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[13].Value.ToString();
                 labID.Text = nuevaLista.dataGridViewModificarClientes.Rows[nuevaLista.dataGridViewModificarClientes.CurrentRow.Index].Cells[0].Value.ToString();
                 
 
