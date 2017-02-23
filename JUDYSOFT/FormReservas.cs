@@ -100,13 +100,7 @@ namespace JUDYSOFT
 
         private void FormReservas_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DialogResult confirmacion = MessageBox.Show("Esta seguro que desea salir", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-
-            if (confirmacion == System.Windows.Forms.DialogResult.OK)
-            {
-                Dispose();
-                MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem","reservacionesToolStripMenuItem");
-            }
+           
         }
 
         private void tablaReservaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -114,7 +108,17 @@ namespace JUDYSOFT
 
         }
 
-        
+        private void FormReservas_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult confirmacion = MessageBox.Show("Esta seguro que desea salir", "JUDYSOFT", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
 
+            if (confirmacion == System.Windows.Forms.DialogResult.OK)
+            {
+                Dispose();
+                MenuSettings.EnableMenuItem("habitacionesToolStripMenuItem", "reservacionesToolStripMenuItem");
+            }
+            else
+                e.Cancel = true;
+        }
     }
 }

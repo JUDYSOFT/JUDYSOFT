@@ -16,7 +16,7 @@ namespace Libreria
             //Lista de conexiones a la base de datos------------------------------------------------------------------------------------
            
 
-            SqlConnection con = new SqlConnection("Data Source="+Environment.MachineName+ "\\SQLSERVER_SAL_A;Initial Catalog=JUDYSOFT;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source='"+Environment.MachineName+"';Initial Catalog=JUDYSOFT;Integrated Security=True");
             
             con.Open();
             DataSet DS = new DataSet();

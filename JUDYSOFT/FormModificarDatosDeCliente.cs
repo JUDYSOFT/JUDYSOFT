@@ -13,7 +13,7 @@ namespace JUDYSOFT
 {
     public partial class FormModificarDatosDeCliente : Form
     {
-
+        Validaciones val = new Validaciones();
         public FormModificarDatosDeCliente()
         {
             InitializeComponent();
@@ -69,7 +69,7 @@ namespace JUDYSOFT
 
             try
             {
-                string cmd1 = string.Format("exec modificarCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}', '{8}', '{9}','{10}','{11}'", objCliente.Nombre1, objCliente.Nombre2, objCliente.Apellido1, objCliente.Apellido2, objCliente.Telefono1, objCliente.Telefono2, objCliente.Direccion, objCliente.Nacionalidad, objCliente.Procedencia, objCliente.Correo, objCliente.EstadoCivil, codCliente);
+                string cmd1 = string.Format("exec modificarCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}', '{8}', '{9}','{10}','{11}'", objCliente.Nombre1, objCliente.Nombre2, objCliente.Apellido1, objCliente.Apellido2, objCliente.Procedencia,objCliente.EstadoCivil,objCliente.Nacionalidad,objCliente.Correo,objCliente.Direccion,objCliente.Telefono1,objCliente.Telefono2,codCliente);
                 DataSet DS1 = Utilidades.Ejecutar(cmd1);
             }
             catch (Exception ex)
@@ -160,19 +160,19 @@ namespace JUDYSOFT
 
             if (frm.DialogResult == DialogResult.OK)
             {
-
-                txtNumDocumentoModificarCliente.Text= frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[9].Value.ToString();
+                
+                txtNumDocumentoModificarCliente.Text= frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[6].Value.ToString();
                 txtNombre1IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[1].Value.ToString();
                 txtNombre2IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[2].Value.ToString();
                 txtApellido1IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[3].Value.ToString();
                 txtApellido2IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[4].Value.ToString();
-                txtTelefono1IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[5].Value.ToString();
-                txtTelefono2IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[6].Value.ToString();
-                txtDireccionIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[7].Value.ToString();
+                txtTelefono1IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[13].Value.ToString();
+                txtTelefono2IngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[14].Value.ToString();
+                txtDireccionIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[12].Value.ToString();
                 txtNacionalidadIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[10].Value.ToString();
-                txtProcedenciaIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[11].Value.ToString();
-                txtCorreoIngresoCLiente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[13].Value.ToString();
-                comboBoxEstadoCivil.SelectedItem = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[14].Value.ToString();
+                txtProcedenciaIngresoCliente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[7].Value.ToString();
+                txtCorreoIngresoCLiente.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[11].Value.ToString();
+                comboBoxEstadoCivil.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[8].Value.ToString();
                 habilitarCampos();
             }
 
@@ -184,7 +184,7 @@ namespace JUDYSOFT
             objCliente.NumDocumento = txtNumDocumentoModificarCliente.Text;
             try
             {
-                string cmd3 = string.Format("select * from CLIENTE where NUMERODOCUMENTOCLIENTE= '{0}' ", objCliente.NumDocumento);
+                string cmd3 = string.Format("select * from CLIENTE where NUMERODOCUMENTOIDENTIFICACIONCLIENTE= '{0}' ", objCliente.NumDocumento);
                 DataSet DS3 = Utilidades.Ejecutar(cmd3);
                 if (DS3.Tables[0].Rows.Count == 0)
                 {
@@ -198,10 +198,10 @@ namespace JUDYSOFT
                     txtApellido2IngresoCliente.Text = DS3.Tables[0].Rows[0]["APELLIDO2CLIENTE"].ToString().Trim();
                     txtTelefono1IngresoCliente.Text = DS3.Tables[0].Rows[0]["TELEFONO1CLIENTE"].ToString().Trim();
                     txtTelefono2IngresoCliente.Text = DS3.Tables[0].Rows[0]["TELEFONO2CLIENTE"].ToString().Trim();
-                    txtDireccionIngresoCliente.Text = DS3.Tables[0].Rows[0]["DIRECCIONCLIENTE"].ToString().Trim();
+                    txtDireccionIngresoCliente.Text = DS3.Tables[0].Rows[0]["DIRECCIONDOMICILIOCLIENTE"].ToString().Trim();
                     txtNacionalidadIngresoCliente.Text = DS3.Tables[0].Rows[0]["NACIONALIDADCLIENTE"].ToString().Trim();
                     txtProcedenciaIngresoCliente.Text = DS3.Tables[0].Rows[0]["LUGARPROCEDENCIACLIENTE"].ToString().Trim();
-                    txtCorreoIngresoCLiente.Text = DS3.Tables[0].Rows[0]["CORREOCLIENTE"].ToString().Trim();
+                    txtCorreoIngresoCLiente.Text = DS3.Tables[0].Rows[0]["CORREOELECTRONICOCLIENTE"].ToString().Trim();
                     comboBoxEstadoCivil.SelectedItem = DS3.Tables[0].Rows[0]["ESTADOCIVILCLIENTE"].ToString().Trim();
                 }
 
@@ -212,6 +212,72 @@ namespace JUDYSOFT
             catch (Exception ex)
             {
                 MessageBox.Show("Error"+ex);
+            }
+        }
+
+        private void FormModificarDatosDeCliente_Load(object sender, EventArgs e)
+        {
+            convertirMayusulas();
+        }
+        private void convertirMayusulas()
+        {
+            txtNombre1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtApellido1IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtNacionalidadIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtNombre2IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtApellido2IngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtProcedenciaIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+            txtDireccionIngresoCliente.CharacterCasing = CharacterCasing.Upper;
+        }
+
+        private void txtTelefono1IngresoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (val.validarCamposNumericos(e, txtTelefono1IngresoCliente))
+                return;
+        }
+
+        private void txtTelefono2IngresoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (val.validarCamposNumericos(e, txtTelefono2IngresoCliente))
+                return;
+        }
+
+        private void txtNacionalidadIngresoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (val.validarCadenasDeTexto(e,txtNacionalidadIngresoCliente))
+            {
+                return;
+            }
+        }
+
+        private void txtProcedenciaIngresoCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtProcedenciaIngresoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (val.validarCadenasDeTexto(e, txtProcedenciaIngresoCliente))
+            {
+                return;
+            }
+        }
+
+        private void txtCorreoIngresoCLiente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (val.emailBienEscrito(txtCorreoIngresoCLiente.Text))
+            {
+                txtCorreoIngresoCLiente.BackColor = Color.LightGreen;
+            }
+            else
+                txtCorreoIngresoCLiente.BackColor = Color.LightCoral;
+        }
+
+        private void txtDireccionIngresoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (val.validarCadenasDeTexto(e, txtDireccionIngresoCliente))
+            {
+                return;
             }
         }
     }

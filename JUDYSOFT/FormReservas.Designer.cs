@@ -155,6 +155,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormReservas";
             this.Text = "Reservaciones";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormReservas_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormReservas_FormClosed);
             this.Load += new System.EventHandler(this.FormReservas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaReservaciones)).EndInit();

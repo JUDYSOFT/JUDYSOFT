@@ -48,7 +48,7 @@ namespace JUDYSOFT
             if (Utilidades.ValidarFormulario(panelInformación,errorProvider2)==false)
             {
 
-               // objCliente.FechaNac = null; 
+               
                 objCliente.Nombre1 = txtNombre1IngresoCliente.Text.ToString();
                 objCliente.Nombre2 = txtNombre2IngresoCliente.Text.ToString();
                 objCliente.Apellido1 = txtApellido1IngresoCliente.Text.ToString();
@@ -80,7 +80,7 @@ namespace JUDYSOFT
                 {
                     try
                     {
-                        string cmd = string.Format("Exec registrarCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}', '{8}', '{9}','{10}','{11}','{12}','{13}'", objCliente.Nombre1, objCliente.Nombre2, objCliente.Apellido1, objCliente.Apellido2,objCliente.Telefono1,objCliente.Telefono2, objCliente.Direccion, objCliente.Documento, objCliente.NumDocumento, objCliente.Nacionalidad, objCliente.Procedencia, objCliente.Sexo,objCliente.Correo,objCliente.EstadoCivil);
+                        string cmd = string.Format("Exec registrarCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}', '{8}', '{9}','{10}','{11}','{12}','{13}'", objCliente.Nombre1, objCliente.Nombre2, objCliente.Apellido1, objCliente.Apellido2,objCliente.Documento,objCliente.NumDocumento,objCliente.Procedencia,objCliente.EstadoCivil,objCliente.Sexo,objCliente.Nacionalidad,objCliente.Correo,objCliente.Direccion,objCliente.Telefono1,objCliente.Telefono2);
                       DataSet  DS1 = Utilidades.Ejecutar(cmd);
 
                     }
@@ -318,7 +318,7 @@ namespace JUDYSOFT
             txtTelefono1IngresoCliente.Text = "";
             txtTelefono2IngresoCliente.Text = "";
             txtNacionalidadIngresoCliente.Text = "";
-            comboBoxEstadoCivil.SelectedIndex=0;
+            comboBoxEstadoCivil.SelectedIndex=-1;
             txtCorreoIngresoCLiente.Text = "";
             txtProcedenciaIngresoCliente.Text = "";
             txtDireccionIngresoCliente.Text = "";
