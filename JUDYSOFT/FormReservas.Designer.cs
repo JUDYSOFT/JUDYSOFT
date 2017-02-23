@@ -41,7 +41,6 @@
             // btnConsultarReservasPasadasReservaciones
             // 
             this.btnConsultarReservasPasadasReservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //this.btnConsultarReservasPasadasReservaciones.Image = global::JUDYSOFT.Properties.Resources._1484548470_Zoom;
             this.btnConsultarReservasPasadasReservaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarReservasPasadasReservaciones.Location = new System.Drawing.Point(472, 14);
             this.btnConsultarReservasPasadasReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -60,11 +59,13 @@
             this.tablaReservaciones.AllowUserToOrderColumns = true;
             this.tablaReservaciones.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.tablaReservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaReservaciones.Enabled = false;
             this.tablaReservaciones.Location = new System.Drawing.Point(29, 74);
             this.tablaReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tablaReservaciones.MultiSelect = false;
             this.tablaReservaciones.Name = "tablaReservaciones";
+            this.tablaReservaciones.ReadOnly = true;
             this.tablaReservaciones.RowTemplate.Height = 24;
+            this.tablaReservaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaReservaciones.Size = new System.Drawing.Size(696, 199);
             this.tablaReservaciones.TabIndex = 9;
             this.tablaReservaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaReservaciones_CellContentClick);
@@ -112,7 +113,6 @@
             // btnConsultarReservaciones
             // 
             this.btnConsultarReservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //this.btnConsultarReservaciones.Image = global::JUDYSOFT.Properties.Resources._1484548470_Zoom;
             this.btnConsultarReservaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarReservaciones.Location = new System.Drawing.Point(29, 313);
             this.btnConsultarReservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

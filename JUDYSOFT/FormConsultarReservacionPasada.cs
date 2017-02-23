@@ -36,14 +36,27 @@ namespace JUDYSOFT
 
         private void reservacionesPasadas_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter SDA = new SqlDataAdapter();
-            BindingSource bs = new BindingSource();
-            tablaReservacionesPasadas.DataSource  = bs;
-            //Utilidades.GetData("SELECT R.CODRESERVACION,C.NOMBRE1CLIENTE,C.APELLIDO1CLIENTE,R.FECHAINGRESORESERVACION,R.FECHASALIDARESERVACION "+
-            //                   "FROM  CLIENTE C JOIN RESERVACION R "+
-            //                   "ON R.CODCLIENTE = C.CODCLIENTEWHERE R.FECHASALIDARESERVACION < GETDATE()",bs,SDA);
-            //tablaReservacionesPasadas.AutoResizeColumns(
-            //        DataGridViewAutoSizeColumnsMode.AllCells);
+            tablaRefresco();
+        }
+
+        public void tablaRefresco()
+        {
+            tablaReservacionesPasadas.DataSource = LLenarDGv().Tables[0];
+            tablaReservacionesPasadas.Columns[0].HeaderCell.Value = "Código de Reservación";
+            tablaReservacionesPasadas.Columns[1].HeaderCell.Value = "Apellido Cliente";
+            tablaReservacionesPasadas.Columns[2].HeaderCell.Value = "Nombre Cliente";
+            tablaReservacionesPasadas.Columns[3].HeaderCell.Value = "Fecha de Ingreso";
+            tablaReservacionesPasadas.Columns[4].HeaderCell.Value = "Fecha de Salida";
+        }
+
+        private DataSet LLenarDGv()
+        {
+            DataSet DS;
+            string cmd = string.Format("SELECT CODRESERVACION,APELLIDO1CLIENTE,NOMBRE1CLIENTE,FECHAINGRESORESERVACION,FECHASALIDARESERVACION " +
+                "FROM RESERVACION R JOIN CLIENTE C ON R.CODCLIENTE = C.CODCLIENTE " +
+                "WHERE FECHASALIDARESERVACION < GETDATE()");
+            DS = Utilidades.Ejecutar(cmd);
+            return DS;
         }
 
         private void tablaReservacionesPasadas_CellContentClick(object sender, DataGridViewCellEventArgs e)

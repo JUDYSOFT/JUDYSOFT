@@ -7,9 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
-using System.Data;
 using Libreria;
 
 namespace JUDYSOFT
@@ -41,11 +38,10 @@ namespace JUDYSOFT
            
             if (txtpass.Text.Trim()!="" || txtuser.Text.Trim()!="") {
                 try {
-                    string CMD = string.Format("SELECT * FROM EMPLEADO WHERE USUARIO = '{0}' AND PASSWORD = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
+                    string CMD = string.Format("SELECT * FROM EMPLEADO WHERE NOMBREUSUARIOEMPLEADO = '{0}' AND CONTRASENIAEMPLEADO = '{1}'", txtuser.Text.Trim(), txtpass.Text.Trim());
                     DataSet ds = Utilidades.Ejecutar(CMD);
-                    string cuenta = ds.Tables[0].Rows[0]["USUARIO"].ToString().Trim();
-    
-                    string psd = ds.Tables[0].Rows[0]["PASSWORD"].ToString().Trim();
+                    string cuenta = ds.Tables[0].Rows[0]["NOMBREUSUARIOEMPLEADO"].ToString().Trim();
+                    string psd = ds.Tables[0].Rows[0]["CONTRASENIAEMPLEADO"].ToString().Trim();
                     Codigo = ds.Tables[0].Rows[0]["CODEMPLEADO"].ToString().Trim();
 
                     if (cuenta == txtuser.Text.Trim() && psd == txtpass.Text.Trim())

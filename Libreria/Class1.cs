@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
@@ -22,7 +21,7 @@ namespace Libreria
 
             //pequeñin-------------------------------------------------------------------------------------------------------------------
 
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-TPC97N2;Initial Catalog=JUDYSOFT;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source="+Environment.MachineName+"\\SQLEXPRESS;Initial Catalog=JUDYSOFT;Integrated Security=True");
             //Alexis
             //SqlConnection con = new SqlConnection("Data Source=JORGE\\SQLEXPRESS;Initial Catalog=JUDYSOFT;Integrated Security=True");
             //Bryan
@@ -33,7 +32,6 @@ namespace Libreria
             da.Fill(DS);
 
             con.Close();
-
             return DS;
         }
 
