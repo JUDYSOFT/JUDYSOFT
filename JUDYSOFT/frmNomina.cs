@@ -48,7 +48,7 @@ namespace JUDYSOFT
         public DataSet LLenarDGv(string tabla)
         {
             DataSet DS;
-            string cmd = string.Format("SELECT NUMERODOCUMENTOCLIENTE Documento_Identificación,DOCUMENTOIDENTIDADCLIENTE Tipo,NOMBRE1CLIENTE Primer_Nombre,NOMBRE2CLIENTE Segundo_Nombre,APELLIDO1CLIENTE Primer_Apellido,APELLIDO2CLIENTE Segundo_Apellido FROM " + tabla);
+            string cmd = string.Format("SELECT NUMERODOCUMENTOIDENTIFICACIONCLIENTE Documento_Identificación,DOCUMENTOIDENTIFICACIONCLIENTE Tipo,NOMBRE1CLIENTE Primer_Nombre,NOMBRE2CLIENTE Segundo_Nombre,APELLIDO1CLIENTE Primer_Apellido,APELLIDO2CLIENTE Segundo_Apellido FROM " + tabla);
             DS = Utilidades.Ejecutar(cmd);
             return DS;
         }
@@ -56,7 +56,7 @@ namespace JUDYSOFT
         public DataSet LLenarDGv1(string tabla)
         {
             DataSet DS;
-            string cmd = string.Format("SELECT NUMERODOCUMENTOEMPLEADO Documento_Identificación,DOCUMENTOIDENTIFICACIONEMPLEADO Tipo_Identificación,NOMBRE1EMPLEADO Primer_Nombre,NOMBRE2EMPLEADO Segundo_Nombre,APELLIDO1EMPLEADO Primer_Apellido,APELLIDO2EMPLEADO Segundo_Apellido FROM " + tabla);
+            string cmd = string.Format("SELECT NUMERODOCUMENTOIDENTIFICACIONEMPLEADO Documento_Identificación,DOCUMENTOIDENTIFICACIONEMPLEADO Tipo_Identificación,NOMBRE1EMPLEADO Primer_Nombre,NOMBRE2EMPLEADO Segundo_Nombre,APELLIDO1EMPLEADO Primer_Apellido,APELLIDO2EMPLEADO Segundo_Apellido FROM " + tabla);
             DS = Utilidades.Ejecutar(cmd);
             return DS;
         }

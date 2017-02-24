@@ -70,6 +70,7 @@ namespace JUDYSOFT
 
             btnh21.Text = "Habitacion 21 Matrimonial";
             btnh21.TextImageRelation = TextImageRelation.TextAboveImage;
+            groupBox1.BackColor = Color.Transparent;
 
             btnh22.Text = "Habitacion 22 Matrimonial";
             btnh22.TextImageRelation = TextImageRelation.TextAboveImage;
