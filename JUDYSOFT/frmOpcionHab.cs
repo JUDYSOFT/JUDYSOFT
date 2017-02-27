@@ -158,7 +158,7 @@ namespace JUDYSOFT
         {
             if (textBox1.Text=="" || textBox1.Text==null)
             {
-                MessageBox.Show("Debe Seleccionar un Cliente","JUDYSOFT");
+                MessageBox.Show("Debe Seleccionar un Cliente o Empleado","JUDYSOFT");
             }
             else
             {
@@ -167,7 +167,7 @@ namespace JUDYSOFT
                     case "Clientes":
                         try
                         {
-                            string CMD1 = string.Format("SELECT CODCLIENTE FROM CLIENTE WHERE NUMERODOCUMENTOCLIENTE='{0}'", textBox1.Text.Trim());
+                            string CMD1 = string.Format("SELECT CODCLIENTE FROM CLIENTE WHERE NUMERODOCUMENTOIDENTIFICACIONCLIENTE='{0}'", textBox1.Text.Trim());
                             DataSet ds1 = Utilidades.Ejecutar(CMD1);
                             string CodCliente = ds1.Tables[0].Rows[0]["CODCLIENTE"].ToString().Trim();
                             string CMD = string.Format("UPDATE HABITACION SET ESTADOHABITACION='Ocupado',CODCLIENTE='{0}' WHERE NUMEROHABITACION='{1}'", CodCliente,objHab.Numero);
@@ -182,7 +182,7 @@ namespace JUDYSOFT
                     case "Empleados":
                         try
                         {
-                            string CMD1 = string.Format("SELECT CODEMPLEADO FROM EMPLEADO WHERE NUMERODOCUMENTOEMPLEADO='{0}'", textBox1.Text.Trim());
+                            string CMD1 = string.Format("SELECT CODEMPLEADO FROM EMPLEADO WHERE NUMERODOCUMENTOIDENTIFICACIONEMPLEADO='{0}'", textBox1.Text.Trim());
                             DataSet ds1 = Utilidades.Ejecutar(CMD1);
                             string CodEmpleado = ds1.Tables[0].Rows[0]["CODEMPLEADO"].ToString().Trim();
                             string CMD = string.Format("UPDATE HABITACION SET ESTADOHABITACION='Limpieza' WHERE NUMEROHABITACION='{0}'", objHab.Numero);

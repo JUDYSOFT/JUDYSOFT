@@ -33,20 +33,18 @@ namespace JUDYSOFT
             {
                 MessageBox.Show("El campo de Identificación no puede estar vacío",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }else if (tBoxNumeroIdClienteNuevareservacion.Text.Length != 8)
+            }else if (tBoxNumeroIdClienteNuevareservacion.Text.Length != 10)
             {
-                MessageBox.Show("El campo de Identificación debe contener 8 dígitos para pasaporte o 10 dígitos para cédula",
+                MessageBox.Show("El campo de Identificación debe contener 10 dígitos ",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }else if(tBoxNumeroNiniosNuevaReserva.Text==""|| tBoxNumeroAdultosNuevaReserva.Text == "")
             {
                 MessageBox.Show("Algún campo de número de personas se encuentra vacío",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }else if(tBoxNumeroIdClienteNuevareservacion.Text.Length != 10)
-            {
-                MessageBox.Show("El campo de Identificación debe contener 8 dígitos para pasaporte o 10 dígitos para cédula",
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else{
+            
+            else
+            {
                 DataSet DS;
                 string cmd1 = string.Format("SELECT CODCLIENTE FROM CLIENTE WHERE NUMERODOCUMENTOIDENTIFICACIONCLIENTE = {0}",tBoxNumeroIdClienteNuevareservacion.Text);
                 DS = Utilidades.Ejecutar(cmd1);
@@ -68,6 +66,9 @@ namespace JUDYSOFT
                         obj.tablaRefresco();
                         Dispose();       
                     }
+
+                    
+
                 }
                 catch (Exception ex)
                 {
@@ -102,6 +103,8 @@ namespace JUDYSOFT
                 tBoxNombreClienteNuevaReservacion.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[3].Value.ToString()+" "
                     + frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[1].Value.ToString();
                 tBoxNumeroIdClienteNuevareservacion.Text = frm.dataGridViewModificarClientes.Rows[frm.dataGridViewModificarClientes.CurrentRow.Index].Cells[6].Value.ToString();
+
+
                 habilitarCampos();
                 tBoxNumeroIdClienteNuevareservacion.BackColor = Color.Green;
             }
@@ -120,6 +123,7 @@ namespace JUDYSOFT
                 else
                 {
                     tBoxNombreClienteNuevaReservacion.Text = DS3.Tables[0].Rows[0]["APELLIDO1CLIENTE"].ToString().Trim()+" "+ DS3.Tables[0].Rows[0]["NOMBRE1CLIENTE"].ToString().Trim();
+                    
                 }
 
               

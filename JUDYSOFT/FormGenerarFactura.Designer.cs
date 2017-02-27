@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblCodCli = new System.Windows.Forms.Label();
+            this.labID = new System.Windows.Forms.Label();
+            this.lblid = new System.Windows.Forms.Label();
             this.botonListaClientesGenerarFactura = new System.Windows.Forms.Button();
             this.txtBoxClienteGenerarFactura = new System.Windows.Forms.TextBox();
             this.lblClienteGenerarFactura = new System.Windows.Forms.Label();
@@ -67,13 +70,10 @@
             this.ValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblid = new System.Windows.Forms.Label();
-            this.labID = new System.Windows.Forms.Label();
             this.txtCodigoGenerarFactura = new Libreria.ErrorTxtBox();
             this.txtDescripcionGenerarFactura = new Libreria.ErrorTxtBox();
             this.txtValUniGenerarFactura = new Libreria.ErrorTxtBox();
             this.txtCantidadGenerarFactura = new Libreria.ErrorTxtBox();
-            this.lblCodCli = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -103,16 +103,45 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(12, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(916, 158);
             this.panel2.TabIndex = 48;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // lblCodCli
+            // 
+            this.lblCodCli.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblCodCli.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCodCli.Location = new System.Drawing.Point(425, 56);
+            this.lblCodCli.Name = "lblCodCli";
+            this.lblCodCli.Size = new System.Drawing.Size(64, 23);
+            this.lblCodCli.TabIndex = 35;
+            this.lblCodCli.Visible = false;
+            // 
+            // labID
+            // 
+            this.labID.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labID.Location = new System.Drawing.Point(422, 89);
+            this.labID.Name = "labID";
+            this.labID.Size = new System.Drawing.Size(67, 23);
+            this.labID.TabIndex = 34;
+            this.labID.Visible = false;
+            // 
+            // lblid
+            // 
+            this.lblid.AutoSize = true;
+            this.lblid.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblid.Location = new System.Drawing.Point(431, 86);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(0, 17);
+            this.lblid.TabIndex = 33;
+            this.lblid.Visible = false;
+            // 
             // botonListaClientesGenerarFactura
             // 
             this.botonListaClientesGenerarFactura.Location = new System.Drawing.Point(280, 86);
-            this.botonListaClientesGenerarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonListaClientesGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.botonListaClientesGenerarFactura.Name = "botonListaClientesGenerarFactura";
             this.botonListaClientesGenerarFactura.Size = new System.Drawing.Size(131, 27);
             this.botonListaClientesGenerarFactura.TabIndex = 32;
@@ -124,7 +153,7 @@
             // 
             this.txtBoxClienteGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtBoxClienteGenerarFactura.Location = new System.Drawing.Point(121, 124);
-            this.txtBoxClienteGenerarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxClienteGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxClienteGenerarFactura.Name = "txtBoxClienteGenerarFactura";
             this.txtBoxClienteGenerarFactura.ReadOnly = true;
             this.txtBoxClienteGenerarFactura.Size = new System.Drawing.Size(288, 22);
@@ -163,7 +192,7 @@
             // 
             this.txtTelefonoGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtTelefonoGenerarFactura.Location = new System.Drawing.Point(625, 112);
-            this.txtTelefonoGenerarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefonoGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefonoGenerarFactura.Name = "txtTelefonoGenerarFactura";
             this.txtTelefonoGenerarFactura.ReadOnly = true;
             this.txtTelefonoGenerarFactura.Size = new System.Drawing.Size(264, 22);
@@ -183,7 +212,7 @@
             // 
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Moccasin;
             this.dateTimePicker1.Location = new System.Drawing.Point(625, 52);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 23;
@@ -202,7 +231,7 @@
             // 
             this.txtDireccionGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtDireccionGenerarFactura.Location = new System.Drawing.Point(625, 82);
-            this.txtDireccionGenerarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccionGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccionGenerarFactura.Name = "txtDireccionGenerarFactura";
             this.txtDireccionGenerarFactura.ReadOnly = true;
             this.txtDireccionGenerarFactura.Size = new System.Drawing.Size(261, 22);
@@ -222,7 +251,7 @@
             // 
             this.txtidClienteGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtidClienteGenerarFactura.Location = new System.Drawing.Point(121, 90);
-            this.txtidClienteGenerarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtidClienteGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.txtidClienteGenerarFactura.Name = "txtidClienteGenerarFactura";
             this.txtidClienteGenerarFactura.ReadOnly = true;
             this.txtidClienteGenerarFactura.Size = new System.Drawing.Size(149, 22);
@@ -261,7 +290,7 @@
             this.panel1.Controls.Add(this.BotonFacturarGenerarFactura);
             this.panel1.Controls.Add(this.BotonSalirGenerarFactura);
             this.panel1.Location = new System.Drawing.Point(684, 207);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(244, 342);
             this.panel1.TabIndex = 47;
@@ -269,7 +298,7 @@
             // botonNuevaFacturaGenerarFactura
             // 
             this.botonNuevaFacturaGenerarFactura.Location = new System.Drawing.Point(53, 16);
-            this.botonNuevaFacturaGenerarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonNuevaFacturaGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.botonNuevaFacturaGenerarFactura.Name = "botonNuevaFacturaGenerarFactura";
             this.botonNuevaFacturaGenerarFactura.Size = new System.Drawing.Size(132, 64);
             this.botonNuevaFacturaGenerarFactura.TabIndex = 46;
@@ -280,7 +309,7 @@
             // botonListaProductosGenerarFactura
             // 
             this.botonListaProductosGenerarFactura.Location = new System.Drawing.Point(29, 188);
-            this.botonListaProductosGenerarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonListaProductosGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.botonListaProductosGenerarFactura.Name = "botonListaProductosGenerarFactura";
             this.botonListaProductosGenerarFactura.Size = new System.Drawing.Size(189, 48);
             this.botonListaProductosGenerarFactura.TabIndex = 45;
@@ -291,7 +320,7 @@
             // BotonAniadir
             // 
             this.BotonAniadir.Location = new System.Drawing.Point(29, 105);
-            this.BotonAniadir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BotonAniadir.Margin = new System.Windows.Forms.Padding(4);
             this.BotonAniadir.Name = "BotonAniadir";
             this.BotonAniadir.Size = new System.Drawing.Size(191, 36);
             this.BotonAniadir.TabIndex = 3;
@@ -302,7 +331,7 @@
             // BotonEliminarGenerarfactura
             // 
             this.BotonEliminarGenerarfactura.Location = new System.Drawing.Point(29, 148);
-            this.BotonEliminarGenerarfactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BotonEliminarGenerarfactura.Margin = new System.Windows.Forms.Padding(4);
             this.BotonEliminarGenerarfactura.Name = "BotonEliminarGenerarfactura";
             this.BotonEliminarGenerarfactura.Size = new System.Drawing.Size(191, 33);
             this.BotonEliminarGenerarfactura.TabIndex = 4;
@@ -313,7 +342,7 @@
             // BotonFacturarGenerarFactura
             // 
             this.BotonFacturarGenerarFactura.Location = new System.Drawing.Point(29, 244);
-            this.BotonFacturarGenerarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BotonFacturarGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.BotonFacturarGenerarFactura.Name = "BotonFacturarGenerarFactura";
             this.BotonFacturarGenerarFactura.Size = new System.Drawing.Size(191, 28);
             this.BotonFacturarGenerarFactura.TabIndex = 2;
@@ -324,7 +353,7 @@
             // BotonSalirGenerarFactura
             // 
             this.BotonSalirGenerarFactura.Location = new System.Drawing.Point(29, 279);
-            this.BotonSalirGenerarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BotonSalirGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.BotonSalirGenerarFactura.Name = "BotonSalirGenerarFactura";
             this.BotonSalirGenerarFactura.Size = new System.Drawing.Size(187, 31);
             this.BotonSalirGenerarFactura.TabIndex = 44;
@@ -344,7 +373,7 @@
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.DGVGenerarFactura);
             this.panel3.Location = new System.Drawing.Point(12, 207);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(652, 383);
             this.panel3.TabIndex = 49;
@@ -377,7 +406,7 @@
             // 
             this.txtTotalGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtTotalGenerarFactura.Location = new System.Drawing.Point(496, 335);
-            this.txtTotalGenerarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotalGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalGenerarFactura.Name = "txtTotalGenerarFactura";
             this.txtTotalGenerarFactura.ReadOnly = true;
             this.txtTotalGenerarFactura.Size = new System.Drawing.Size(132, 22);
@@ -387,7 +416,7 @@
             // 
             this.txtImpuestoGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtImpuestoGenerarFactura.Location = new System.Drawing.Point(496, 284);
-            this.txtImpuestoGenerarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtImpuestoGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.txtImpuestoGenerarFactura.Name = "txtImpuestoGenerarFactura";
             this.txtImpuestoGenerarFactura.ReadOnly = true;
             this.txtImpuestoGenerarFactura.Size = new System.Drawing.Size(132, 22);
@@ -407,7 +436,7 @@
             // 
             this.txtSubtotalGenerarFactura.BackColor = System.Drawing.Color.Moccasin;
             this.txtSubtotalGenerarFactura.Location = new System.Drawing.Point(496, 236);
-            this.txtSubtotalGenerarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSubtotalGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.txtSubtotalGenerarFactura.Name = "txtSubtotalGenerarFactura";
             this.txtSubtotalGenerarFactura.ReadOnly = true;
             this.txtSubtotalGenerarFactura.Size = new System.Drawing.Size(132, 22);
@@ -439,7 +468,7 @@
             this.ValorUnitario,
             this.ValorTotal});
             this.DGVGenerarFactura.Location = new System.Drawing.Point(12, 15);
-            this.DGVGenerarFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGVGenerarFactura.Margin = new System.Windows.Forms.Padding(4);
             this.DGVGenerarFactura.Name = "DGVGenerarFactura";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.DGVGenerarFactura.RowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -479,24 +508,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // lblid
-            // 
-            this.lblid.AutoSize = true;
-            this.lblid.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblid.Location = new System.Drawing.Point(431, 86);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(0, 17);
-            this.lblid.TabIndex = 33;
-            this.lblid.Visible = false;
-            // 
-            // labID
-            // 
-            this.labID.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labID.Location = new System.Drawing.Point(422, 89);
-            this.labID.Name = "labID";
-            this.labID.Size = new System.Drawing.Size(67, 23);
-            this.labID.TabIndex = 34;
             // 
             // txtCodigoGenerarFactura
             // 
@@ -541,15 +552,6 @@
             this.txtCantidadGenerarFactura.TabIndex = 45;
             this.txtCantidadGenerarFactura.Validar = true;
             // 
-            // lblCodCli
-            // 
-            this.lblCodCli.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblCodCli.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCodCli.Location = new System.Drawing.Point(425, 56);
-            this.lblCodCli.Name = "lblCodCli";
-            this.lblCodCli.Size = new System.Drawing.Size(64, 23);
-            this.lblCodCli.TabIndex = 35;
-            // 
             // FormGenerarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -564,7 +566,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormGenerarFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormGenerarFactura";

@@ -58,7 +58,7 @@ namespace JUDYSOFT
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormEliminarEmpleado frm = new FormEliminarEmpleado();
-            eliminarToolStripMenuItem.Enabled = false;
+           
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.WindowState = FormWindowState.Maximized;
             frm.MdiParent = this;
@@ -68,7 +68,7 @@ namespace JUDYSOFT
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormModificarDatosDeEmpleado frm = new FormModificarDatosDeEmpleado();
-            modificarToolStripMenuItem.Enabled = false;
+          
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.WindowState = FormWindowState.Maximized;
             frm.MdiParent = this;
